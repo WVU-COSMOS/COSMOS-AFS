@@ -1,0 +1,4 @@
+source;share/state_machine_pkg/local_setup.bash
+source;share/state_machine_pkg/local_setup.dsv
+source;share/state_machine_pkg/local_setup.sh
+source;share/state_machine_pkg/local_setup.zsh

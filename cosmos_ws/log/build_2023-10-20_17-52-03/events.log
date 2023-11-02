@@ -1,0 +1,193 @@
+[0.000000] (-) TimerEvent: {}
+[0.000529] (state_machine_pkg) JobQueued: {'identifier': 'state_machine_pkg', 'dependencies': OrderedDict()}
+[0.000585] (state_machine_pkg) JobStarted: {'identifier': 'state_machine_pkg'}
+[0.010792] (state_machine_pkg) JobProgress: {'identifier': 'state_machine_pkg', 'progress': 'cmake'}
+[0.011804] (state_machine_pkg) Command: {'cmd': ['/usr/bin/cmake', '/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg', '-DCMAKE_INSTALL_PREFIX=/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg'], 'cwd': '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vini_dunker'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vini_dunker/udemy_ws/install/udemy_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vini_dunker'), ('OLDPWD', '/home/vini_dunker/COSMOS-AFS/cosmos_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/vini_dunker/Automation/mrt19ROS_ws/install:/home/vini_dunker/mrt_ws/install:/home/vini_dunker/udemy_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'vini_dunker'), ('NAME', 'Vinicius'), ('WSL_INTEROP', '/run/WSL/371_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/Microsoft/jdk-11.0.16.101-hotspot/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/MATLAB/R2022b/bin:/mnt/c/Program Files/MATLAB/R2022a/bin:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/FPC/3.2.2/bin/i386-Win32:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Users/Vinicius Ferreira/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Vinicius Ferreira/.dotnet/tools:/mnt/c/Users/Vinicius Ferreira/AppData/Local/JetBrains/Toolbox/scripts:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2022.3/bin:/mnt/c/Users/Vinicius Ferreira/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Vinicius Ferreira/.dotnet/tools:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg:/home/vini_dunker/udemy_ws/install/udemy_bringup:/home/vini_dunker/udemy_ws/install/my_py_pkg:/home/vini_dunker/udemy_ws/install/my_cpp_pkg:/home/vini_dunker/udemy_ws/install/udemy_interfaces:/home/vini_dunker/mrt_ws/install/traverse_stage:/home/vini_dunker/mrt_ws/install/state_machine:/home/vini_dunker/mrt_ws/install/data_acquisition:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg/lib/python3.10/site-packages:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg/lib/python3.10/site-packages:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg/lib/python3.10/site-packages:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg/lib/python3.10/site-packages:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg/lib/python3.10/site-packages:/home/vini_dunker/udemy_ws/install/my_py_pkg/lib/python3.10/site-packages:/home/vini_dunker/udemy_ws/install/udemy_interfaces/local/lib/python3.10/dist-packages:/home/vini_dunker/mrt_ws/install/traverse_stage/lib/python3.10/site-packages:/home/vini_dunker/mrt_ws/install/state_machine/lib/python3.10/site-packages:/home/vini_dunker/mrt_ws/install/data_acquisition/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/vini_dunker/udemy_ws/install/udemy_bringup:/home/vini_dunker/udemy_ws/install/my_cpp_pkg:/home/vini_dunker/udemy_ws/install/udemy_interfaces:/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg:/home/vini_dunker/udemy_ws/install/my_py_pkg:/home/vini_dunker/mrt_ws/install/traverse_stage:/home/vini_dunker/mrt_ws/install/state_machine:/home/vini_dunker/mrt_ws/install/data_acquisition:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[0.022521] (state_machine_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099607] (-) TimerEvent: {}
+[0.136942] (state_machine_pkg) StdoutLine: {'line': b'-- Found rclcpp: 16.0.4 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.199748] (-) TimerEvent: {}
+[0.300114] (-) TimerEvent: {}
+[0.400491] (-) TimerEvent: {}
+[0.430192] (state_machine_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.432695] (state_machine_pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.438325] (state_machine_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.451169] (state_machine_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.466695] (state_machine_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.500611] (-) TimerEvent: {}
+[0.526179] (state_machine_pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.527628] (state_machine_pkg) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.600763] (-) TimerEvent: {}
+[0.701133] (-) TimerEvent: {}
+[0.801529] (-) TimerEvent: {}
+[0.901933] (-) TimerEvent: {}
+[1.002335] (-) TimerEvent: {}
+[1.102683] (-) TimerEvent: {}
+[1.203106] (-) TimerEvent: {}
+[1.303473] (-) TimerEvent: {}
+[1.403831] (-) TimerEvent: {}
+[1.504237] (-) TimerEvent: {}
+[1.604666] (-) TimerEvent: {}
+[1.705025] (-) TimerEvent: {}
+[1.805431] (-) TimerEvent: {}
+[1.905836] (-) TimerEvent: {}
+[2.006215] (-) TimerEvent: {}
+[2.106636] (-) TimerEvent: {}
+[2.207033] (-) TimerEvent: {}
+[2.307414] (-) TimerEvent: {}
+[2.407790] (-) TimerEvent: {}
+[2.508176] (-) TimerEvent: {}
+[2.608555] (-) TimerEvent: {}
+[2.708956] (-) TimerEvent: {}
+[2.809318] (-) TimerEvent: {}
+[2.909708] (-) TimerEvent: {}
+[3.010104] (-) TimerEvent: {}
+[3.110508] (-) TimerEvent: {}
+[3.210906] (-) TimerEvent: {}
+[3.311380] (-) TimerEvent: {}
+[3.411754] (-) TimerEvent: {}
+[3.512132] (-) TimerEvent: {}
+[3.612481] (-) TimerEvent: {}
+[3.712861] (-) TimerEvent: {}
+[3.813205] (-) TimerEvent: {}
+[3.913576] (-) TimerEvent: {}
+[4.013942] (-) TimerEvent: {}
+[4.114296] (-) TimerEvent: {}
+[4.214723] (-) TimerEvent: {}
+[4.315105] (-) TimerEvent: {}
+[4.415487] (-) TimerEvent: {}
+[4.515850] (-) TimerEvent: {}
+[4.616216] (-) TimerEvent: {}
+[4.716579] (-) TimerEvent: {}
+[4.816940] (-) TimerEvent: {}
+[4.917300] (-) TimerEvent: {}
+[5.017722] (-) TimerEvent: {}
+[5.118109] (-) TimerEvent: {}
+[5.218511] (-) TimerEvent: {}
+[5.318874] (-) TimerEvent: {}
+[5.419234] (-) TimerEvent: {}
+[5.519579] (-) TimerEvent: {}
+[5.619927] (-) TimerEvent: {}
+[5.720287] (-) TimerEvent: {}
+[5.820642] (-) TimerEvent: {}
+[5.921006] (-) TimerEvent: {}
+[6.021361] (-) TimerEvent: {}
+[6.121729] (-) TimerEvent: {}
+[6.222103] (-) TimerEvent: {}
+[6.322516] (-) TimerEvent: {}
+[6.422877] (-) TimerEvent: {}
+[6.523231] (-) TimerEvent: {}
+[6.623583] (-) TimerEvent: {}
+[6.723959] (-) TimerEvent: {}
+[6.824318] (-) TimerEvent: {}
+[6.924690] (-) TimerEvent: {}
+[7.025049] (-) TimerEvent: {}
+[7.125450] (-) TimerEvent: {}
+[7.225869] (-) TimerEvent: {}
+[7.326285] (-) TimerEvent: {}
+[7.426658] (-) TimerEvent: {}
+[7.527022] (-) TimerEvent: {}
+[7.627386] (-) TimerEvent: {}
+[7.727750] (-) TimerEvent: {}
+[7.828123] (-) TimerEvent: {}
+[7.928485] (-) TimerEvent: {}
+[8.028861] (-) TimerEvent: {}
+[8.129227] (-) TimerEvent: {}
+[8.229594] (-) TimerEvent: {}
+[8.329953] (-) TimerEvent: {}
+[8.430338] (-) TimerEvent: {}
+[8.530721] (-) TimerEvent: {}
+[8.631088] (-) TimerEvent: {}
+[8.731492] (-) TimerEvent: {}
+[8.831872] (-) TimerEvent: {}
+[8.932253] (-) TimerEvent: {}
+[9.032632] (-) TimerEvent: {}
+[9.133009] (-) TimerEvent: {}
+[9.233368] (-) TimerEvent: {}
+[9.333730] (-) TimerEvent: {}
+[9.434101] (-) TimerEvent: {}
+[9.534453] (-) TimerEvent: {}
+[9.634827] (-) TimerEvent: {}
+[9.735199] (-) TimerEvent: {}
+[9.835622] (-) TimerEvent: {}
+[9.936051] (-) TimerEvent: {}
+[10.036413] (-) TimerEvent: {}
+[10.136760] (-) TimerEvent: {}
+[10.237121] (-) TimerEvent: {}
+[10.337520] (-) TimerEvent: {}
+[10.437896] (-) TimerEvent: {}
+[10.538255] (-) TimerEvent: {}
+[10.638622] (-) TimerEvent: {}
+[10.739016] (-) TimerEvent: {}
+[10.839413] (-) TimerEvent: {}
+[10.939783] (-) TimerEvent: {}
+[11.040160] (-) TimerEvent: {}
+[11.140516] (-) TimerEvent: {}
+[11.240899] (-) TimerEvent: {}
+[11.341292] (-) TimerEvent: {}
+[11.441659] (-) TimerEvent: {}
+[11.542029] (-) TimerEvent: {}
+[11.642421] (-) TimerEvent: {}
+[11.742779] (-) TimerEvent: {}
+[11.843150] (-) TimerEvent: {}
+[11.881046] (state_machine_pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[11.943289] (-) TimerEvent: {}
+[12.043646] (-) TimerEvent: {}
+[12.084817] (state_machine_pkg) StdoutLine: {'line': b'-- Configuring done\n'}
+[12.092411] (state_machine_pkg) StdoutLine: {'line': b'-- Generating done\n'}
+[12.093605] (state_machine_pkg) StdoutLine: {'line': b'-- Build files have been written to: /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg\n'}
+[12.100672] (state_machine_pkg) CommandEnded: {'returncode': 0}
+[12.102501] (state_machine_pkg) JobProgress: {'identifier': 'state_machine_pkg', 'progress': 'build'}
+[12.102868] (state_machine_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg', '--', '-j12', '-l12'], 'cwd': '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vini_dunker'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vini_dunker/udemy_ws/install/udemy_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vini_dunker'), ('OLDPWD', '/home/vini_dunker/COSMOS-AFS/cosmos_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/vini_dunker/Automation/mrt19ROS_ws/install:/home/vini_dunker/mrt_ws/install:/home/vini_dunker/udemy_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'vini_dunker'), ('NAME', 'Vinicius'), ('WSL_INTEROP', '/run/WSL/371_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/Microsoft/jdk-11.0.16.101-hotspot/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/MATLAB/R2022b/bin:/mnt/c/Program Files/MATLAB/R2022a/bin:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/FPC/3.2.2/bin/i386-Win32:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Users/Vinicius Ferreira/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Vinicius Ferreira/.dotnet/tools:/mnt/c/Users/Vinicius Ferreira/AppData/Local/JetBrains/Toolbox/scripts:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2022.3/bin:/mnt/c/Users/Vinicius Ferreira/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Vinicius Ferreira/.dotnet/tools:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg:/home/vini_dunker/udemy_ws/install/udemy_bringup:/home/vini_dunker/udemy_ws/install/my_py_pkg:/home/vini_dunker/udemy_ws/install/my_cpp_pkg:/home/vini_dunker/udemy_ws/install/udemy_interfaces:/home/vini_dunker/mrt_ws/install/traverse_stage:/home/vini_dunker/mrt_ws/install/state_machine:/home/vini_dunker/mrt_ws/install/data_acquisition:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg/lib/python3.10/site-packages:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg/lib/python3.10/site-packages:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg/lib/python3.10/site-packages:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg/lib/python3.10/site-packages:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg/lib/python3.10/site-packages:/home/vini_dunker/udemy_ws/install/my_py_pkg/lib/python3.10/site-packages:/home/vini_dunker/udemy_ws/install/udemy_interfaces/local/lib/python3.10/dist-packages:/home/vini_dunker/mrt_ws/install/traverse_stage/lib/python3.10/site-packages:/home/vini_dunker/mrt_ws/install/state_machine/lib/python3.10/site-packages:/home/vini_dunker/mrt_ws/install/data_acquisition/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/vini_dunker/udemy_ws/install/udemy_bringup:/home/vini_dunker/udemy_ws/install/my_cpp_pkg:/home/vini_dunker/udemy_ws/install/udemy_interfaces:/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg:/home/vini_dunker/udemy_ws/install/my_py_pkg:/home/vini_dunker/mrt_ws/install/traverse_stage:/home/vini_dunker/mrt_ws/install/state_machine:/home/vini_dunker/mrt_ws/install/data_acquisition:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[12.132278] (state_machine_pkg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o\x1b[0m\n'}
+[12.143777] (-) TimerEvent: {}
+[12.244159] (-) TimerEvent: {}
+[12.344636] (-) TimerEvent: {}
+[12.445031] (-) TimerEvent: {}
+[12.545417] (-) TimerEvent: {}
+[12.645801] (-) TimerEvent: {}
+[12.746183] (-) TimerEvent: {}
+[12.846548] (-) TimerEvent: {}
+[12.946896] (-) TimerEvent: {}
+[13.047268] (-) TimerEvent: {}
+[13.147694] (-) TimerEvent: {}
+[13.248057] (-) TimerEvent: {}
+[13.348413] (-) TimerEvent: {}
+[13.448790] (-) TimerEvent: {}
+[13.549163] (-) TimerEvent: {}
+[13.649541] (-) TimerEvent: {}
+[13.749910] (-) TimerEvent: {}
+[13.850287] (-) TimerEvent: {}
+[13.950663] (-) TimerEvent: {}
+[14.051030] (-) TimerEvent: {}
+[14.151392] (-) TimerEvent: {}
+[14.251749] (-) TimerEvent: {}
+[14.291142] (state_machine_pkg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable state_machine\x1b[0m\n'}
+[14.351871] (-) TimerEvent: {}
+[14.452270] (-) TimerEvent: {}
+[14.552682] (-) TimerEvent: {}
+[14.567238] (state_machine_pkg) StdoutLine: {'line': b'[100%] Built target state_machine\n'}
+[14.574523] (state_machine_pkg) CommandEnded: {'returncode': 0}
+[14.590423] (state_machine_pkg) JobProgress: {'identifier': 'state_machine_pkg', 'progress': 'install'}
+[14.595933] (state_machine_pkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg'], 'cwd': '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'vini_dunker'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/vini_dunker/udemy_ws/install/udemy_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/vini_dunker'), ('OLDPWD', '/home/vini_dunker/COSMOS-AFS/cosmos_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/vini_dunker/Automation/mrt19ROS_ws/install:/home/vini_dunker/mrt_ws/install:/home/vini_dunker/udemy_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'vini_dunker'), ('NAME', 'Vinicius'), ('WSL_INTEROP', '/run/WSL/371_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/Microsoft/jdk-11.0.16.101-hotspot/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/MATLAB/R2022b/bin:/mnt/c/Program Files/MATLAB/R2022a/bin:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/Git/cmd:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/FPC/3.2.2/bin/i386-Win32:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Users/Vinicius Ferreira/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Vinicius Ferreira/.dotnet/tools:/mnt/c/Users/Vinicius Ferreira/AppData/Local/JetBrains/Toolbox/scripts:/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2022.3/bin:/mnt/c/Users/Vinicius Ferreira/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Vinicius Ferreira/.dotnet/tools:/snap/bin'), ('XDG_RUNTIME_DIR', '/mnt/wslg/runtime-dir'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg:/home/vini_dunker/udemy_ws/install/udemy_bringup:/home/vini_dunker/udemy_ws/install/my_py_pkg:/home/vini_dunker/udemy_ws/install/my_cpp_pkg:/home/vini_dunker/udemy_ws/install/udemy_interfaces:/home/vini_dunker/mrt_ws/install/traverse_stage:/home/vini_dunker/mrt_ws/install/state_machine:/home/vini_dunker/mrt_ws/install/data_acquisition:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg/lib/python3.10/site-packages:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg/lib/python3.10/site-packages:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg/lib/python3.10/site-packages:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg/lib/python3.10/site-packages:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg/lib/python3.10/site-packages:/home/vini_dunker/udemy_ws/install/my_py_pkg/lib/python3.10/site-packages:/home/vini_dunker/udemy_ws/install/udemy_interfaces/local/lib/python3.10/dist-packages:/home/vini_dunker/mrt_ws/install/traverse_stage/lib/python3.10/site-packages:/home/vini_dunker/mrt_ws/install/state_machine/lib/python3.10/site-packages:/home/vini_dunker/mrt_ws/install/data_acquisition/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/vini_dunker/udemy_ws/install/udemy_bringup:/home/vini_dunker/udemy_ws/install/my_cpp_pkg:/home/vini_dunker/udemy_ws/install/udemy_interfaces:/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg:/home/vini_dunker/udemy_ws/install/my_py_pkg:/home/vini_dunker/mrt_ws/install/traverse_stage:/home/vini_dunker/mrt_ws/install/state_machine:/home/vini_dunker/mrt_ws/install/data_acquisition:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[14.600979] (state_machine_pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[14.601362] (state_machine_pkg) StdoutLine: {'line': b'-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/lib/state_machine_pkg/state_machine\n'}
+[14.601669] (state_machine_pkg) StdoutLine: {'line': b'-- Set runtime path of "/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/lib/state_machine_pkg/state_machine" to ""\n'}
+[14.601890] (state_machine_pkg) StdoutLine: {'line': b'-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/ament_index/resource_index/package_run_dependencies/state_machine_pkg\n'}
+[14.602107] (state_machine_pkg) StdoutLine: {'line': b'-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/ament_index/resource_index/parent_prefix_path/state_machine_pkg\n'}
+[14.602296] (state_machine_pkg) StdoutLine: {'line': b'-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/environment/ament_prefix_path.sh\n'}
+[14.602426] (state_machine_pkg) StdoutLine: {'line': b'-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/environment/ament_prefix_path.dsv\n'}
+[14.602588] (state_machine_pkg) StdoutLine: {'line': b'-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/environment/path.sh\n'}
+[14.602913] (state_machine_pkg) StdoutLine: {'line': b'-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/environment/path.dsv\n'}
+[14.602985] (state_machine_pkg) StdoutLine: {'line': b'-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/local_setup.bash\n'}
+[14.603143] (state_machine_pkg) StdoutLine: {'line': b'-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/local_setup.sh\n'}
+[14.603496] (state_machine_pkg) StdoutLine: {'line': b'-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/local_setup.zsh\n'}
+[14.603566] (state_machine_pkg) StdoutLine: {'line': b'-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/local_setup.dsv\n'}
+[14.603619] (state_machine_pkg) StdoutLine: {'line': b'-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/package.dsv\n'}
+[14.603774] (state_machine_pkg) StdoutLine: {'line': b'-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/ament_index/resource_index/packages/state_machine_pkg\n'}
+[14.604099] (state_machine_pkg) StdoutLine: {'line': b'-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/cmake/state_machine_pkgConfig.cmake\n'}
+[14.604169] (state_machine_pkg) StdoutLine: {'line': b'-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/cmake/state_machine_pkgConfig-version.cmake\n'}
+[14.604221] (state_machine_pkg) StdoutLine: {'line': b'-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/package.xml\n'}
+[14.605678] (state_machine_pkg) CommandEnded: {'returncode': 0}
+[14.642971] (state_machine_pkg) JobEnded: {'identifier': 'state_machine_pkg', 'rc': 0}
+[14.644085] (-) EventReactorShutdown: {}

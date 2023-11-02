@@ -1,0 +1,3 @@
+[console_scripts]
+Data_Acquisition = sensors_pkg.daq_node:main
+
