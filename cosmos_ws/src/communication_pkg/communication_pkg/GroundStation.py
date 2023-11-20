@@ -24,7 +24,7 @@ class GroundStation(Node):
         msg = int(self.serial.readline().decode().strip())
         if msg:
             self.get_logger().info(f"Publishing Mission: {msg}")
-            self.mission_publisher.publish(Int32(data=msg))
+            self.publisher_.publish(Int32(data=msg))
 
     def sm_command(self, msg):
         command = msg.data
