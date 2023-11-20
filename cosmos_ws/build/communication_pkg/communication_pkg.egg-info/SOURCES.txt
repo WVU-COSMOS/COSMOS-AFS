@@ -8,6 +8,7 @@ setup.py
 ../../build/communication_pkg/communication_pkg.egg-info/requires.txt
 ../../build/communication_pkg/communication_pkg.egg-info/top_level.txt
 ../../build/communication_pkg/communication_pkg.egg-info/zip-safe
+communication_pkg/GroundStation.py
 communication_pkg/__init__.py
 resource/communication_pkg
 test/test_copyright.py
