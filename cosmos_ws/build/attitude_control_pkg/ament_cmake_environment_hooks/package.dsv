@@ -1,0 +1,4 @@
+source;share/attitude_control_pkg/local_setup.bash
+source;share/attitude_control_pkg/local_setup.dsv
+source;share/attitude_control_pkg/local_setup.sh
+source;share/attitude_control_pkg/local_setup.zsh

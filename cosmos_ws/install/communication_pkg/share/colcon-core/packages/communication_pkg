@@ -1,1 +1,1 @@
-example_interfaces:rclpy:serial
+cosmos_interfaces:example_interfaces:rclpy:serial

@@ -1,7 +1,7 @@
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages/communication_pkg/__init__.py
-/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages/communication_pkg/GroundStation.py
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages/communication_pkg/SerialCommunication.py
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages/communication_pkg/__pycache__/__init__.cpython-310.pyc
-/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages/communication_pkg/__pycache__/GroundStation.cpython-310.pyc
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages/communication_pkg/__pycache__/SerialCommunication.cpython-310.pyc
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg/share/ament_index/resource_index/packages/communication_pkg
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg/share/communication_pkg/package.xml
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages/communication_pkg-0.0.0-py3.10.egg-info/dependency_links.txt
@@ -11,4 +11,4 @@
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages/communication_pkg-0.0.0-py3.10.egg-info/zip-safe
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages/communication_pkg-0.0.0-py3.10.egg-info/entry_points.txt
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages/communication_pkg-0.0.0-py3.10.egg-info/PKG-INFO
-/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/communication_pkg/Ground_Station
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/communication_pkg/SerialCommunication

@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "Ground_Station = communication_pkg.GroundStation:main"
+            "SerialCommunication = communication_pkg.SerialCommunication:main"
         ],
     },
 )

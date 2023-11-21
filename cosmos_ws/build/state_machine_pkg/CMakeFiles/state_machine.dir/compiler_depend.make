@@ -669,8 +669,16 @@ CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o: /home/vini_dunker/COS
   /opt/ros/humble/include/std_msgs/std_msgs/msg/int32.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__struct.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__builder.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__traits.hpp
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__traits.hpp \
+  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/reaction_wheels.hpp \
+  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__struct.hpp \
+  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__builder.hpp \
+  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__traits.hpp
 
+
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__builder.hpp:
+
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__struct.hpp:
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__builder.hpp:
 
@@ -703,6 +711,8 @@ CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o: /home/vini_dunker/COS
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/list_parameters.hpp:
+
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__traits.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__traits.hpp:
 
@@ -1949,6 +1959,8 @@ CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o: /home/vini_dunker/COS
 /opt/ros/humble/include/rclcpp/rclcpp/detail/rmw_implementation_specific_payload.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__builder.hpp:
+
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/reaction_wheels.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__struct.hpp:
 

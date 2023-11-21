@@ -1,0 +1,22 @@
+[1.138s] Invoking command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/camera_pkg': PYTHONPATH=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/camera_pkg/prefix_override:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/camera_pkg build --build-base /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/camera_pkg/build install --record /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/camera_pkg/install.log --single-version-externally-managed
+[1.404s] running egg_info
+[1.404s] writing ../../build/camera_pkg/camera_pkg.egg-info/PKG-INFO
+[1.405s] writing dependency_links to ../../build/camera_pkg/camera_pkg.egg-info/dependency_links.txt
+[1.405s] writing entry points to ../../build/camera_pkg/camera_pkg.egg-info/entry_points.txt
+[1.406s] writing requirements to ../../build/camera_pkg/camera_pkg.egg-info/requires.txt
+[1.406s] writing top-level names to ../../build/camera_pkg/camera_pkg.egg-info/top_level.txt
+[1.412s] reading manifest file '../../build/camera_pkg/camera_pkg.egg-info/SOURCES.txt'
+[1.412s] writing manifest file '../../build/camera_pkg/camera_pkg.egg-info/SOURCES.txt'
+[1.412s] running build
+[1.412s] running build_py
+[1.412s] running install
+[1.413s] running install_lib
+[1.413s] byte-compiling /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg/image_to_pixel.py to image_to_pixel.cpython-310.pyc
+[1.413s] running install_data
+[1.413s] Sorry: IndentationError: expected an indented block after function definition on line 6 (image_to_pixel.py, line 14)
+[1.413s] running install_egg_info
+[1.416s] removing '/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[1.416s] Copying ../../build/camera_pkg/camera_pkg.egg-info to /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg-0.0.0-py3.10.egg-info
+[1.418s] running install_scripts
+[1.446s] writing list of installed files to '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/camera_pkg/install.log'
+[1.491s] Invoked command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/camera_pkg' returned '0': PYTHONPATH=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/camera_pkg/prefix_override:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/camera_pkg build --build-base /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/camera_pkg/build install --record /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/camera_pkg/install.log --single-version-externally-managed

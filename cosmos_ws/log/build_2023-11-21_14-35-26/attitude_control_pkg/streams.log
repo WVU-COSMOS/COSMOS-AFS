@@ -1,0 +1,122 @@
+[0.137s] Invoking command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg': CMAKE_PREFIX_PATH=/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/vini_dunker/udemy_ws/install/udemy_bringup:/home/vini_dunker/udemy_ws/install/my_cpp_pkg:/home/vini_dunker/udemy_ws/install/udemy_interfaces:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg:/home/vini_dunker/udemy_ws/install/my_py_pkg:/home/vini_dunker/mrt_ws/install/traverse_stage:/home/vini_dunker/mrt_ws/install/state_machine:/home/vini_dunker/mrt_ws/install/data_acquisition:/opt/ros/humble /usr/bin/cmake --build /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg -- -j12 -l12
+[0.165s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.303s] -- Found rclcpp: 16.0.4 (/opt/ros/humble/share/rclcpp/cmake)
+[0.533s] -- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.536s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.543s] -- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.555s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.571s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.632s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.634s] -- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[9.027s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[9.185s] -- Found cosmos_interfaces: 0.0.0 (/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake)
+[9.265s] -- Configuring done
+[9.286s] -- Generating done
+[9.288s] -- Build files have been written to: /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg
+[9.309s] [35m[1mConsolidate compiler generated dependencies of target reaction_wheels[0m
+[9.321s] [ 50%] [32mBuilding CXX object CMakeFiles/reaction_wheels.dir/src/reaction_wheels_node.cpp.o[0m
+[11.282s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[11.283s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[11.283s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[11.283s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[11.283s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[11.283s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[11.283s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[11.283s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[11.283s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[11.283s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[11.283s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[11.283s]                  from [01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/include/attitude_control_pkg/reaction_wheels_node.hpp:4[m[K,
+[11.283s]                  from [01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/reaction_wheels_node.cpp:1[m[K:
+[11.283s] [01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/reaction_wheels_node.cpp:[m[K In member function ‘[01m[Kvoid ReactionWheels::sMachineCallback(cosmos_interfaces::msg::ReactionWheels_<std::allocator<void> >::SharedPtr)[m[K’:
+[11.283s] [01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/reaction_wheels_node.cpp:15:37:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[Kcosmos_interfaces::msg::ReactionWheels_<std::allocator<void> >::_command_type[m[K’ {aka ‘[01m[Klong int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[11.283s]    15 |     RCLCPP_INFO(this->get_logger(), [01;35m[K"Received: Command: %d, Speed: %d, Time: %d."[m[K,
+[11.283s]       |                                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.283s]    16 |                          [32m[Kmsg->command[m[K, msg->speed, msg->running_time);
+[11.284s]       |                          [32m[K~~~~~~~~~~~~[m[K
+[11.284s]       |                               [32m[K|[m[K
+[11.284s]       |                               [32m[Kcosmos_interfaces::msg::ReactionWheels_<std::allocator<void> >::_command_type {aka long int}[m[K
+[11.284s] [01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/reaction_wheels_node.cpp:15:58:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[11.284s]    15 |     RCLCPP_INFO(this->get_logger(), "Received: Command: [01;36m[K%d[m[K, Speed: %d, Time: %d.",
+[11.284s]       |                                                         [01;36m[K~^[m[K
+[11.284s]       |                                                          [01;36m[K|[m[K
+[11.284s]       |                                                          [01;36m[Kint[m[K
+[11.284s]       |                                                         [32m[K%ld[m[K
+[11.284s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[11.284s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[11.284s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[11.284s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[11.284s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[11.284s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[11.284s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[11.284s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[11.285s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[11.285s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[11.285s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[11.285s]                  from [01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/include/attitude_control_pkg/reaction_wheels_node.hpp:4[m[K,
+[11.285s]                  from [01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/reaction_wheels_node.cpp:1[m[K:
+[11.285s] [01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/reaction_wheels_node.cpp:15:37:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 6 has type ‘[01m[Kcosmos_interfaces::msg::ReactionWheels_<std::allocator<void> >::_speed_type[m[K’ {aka ‘[01m[Klong int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[11.285s]    15 |     RCLCPP_INFO(this->get_logger(), [01;35m[K"Received: Command: %d, Speed: %d, Time: %d."[m[K,
+[11.285s]       |                                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.285s]    16 |                          msg->command, [32m[Kmsg->speed[m[K, msg->running_time);
+[11.285s]       |                                        [32m[K~~~~~~~~~~[m[K
+[11.285s]       |                                             [32m[K|[m[K
+[11.285s]       |                                             [32m[Kcosmos_interfaces::msg::ReactionWheels_<std::allocator<void> >::_speed_type {aka long int}[m[K
+[11.285s] [01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/reaction_wheels_node.cpp:15:69:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[11.285s]    15 |     RCLCPP_INFO(this->get_logger(), "Received: Command: %d, Speed: [01;36m[K%d[m[K, Time: %d.",
+[11.285s]       |                                                                    [01;36m[K~^[m[K
+[11.285s]       |                                                                     [01;36m[K|[m[K
+[11.285s]       |                                                                     [01;36m[Kint[m[K
+[11.285s]       |                                                                    [32m[K%ld[m[K
+[11.285s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[11.285s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[11.285s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[11.286s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[11.286s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[11.286s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[11.286s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[11.286s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[11.286s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[11.286s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[11.286s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[11.286s]                  from [01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/include/attitude_control_pkg/reaction_wheels_node.hpp:4[m[K,
+[11.286s]                  from [01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/reaction_wheels_node.cpp:1[m[K:
+[11.286s] [01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/reaction_wheels_node.cpp:15:37:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 7 has type ‘[01m[Kcosmos_interfaces::msg::ReactionWheels_<std::allocator<void> >::_running_time_type[m[K’ {aka ‘[01m[Klong int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[11.286s]    15 |     RCLCPP_INFO(this->get_logger(), [01;35m[K"Received: Command: %d, Speed: %d, Time: %d."[m[K,
+[11.286s]       |                                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.286s]    16 |                          msg->command, msg->speed, [32m[Kmsg->running_time[m[K);
+[11.286s]       |                                                    [32m[K~~~~~~~~~~~~~~~~~[m[K
+[11.286s]       |                                                         [32m[K|[m[K
+[11.286s]       |                                                         [32m[Kcosmos_interfaces::msg::ReactionWheels_<std::allocator<void> >::_running_time_type {aka long int}[m[K
+[11.286s] [01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/reaction_wheels_node.cpp:15:79:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[11.286s]    15 |     RCLCPP_INFO(this->get_logger(), "Received: Command: %d, Speed: %d, Time: [01;36m[K%d[m[K.",
+[11.286s]       |                                                                              [01;36m[K~^[m[K
+[11.287s]       |                                                                               [01;36m[K|[m[K
+[11.287s]       |                                                                               [01;36m[Kint[m[K
+[11.287s]       |                                                                              [32m[K%ld[m[K
+[15.979s] [100%] [32m[1mLinking CXX executable reaction_wheels[0m
+[16.409s] [100%] Built target reaction_wheels
+[16.418s] Invoked command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg' returned '0': CMAKE_PREFIX_PATH=/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/vini_dunker/udemy_ws/install/udemy_bringup:/home/vini_dunker/udemy_ws/install/my_cpp_pkg:/home/vini_dunker/udemy_ws/install/udemy_interfaces:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg:/home/vini_dunker/udemy_ws/install/my_py_pkg:/home/vini_dunker/mrt_ws/install/traverse_stage:/home/vini_dunker/mrt_ws/install/state_machine:/home/vini_dunker/mrt_ws/install/data_acquisition:/opt/ros/humble /usr/bin/cmake --build /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg -- -j12 -l12
+[16.441s] Invoking command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg': CMAKE_PREFIX_PATH=/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/vini_dunker/udemy_ws/install/udemy_bringup:/home/vini_dunker/udemy_ws/install/my_cpp_pkg:/home/vini_dunker/udemy_ws/install/udemy_interfaces:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg:/home/vini_dunker/udemy_ws/install/my_py_pkg:/home/vini_dunker/mrt_ws/install/traverse_stage:/home/vini_dunker/mrt_ws/install/state_machine:/home/vini_dunker/mrt_ws/install/data_acquisition:/opt/ros/humble /usr/bin/cmake --install /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg
+[16.445s] -- Install configuration: ""
+[16.446s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/lib/attitude_control_pkg/reaction_wheels
+[16.449s] -- Set runtime path of "/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/lib/attitude_control_pkg/reaction_wheels" to ""
+[16.450s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/include/attitude_control_pkg
+[16.450s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/include/attitude_control_pkg/attitude_control_pkg
+[16.450s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/include/attitude_control_pkg/attitude_control_pkg/reaction_wheels_node.hpp
+[16.450s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/ament_index/resource_index/package_run_dependencies/attitude_control_pkg
+[16.450s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/ament_index/resource_index/parent_prefix_path/attitude_control_pkg
+[16.450s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/environment/ament_prefix_path.sh
+[16.450s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/environment/ament_prefix_path.dsv
+[16.450s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/environment/path.sh
+[16.451s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/environment/path.dsv
+[16.451s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/local_setup.bash
+[16.451s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/local_setup.sh
+[16.451s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/local_setup.zsh
+[16.452s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/local_setup.dsv
+[16.452s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/package.dsv
+[16.452s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/ament_index/resource_index/packages/attitude_control_pkg
+[16.452s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/cmake/attitude_control_pkgConfig.cmake
+[16.452s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/cmake/attitude_control_pkgConfig-version.cmake
+[16.452s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/package.xml
+[16.456s] Invoked command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg' returned '0': CMAKE_PREFIX_PATH=/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/vini_dunker/udemy_ws/install/udemy_bringup:/home/vini_dunker/udemy_ws/install/my_cpp_pkg:/home/vini_dunker/udemy_ws/install/udemy_interfaces:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg:/home/vini_dunker/udemy_ws/install/my_py_pkg:/home/vini_dunker/mrt_ws/install/traverse_stage:/home/vini_dunker/mrt_ws/install/state_machine:/home/vini_dunker/mrt_ws/install/data_acquisition:/opt/ros/humble /usr/bin/cmake --install /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg
