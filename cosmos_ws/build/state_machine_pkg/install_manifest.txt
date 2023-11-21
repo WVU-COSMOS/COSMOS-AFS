@@ -1,4 +1,5 @@
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/lib/state_machine_pkg/state_machine
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/include/state_machine_pkg/state_machine_pkg/state_machine_node.hpp
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/ament_index/resource_index/package_run_dependencies/state_machine_pkg
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/ament_index/resource_index/parent_prefix_path/state_machine_pkg
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/environment/ament_prefix_path.sh
