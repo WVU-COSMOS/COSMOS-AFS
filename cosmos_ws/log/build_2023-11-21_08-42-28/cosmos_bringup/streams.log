@@ -1,0 +1,18 @@
+[0.711s] Invoking command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg:/home/vini_dunker/udemy_ws/install/my_py_pkg:/home/vini_dunker/mrt_ws/install/traverse_stage:/home/vini_dunker/mrt_ws/install/state_machine:/home/vini_dunker/mrt_ws/install/data_acquisition:/opt/ros/humble /usr/bin/cmake /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_bringup -DCMAKE_INSTALL_PREFIX=/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_bringup
+[0.962s] -- The C compiler identification is GNU 11.4.0
+[1.777s] -- The CXX compiler identification is GNU 11.4.0
+[2.413s] -- Detecting C compiler ABI info
+[2.593s] -- Detecting C compiler ABI info - done
+[2.599s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.600s] -- Detecting C compile features
+[2.601s] -- Detecting C compile features - done
+[2.604s] -- Detecting CXX compiler ABI info
+[2.810s] -- Detecting CXX compiler ABI info - done
+[2.817s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.817s] -- Detecting CXX compile features
+[2.818s] -- Detecting CXX compile features - done
+[2.825s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.988s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[3.132s] -- Configuring done
+[3.136s] -- Generating done
+[3.137s] -- Build files have been written to: /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_bringup

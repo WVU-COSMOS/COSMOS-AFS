@@ -1,6 +1,7 @@
 CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o: \
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg/src/state_machine_node.cpp \
  /usr/include/stdc-predef.h \
+ /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg/include/state_machine_pkg/state_machine_node.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
  /usr/include/c++/11/csignal \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -598,4 +599,8 @@ CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o: \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/static_storage.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
- /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp
+ /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/int32.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__struct.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__builder.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32__traits.hpp

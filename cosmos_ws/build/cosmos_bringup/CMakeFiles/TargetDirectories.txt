@@ -1,0 +1,9 @@
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_bringup/CMakeFiles/uninstall.dir
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_bringup/CMakeFiles/cosmos_bringup_uninstall.dir
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_bringup/CMakeFiles/test.dir
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_bringup/CMakeFiles/edit_cache.dir
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_bringup/CMakeFiles/rebuild_cache.dir
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_bringup/CMakeFiles/list_install_components.dir
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_bringup/CMakeFiles/install.dir
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_bringup/CMakeFiles/install/local.dir
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_bringup/CMakeFiles/install/strip.dir

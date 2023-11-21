@@ -1,0 +1,42 @@
+[0.888s] Invoking command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg:/home/vini_dunker/udemy_ws/install/my_py_pkg:/home/vini_dunker/mrt_ws/install/traverse_stage:/home/vini_dunker/mrt_ws/install/state_machine:/home/vini_dunker/mrt_ws/install/data_acquisition:/opt/ros/humble /usr/bin/cmake --build /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg -- -j12 -l12
+[0.903s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.034s] -- Found rclcpp: 16.0.4 (/opt/ros/humble/share/rclcpp/cmake)
+[1.282s] -- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.285s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.293s] -- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.309s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.330s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.400s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.402s] -- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[9.840s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[10.040s] -- Configuring done
+[10.048s] -- Generating done
+[10.049s] -- Build files have been written to: /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg
+[10.066s] [35m[1mConsolidate compiler generated dependencies of target state_machine[0m
+[10.077s] [ 50%] [32mBuilding CXX object CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o[0m
+[16.734s] [100%] [32m[1mLinking CXX executable state_machine[0m
+[17.115s] [100%] Built target state_machine
+[17.123s] Invoked command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg:/home/vini_dunker/udemy_ws/install/my_py_pkg:/home/vini_dunker/mrt_ws/install/traverse_stage:/home/vini_dunker/mrt_ws/install/state_machine:/home/vini_dunker/mrt_ws/install/data_acquisition:/opt/ros/humble /usr/bin/cmake --build /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg -- -j12 -l12
+[17.141s] Invoking command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg:/home/vini_dunker/udemy_ws/install/my_py_pkg:/home/vini_dunker/mrt_ws/install/traverse_stage:/home/vini_dunker/mrt_ws/install/state_machine:/home/vini_dunker/mrt_ws/install/data_acquisition:/opt/ros/humble /usr/bin/cmake --install /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg
+[17.145s] -- Install configuration: ""
+[17.146s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/lib/state_machine_pkg/state_machine
+[17.149s] -- Set runtime path of "/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/lib/state_machine_pkg/state_machine" to ""
+[17.149s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/include/state_machine_pkg
+[17.149s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/include/state_machine_pkg/state_machine_pkg
+[17.149s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/include/state_machine_pkg/state_machine_pkg/state_machine_node.hpp
+[17.149s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/ament_index/resource_index/package_run_dependencies/state_machine_pkg
+[17.150s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/ament_index/resource_index/parent_prefix_path/state_machine_pkg
+[17.150s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/environment/ament_prefix_path.sh
+[17.150s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/environment/ament_prefix_path.dsv
+[17.150s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/environment/path.sh
+[17.150s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/environment/path.dsv
+[17.150s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/local_setup.bash
+[17.150s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/local_setup.sh
+[17.151s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/local_setup.zsh
+[17.151s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/local_setup.dsv
+[17.151s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/package.dsv
+[17.151s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/ament_index/resource_index/packages/state_machine_pkg
+[17.151s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/cmake/state_machine_pkgConfig.cmake
+[17.151s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/cmake/state_machine_pkgConfig-version.cmake
+[17.151s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/package.xml
+[17.153s] Invoked command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg:/home/vini_dunker/udemy_ws/install/my_py_pkg:/home/vini_dunker/mrt_ws/install/traverse_stage:/home/vini_dunker/mrt_ws/install/state_machine:/home/vini_dunker/mrt_ws/install/data_acquisition:/opt/ros/humble /usr/bin/cmake --install /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg

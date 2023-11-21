@@ -1,33 +1,22 @@
-#include "rclcpp/rclcpp.hpp"
+#include "state_machine_pkg/state_machine_node.hpp"
 
-class StateMachine : public rclcpp::Node // MODIFY NAME
+StateMachine::StateMachine() : Node("state_machine")
 {
-public:
-    StateMachine() : Node("state_machine"), counter_(0) // MODIFY NAME
-    {
-        RCLCPP_INFO(this->get_logger(), "Hello from State Machine");
+    gSsubscriber_ = this->create_subscription<std_msgs::msg::Int32>(
+            "gStation_Command", 10, std::bind(&StateMachine::gStationCallback, this, std::placeholders::_1));
 
-        timer_ = this->create_wall_timer(std::chrono::seconds(1),
-                                         std::bind(&StateMachine::timerCallback, this));
-    }
+    RCLCPP_INFO(this->get_logger(), "State Machine has been started!");
+}
 
-private:
-
-    void timerCallback()
-    {
-        counter_++;
-        RCLCPP_INFO(this->get_logger(), "Hello from State Machine %d", counter_);
-    }
-
-    rclcpp::TimerBase::SharedPtr timer_;
-    int counter_;
-
-};
+void StateMachine::gStationCallback(const std_msgs::msg::Int32::SharedPtr msg)
+{
+    RCLCPP_INFO(this->get_logger(), "Received from GStation: %d", msg->data);
+}
 
 int main(int argc, char **argv)
 {
     rclcpp::init(argc, argv);
-    auto node = std::make_shared<StateMachine>(); // MODIFY NAME
+    auto node = std::make_shared<StateMachine>();
     rclcpp::spin(node);
     rclcpp::shutdown();
     return 0;
