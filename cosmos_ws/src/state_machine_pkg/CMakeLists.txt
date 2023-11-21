@@ -9,11 +9,12 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(cosmos_interfaces REQUIRED)
 
 include_directories(include)
 
 add_executable(state_machine src/state_machine_node.cpp)
-ament_target_dependencies(state_machine rclcpp std_msgs)
+ament_target_dependencies(state_machine rclcpp std_msgs cosmos_interfaces)
 
 install(TARGETS
   state_machine

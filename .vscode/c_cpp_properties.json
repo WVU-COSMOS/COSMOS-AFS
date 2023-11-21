@@ -6,7 +6,10 @@
                 "${workspaceFolder}/**",
                 "/opt/ros/humble/include/**",
                 "/opt/ros/humble/include/rclcpp",
-                "${workspaceFolder}/cosmos_ws/src/state_machine_pkg/include"
+                "${workspaceFolder}/cosmos_ws/src/state_machine_pkg/include",
+                "${workspaceFolder}/cosmos_ws/src/attitude_control_pkg/include",
+                "${workspaceFolder}/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp",
+                "/opt/ros/humble/include/rcl"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",

@@ -1,0 +1,30 @@
+-- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.4 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.2 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found cosmos_interfaces: 0.0.0 (/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg
+[35m[1mConsolidate compiler generated dependencies of target state_machine[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o[0m
+[01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg/src/state_machine_node.cpp:[m[K In member function ‘[01m[Kvoid StateMachine::gStationCallback(std_msgs::msg::Int32_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg/src/state_machine_node.cpp:29:5:[m[K [01;31m[Kerror: [m[Kjump to case label
+   29 |     [01;31m[Kdefault[m[K:
+      |     [01;31m[K^~~~~~~[m[K
+[01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg/src/state_machine_node.cpp:22:14:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kcosmos_interfaces::msg::ReactionWheels_<std::allocator<void> > command[m[K’
+   22 |         auto [01;36m[Kcommand[m[K = cosmos_interfaces::msg::ReactionWheels();
+      |              [01;36m[K^~~~~~~[m[K
+[01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg/src/state_machine_node.cpp:19:12:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KORBIT[m[K’ not handled in switch [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch-Wswitch]8;;[m[K]
+   19 |     switch [01;35m[K([m[Kmission_state)
+      |            [01;35m[K^[m[K
+[01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg/src/state_machine_node.cpp:19:12:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KFOLLOW[m[K’ not handled in switch [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch-Wswitch]8;;[m[K]
+gmake[2]: *** [CMakeFiles/state_machine.dir/build.make:76: CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/state_machine.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
