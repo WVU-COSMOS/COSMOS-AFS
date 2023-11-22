@@ -3,7 +3,9 @@
   "output_dir": "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_py/cosmos_interfaces",
   "template_dir": "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource",
   "idl_tuples": [
-    "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_adapter/cosmos_interfaces:msg/ReactionWheels.idl"
+    "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_adapter/cosmos_interfaces:msg/ReactionWheels.idl",
+    "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_adapter/cosmos_interfaces:msg/Position.idl",
+    "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_adapter/cosmos_interfaces:msg/Attitude.idl"
   ],
   "target_dependencies": [
     "/opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py",
@@ -19,6 +21,8 @@
     "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource/_msg.py.em",
     "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource/_srv_pkg_typesupport_entry_point.c.em",
     "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
-    "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_adapter/cosmos_interfaces/msg/ReactionWheels.idl"
+    "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_adapter/cosmos_interfaces/msg/ReactionWheels.idl",
+    "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_adapter/cosmos_interfaces/msg/Position.idl",
+    "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_adapter/cosmos_interfaces/msg/Attitude.idl"
   ]
 }

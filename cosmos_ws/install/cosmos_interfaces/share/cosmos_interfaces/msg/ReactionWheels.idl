@@ -6,11 +6,29 @@
 module cosmos_interfaces {
   module msg {
     struct ReactionWheels {
-      int64 command;
+      boolean motor_x;
 
-      int64 speed;
+      boolean motor_y;
 
-      int64 running_time;
+      boolean motor_z;
+
+      boolean motor_w;
+
+      int32 speed_x;
+
+      int32 speed_y;
+
+      int32 speed_z;
+
+      int32 speed_w;
+
+      int64 time_x;
+
+      int64 time_y;
+
+      int64 time_z;
+
+      int64 time_w;
     };
   };
 };

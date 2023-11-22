@@ -1,2 +1,6 @@
+msg/Attitude.idl
+msg/Attitude.msg
+msg/Position.idl
+msg/Position.msg
 msg/ReactionWheels.idl
 msg/ReactionWheels.msg

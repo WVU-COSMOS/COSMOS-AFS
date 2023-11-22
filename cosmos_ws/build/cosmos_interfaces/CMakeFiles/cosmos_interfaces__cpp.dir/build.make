@@ -70,6 +70,14 @@ CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/re
 CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/reaction_wheels__builder.hpp
 CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/reaction_wheels__struct.hpp
 CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/reaction_wheels__traits.hpp
+CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/position.hpp
+CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/position__builder.hpp
+CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/position__struct.hpp
+CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/position__traits.hpp
+CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/attitude.hpp
+CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/attitude__builder.hpp
+CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/attitude__struct.hpp
+CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/attitude__traits.hpp
 
 rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
 rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
@@ -87,6 +95,8 @@ rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp: /opt/ros/humble/
 rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
 rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp: rosidl_adapter/cosmos_interfaces/msg/ReactionWheels.idl
+rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp: rosidl_adapter/cosmos_interfaces/msg/Position.idl
+rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp: rosidl_adapter/cosmos_interfaces/msg/Attitude.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp__arguments.json
 
@@ -99,10 +109,42 @@ rosidl_generator_cpp/cosmos_interfaces/msg/detail/reaction_wheels__struct.hpp: r
 rosidl_generator_cpp/cosmos_interfaces/msg/detail/reaction_wheels__traits.hpp: rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/cosmos_interfaces/msg/detail/reaction_wheels__traits.hpp
 
+rosidl_generator_cpp/cosmos_interfaces/msg/position.hpp: rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/cosmos_interfaces/msg/position.hpp
+
+rosidl_generator_cpp/cosmos_interfaces/msg/detail/position__builder.hpp: rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/cosmos_interfaces/msg/detail/position__builder.hpp
+
+rosidl_generator_cpp/cosmos_interfaces/msg/detail/position__struct.hpp: rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/cosmos_interfaces/msg/detail/position__struct.hpp
+
+rosidl_generator_cpp/cosmos_interfaces/msg/detail/position__traits.hpp: rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/cosmos_interfaces/msg/detail/position__traits.hpp
+
+rosidl_generator_cpp/cosmos_interfaces/msg/attitude.hpp: rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/cosmos_interfaces/msg/attitude.hpp
+
+rosidl_generator_cpp/cosmos_interfaces/msg/detail/attitude__builder.hpp: rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/cosmos_interfaces/msg/detail/attitude__builder.hpp
+
+rosidl_generator_cpp/cosmos_interfaces/msg/detail/attitude__struct.hpp: rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/cosmos_interfaces/msg/detail/attitude__struct.hpp
+
+rosidl_generator_cpp/cosmos_interfaces/msg/detail/attitude__traits.hpp: rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/cosmos_interfaces/msg/detail/attitude__traits.hpp
+
 cosmos_interfaces__cpp: CMakeFiles/cosmos_interfaces__cpp
+cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/attitude.hpp
+cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/attitude__builder.hpp
+cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/attitude__struct.hpp
+cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/attitude__traits.hpp
+cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/position__builder.hpp
+cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/position__struct.hpp
+cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/position__traits.hpp
 cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/reaction_wheels__builder.hpp
 cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/reaction_wheels__struct.hpp
 cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/reaction_wheels__traits.hpp
+cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/position.hpp
 cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp
 cosmos_interfaces__cpp: CMakeFiles/cosmos_interfaces__cpp.dir/build.make
 .PHONY : cosmos_interfaces__cpp

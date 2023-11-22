@@ -1,0 +1,4 @@
+int64 mission
+int64 current_position
+int64 next_position
+bool is_running

@@ -43,21 +43,21 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg/reaction_wheels" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg/reaction_wheels")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg/attitude_control" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg/attitude_control")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg/reaction_wheels"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg/attitude_control"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg" TYPE EXECUTABLE FILES "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/reaction_wheels")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg/reaction_wheels" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg/reaction_wheels")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg" TYPE EXECUTABLE FILES "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/attitude_control")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg/attitude_control" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg/attitude_control")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg/reaction_wheels"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg/attitude_control"
          OLD_RPATH "/opt/ros/humble/lib:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg/reaction_wheels")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg/attitude_control")
     endif()
   endif()
 endif()

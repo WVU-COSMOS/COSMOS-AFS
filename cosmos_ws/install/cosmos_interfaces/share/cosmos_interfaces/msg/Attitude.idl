@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from cosmos_interfaces/msg/Attitude.msg
+// generated code does not contain a copyright notice
+
+
+module cosmos_interfaces {
+  module msg {
+    struct Attitude {
+      double time_stamp;
+
+      float q1;
+
+      float q2;
+
+      float q3;
+
+      float q4;
+    };
+  };
+};

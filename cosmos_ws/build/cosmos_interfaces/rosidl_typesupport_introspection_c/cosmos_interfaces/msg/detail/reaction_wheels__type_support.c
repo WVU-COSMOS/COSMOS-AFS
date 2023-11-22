@@ -31,16 +31,16 @@ void cosmos_interfaces__msg__ReactionWheels__rosidl_typesupport_introspection_c_
   cosmos_interfaces__msg__ReactionWheels__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember cosmos_interfaces__msg__ReactionWheels__rosidl_typesupport_introspection_c__ReactionWheels_message_member_array[3] = {
+static rosidl_typesupport_introspection_c__MessageMember cosmos_interfaces__msg__ReactionWheels__rosidl_typesupport_introspection_c__ReactionWheels_message_member_array[12] = {
   {
-    "command",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    "motor_x",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(cosmos_interfaces__msg__ReactionWheels, command),  // bytes offset in struct
+    offsetof(cosmos_interfaces__msg__ReactionWheels, motor_x),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -50,14 +50,14 @@ static rosidl_typesupport_introspection_c__MessageMember cosmos_interfaces__msg_
     NULL  // resize(index) function pointer
   },
   {
-    "speed",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    "motor_y",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(cosmos_interfaces__msg__ReactionWheels, speed),  // bytes offset in struct
+    offsetof(cosmos_interfaces__msg__ReactionWheels, motor_y),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -67,14 +67,167 @@ static rosidl_typesupport_introspection_c__MessageMember cosmos_interfaces__msg_
     NULL  // resize(index) function pointer
   },
   {
-    "running_time",  // name
+    "motor_z",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(cosmos_interfaces__msg__ReactionWheels, motor_z),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "motor_w",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(cosmos_interfaces__msg__ReactionWheels, motor_w),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "speed_x",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(cosmos_interfaces__msg__ReactionWheels, speed_x),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "speed_y",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(cosmos_interfaces__msg__ReactionWheels, speed_y),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "speed_z",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(cosmos_interfaces__msg__ReactionWheels, speed_z),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "speed_w",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(cosmos_interfaces__msg__ReactionWheels, speed_w),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "time_x",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(cosmos_interfaces__msg__ReactionWheels, running_time),  // bytes offset in struct
+    offsetof(cosmos_interfaces__msg__ReactionWheels, time_x),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "time_y",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(cosmos_interfaces__msg__ReactionWheels, time_y),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "time_z",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(cosmos_interfaces__msg__ReactionWheels, time_z),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "time_w",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(cosmos_interfaces__msg__ReactionWheels, time_w),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -88,7 +241,7 @@ static rosidl_typesupport_introspection_c__MessageMember cosmos_interfaces__msg_
 static const rosidl_typesupport_introspection_c__MessageMembers cosmos_interfaces__msg__ReactionWheels__rosidl_typesupport_introspection_c__ReactionWheels_message_members = {
   "cosmos_interfaces__msg",  // message namespace
   "ReactionWheels",  // message name
-  3,  // number of fields
+  12,  // number of fields
   sizeof(cosmos_interfaces__msg__ReactionWheels),
   cosmos_interfaces__msg__ReactionWheels__rosidl_typesupport_introspection_c__ReactionWheels_message_member_array,  // message members
   cosmos_interfaces__msg__ReactionWheels__rosidl_typesupport_introspection_c__ReactionWheels_init_function,  // function to initialize message memory (memory has to be allocated)

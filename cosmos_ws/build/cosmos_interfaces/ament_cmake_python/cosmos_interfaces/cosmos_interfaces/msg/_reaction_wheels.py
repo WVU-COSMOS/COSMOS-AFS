@@ -55,18 +55,45 @@ class ReactionWheels(metaclass=Metaclass_ReactionWheels):
     """Message class 'ReactionWheels'."""
 
     __slots__ = [
-        '_command',
-        '_speed',
-        '_running_time',
+        '_motor_x',
+        '_motor_y',
+        '_motor_z',
+        '_motor_w',
+        '_speed_x',
+        '_speed_y',
+        '_speed_z',
+        '_speed_w',
+        '_time_x',
+        '_time_y',
+        '_time_z',
+        '_time_w',
     ]
 
     _fields_and_field_types = {
-        'command': 'int64',
-        'speed': 'int64',
-        'running_time': 'int64',
+        'motor_x': 'boolean',
+        'motor_y': 'boolean',
+        'motor_z': 'boolean',
+        'motor_w': 'boolean',
+        'speed_x': 'int32',
+        'speed_y': 'int32',
+        'speed_z': 'int32',
+        'speed_w': 'int32',
+        'time_x': 'int64',
+        'time_y': 'int64',
+        'time_z': 'int64',
+        'time_w': 'int64',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
@@ -76,9 +103,18 @@ class ReactionWheels(metaclass=Metaclass_ReactionWheels):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.command = kwargs.get('command', int())
-        self.speed = kwargs.get('speed', int())
-        self.running_time = kwargs.get('running_time', int())
+        self.motor_x = kwargs.get('motor_x', bool())
+        self.motor_y = kwargs.get('motor_y', bool())
+        self.motor_z = kwargs.get('motor_z', bool())
+        self.motor_w = kwargs.get('motor_w', bool())
+        self.speed_x = kwargs.get('speed_x', int())
+        self.speed_y = kwargs.get('speed_y', int())
+        self.speed_z = kwargs.get('speed_z', int())
+        self.speed_w = kwargs.get('speed_w', int())
+        self.time_x = kwargs.get('time_x', int())
+        self.time_y = kwargs.get('time_y', int())
+        self.time_z = kwargs.get('time_z', int())
+        self.time_w = kwargs.get('time_w', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -109,11 +145,29 @@ class ReactionWheels(metaclass=Metaclass_ReactionWheels):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.command != other.command:
+        if self.motor_x != other.motor_x:
             return False
-        if self.speed != other.speed:
+        if self.motor_y != other.motor_y:
             return False
-        if self.running_time != other.running_time:
+        if self.motor_z != other.motor_z:
+            return False
+        if self.motor_w != other.motor_w:
+            return False
+        if self.speed_x != other.speed_x:
+            return False
+        if self.speed_y != other.speed_y:
+            return False
+        if self.speed_z != other.speed_z:
+            return False
+        if self.speed_w != other.speed_w:
+            return False
+        if self.time_x != other.time_x:
+            return False
+        if self.time_y != other.time_y:
+            return False
+        if self.time_z != other.time_z:
+            return False
+        if self.time_w != other.time_w:
             return False
         return True
 
@@ -123,46 +177,173 @@ class ReactionWheels(metaclass=Metaclass_ReactionWheels):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def command(self):
-        """Message field 'command'."""
-        return self._command
+    def motor_x(self):
+        """Message field 'motor_x'."""
+        return self._motor_x
 
-    @command.setter
-    def command(self, value):
+    @motor_x.setter
+    def motor_x(self, value):
         if __debug__:
             assert \
-                isinstance(value, int), \
-                "The 'command' field must be of type 'int'"
-            assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'command' field must be an integer in [-9223372036854775808, 9223372036854775807]"
-        self._command = value
+                isinstance(value, bool), \
+                "The 'motor_x' field must be of type 'bool'"
+        self._motor_x = value
 
     @builtins.property
-    def speed(self):
-        """Message field 'speed'."""
-        return self._speed
+    def motor_y(self):
+        """Message field 'motor_y'."""
+        return self._motor_y
 
-    @speed.setter
-    def speed(self, value):
+    @motor_y.setter
+    def motor_y(self, value):
         if __debug__:
             assert \
-                isinstance(value, int), \
-                "The 'speed' field must be of type 'int'"
-            assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'speed' field must be an integer in [-9223372036854775808, 9223372036854775807]"
-        self._speed = value
+                isinstance(value, bool), \
+                "The 'motor_y' field must be of type 'bool'"
+        self._motor_y = value
 
     @builtins.property
-    def running_time(self):
-        """Message field 'running_time'."""
-        return self._running_time
+    def motor_z(self):
+        """Message field 'motor_z'."""
+        return self._motor_z
 
-    @running_time.setter
-    def running_time(self, value):
+    @motor_z.setter
+    def motor_z(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'motor_z' field must be of type 'bool'"
+        self._motor_z = value
+
+    @builtins.property
+    def motor_w(self):
+        """Message field 'motor_w'."""
+        return self._motor_w
+
+    @motor_w.setter
+    def motor_w(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'motor_w' field must be of type 'bool'"
+        self._motor_w = value
+
+    @builtins.property
+    def speed_x(self):
+        """Message field 'speed_x'."""
+        return self._speed_x
+
+    @speed_x.setter
+    def speed_x(self, value):
         if __debug__:
             assert \
                 isinstance(value, int), \
-                "The 'running_time' field must be of type 'int'"
+                "The 'speed_x' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'speed_x' field must be an integer in [-2147483648, 2147483647]"
+        self._speed_x = value
+
+    @builtins.property
+    def speed_y(self):
+        """Message field 'speed_y'."""
+        return self._speed_y
+
+    @speed_y.setter
+    def speed_y(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'speed_y' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'speed_y' field must be an integer in [-2147483648, 2147483647]"
+        self._speed_y = value
+
+    @builtins.property
+    def speed_z(self):
+        """Message field 'speed_z'."""
+        return self._speed_z
+
+    @speed_z.setter
+    def speed_z(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'speed_z' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'speed_z' field must be an integer in [-2147483648, 2147483647]"
+        self._speed_z = value
+
+    @builtins.property
+    def speed_w(self):
+        """Message field 'speed_w'."""
+        return self._speed_w
+
+    @speed_w.setter
+    def speed_w(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'speed_w' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'speed_w' field must be an integer in [-2147483648, 2147483647]"
+        self._speed_w = value
+
+    @builtins.property
+    def time_x(self):
+        """Message field 'time_x'."""
+        return self._time_x
+
+    @time_x.setter
+    def time_x(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'time_x' field must be of type 'int'"
             assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'running_time' field must be an integer in [-9223372036854775808, 9223372036854775807]"
-        self._running_time = value
+                "The 'time_x' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._time_x = value
+
+    @builtins.property
+    def time_y(self):
+        """Message field 'time_y'."""
+        return self._time_y
+
+    @time_y.setter
+    def time_y(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'time_y' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'time_y' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._time_y = value
+
+    @builtins.property
+    def time_z(self):
+        """Message field 'time_z'."""
+        return self._time_z
+
+    @time_z.setter
+    def time_z(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'time_z' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'time_z' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._time_z = value
+
+    @builtins.property
+    def time_w(self):
+        """Message field 'time_w'."""
+        return self._time_w
+
+    @time_w.setter
+    def time_w(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'time_w' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'time_w' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._time_w = value
