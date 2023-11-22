@@ -15,18 +15,32 @@ class SerialCommunication(Node):
 
         # Creating the publisher
         self.publisher_ = self.create_publisher(Int32, "gStation_Command", 10)
-        self.sm_subscriber = self.create_subscription(ReactionWheels, "esp32_command", self.sm_command, 10)
-        self.timer_ = self.create_timer(0.5, self.publish_command)
+
+        # Creating the subcribers
+        self.sm_subscriber = self.create_subscription(ReactionWheels, "esp32_command", self.sm_command_callback, 10)
+
+        self.last_serial_message = None
+
+        self.timer_ = self.create_timer(0.1, self.check_serial)
+
         self.get_logger().info("Serial Communication has been started!")
         
-
+    def check_serial(self):
+        # Check for new messages from the serial port
+        if self.serial.in_waiting > 0:
+            serial_data = self.serial.readline().decode().strip()
+            self.last_serial_message = int(serial_data)
+            self.get_logger().info(f"Received from serial: {self.last_serial_message}")
+            # Publish the received message to the "gStation_Command" topic
+            self.publisher_.publish(Int32(data=self.last_serial_message))
+            
     def publish_command(self):
         msg = int(self.serial.readline().decode().strip())
         if msg:
             self.get_logger().info(f"Publishing Mission: {msg}")
             self.publisher_.publish(Int32(data=msg))
 
-    def sm_command(self, msg):
+    def sm_command_callback(self, msg):
         self.get_logger().info(f"Received: {msg.motor_x}, {msg.speed_x}, {msg.time_x}")
         command_string = f"{msg.motor_x},{msg.speed_x},{msg.time_x}\n"
         # Send the command via serial to ESP32
