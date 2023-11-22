@@ -673,8 +673,16 @@ CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o: /home/vini_dunker/COS
   /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/reaction_wheels.hpp \
   /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__struct.hpp \
   /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__builder.hpp \
-  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__traits.hpp
+  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__traits.hpp \
+  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/position.hpp \
+  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__struct.hpp \
+  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__builder.hpp \
+  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__traits.hpp
 
+
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__traits.hpp:
+
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/position.hpp:
 
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__builder.hpp:
 
@@ -723,6 +731,8 @@ CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o: /home/vini_dunker/COS
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__traits.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__builder.hpp:
+
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__builder.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__struct.hpp:
 
@@ -861,6 +871,8 @@ CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o: /home/vini_dunker/COS
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/parameter_value.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:
+
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__struct.hpp:
 
 /usr/include/c++/11/bits/hashtable.h:
 

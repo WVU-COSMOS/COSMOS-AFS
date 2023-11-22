@@ -32,6 +32,7 @@ void AttitudeControl::sMachineCallback(const cosmos_interfaces::msg::Position::S
         rWheel_msg.time_w = 0;
 
         rWheelsPub_->publish(rWheel_msg);
+        RCLCPP_INFO(this->get_logger(), "Published to esp32_command!");
     }
 }
 
