@@ -10,6 +10,8 @@ find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ReactionWheels.msg"
+  "msg/Position.msg"
+  "msg/Attitude.msg"
 )
 
 ament_export_dependencies(rosidl_default_runtime)

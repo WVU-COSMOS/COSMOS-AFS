@@ -1,8 +1,16 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/attitude__type_support.cpp.o"
+  "CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/attitude__type_support.cpp.o.d"
+  "CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/position__type_support.cpp.o"
+  "CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/position__type_support.cpp.o.d"
   "CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__type_support.cpp.o"
   "CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__type_support.cpp.o.d"
   "libcosmos_interfaces__rosidl_typesupport_introspection_cpp.pdb"
   "libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so"
+  "rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/attitude__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/attitude__type_support.cpp"
+  "rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/position__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/position__type_support.cpp"
   "rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__rosidl_typesupport_introspection_cpp.hpp"
   "rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__type_support.cpp"
 )

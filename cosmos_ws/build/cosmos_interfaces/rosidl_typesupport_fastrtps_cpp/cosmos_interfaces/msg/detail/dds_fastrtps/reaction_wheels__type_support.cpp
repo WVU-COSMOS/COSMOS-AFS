@@ -32,12 +32,30 @@ cdr_serialize(
   const cosmos_interfaces::msg::ReactionWheels & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: command
-  cdr << ros_message.command;
-  // Member: speed
-  cdr << ros_message.speed;
-  // Member: running_time
-  cdr << ros_message.running_time;
+  // Member: motor_x
+  cdr << (ros_message.motor_x ? true : false);
+  // Member: motor_y
+  cdr << (ros_message.motor_y ? true : false);
+  // Member: motor_z
+  cdr << (ros_message.motor_z ? true : false);
+  // Member: motor_w
+  cdr << (ros_message.motor_w ? true : false);
+  // Member: speed_x
+  cdr << ros_message.speed_x;
+  // Member: speed_y
+  cdr << ros_message.speed_y;
+  // Member: speed_z
+  cdr << ros_message.speed_z;
+  // Member: speed_w
+  cdr << ros_message.speed_w;
+  // Member: time_x
+  cdr << ros_message.time_x;
+  // Member: time_y
+  cdr << ros_message.time_y;
+  // Member: time_z
+  cdr << ros_message.time_z;
+  // Member: time_w
+  cdr << ros_message.time_w;
   return true;
 }
 
@@ -47,14 +65,57 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   cosmos_interfaces::msg::ReactionWheels & ros_message)
 {
-  // Member: command
-  cdr >> ros_message.command;
+  // Member: motor_x
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.motor_x = tmp ? true : false;
+  }
 
-  // Member: speed
-  cdr >> ros_message.speed;
+  // Member: motor_y
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.motor_y = tmp ? true : false;
+  }
 
-  // Member: running_time
-  cdr >> ros_message.running_time;
+  // Member: motor_z
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.motor_z = tmp ? true : false;
+  }
+
+  // Member: motor_w
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.motor_w = tmp ? true : false;
+  }
+
+  // Member: speed_x
+  cdr >> ros_message.speed_x;
+
+  // Member: speed_y
+  cdr >> ros_message.speed_y;
+
+  // Member: speed_z
+  cdr >> ros_message.speed_z;
+
+  // Member: speed_w
+  cdr >> ros_message.speed_w;
+
+  // Member: time_x
+  cdr >> ros_message.time_x;
+
+  // Member: time_y
+  cdr >> ros_message.time_y;
+
+  // Member: time_z
+  cdr >> ros_message.time_z;
+
+  // Member: time_w
+  cdr >> ros_message.time_w;
 
   return true;
 }
@@ -72,21 +133,75 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: command
+  // Member: motor_x
   {
-    size_t item_size = sizeof(ros_message.command);
+    size_t item_size = sizeof(ros_message.motor_x);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: speed
+  // Member: motor_y
   {
-    size_t item_size = sizeof(ros_message.speed);
+    size_t item_size = sizeof(ros_message.motor_y);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: running_time
+  // Member: motor_z
   {
-    size_t item_size = sizeof(ros_message.running_time);
+    size_t item_size = sizeof(ros_message.motor_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: motor_w
+  {
+    size_t item_size = sizeof(ros_message.motor_w);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: speed_x
+  {
+    size_t item_size = sizeof(ros_message.speed_x);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: speed_y
+  {
+    size_t item_size = sizeof(ros_message.speed_y);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: speed_z
+  {
+    size_t item_size = sizeof(ros_message.speed_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: speed_w
+  {
+    size_t item_size = sizeof(ros_message.speed_w);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: time_x
+  {
+    size_t item_size = sizeof(ros_message.time_x);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: time_y
+  {
+    size_t item_size = sizeof(ros_message.time_y);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: time_z
+  {
+    size_t item_size = sizeof(ros_message.time_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: time_w
+  {
+    size_t item_size = sizeof(ros_message.time_w);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -112,7 +227,67 @@ max_serialized_size_ReactionWheels(
   is_plain = true;
 
 
-  // Member: command
+  // Member: motor_x
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Member: motor_y
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Member: motor_z
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Member: motor_w
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Member: speed_x
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: speed_y
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: speed_z
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: speed_w
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: time_x
   {
     size_t array_size = 1;
 
@@ -120,7 +295,7 @@ max_serialized_size_ReactionWheels(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Member: speed
+  // Member: time_y
   {
     size_t array_size = 1;
 
@@ -128,7 +303,15 @@ max_serialized_size_ReactionWheels(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Member: running_time
+  // Member: time_z
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: time_w
   {
     size_t array_size = 1;
 

@@ -16,7 +16,7 @@ class SerialCommunication(Node):
 
         # Creating the publisher
         self.publisher_ = self.create_publisher(Int32, "gStation_Command", 10)
-        self.sm_subscriber = self.create_subscription(ReactionWheels, "reactionWheels_Command", self.sm_command, 10)
+        self.sm_subscriber = self.create_subscription(ReactionWheels, "esp32_command", self.sm_command, 10)
         self.timer_ = self.create_timer(0.5, self.publish_command)
         self.get_logger().info("Serial Communication has been started!")
         
@@ -28,12 +28,11 @@ class SerialCommunication(Node):
             self.publisher_.publish(Int32(data=msg))
 
     def sm_command(self, msg):
-        command = msg.command
-        self.get_logger().info(f"Received Command: {command}")
-
+        self.get_logger().info(f"Received: {msg.command}, {msg.speed}, {msg.running_time}")
+        command_string = f"{msg.motor_x},{msg.speed_x},{msg.time_x}\n"
         # Send the command via serial to ESP32
-        self.serial.write(command.encode())
-        self.get_logger().info(f"Sent command to ESP32: {command}")
+        self.serial.write(command_string.encode())
+        self.get_logger().info(f"Sent command to ESP32: {command_string}")
 
 
 def main(args=None):

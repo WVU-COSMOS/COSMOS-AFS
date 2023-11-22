@@ -198,41 +198,41 @@ attitude_control_pkg_uninstall/fast:
 .PHONY : attitude_control_pkg_uninstall/fast
 
 #=============================================================================
-# Target rules for targets named reaction_wheels
+# Target rules for targets named attitude_control
 
 # Build rule for target.
-reaction_wheels: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reaction_wheels
-.PHONY : reaction_wheels
+attitude_control: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 attitude_control
+.PHONY : attitude_control
 
 # fast build rule for target.
-reaction_wheels/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaction_wheels.dir/build.make CMakeFiles/reaction_wheels.dir/build
-.PHONY : reaction_wheels/fast
+attitude_control/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/attitude_control.dir/build.make CMakeFiles/attitude_control.dir/build
+.PHONY : attitude_control/fast
 
-src/reaction_wheels_node.o: src/reaction_wheels_node.cpp.o
-.PHONY : src/reaction_wheels_node.o
+src/attitude_control_node.o: src/attitude_control_node.cpp.o
+.PHONY : src/attitude_control_node.o
 
 # target to build an object file
-src/reaction_wheels_node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaction_wheels.dir/build.make CMakeFiles/reaction_wheels.dir/src/reaction_wheels_node.cpp.o
-.PHONY : src/reaction_wheels_node.cpp.o
+src/attitude_control_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/attitude_control.dir/build.make CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.o
+.PHONY : src/attitude_control_node.cpp.o
 
-src/reaction_wheels_node.i: src/reaction_wheels_node.cpp.i
-.PHONY : src/reaction_wheels_node.i
+src/attitude_control_node.i: src/attitude_control_node.cpp.i
+.PHONY : src/attitude_control_node.i
 
 # target to preprocess a source file
-src/reaction_wheels_node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaction_wheels.dir/build.make CMakeFiles/reaction_wheels.dir/src/reaction_wheels_node.cpp.i
-.PHONY : src/reaction_wheels_node.cpp.i
+src/attitude_control_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/attitude_control.dir/build.make CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.i
+.PHONY : src/attitude_control_node.cpp.i
 
-src/reaction_wheels_node.s: src/reaction_wheels_node.cpp.s
-.PHONY : src/reaction_wheels_node.s
+src/attitude_control_node.s: src/attitude_control_node.cpp.s
+.PHONY : src/attitude_control_node.s
 
 # target to generate assembly for a file
-src/reaction_wheels_node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/reaction_wheels.dir/build.make CMakeFiles/reaction_wheels.dir/src/reaction_wheels_node.cpp.s
-.PHONY : src/reaction_wheels_node.cpp.s
+src/attitude_control_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/attitude_control.dir/build.make CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.s
+.PHONY : src/attitude_control_node.cpp.s
 
 # Help Target
 help:
@@ -249,10 +249,10 @@ help:
 	@echo "... test"
 	@echo "... attitude_control_pkg_uninstall"
 	@echo "... uninstall"
-	@echo "... reaction_wheels"
-	@echo "... src/reaction_wheels_node.o"
-	@echo "... src/reaction_wheels_node.i"
-	@echo "... src/reaction_wheels_node.s"
+	@echo "... attitude_control"
+	@echo "... src/attitude_control_node.o"
+	@echo "... src/attitude_control_node.i"
+	@echo "... src/attitude_control_node.s"
 .PHONY : help
 
 

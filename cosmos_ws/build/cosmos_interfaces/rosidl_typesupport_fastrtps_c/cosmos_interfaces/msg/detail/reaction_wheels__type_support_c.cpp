@@ -49,19 +49,64 @@ static bool _ReactionWheels__cdr_serialize(
     return false;
   }
   const _ReactionWheels__ros_msg_type * ros_message = static_cast<const _ReactionWheels__ros_msg_type *>(untyped_ros_message);
-  // Field name: command
+  // Field name: motor_x
   {
-    cdr << ros_message->command;
+    cdr << (ros_message->motor_x ? true : false);
   }
 
-  // Field name: speed
+  // Field name: motor_y
   {
-    cdr << ros_message->speed;
+    cdr << (ros_message->motor_y ? true : false);
   }
 
-  // Field name: running_time
+  // Field name: motor_z
   {
-    cdr << ros_message->running_time;
+    cdr << (ros_message->motor_z ? true : false);
+  }
+
+  // Field name: motor_w
+  {
+    cdr << (ros_message->motor_w ? true : false);
+  }
+
+  // Field name: speed_x
+  {
+    cdr << ros_message->speed_x;
+  }
+
+  // Field name: speed_y
+  {
+    cdr << ros_message->speed_y;
+  }
+
+  // Field name: speed_z
+  {
+    cdr << ros_message->speed_z;
+  }
+
+  // Field name: speed_w
+  {
+    cdr << ros_message->speed_w;
+  }
+
+  // Field name: time_x
+  {
+    cdr << ros_message->time_x;
+  }
+
+  // Field name: time_y
+  {
+    cdr << ros_message->time_y;
+  }
+
+  // Field name: time_z
+  {
+    cdr << ros_message->time_z;
+  }
+
+  // Field name: time_w
+  {
+    cdr << ros_message->time_w;
   }
 
   return true;
@@ -76,19 +121,72 @@ static bool _ReactionWheels__cdr_deserialize(
     return false;
   }
   _ReactionWheels__ros_msg_type * ros_message = static_cast<_ReactionWheels__ros_msg_type *>(untyped_ros_message);
-  // Field name: command
+  // Field name: motor_x
   {
-    cdr >> ros_message->command;
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->motor_x = tmp ? true : false;
   }
 
-  // Field name: speed
+  // Field name: motor_y
   {
-    cdr >> ros_message->speed;
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->motor_y = tmp ? true : false;
   }
 
-  // Field name: running_time
+  // Field name: motor_z
   {
-    cdr >> ros_message->running_time;
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->motor_z = tmp ? true : false;
+  }
+
+  // Field name: motor_w
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->motor_w = tmp ? true : false;
+  }
+
+  // Field name: speed_x
+  {
+    cdr >> ros_message->speed_x;
+  }
+
+  // Field name: speed_y
+  {
+    cdr >> ros_message->speed_y;
+  }
+
+  // Field name: speed_z
+  {
+    cdr >> ros_message->speed_z;
+  }
+
+  // Field name: speed_w
+  {
+    cdr >> ros_message->speed_w;
+  }
+
+  // Field name: time_x
+  {
+    cdr >> ros_message->time_x;
+  }
+
+  // Field name: time_y
+  {
+    cdr >> ros_message->time_y;
+  }
+
+  // Field name: time_z
+  {
+    cdr >> ros_message->time_z;
+  }
+
+  // Field name: time_w
+  {
+    cdr >> ros_message->time_w;
   }
 
   return true;
@@ -108,21 +206,75 @@ size_t get_serialized_size_cosmos_interfaces__msg__ReactionWheels(
   (void)padding;
   (void)wchar_size;
 
-  // field.name command
+  // field.name motor_x
   {
-    size_t item_size = sizeof(ros_message->command);
+    size_t item_size = sizeof(ros_message->motor_x);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name speed
+  // field.name motor_y
   {
-    size_t item_size = sizeof(ros_message->speed);
+    size_t item_size = sizeof(ros_message->motor_y);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name running_time
+  // field.name motor_z
   {
-    size_t item_size = sizeof(ros_message->running_time);
+    size_t item_size = sizeof(ros_message->motor_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name motor_w
+  {
+    size_t item_size = sizeof(ros_message->motor_w);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name speed_x
+  {
+    size_t item_size = sizeof(ros_message->speed_x);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name speed_y
+  {
+    size_t item_size = sizeof(ros_message->speed_y);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name speed_z
+  {
+    size_t item_size = sizeof(ros_message->speed_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name speed_w
+  {
+    size_t item_size = sizeof(ros_message->speed_w);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name time_x
+  {
+    size_t item_size = sizeof(ros_message->time_x);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name time_y
+  {
+    size_t item_size = sizeof(ros_message->time_y);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name time_z
+  {
+    size_t item_size = sizeof(ros_message->time_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name time_w
+  {
+    size_t item_size = sizeof(ros_message->time_w);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -153,21 +305,80 @@ size_t max_serialized_size_cosmos_interfaces__msg__ReactionWheels(
   full_bounded = true;
   is_plain = true;
 
-  // member: command
+  // member: motor_x
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+  // member: motor_y
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+  // member: motor_z
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+  // member: motor_w
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+  // member: speed_x
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: speed_y
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: speed_z
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: speed_w
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: time_x
   {
     size_t array_size = 1;
 
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // member: speed
+  // member: time_y
   {
     size_t array_size = 1;
 
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // member: running_time
+  // member: time_z
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: time_w
   {
     size_t array_size = 1;
 

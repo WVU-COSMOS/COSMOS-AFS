@@ -1,0 +1,7 @@
+[01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/attitude_control_node.cpp:[m[K In member function ‘[01m[Kcosmos_interfaces::msg::Attitude_<std::allocator<void> >::SharedPtr AttitudeControl::getQuaternion(const string&)[m[K’:
+[01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/attitude_control_node.cpp:49:7:[m[K [01;31m[Kerror: [m[Kreturn-statement with no value, in function returning ‘[01m[Kcosmos_interfaces::msg::Attitude_<std::allocator<void> >::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<cosmos_interfaces::msg::Attitude_<std::allocator<void> > >[m[K’} [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   49 |       [01;31m[Kreturn[m[K;
+      |       [01;31m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/attitude_control.dir/build.make:76: CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/attitude_control.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

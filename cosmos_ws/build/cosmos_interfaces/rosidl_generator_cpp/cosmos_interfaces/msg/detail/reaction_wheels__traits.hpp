@@ -25,24 +25,87 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: command
+  // member: motor_x
   {
-    out << "command: ";
-    rosidl_generator_traits::value_to_yaml(msg.command, out);
+    out << "motor_x: ";
+    rosidl_generator_traits::value_to_yaml(msg.motor_x, out);
     out << ", ";
   }
 
-  // member: speed
+  // member: motor_y
   {
-    out << "speed: ";
-    rosidl_generator_traits::value_to_yaml(msg.speed, out);
+    out << "motor_y: ";
+    rosidl_generator_traits::value_to_yaml(msg.motor_y, out);
     out << ", ";
   }
 
-  // member: running_time
+  // member: motor_z
   {
-    out << "running_time: ";
-    rosidl_generator_traits::value_to_yaml(msg.running_time, out);
+    out << "motor_z: ";
+    rosidl_generator_traits::value_to_yaml(msg.motor_z, out);
+    out << ", ";
+  }
+
+  // member: motor_w
+  {
+    out << "motor_w: ";
+    rosidl_generator_traits::value_to_yaml(msg.motor_w, out);
+    out << ", ";
+  }
+
+  // member: speed_x
+  {
+    out << "speed_x: ";
+    rosidl_generator_traits::value_to_yaml(msg.speed_x, out);
+    out << ", ";
+  }
+
+  // member: speed_y
+  {
+    out << "speed_y: ";
+    rosidl_generator_traits::value_to_yaml(msg.speed_y, out);
+    out << ", ";
+  }
+
+  // member: speed_z
+  {
+    out << "speed_z: ";
+    rosidl_generator_traits::value_to_yaml(msg.speed_z, out);
+    out << ", ";
+  }
+
+  // member: speed_w
+  {
+    out << "speed_w: ";
+    rosidl_generator_traits::value_to_yaml(msg.speed_w, out);
+    out << ", ";
+  }
+
+  // member: time_x
+  {
+    out << "time_x: ";
+    rosidl_generator_traits::value_to_yaml(msg.time_x, out);
+    out << ", ";
+  }
+
+  // member: time_y
+  {
+    out << "time_y: ";
+    rosidl_generator_traits::value_to_yaml(msg.time_y, out);
+    out << ", ";
+  }
+
+  // member: time_z
+  {
+    out << "time_z: ";
+    rosidl_generator_traits::value_to_yaml(msg.time_z, out);
+    out << ", ";
+  }
+
+  // member: time_w
+  {
+    out << "time_w: ";
+    rosidl_generator_traits::value_to_yaml(msg.time_w, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -51,33 +114,123 @@ inline void to_block_style_yaml(
   const ReactionWheels & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: command
+  // member: motor_x
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "command: ";
-    rosidl_generator_traits::value_to_yaml(msg.command, out);
+    out << "motor_x: ";
+    rosidl_generator_traits::value_to_yaml(msg.motor_x, out);
     out << "\n";
   }
 
-  // member: speed
+  // member: motor_y
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "speed: ";
-    rosidl_generator_traits::value_to_yaml(msg.speed, out);
+    out << "motor_y: ";
+    rosidl_generator_traits::value_to_yaml(msg.motor_y, out);
     out << "\n";
   }
 
-  // member: running_time
+  // member: motor_z
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "running_time: ";
-    rosidl_generator_traits::value_to_yaml(msg.running_time, out);
+    out << "motor_z: ";
+    rosidl_generator_traits::value_to_yaml(msg.motor_z, out);
+    out << "\n";
+  }
+
+  // member: motor_w
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "motor_w: ";
+    rosidl_generator_traits::value_to_yaml(msg.motor_w, out);
+    out << "\n";
+  }
+
+  // member: speed_x
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "speed_x: ";
+    rosidl_generator_traits::value_to_yaml(msg.speed_x, out);
+    out << "\n";
+  }
+
+  // member: speed_y
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "speed_y: ";
+    rosidl_generator_traits::value_to_yaml(msg.speed_y, out);
+    out << "\n";
+  }
+
+  // member: speed_z
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "speed_z: ";
+    rosidl_generator_traits::value_to_yaml(msg.speed_z, out);
+    out << "\n";
+  }
+
+  // member: speed_w
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "speed_w: ";
+    rosidl_generator_traits::value_to_yaml(msg.speed_w, out);
+    out << "\n";
+  }
+
+  // member: time_x
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "time_x: ";
+    rosidl_generator_traits::value_to_yaml(msg.time_x, out);
+    out << "\n";
+  }
+
+  // member: time_y
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "time_y: ";
+    rosidl_generator_traits::value_to_yaml(msg.time_y, out);
+    out << "\n";
+  }
+
+  // member: time_z
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "time_z: ";
+    rosidl_generator_traits::value_to_yaml(msg.time_z, out);
+    out << "\n";
+  }
+
+  // member: time_w
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "time_w: ";
+    rosidl_generator_traits::value_to_yaml(msg.time_w, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

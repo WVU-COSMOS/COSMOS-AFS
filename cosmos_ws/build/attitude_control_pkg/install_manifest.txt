@@ -1,5 +1,5 @@
-/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/lib/attitude_control_pkg/reaction_wheels
-/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/include/attitude_control_pkg/attitude_control_pkg/reaction_wheels_node.hpp
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/lib/attitude_control_pkg/attitude_control
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/include/attitude_control_pkg/attitude_control_pkg/attitude_control_node.hpp
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/ament_index/resource_index/package_run_dependencies/attitude_control_pkg
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/ament_index/resource_index/parent_prefix_path/attitude_control_pkg
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/environment/ament_prefix_path.sh

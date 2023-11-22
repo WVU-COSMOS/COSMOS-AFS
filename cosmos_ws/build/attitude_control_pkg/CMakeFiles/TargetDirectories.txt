@@ -1,6 +1,6 @@
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/CMakeFiles/uninstall.dir
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/CMakeFiles/attitude_control_pkg_uninstall.dir
-/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/CMakeFiles/reaction_wheels.dir
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/CMakeFiles/attitude_control.dir
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/CMakeFiles/test.dir
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/CMakeFiles/edit_cache.dir
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/CMakeFiles/rebuild_cache.dir

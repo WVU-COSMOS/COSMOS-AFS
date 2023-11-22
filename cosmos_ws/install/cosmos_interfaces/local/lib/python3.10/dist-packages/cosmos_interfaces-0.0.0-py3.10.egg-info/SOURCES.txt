@@ -5,4 +5,6 @@ cosmos_interfaces.egg-info/SOURCES.txt
 cosmos_interfaces.egg-info/dependency_links.txt
 cosmos_interfaces.egg-info/top_level.txt
 cosmos_interfaces/msg/__init__.py
+cosmos_interfaces/msg/_attitude.py
+cosmos_interfaces/msg/_position.py
 cosmos_interfaces/msg/_reaction_wheels.py

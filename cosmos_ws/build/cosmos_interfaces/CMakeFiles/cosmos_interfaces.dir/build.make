@@ -67,6 +67,8 @@ include CMakeFiles/cosmos_interfaces.dir/compiler_depend.make
 include CMakeFiles/cosmos_interfaces.dir/progress.make
 
 CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/ReactionWheels.msg
+CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/Position.msg
+CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/Attitude.msg
 
 cosmos_interfaces: CMakeFiles/cosmos_interfaces
 cosmos_interfaces: CMakeFiles/cosmos_interfaces.dir/build.make

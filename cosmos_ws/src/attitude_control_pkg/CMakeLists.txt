@@ -10,14 +10,16 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(cosmos_interfaces REQUIRED)
+find_package(Eigen3 REQUIRED)
 
 include_directories(include)
+include_directories(${EIGEN3_INCLUDE_DIR})
 
-add_executable(reaction_wheels src/reaction_wheels_node.cpp)
-ament_target_dependencies(reaction_wheels rclcpp std_msgs cosmos_interfaces)
+add_executable(attitude_control src/attitude_control_node.cpp)
+ament_target_dependencies(attitude_control rclcpp std_msgs cosmos_interfaces Eigen3)
 
 install(TARGETS
-  reaction_wheels
+  attitude_control
   DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -204,4 +204,10 @@ CMakeFiles/cosmos_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_p
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__type_support.h \
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/rosidl_generator_c__visibility_control.h \
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__struct.h \
- /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__functions.h
+ /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__functions.h \
+ /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/position__type_support.h \
+ /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/position__struct.h \
+ /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/position__functions.h \
+ /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__type_support.h \
+ /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__struct.h \
+ /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__functions.h

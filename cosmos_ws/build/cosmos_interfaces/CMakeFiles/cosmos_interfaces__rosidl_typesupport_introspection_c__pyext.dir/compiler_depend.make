@@ -245,8 +245,16 @@ CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosi
   rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__type_support.h \
   rosidl_generator_c/cosmos_interfaces/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__struct.h \
-  rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__functions.h
+  rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__functions.h \
+  rosidl_generator_c/cosmos_interfaces/msg/detail/position__type_support.h \
+  rosidl_generator_c/cosmos_interfaces/msg/detail/position__struct.h \
+  rosidl_generator_c/cosmos_interfaces/msg/detail/position__functions.h \
+  rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__type_support.h \
+  rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__struct.h \
+  rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__functions.h
 
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/position__struct.h:
 
 /usr/include/python3.10/fileutils.h:
 
@@ -293,6 +301,10 @@ rosidl_generator_c/cosmos_interfaces/msg/rosidl_generator_c__visibility_control.
 /usr/include/python3.10/genericaliasobject.h:
 
 /usr/include/python3.10/descrobject.h:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__struct.h:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/position__type_support.h:
 
 /usr/include/python3.10/pythonrun.h:
 
@@ -486,6 +498,8 @@ rosidl_generator_c/cosmos_interfaces/msg/rosidl_generator_c__visibility_control.
 
 /usr/include/python3.10/patchlevel.h:
 
+rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__type_support.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
@@ -493,6 +507,8 @@ rosidl_generator_c/cosmos_interfaces/msg/rosidl_generator_c__visibility_control.
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
 
 /usr/include/python3.10/pymacconfig.h:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__functions.h:
 
 /usr/include/stdlib.h:
 
@@ -699,6 +715,8 @@ rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__type_support.h:
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 /usr/include/x86_64-linux-gnu/sys/time.h:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/position__functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 

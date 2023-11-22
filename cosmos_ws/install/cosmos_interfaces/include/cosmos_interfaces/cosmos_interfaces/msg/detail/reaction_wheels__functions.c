@@ -17,9 +17,18 @@ cosmos_interfaces__msg__ReactionWheels__init(cosmos_interfaces__msg__ReactionWhe
   if (!msg) {
     return false;
   }
-  // command
-  // speed
-  // running_time
+  // motor_x
+  // motor_y
+  // motor_z
+  // motor_w
+  // speed_x
+  // speed_y
+  // speed_z
+  // speed_w
+  // time_x
+  // time_y
+  // time_z
+  // time_w
   return true;
 }
 
@@ -29,9 +38,18 @@ cosmos_interfaces__msg__ReactionWheels__fini(cosmos_interfaces__msg__ReactionWhe
   if (!msg) {
     return;
   }
-  // command
-  // speed
-  // running_time
+  // motor_x
+  // motor_y
+  // motor_z
+  // motor_w
+  // speed_x
+  // speed_y
+  // speed_z
+  // speed_w
+  // time_x
+  // time_y
+  // time_z
+  // time_w
 }
 
 bool
@@ -40,16 +58,52 @@ cosmos_interfaces__msg__ReactionWheels__are_equal(const cosmos_interfaces__msg__
   if (!lhs || !rhs) {
     return false;
   }
-  // command
-  if (lhs->command != rhs->command) {
+  // motor_x
+  if (lhs->motor_x != rhs->motor_x) {
     return false;
   }
-  // speed
-  if (lhs->speed != rhs->speed) {
+  // motor_y
+  if (lhs->motor_y != rhs->motor_y) {
     return false;
   }
-  // running_time
-  if (lhs->running_time != rhs->running_time) {
+  // motor_z
+  if (lhs->motor_z != rhs->motor_z) {
+    return false;
+  }
+  // motor_w
+  if (lhs->motor_w != rhs->motor_w) {
+    return false;
+  }
+  // speed_x
+  if (lhs->speed_x != rhs->speed_x) {
+    return false;
+  }
+  // speed_y
+  if (lhs->speed_y != rhs->speed_y) {
+    return false;
+  }
+  // speed_z
+  if (lhs->speed_z != rhs->speed_z) {
+    return false;
+  }
+  // speed_w
+  if (lhs->speed_w != rhs->speed_w) {
+    return false;
+  }
+  // time_x
+  if (lhs->time_x != rhs->time_x) {
+    return false;
+  }
+  // time_y
+  if (lhs->time_y != rhs->time_y) {
+    return false;
+  }
+  // time_z
+  if (lhs->time_z != rhs->time_z) {
+    return false;
+  }
+  // time_w
+  if (lhs->time_w != rhs->time_w) {
     return false;
   }
   return true;
@@ -63,12 +117,30 @@ cosmos_interfaces__msg__ReactionWheels__copy(
   if (!input || !output) {
     return false;
   }
-  // command
-  output->command = input->command;
-  // speed
-  output->speed = input->speed;
-  // running_time
-  output->running_time = input->running_time;
+  // motor_x
+  output->motor_x = input->motor_x;
+  // motor_y
+  output->motor_y = input->motor_y;
+  // motor_z
+  output->motor_z = input->motor_z;
+  // motor_w
+  output->motor_w = input->motor_w;
+  // speed_x
+  output->speed_x = input->speed_x;
+  // speed_y
+  output->speed_y = input->speed_y;
+  // speed_z
+  output->speed_z = input->speed_z;
+  // speed_w
+  output->speed_w = input->speed_w;
+  // time_x
+  output->time_x = input->time_x;
+  // time_y
+  output->time_y = input->time_y;
+  // time_z
+  output->time_z = input->time_z;
+  // time_w
+  output->time_w = input->time_w;
   return true;
 }
 
