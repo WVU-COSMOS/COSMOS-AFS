@@ -1,1 +1,1 @@
-state_machine_pkg;communication_pkg;ament_lint_auto;ament_lint_common
+state_machine_pkg;communication_pkg;attitude_control_pkg;ament_lint_auto;ament_lint_common

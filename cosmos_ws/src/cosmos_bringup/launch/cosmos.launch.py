@@ -15,7 +15,7 @@ def generate_launch_description():
     )
 
     attitude_node = Node(
-        package="attitude_control_plg",
+        package="attitude_control_pkg",
         executable="attitude_control"
     )
 
