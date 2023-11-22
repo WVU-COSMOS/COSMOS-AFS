@@ -14,7 +14,7 @@ void StateMachine::gStationCallback(const std_msgs::msg::Int32::SharedPtr msg)
 {
     RCLCPP_INFO(this->get_logger(), "Mission Selected: %d", msg->data);
 
-    if(msg->data == 0)
+    if(msg->data == 1)
     {
         auto command = cosmos_interfaces::msg::Position();
         command.mission = msg->data;
@@ -22,6 +22,7 @@ void StateMachine::gStationCallback(const std_msgs::msg::Int32::SharedPtr msg)
         command.next_position = curr_position_ + 1;
         command.is_running = true;
         positionPub_->publish(command);
+        RCLCPP_INFO(this->get_logger(), "Mission Published: %d", msg->data);
         curr_position_ += 1; 
     }
 }

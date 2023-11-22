@@ -6,7 +6,6 @@ from example_interfaces.msg import String
 from cosmos_interfaces.msg import ReactionWheels
 from std_msgs.msg import Int32
 
-
 class SerialCommunication(Node):
     def __init__(self):
         super().__init__("SerialCommunication")
@@ -28,7 +27,7 @@ class SerialCommunication(Node):
             self.publisher_.publish(Int32(data=msg))
 
     def sm_command(self, msg):
-        self.get_logger().info(f"Received: {msg.command}, {msg.speed}, {msg.running_time}")
+        self.get_logger().info(f"Received: {msg.motor_x}, {msg.speed_x}, {msg.time_x}")
         command_string = f"{msg.motor_x},{msg.speed_x},{msg.time_x}\n"
         # Send the command via serial to ESP32
         self.serial.write(command_string.encode())
