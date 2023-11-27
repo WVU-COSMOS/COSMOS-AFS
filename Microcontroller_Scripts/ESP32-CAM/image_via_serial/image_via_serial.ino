@@ -83,12 +83,14 @@ void loop() {
 
       if (fb) {
        
+        // 1024 = sizeof(fb->buf)
+        // 256 = sizeof(fb->buf[0]) = sizeof(fb->buf[1]) = ... = sizeof(fb->buf[n])
+        
         // Send number of bytes in image (using two bytes)
-        uint16_t fb_length = fb->len;
-        // Serial.write((uint8_t*)&fb_length, sizeof(uint16_t));
-        Serial.write((uint8_t*)&fb_length, sizeof(fb_length));
-        // uint16_t fb_width = fb->width;
-        // Serial.write((uint8_t*)&fb_width, sizeof(fb_width));
+        // uint16_t fb_length = fb->len; // ATTEMPT 1 (FAILED):
+        // uint16_t fb_length = sizeof((uint8_t*)fb->buf, fb->len); // = 1024, ATTEMPT 2 (FAILED):
+        uint16_t fb_length = fb->len * sizeof(uint8_t); // ATTEMPT 3 (FAILED):
+        Serial.write((uint8_t*)&fb_length, 2);
         
         // Send image
         Serial.write((uint8_t*)fb->buf, fb->len);
