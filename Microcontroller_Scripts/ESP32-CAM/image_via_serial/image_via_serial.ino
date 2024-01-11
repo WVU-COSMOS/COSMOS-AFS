@@ -18,6 +18,8 @@
 // Date              Developer        Comments
 // ---------------   -------------    --------------------------------
 // Nov. 27, 2023     JPK              'fb_length' is incorrect
+// Jan. 10, 2024     JPK              Python uses 'ser.inWaiting()' now
+// Jan. 11, 2024     JPK              Code uploaded to GitHub with comments of troubleshooting, then re-uploaded without
 //
 ////
 
@@ -54,7 +56,7 @@ void setup() {
   // config.pixel_format = PIXFORMAT_RGB565; // PIXFORMAT_BMP, PIXFORMAT_RGB565 (not listed on esp32-cam docs, but is on ov2640), PIXFORMAT_JPEG
   config.pixel_format = PIXFORMAT_JPEG;
   config.grab_mode = CAMERA_GRAB_WHEN_EMPTY;
-  config.jpeg_quality = 12;
+  config.jpeg_quality = 63; // Quality of JPEG output. 0-63 lower means higher quality
   config.fb_count = 1;
 
 #if CONFIG_IDF_TARGET_ESP32S3
@@ -77,21 +79,14 @@ void loop() {
     
     char command = Serial.read();
     if (command == 'C') {
+    // replace with '1', '2', ..., 'N' in future to represent mission if data processing is onboard ESP32
 
       camera_fb_t *fb = NULL;
       fb = esp_camera_fb_get(); // capture image
 
       if (fb) {
        
-        // Send number of bytes in image (using two bytes)
-        uint16_t fb_length = fb->len;
-        // Serial.write((uint8_t*)&fb_length, sizeof(uint16_t));
-        Serial.write((uint8_t*)&fb_length, sizeof(fb_length));
-        // uint16_t fb_width = fb->width;
-        // Serial.write((uint8_t*)&fb_width, sizeof(fb_width));
-        
-        // Send image
-        Serial.write((uint8_t*)fb->buf, fb->len);
+        Serial.write((uint8_t*)fb->buf, fb->len); // send image
 
         esp_camera_fb_return(fb);
 
