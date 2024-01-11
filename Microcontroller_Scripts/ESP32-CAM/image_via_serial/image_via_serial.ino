@@ -79,67 +79,14 @@ void loop() {
     
     char command = Serial.read();
     if (command == 'C') {
+    // replace with '1', '2', ..., 'N' in future to represent mission if data processing is onboard ESP32
 
       camera_fb_t *fb = NULL;
       fb = esp_camera_fb_get(); // capture image
 
       if (fb) {
        
-        // 1024 = sizeof(fb->buf)
-        // 256 = sizeof(fb->buf[0]) = sizeof(fb->buf[1]) = ... = sizeof(fb->buf[n])
-        
-        // Send number of bytes in image (using two bytes)
-        // uint16_t fb_length = fb->len; // ATTEMPT 1 (FAILED):
-        // uint16_t fb_length = sizeof((uint8_t*)fb->buf, fb->len); // = 1024, ATTEMPT 2 (FAILED):
-        // uint16_t fb_length = fb->len * sizeof(uint8_t); // ATTEMPT 3 (FAILED):
-        // Serial.write((uint8_t*)&fb_length, 2);
-
-        // uint32_t fb_length = fb->len * sizeof(uint8_t); // ATTEMPT 4 (FAILED ... way too large):
-        // Serial.write((uint8_t*)&fb_length, 4);
-        
-        // uint8_t l1 = fb->len; // ATTEMPT 5 (FAILED)
-        // Serial.print("l1: ");
-        // Serial.println(l1);
-        // Serial.write((uint8_t*)&l1, 1);
-
-        // uint16_t width = fb->width; // ATTEMPT 6 (FAILED ... adding got close but did not work)
-        // uint16_t height = fb->height;
-        // uint16_t len = fb->len;
-        // Serial.write((uint8_t*)&width, 2);
-        // Serial.write((uint8_t*)&height, 2);
-        // Serial.write((uint8_t*)&len, 2);
-
-        // FROM esp_camera.h
-        // len ...... Length of the buffer in bytes
-        // width .... Width of the buffer in pixels
-        // height ... Height of the buffer in pixels
-
-        // size_t len = fb->len;
-        // Serial.write((uint8_t*)&len, 2);
-
-        // Serial.println(sizeof(int)); // = 4
-
-        // Serial.write((uint8_t*)&fb->len, 4); // ATTEMPT 7 (FAILED)
-
-        // uint32_t l1 = fb->len; // ATTEMPT 8 (FAILED)
-        // Serial.write((uint8_t*)&l1, 4);
-  
-        // Serial.write(fb->len); // ATTEMPT 9 (FAILED)
-        
-        // Serial.write((uint8_t*)fb->len, 2); // ATTEMPT 10 (FAILED)
-
-        // Serial.write(fb->width & 0xFF); // = b'@\06' = 16390; ATTEMPT 11, to get width of pixels to know if size_t is uint16_t, etc
-        // Serial.write(fb->width >> 8);
-        // Serial.write(fb->height & 0xFF); // = b'xb0\x04' = 45060; ATTEMPT 11, to get height of pixels
-        // Serial.write(fb->height >> 8);
-
-        // SUMMARY OF ATTEMPTS TO SEND LENGTH:
-        //  - could not get correct length from ESP32, so instead using 'ser.inWaiting()' in Python
-
-
-
-        // Send image
-        Serial.write((uint8_t*)fb->buf, fb->len);
+        Serial.write((uint8_t*)fb->buf, fb->len); // send image
 
         esp_camera_fb_return(fb);
 
