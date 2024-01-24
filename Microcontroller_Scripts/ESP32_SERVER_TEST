@@ -2,7 +2,7 @@
 
 // Defining the Wi-Fi host
 const char* ssid     = "COSMOS";
-const char* password = "cosmos";
+const char* password = "123456789";
 const int serverPort = 80;
 
 WiFiServer server(serverPort);
