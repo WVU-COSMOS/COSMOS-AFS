@@ -18,6 +18,7 @@ Date              Developer        Comments
 ---------------   -------------    --------------------------------
 Jan. 11, 2024     JPK              'image_via_serial' is limited by ESP32's ~10,000 bytes/second output;
                                    'image_to_pixel' needs to have RGB range fine-tuned as currently does not detect red;
+Jan. 29, 2024     JPK              restructured so that 'image_via_wifi' is main function and optimized
 
 """
 
@@ -27,78 +28,6 @@ import io
 import numpy as np
 import cv2
 import requests
-
-
-def image_via_serial(ser,**kwargs):
-    """
-    Prompt ESP32-CAM to capture and send single image (via USB), then return a numpy array.
-
-    Inputs:
-    - ser (object) == serial.Serial(port, baudrate, timeout=timeout)
-
-    Optional Inputs:
-    - debug    == boolean for printing to console                    == 0 (default)
-    - array    == maximum number of bytes if image is not compressed == 5760000 = 1200x1600x3 (default)
-
-    Output:
-    - img_array == numpy array of an RGB representation of the image (e.g., 1200x1600x3)
-
-    Primary Developer Contact Information:
-    - Jacob P. Krell (JPK)
-        - Aerospace Engineering Undergraduate Student
-        - Statler College of Engineering & Mineral Resources
-        - Dept. Mechanical and Aerospace Engineering
-        - West Virginia University (WVU)
-        - jpk0024@mix.wvu.edu
-    """
-    kwargs_default = {'debug': 0, 'array': 5760000}
-    kwargs_expected = kwargs_default.keys()
-    for kwarg in kwargs.keys():
-        if kwarg not in kwargs_expected:
-            raise ValueError(f"Unexpected keyword argument: {kwarg}")
-        else:
-            kwargs_default[kwarg] = kwargs.get(kwarg, kwargs_default.get(kwarg))
-    debug = kwargs_default.get('debug')
-    array = kwargs_default.get('array')
-
-    ser.reset_input_buffer()  # clear serial input
-    ser.reset_output_buffer()  # clear serial output
-    ser.write(b'C')
-    try:
-        img_length0 = 0
-        img_length = -1  # != img_length0
-        start = time.time()
-        while img_length != img_length0:
-            time.sleep(0.005)
-            img_length0 = img_length
-            img_length = ser.inWaiting()
-        time_inWaiting = time.time() - start
-        if debug:
-            print(f'Lag for Single Image:         {time_inWaiting} s')
-            print(f'Inferred Bit Rate:            {img_length * 8 / time_inWaiting}')
-        img_data = ser.read(img_length)
-
-        # Handle incorrect img_length if less than actual length, otherwise infinite ser.read() may be occurring:
-        img_length_actual = img_length
-        while img_data[-2:] != b'\xff\xd9':
-            img_length_actual = img_length_actual + 1
-            img_data_i = ser.read(1)
-            img_data = img_data + img_data_i
-        if debug:
-            print(f'Bytes (Assumed): {img_length}\nBytes (Actual):  {img_length_actual}')
-
-        # still need to handle case of image not starting with b'\xff\xd8\...', e.g., if date and time are displayed
-        #   - format ... common exception == meaning:
-        #       - (1) ... b'et' == unknown
-        #       - (2) ...
-
-        img = Image.open(io.BytesIO(img_data))
-        img_array = np.array(img)
-
-    except Exception as e:
-        raise ValueError(f"Could not capture image. Exception: {str(e)}")
-
-    return img_array
 
 
 def image_via_wifi(esp32_ip, **kwargs):
