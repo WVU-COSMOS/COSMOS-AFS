@@ -22,109 +22,131 @@ Jan. 24, 2024     VDF              images from wifi
 
 """
 
-from src.COSMOS_AFS import image_via_wifi
-from src.COSMOS_AFS import image_to_pixel
+from src.COSMOS_AFS import COSMOS_AFS
 import time
 import cv2
+import numpy as np
 
 
-esp32_ip = "192.168.4.2"
+# 240x240 with DCW (Downsize EN): FoV = 2 * np.arctan(41/108)  # measured 82in wide from 108in away
 
 def main():
+    # ------------------------------------------------------------------------------------------------------------------
+    # User Parameters:
 
-    debug = 1
+    url = "http://192.168.4.2/capture"  # see Arduino IDE console of ESP32 router for IP address
+    mission = 1  # integer of mission (for image processing)
     video = 1
-    video_contour = 1
+    video_info = 1  # display FPS, quaternion, line to target, and timestamp on processed image
+    debug = 1
+    frames = 500  # frames to process before ending example
+    dec = 4  # decimals to round to
 
-    buffer = 0.05
-    fps = 20
-    Fs = 1 / fps
-    fps0 = fps
+    if video:
+        scale = 1  # scale factor of display window size
 
-    img_arrays = []
-    pixels = []
-    img_contours = []
-    Frame = 0
-    count = 0
-    while True:  # acquisition and tracking closed-loop
-        if debug:
-            Frame = Frame + 1
-            if Frame < 10:
-                print()
-                print(f'==================== Frame 0{Frame} ====================')
-            else:
-                print(f'==================== Frame {Frame} ====================')
+    if video_info:
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        fontclr = (0, 0, 255)
+        ratio = np.array([0.33, 14]) / 240  # good size for 240x240
+        sizing = {'min': list(ratio*96), 'med': [0.33, 14], 'QVGA': [0.4, 14], 'SVGA': [0.4, 14], 'UXGA': [0.8, 20]}
 
-        t_start = time.time()
+    # ------------------------------------------------------------------------------------------------------------------
 
-        img_array = image_via_wifi(esp32_ip)
-        img_arrays.append(img_array)
+    afs = COSMOS_AFS(url)  # initialize COSMOS_AFS class
+    imgs = []  # raw images
+    timestamps = []  # timestamps of images
+    uvs = []  # pixels indices of target
+    raws = []  # raw images
+    cons = []  # processed images (i.e., contours)
+    frame = 0
 
-        if debug:
-            print(f'Lag for Camera Protocol:      {time.time() - t_start} s')
+    if video:
+        w = scale * afs.uu
+        h = scale * afs.vv
 
-        t_start_pixel = time.time()
+        for title in ['Raw Video', 'Processed Video']:
+            cv2.namedWindow(title, cv2.WINDOW_NORMAL)
+            cv2.resizeWindow(title, w, h)
 
-        pixel, img_contour = image_to_pixel(img_array, mission=1, debug=1, video=1, circle=1, ReturnContour=1)
-        pixels.append(pixel)
-        img_contours.append(img_contour)
+    if video_info:
+        fontsize = sizing.get(afs.format)[0] / scale
+        offset = int(sizing.get(afs.format)[1] / scale)
+        offset_x2 = 2 * offset
 
-        if debug:
-            print(f'Lag for Camera Data Analysis: {time.time() - t_start_pixel} s')
+    while frame < frames:  # acquisition and tracking closed-loop
+        t0 = time.time()
+
+        img, timestamp = afs.image_via_wifi()
+        imgs.append(img)
+        timestamps.append(timestamp)
+
+        t1 = time.time()
+
+        uv, raw, con = afs.image_to_pixel(img, mission, circle=1, ReturnImage=1)
+        uvs.append(uv)
+        raws.append(raw)
+        cons.append(con)
+
+        t2 = time.time()
+
+        uv_log = (uv != [[], []])
+        if uv_log:
+            phi = afs.pixel_to_aa(uv)
+            q, dcm = afs.aa_to_q_and_dcm(phi)
+            q_txt = list(np.transpose(np.round(q, dec))[0])
+
+        t3 = time.time()
+        fps = round(1 / (t3 - t1), dec)
+
+        frame = frame + 1
 
         if video:
-            t_start_video = time.time()
-
-            # cv2.imshow(f'Raw Video', cv2.cvtColor(img_array, cv2.COLOR_RGB2BGR))
-            cv2.imshow(f'Raw Video', img_array)
+            cv2.imshow('Raw Video', cv2.cvtColor(raw, cv2.COLOR_BGR2RGB))
             cv2.waitKey(1)
 
-            if debug:
-                print(f'Lag for Raw Video:            {time.time() - t_start_video} s')
+            if video_info:
+                # ("https://stackoverflow.com/questions/16615662/how-to-write-text-on-a-image-in-windows-using-python-
+                # opencv2")
 
-        if video_contour:
-            t_start_video_contour = time.time()
+                cv2.putText(con, f'FPS: {fps}', (offset, offset), font, fontsize, fontclr, 1, 2)
+                if uv_log:
+                    cv2.putText(con, f'q = {q_txt}', (offset, offset_x2), font, fontsize, fontclr, 1, 2)
+                    cv2.line(con, (afs.vv_2, afs.uu_2), (uv[0], uv[1]), fontclr, thickness=1)
+                cv2.putText(con, f'{timestamp}', (offset, afs.uu - offset), font, fontsize, fontclr, 1, 2)
 
-            cv2.imshow(f'Processed Video', img_contour)
+            cv2.imshow('Processed Video', cv2.cvtColor(con, cv2.COLOR_BGR2RGB))
             cv2.waitKey(1)
 
-            if debug:
-                print(f'Lag for Processed Video:      {time.time() - t_start_video_contour} s')
-
-            count = count+1
-        # if count > 100:
-        #     breakpoint()
+        t4 = time.time()
 
         if debug:
-            print(f'Lag for Overall:              {time.time() - t_start} s')
+            print()
+            print()
+            if frame < 10:
+                print(f'==================== Frame 0{frame} ====================')
+            else:
+                print(f'==================== Frame {frame} ====================')
+            print(f'Method         | Time (s)')
+            print(f'---------------|----------------------------------')
+            print(f'image_via_wifi | {t1 - t0}')
+            print(f'image_to_pixel | {t2 - t1}')
+            if uv_log:
+                print(f'    pixel_to_q | {t3 - t2}')
+            print(f'           FPS | {fps}')
+            if video:
+                print()
+                print(f'image_to_video | {t4 - t3}')
+                print(f'           FPS | {round(1/(t4 - t1), dec)}')
+            if uv_log:
+                print()
+                print(f'             q | {q_txt}')
 
 
         # NEEDS DEVELOPMENT:
 
-        # pixel_to_attitude()
-        # attitude_to_voltage()
-
-
-        # NEEDS TROUBLESHOOTING BECAUSE t_wait IS NOT CORRECT:
-
-        # t_wait = Fs - (time.time() - t_start)
-        # print(f't_wait = {t_wait}')
-        # if t_wait >= 0:
-        #     if fps < fps0:
-        #         Fs = Fs - t_wait
-        #         fps = 1 / Fs
-        #         if fps > fps0:
-        #             fps = fps0
-        #             Fs = 1 / fps
-        #         if debug:
-        #             print(f"Rise: {fps} FPS.")
-        #     time.sleep(t_wait)
-        # else:
-        #     Fs = Fs - t_wait
-        #     fps = 1 / Fs - buffer
-        #     Fs = 1 / fps
-        #     if debug:
-        #         print(f"Drop: {fps} FPS.")
+        # q_to_torque()
+        # torque_to_v()
 
 
 if __name__ == "__main__":
