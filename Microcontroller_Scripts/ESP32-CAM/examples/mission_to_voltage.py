@@ -28,8 +28,6 @@ import cv2
 import numpy as np
 
 
-# 240x240 with DCW (Downsize EN): FoV = 2 * np.arctan(41/108)  # measured 82in wide from 108in away
-
 def main():
     # ------------------------------------------------------------------------------------------------------------------
     # User Parameters:
