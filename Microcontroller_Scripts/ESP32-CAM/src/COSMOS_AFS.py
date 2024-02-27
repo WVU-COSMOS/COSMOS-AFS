@@ -20,6 +20,9 @@ Jan. 11, 2024     JPK              'image_via_serial' is limited by ESP32's ~10,
                                    'image_to_pixel' needs to have RGB range fine-tuned as currently does not detect red;
 Jan. 29, 2024     JPK              Restructured into class, optimized functions, deleted 'image_via_serial';
 Feb. 19, 2024     JPK              Need to get DCM from frame blocks, not axis-angles (see iPhone pics);
+Feb. 26, 2024     JPK              Successful tests of 'acquisition' method; May be inaccurate but has functionality;
+                                   Outer loop checks for target @ stable FPS, returns RPM's if target, performs
+                                   'nontracking_mode' operation if no target for specified number of frames; Need ode45;
 """
 
 import time
@@ -28,13 +31,6 @@ import io
 import numpy as np
 import cv2
 import requests
-
-
-# OUTDATED BECAUSE USES AXIS-ANGLES:
-def aa_to_dcm(ehat, phimag):
-    """Convert axis-angle to DCM."""
-    cp = np.cos(phimag)
-    return cp * np.eye(3) + (1 - cp) * (ehat * np.transpose(ehat)) - np.sin(phimag) * skew(ehat)
 
 
 # OUTDATED BECAUSE USES AXIS-ANGLES:
@@ -75,7 +71,7 @@ class COSMOS_AFS:
                 break
 
         # field of view divided by two (i.e., half-angle), ordered as [v, u]:
-        self.fov_2 = {'mid': [np.arctan(41/108), np.arctan(41/108)],
+        self.fov_2 = {'med': [np.arctan(41/108), np.arctan(41/108)],
                       'UXGA': [np.arctan(5.5 / 12.75), np.arctan(5 / 12.75)]}
 
         # radians per pixel:
@@ -83,30 +79,31 @@ class COSMOS_AFS:
         self.rad_v = self.fov_2[self.format][0] / self.vv_2
 
         # reaction wheels torque control:
-        self.eye33 = np.eye(3)  # need to update to functions to optimize calculations
-        self.I_body_as_B = np.array([[9, 0, 0], [0, 4, 0], [0, 0, 7]])
-        self.Is = [5, 5, 5]  # inertias of reaction wheels
-        self.Kp = 1
-        self.Kd = 3
-        self.Ki = 0.25
+        self.eye33 = np.eye(3)  # meant to aid optimization by not requiring repeat function calls
+        self.I_body_as_B = np.array([[0.4, 0, 0], [0, 0.3, 0], [0, 0, 0.6]])
+        self.Is = [5, 5, 5]  # inertia of reaction wheels
+        self.Kp = 1  # scalar
+        self.Kd = np.ones([3, 3])  # 3x3 matrix, needs to be solved as function of other control gains
+        self.Ki = np.ones([3, 3])  # 3x3 matrix, needs to be solved as function of other control gains
         self.gs1 = np.array([-1, 0, 0])[:, np.newaxis]
         self.gs2 = np.array([0, 1, 0])[:, np.newaxis]
         self.gs3 = np.array([0, 0, -1])[:, np.newaxis]
-        self.Gs = np.transpose(np.squeeze([self.gs1, self.gs2, self.gs3]))  # projection to spin axis
-        self.GsT = np.transpose(self.Gs)
-        self.GsT_iGsGsT = np.matlmul(self.GsT, np.linalg.inv(np.matmul(self.Gs, self.GsT)))
+        self.Gs = np.squeeze([self.gs1, self.gs2, self.gs3]).T  # projection to spin axis
+        self.GsT = self.Gs.T
+        self.GsT_iGsGsT = np.matmul(self.GsT, np.linalg.inv(np.matmul(self.Gs, self.GsT)))
         self.n = len(self.Gs)  # = 3, number of reaction wheels
-        self.A = np.array([[np.eye(4),           np.zeros(4, 3),                np.zeros(4, self.n)],
-                           [np.zeros(3, 4),      self.I_body_as_B,              np.matmul(self.Is, self.Gs)],
-                           [np.zeros(self.n, 4), np.matlmul(self.Is, self.GsT), np.matlmul(self.Is, np.eye(self.n))]])
-        self.N = np.linalg.inv(self.Gs) * np.zeros(3, self.n)  # null space vector N such that Gs*N=0_3xn
         self.IsGs = np.zeros_like(self.Gs)
         for i in range(self.n):
             self.IsGs[:, i] = self.Is[i] * self.Gs[:, i]
+        self.A = np.concatenate([np.concatenate([np.eye(4), np.zeros([4, 3]), np.zeros([4, self.n])], axis=1),
+                                 np.concatenate([np.zeros([3, 4]), self.I_body_as_B, self.IsGs], axis=1),
+                                 np.concatenate([np.zeros([self.n, 4]), self.IsGs.T, np.diag(self.Is)], axis=1)])
+        self.N = np.linalg.inv(self.Gs) * np.zeros([3, self.n])  # null space vector N such that Gs*N=0_3xn
 
         # defaults for 'self.acquisition':
-        self.nontracking_modes = {0: 'nothing', 1: 'spindown'}
-        self.nontracking_funcs = {'nothing': self.nontracking_nothing, 'spindown': self.nontracking_spindown}
+        self.nontracking_modes = {0: 'maintain', 1: 'shutdown', 2: 'spindown'}
+        self.nontracking_funcs = {'maintain': self.nontracking_maintain, 'shutdown': self.nontracking_shutdown,
+                                  'spindown': self.nontracking_spindown}
         self.fs_cam = 10
         self.fs_ode = 100
         self.mission = 1
@@ -140,20 +137,14 @@ class COSMOS_AFS:
         """
         try:
             response = requests.get(self.url)  # response.status_code == 200, if successful
-            timestamp = time.asctime()
+            timestamp = time.time()  # = time.asctime()
             img = np.array(Image.open(io.BytesIO(response.content)))
         except Exception as e:
             raise ValueError(f"Could not capture image. Exception: {str(e)}")
 
         return img, timestamp
 
-    # From Dr. Rhodes (2024/01/08):
-    #   - Use ArUco to get DCM for tracking (per Rhodes).
-    #   - Propagate R_N_to_B as q_N_to_B, then measure R_B_to_A, then calculate R_N_to_A.
-    def image_to_dcm(self):
-        return
-
-    # OUTDATED METHOD BECAUSE USES AXIS-ANGLES:
+    # NEEDS UPDATING TO ALLOW ARUCO CODES (which may be more like 'image_to_dcm'):
     def image_to_pixel(self, img, mission, **kwargs):
         """
         Process RGB image array to return a single pixel location as the target to aim at.
@@ -238,11 +229,15 @@ class COSMOS_AFS:
         else:
             return [u, v]
 
-    def pixel_to_dcm(self):
-        return
+    # OUTDATED BECAUSE USES AXIS-ANGLES (but needed for pixel_to_dcm for now):
+    def aa_to_dcm(self, ehat, phimag):
+        """Convert axis-angle to DCM."""
+        cp = np.cos(phimag)
+        return cp * np.eye(3) + (1 - cp) * (ehat * np.transpose(ehat)) - np.sin(phimag) * self.skew(ehat)
 
-    # OUTDATED METHOD BECAUSE USES AXIS-ANGLES:
-    def pixel_to_angle(self, uv):
+    # NEEDS UPDATING BECAUSE USES AXIS-ANGLES:
+    def pixel_to_dcm(self, uv):  # for acquisition
+    # def pixel_to_angle(self, uv):  # original
         """
         [IN DEVELOPMENT ... CURRENT VERSION USES AXIS-ANGLES TO DERIVE DCM, BUT FRAME BLOCKS SHOULD BE USED TO AVOID
         BLOWING UP WHEN TARGET IS NEAR CENTER]
@@ -272,22 +267,15 @@ class COSMOS_AFS:
         phimag = (phi[0] ** 2 + phi[1] ** 2 + phi[2] ** 2) ** 0.5
         ehat = np.divide(phi, phimag)
 
-        q = aa_to_q(ehat, phimag)
-        dcm = aa_to_dcm(ehat, phimag)
+        # q = aa_to_q(ehat, phimag)
+        dcm = self.aa_to_dcm(ehat[:, np.newaxis], phimag)
 
-        return q, dcm
+        return dcm  # for acquisition
+        # return q, dcm
 
     def skew(self, u):
         """Return skew matrix of a 3x1 vector."""
         return np.array([[0, 0, u[1, 0]], [0, 0, -u[0, 0]], [-u[1, 0], u[0, 0], 0]])
-
-    def dcm_to_q__sv(self, dcm, n, m, qmax):
-        """For 'dcm_to_q' but defined here to avoid defining on every iteration."""
-        return (dcm[n, m] - dcm[m, n]) / 4 / qmax
-
-    def dcm_to_q__vv(self, dcm, n, m, qmax):
-        """For 'dcm_to_q' but defined here to avoid defining on every iteration."""
-        return (dcm[n, m] + dcm[m, n]) / 4 / qmax
 
     def dcm_to_q(self, dcm):
         """Convert DCM to quaternion using Shepherd's method."""
@@ -303,95 +291,44 @@ class COSMOS_AFS:
         q = np.zeros([4, 1])
         q[imax] = np.sqrt(qmax2)
         if imax == 0:  # qs is max
-            q[1::] = np.array([[dcm_to_q__sv(dcm, 2, 3, q[imax])],
-                               [dcm_to_q__sv(dcm, 3, 1, q[imax])],
-                               [dcm_to_q__sv(dcm, 1, 2, q[imax])]])
+            q[1::] = np.array([self.dcm_to_q__sv(dcm, 1, 2, q[imax]),
+                               self.dcm_to_q__sv(dcm, 2, 0, q[imax]),
+                               self.dcm_to_q__sv(dcm, 0, 1, q[imax])])
         elif imax == 1:  # q1 is max
-            q[[0, 2, 3]] = np.array([[dcm_to_q__sv(dcm, 2, 3, q[imax])],
-                                     [dcm_to_q__vv(dcm, 1, 2, q[imax])],
-                                     [dcm_to_q__vv(dcm, 3, 1, q[imax])]])
+            q[[0, 2, 3]] = np.array([self.dcm_to_q__sv(dcm, 1, 2, q[imax]),
+                                     self.dcm_to_q__vv(dcm, 0, 1, q[imax]),
+                                     self.dcm_to_q__vv(dcm, 2, 0, q[imax])])
         elif imax == 2:  # q2 is max
-            q[[0, 1, 3]] = np.array([[dcm_to_q__sv(dcm, 3, 1, q[imax])],
-                                     [dcm_to_q__vv(dcm, 1, 2, q[imax])],
-                                     [dcm_to_q__vv(dcm, 2, 3, q[imax])]])
+            q[[0, 1, 3]] = np.array([self.dcm_to_q__sv(dcm, 2, 0, q[imax]),
+                                     self.dcm_to_q__vv(dcm, 0, 1, q[imax]),
+                                     self.dcm_to_q__vv(dcm, 1, 2, q[imax])])
         else:  # imax == 3:  # q3 is max
-            q[:3] = np.array([[dcm_to_q__sv(dcm, 1, 2, q[imax])],
-                              [dcm_to_q__vv(dcm, 3, 1, q[imax])],
-                              [dcm_to_q__vv(dcm, 2, 3, q[imax])]])
+            q[:3] = np.array([self.dcm_to_q__sv(dcm, 0, 1, q[imax]),
+                              self.dcm_to_q__vv(dcm, 2, 0, q[imax]),
+                              self.dcm_to_q__vv(dcm, 1, 2, q[imax])])
 
+        return self.q_norm_and_short(q)
+
+    def dcm_to_q__sv(self, dcm, n, m, qmax):
+        """For 'dcm_to_q' but defined here to avoid defining on every iteration."""
+        return (dcm[n, m] - dcm[m, n]) / 4 / qmax
+
+    def dcm_to_q__vv(self, dcm, n, m, qmax):
+        """For 'dcm_to_q' but defined here to avoid defining on every iteration."""
+        return (dcm[n, m] + dcm[m, n]) / 4 / qmax
+
+    def q_norm_and_short(self, q):
+        """Apply quaternion constraint (i.e., normalize) and enforce short rotation."""
         q = q / np.linalg.norm(q)
         if q[0] < 0:
             q = -q  # short rotation
         q[np.abs(q) < 1e-10] = 0
-
         return q
 
-    def qdot(self, q):
-        """Kinematic equation for quaternion, qdot = B(q). (4x1 numpy array)."""
-        return np.array([[q[0],   -np.transpose(q[1::])],
-                         [q[1::], q[0] * self.eye33 + self.skew(q[1::])]])
-
-    # OLD (use acquisition instead):
-    def dcm_to_torque(self, dcm, q0):
-        """
-        Assume fixed time step dt defined as attribute of class.
-
-        Inputs:
-            - dcm == DCM from R (i.e., T) to B (i.e., C) of CURRENT timestep
-            - q0  == quaternion from R to B of PREVIOUS timestep
-        """
-
-        # Current timestep:
-        q = dcm_to_q(dcm)
-
-        q0v = q0[::3]
-        qv = q[::3]
-
-        omega_B_rel_N_as_B
-
-        b = np.array([[0.5 * np.matmult(self.B(q), np.array([0], omega)),
-                       [-skew(omega_B_rel_N_as_B) * (self.I_body_as_B * omega_B_rel_N_as_B + sum(
-                           self.Is[i] * OMEGA[i] * self.Gs[:, i] for i in range(self.n)) + T)],
-                       [uS_as_G]])
-
-        # Prepare for next timestep:
-        q0_R_to_B = q_R_to_B
-
-        return torque
-
-    # OLD (use acquisition instead):
-    def angle_to_torque_OLD(self, dt, q0_R_to_B, q_R_to_B, omega_B_rel_R_as_B):
-        """Convert quaternion and DCM to reaction wheel control torque."""
-
-        # ------------------
-        # RTW on 2nd element of b
-
-        b = np.array([[0.5 * np.matmult(B(q), np.array([0], omega)),
-                      [-skew(omega_B_rel_N_as_B) * (self.I_body_as_B * omega_B_rel_N_as_B + sum(self.Is[i] * OMEGA[i] * self.Gs[:, i] for i in range(self.n)) + T)],
-                      [uS_as_G]])
-
-        # --------------------------------
-
-        # Control Loop:
-
-        q0v = q0_R_to_B[::3]
-        qv = q_R_to_B[::3]
-
-        uC_as_B = -Kp * qv - Kd * omega_B_rel_R_as_B # - Ki * dt * (q0v + qv) / 2
-        uS_as_G = GsT_iGsGsT * uC_as_B
-
-        xdot = inv(A) * b
-        x = dt * (xdot0 + xdot) / 2  # element-wise, and dt/2 should be calculated once when dt is known
-
-        # Prepare for next time-step:
-        q0_N_to_B = x[0]
-        omega0_B_rel_N_as_B = x[1]
-        OMEGA0 = x[2]  # spin speed to use until next time step
-
-        # optimal power:
-        NT = np.transpose(N)
-        OMEGA_sq = np.diag(OMEGA[i] ** 2)
-        uS_as_G = (np.eye(n) - N * inv(NT * OMEGA_sq * N) * NT * OMEGA_sq) * GsT_iGsGsT * uC_as_B
+    def B(self, q):
+        """B(q) from quaternion kinematics. (4x1 numpy array input, 4x4 numpy array output)."""
+        return np.concatenate([np.concatenate([q[0], -q[1::].T[0]])[np.newaxis],
+                               np.concatenate([q[1::], q[0] * self.eye33 + self.skew(q[1::])], axis=1)])
 
     def acquisition(self, fs_cam=None, fs_ode=None, mission=None, nontracking_count=None, nontracking_mode=None):
         """
@@ -408,7 +345,8 @@ class COSMOS_AFS:
         """
         # Process inputs and define as local variables:
 
-        params = {'fs_cam': fs_cam, 'fs_ode': fs_ode, 'mission': mission, 'nontracking_count': nontracking_count}
+        params = {'fs_cam': fs_cam, 'fs_ode': fs_ode, 'mission': mission, 'nontracking_count': nontracking_count,
+                  'nontracking_mode': nontracking_mode}
         for param in params.keys():
             if params[param] is None:
                 params[param] = getattr(self, param)
@@ -423,13 +361,15 @@ class COSMOS_AFS:
 
         # Initialization prior to Acquisition and Tracking/Non-Tracking:
 
+        frame = 0
+        x0 = np.concatenate([[[1]], np.zeros([6, 1]), self.rw_read()])  # = np.array([[q], [w], [rw]]), state vector
         count = nontracking_count  # initialize to be in non-tracking mode until first target appears
         dt_cam = 1 / fs_cam
         dt_ode = 1 / fs_ode
 
         def acquire_target(mission):
             img, t = self.image_via_wifi()  # capture image
-            uv, _, _ = self.image_to_pixel(img, mission)  # process image
+            uv = self.image_to_pixel(img, mission)  # process image
             if uv != [[], []]:  # if target
                 return uv, t
             else:  # no target
@@ -446,10 +386,10 @@ class COSMOS_AFS:
 
         # Begin Acquisition:
 
-        x0 = np.concatenate([np.zeros([7, 1]), self.rw_read()])  # = np.array([[q], [w], [rw]])
         while True:
             t_iter = time.time()
             target, t = acquire_target(mission)  # constantly check @ fs_cam if target (i.e., Acquisition)
+            frame += 1  # for printing to console when debugging
 
             # Tracking (if target spotted now or at least once within 'nontracking_count' limit):
 
@@ -457,52 +397,58 @@ class COSMOS_AFS:
                 count = 0
                 t0 = t
                 dcm0 = self.pixel_to_dcm(target)
-                z = np.zeros([4, 1])
+                z = np.zeros([3, 1])  # reset error propagation
                 sync_iter(t_iter, dt_cam)
             while count < nontracking_count:  # not first target
                 t_iter = time.time()
                 target, t = acquire_target(mission)
+                frame += 1  # for printing to console when debugging
                 if target is not False:  # if target
                     dcm = self.pixel_to_dcm(target)
-                    wx = -np.matmul(np.transpose(dcm), (dcm - dcm0) / (t - t0))  # [omega x]
+                    wx = -np.matmul(dcm.T, (dcm - dcm0) / (t - t0))  # [omega x]
                     w = np.array([[wx[2, 1]], [-wx[2, 0]], [wx[1, 0]]])  # omega
                     q = self.dcm_to_q(dcm)  # error quaternion
-                    z += q
+                    z += q[1::]  # not sure if qv but assuming because Ki is 3x3
                     u_c_as_b = self.Kp * q[1::] + np.matmul(self.Kd, w) + \
                                self.Kp * np.matmul(self.Kd, np.matmul(self.Ki, z))  # control torque in body frame
                     u_s_as_g = np.matmul(self.GsT_iGsGsT, u_c_as_b)  # projected spin torque in rw frames
                     rw = x0[7::]  # reaction wheels rpm
                     t_ext = np.zeros([3, 1])  # external torque
-                    b = np.array([[0.5 * np.matmult(self.qdot(q), np.array([0], w)),
-                                  [-self.skew(w) * (self.I_body_as_B * w + sum(rw[i] * self.IsGs[:, i][:, np.newaxis]
-                                                                               for i in range(self.n)) + t_ext)],
-                                  [u_s_as_g]])
-                    xdot = np.matmul(np.inv(self.A), b)  # time derivative of state vector
+                    b = np.concatenate([0.5 * np.matmul(self.B(q), np.concatenate([[[0]], w])),
+                                        -np.matmul(self.skew(w), (np.matmul(self.I_body_as_B, w) + t_ext +
+                                                         sum(rw[i] * self.IsGs[:, i][:, np.newaxis]
+                                                             for i in range(self.n)))),
+                                        u_s_as_g])
+                    xdot = np.matmul(np.linalg.inv(self.A), b)  # time derivative of state vector
                     # x = self.ode45(xdot, x0)  # state vector
                     x = x0 + xdot * dt_cam
-                    x[:4] = x[:4] / np.linalg.norm(x[:4])  # quaternion normalization constraint
-                    self.rw_update(x[7::])  # send spin rates to reaction wheels
+                    x[:4] = self.q_norm_and_short(x[:4])  # quaternion normalization constraint and short rotation
+                    self.rw_update(x[7::], frame, '+')  # send spin rates to reaction wheels
                     x0 = x
                     t0 = t
                     dcm0 = dcm
                 else:  # no target
                     count += 1  # count consecutive non-target frames to break while loop
+                    # x = nontracking_maintain(x0)
+                    self.rw_update(x[7::], frame, count)
+                    # x0 = x
                 sync_iter(t_iter, dt_cam)
 
             # Non-Tracking (because target has not been spotted nor has been within 'nontracking_count' limit):
 
             x = nontracking_func(x0)
-            x[:4] = x[:4] / np.linalg.norm(x[:4])  # quaternion normalization constraint
-            self.rw_update(x[7::])  # send spin rates to reaction wheels
+            x[:4] = self.q_norm_and_short(x[:4])  # quaternion normalization constraint and short rotation
+            self.rw_update(x[7::], frame, 'n/a')  # send spin rates to reaction wheels
             x0 = x
-
-    def nontracking_shutdown(self, x0):
-        """Turn reaction wheels off."""
-        return np.zeros_like(x0)
+            sync_iter(t_iter, dt_cam)
 
     def nontracking_maintain(self, x0):
         """Continue last known state vector."""
         return x0
+
+    def nontracking_shutdown(self, x0):
+        """Turn reaction wheels off."""
+        return np.zeros_like(x0)
 
     def nontracking_spindown(self, x0):
         """Reset the reaction wheels."""
@@ -512,12 +458,42 @@ class COSMOS_AFS:
 
     def rw_read(self):
         """Receive current RPM from reaction wheels."""
-        rw = np.ones([self.n, 1])
+        rw = np.zeros([self.n, 1])
         return rw
 
-    def rw_update(self, rw):
-        """Send RPM to reaction wheels."""
-        print(rw)
+    def rw_update(self, rw, frame=None, count=None):
+        """Send RPM to reaction wheels. Note 'frame' is only for printing to the console when debugging."""
+        self.rw_print(rw, frame, count)  # for debugging
         return
 
+    def rw_print(self, rw, frame=None, count=None):
+        """Print spin rate (i.e., RPM's) to console for debugging."""
+        digits = 4
+        len_str = 3 + digits  # +/-, one's place, decimal, digits
+        rw_str = []
+        for i in range(len(rw)):
+            rw_str.append(str(np.round(rw[i][0], digits)))
+            if rw_str[i][0] != '-':
+                rw_str[i] = ' ' + rw_str[i]
+            while len(rw_str[i]) < len_str:
+                rw_str[i] += '0'
+
+        if count is not None:
+            count = str(count)
+            while len(count) < 3:
+                count = ' ' + count
+        if frame is not None:
+            frame = str(frame)
+            while len(frame) < 4:
+                frame = ' ' + frame
+            if count is not None:
+                print(f"{frame} | {count} |    {rw_str[0]}    |    {rw_str[1]}    |    {rw_str[2]}")
+            else:
+                print(f"{frame} |     |    {rw_str[0]}    |    {rw_str[1]}    |    {rw_str[2]}")
+        elif count is not None:
+            print(f"{count} |    {rw_str[0]}    |    {rw_str[1]}    |    {rw_str[2]}")
+        else:
+            print(f"{rw_str[0]}    |    {rw_str[1]}    |    {rw_str[2]}")
+
+        return
 
