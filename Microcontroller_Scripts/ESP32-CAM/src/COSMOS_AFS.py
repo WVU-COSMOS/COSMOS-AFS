@@ -30,17 +30,14 @@ import cv2
 import requests
 
 
-def skew(u):
-    """Return skew matrix of a 3x1 vector."""
-    return np.array([[0, 0, u[1, 0]], [0, 0, -u[0, 0]], [-u[1, 0], u[0, 0], 0]])
-
-
+# OUTDATED BECAUSE USES AXIS-ANGLES:
 def aa_to_dcm(ehat, phimag):
     """Convert axis-angle to DCM."""
     cp = np.cos(phimag)
     return cp * np.eye(3) + (1 - cp) * (ehat * np.transpose(ehat)) - np.sin(phimag) * skew(ehat)
 
 
+# OUTDATED BECAUSE USES AXIS-ANGLES:
 def aa_to_q(ehat, phimag):
     """Convert axis-angle to quaternion."""
     phimag_2 = phimag / 2
@@ -103,9 +100,13 @@ class COSMOS_AFS:
                            [np.zeros(3, 4),      self.I_body_as_B,              np.matmul(self.Is, self.Gs)],
                            [np.zeros(self.n, 4), np.matlmul(self.Is, self.GsT), np.matlmul(self.Is, np.eye(self.n))]])
         self.N = np.linalg.inv(self.Gs) * np.zeros(3, self.n)  # null space vector N such that Gs*N=0_3xn
+        self.IsGs = np.zeros_like(self.Gs)
+        for i in range(self.n):
+            self.IsGs[:, i] = self.Is[i] * self.Gs[:, i]
 
         # defaults for 'self.acquisition':
-        self.nontracking_modes = {0: 'nothing', 1: 'spin_down_rws'}
+        self.nontracking_modes = {0: 'nothing', 1: 'spindown'}
+        self.nontracking_funcs = {'nothing': self.nontracking_nothing, 'spindown': self.nontracking_spindown}
         self.fs_cam = 10
         self.fs_ode = 100
         self.mission = 1
@@ -149,6 +150,10 @@ class COSMOS_AFS:
     # From Dr. Rhodes (2024/01/08):
     #   - Use ArUco to get DCM for tracking (per Rhodes).
     #   - Propagate R_N_to_B as q_N_to_B, then measure R_B_to_A, then calculate R_N_to_A.
+    def image_to_dcm(self):
+        return
+
+    # OUTDATED METHOD BECAUSE USES AXIS-ANGLES:
     def image_to_pixel(self, img, mission, **kwargs):
         """
         Process RGB image array to return a single pixel location as the target to aim at.
@@ -233,6 +238,10 @@ class COSMOS_AFS:
         else:
             return [u, v]
 
+    def pixel_to_dcm(self):
+        return
+
+    # OUTDATED METHOD BECAUSE USES AXIS-ANGLES:
     def pixel_to_angle(self, uv):
         """
         [IN DEVELOPMENT ... CURRENT VERSION USES AXIS-ANGLES TO DERIVE DCM, BUT FRAME BLOCKS SHOULD BE USED TO AVOID
@@ -268,14 +277,62 @@ class COSMOS_AFS:
 
         return q, dcm
 
+    def skew(self, u):
+        """Return skew matrix of a 3x1 vector."""
+        return np.array([[0, 0, u[1, 0]], [0, 0, -u[0, 0]], [-u[1, 0], u[0, 0], 0]])
 
-    def B(self, q):
-        """Kinematic equation for quaternion (4x1 numpy array)."""
+    def dcm_to_q__sv(self, dcm, n, m, qmax):
+        """For 'dcm_to_q' but defined here to avoid defining on every iteration."""
+        return (dcm[n, m] - dcm[m, n]) / 4 / qmax
+
+    def dcm_to_q__vv(self, dcm, n, m, qmax):
+        """For 'dcm_to_q' but defined here to avoid defining on every iteration."""
+        return (dcm[n, m] + dcm[m, n]) / 4 / qmax
+
+    def dcm_to_q(self, dcm):
+        """Convert DCM to quaternion using Shepherd's method."""
+        tr = dcm[0, 0] + dcm[1, 1] + dcm[2, 2]  # trace
+
+        qi2 = np.array([[(1 + tr) / 4], [0], [0], [0]])
+        for i in range(3):
+            qi2[i + 1] = (1 + 2 * dcm[i, i] - tr) / 4
+        qi2_abs = abs(qi2)
+        qmax2 = np.max(qi2_abs)
+        imax = np.argmax(qi2_abs)
+
+        q = np.zeros([4, 1])
+        q[imax] = np.sqrt(qmax2)
+        if imax == 0:  # qs is max
+            q[1::] = np.array([[dcm_to_q__sv(dcm, 2, 3, q[imax])],
+                               [dcm_to_q__sv(dcm, 3, 1, q[imax])],
+                               [dcm_to_q__sv(dcm, 1, 2, q[imax])]])
+        elif imax == 1:  # q1 is max
+            q[[0, 2, 3]] = np.array([[dcm_to_q__sv(dcm, 2, 3, q[imax])],
+                                     [dcm_to_q__vv(dcm, 1, 2, q[imax])],
+                                     [dcm_to_q__vv(dcm, 3, 1, q[imax])]])
+        elif imax == 2:  # q2 is max
+            q[[0, 1, 3]] = np.array([[dcm_to_q__sv(dcm, 3, 1, q[imax])],
+                                     [dcm_to_q__vv(dcm, 1, 2, q[imax])],
+                                     [dcm_to_q__vv(dcm, 2, 3, q[imax])]])
+        else:  # imax == 3:  # q3 is max
+            q[:3] = np.array([[dcm_to_q__sv(dcm, 1, 2, q[imax])],
+                              [dcm_to_q__vv(dcm, 3, 1, q[imax])],
+                              [dcm_to_q__vv(dcm, 2, 3, q[imax])]])
+
+        q = q / np.linalg.norm(q)
+        if q[0] < 0:
+            q = -q  # short rotation
+        q[np.abs(q) < 1e-10] = 0
+
+        return q
+
+    def qdot(self, q):
+        """Kinematic equation for quaternion, qdot = B(q). (4x1 numpy array)."""
         return np.array([[q[0],   -np.transpose(q[1::])],
-                         [q[1::], q[0] * self.eye33 + skew(q[1::])]])
+                         [q[1::], q[0] * self.eye33 + self.skew(q[1::])]])
 
-
-    def dcm_to_torqu(self, dcm, q0):
+    # OLD (use acquisition instead):
+    def dcm_to_torque(self, dcm, q0):
         """
         Assume fixed time step dt defined as attribute of class.
 
@@ -302,6 +359,7 @@ class COSMOS_AFS:
 
         return torque
 
+    # OLD (use acquisition instead):
     def angle_to_torque_OLD(self, dt, q0_R_to_B, q_R_to_B, omega_B_rel_R_as_B):
         """Convert quaternion and DCM to reaction wheel control torque."""
 
@@ -335,8 +393,6 @@ class COSMOS_AFS:
         OMEGA_sq = np.diag(OMEGA[i] ** 2)
         uS_as_G = (np.eye(n) - N * inv(NT * OMEGA_sq * N) * NT * OMEGA_sq) * GsT_iGsGsT * uC_as_B
 
-
-
     def acquisition(self, fs_cam=None, fs_ode=None, mission=None, nontracking_count=None, nontracking_mode=None):
         """
         Call this method once if State Machine's mode is Acquisition.
@@ -363,6 +419,7 @@ class COSMOS_AFS:
         nontracking_mode = params['nontracking_mode']
         if isinstance(nontracking_mode, int):
             nontracking_mode = self.nontracking_modes[nontracking_mode]
+        nontracking_func = self.nontracking_funcs[nontracking_mode]
 
         # Initialization prior to Acquisition and Tracking/Non-Tracking:
 
@@ -387,21 +444,20 @@ class COSMOS_AFS:
                 except Exception:
                     pass
 
-        nontracking_func_handles = self.nontracking_modes.values()
-
         # Begin Acquisition:
 
+        x0 = np.concatenate([np.zeros([7, 1]), self.rw_read()])  # = np.array([[q], [w], [rw]])
         while True:
             t_iter = time.time()
-            target, t = acquire_target(mission)  # constantly check if target (i.e., Acquisition)
+            target, t = acquire_target(mission)  # constantly check @ fs_cam if target (i.e., Acquisition)
 
             # Tracking (if target spotted now or at least once within 'nontracking_count' limit):
 
             if target is not False:  # first target
                 count = 0
-                x0 = np.concatenate([np.zeros([7, 1]), self.rw_read()])  # = np.array([[q], [w], [rw]])
                 t0 = t
                 dcm0 = self.pixel_to_dcm(target)
+                z = np.zeros([4, 1])
                 sync_iter(t_iter, dt_cam)
             while count < nontracking_count:  # not first target
                 t_iter = time.time()
@@ -411,13 +467,20 @@ class COSMOS_AFS:
                     wx = -np.matmul(np.transpose(dcm), (dcm - dcm0) / (t - t0))  # [omega x]
                     w = np.array([[wx[2, 1]], [-wx[2, 0]], [wx[1, 0]]])  # omega
                     q = self.dcm_to_q(dcm)  # error quaternion
-                    u_c_as_b = self.Kp * q[1::] + np.matmul(self.Kd, w)  # control torque in body frame
-                               # + self.Kp * np.matmul(self.Kd, np.matmul(self.Ki, z))
+                    z += q
+                    u_c_as_b = self.Kp * q[1::] + np.matmul(self.Kd, w) + \
+                               self.Kp * np.matmul(self.Kd, np.matmul(self.Ki, z))  # control torque in body frame
                     u_s_as_g = np.matmul(self.GsT_iGsGsT, u_c_as_b)  # projected spin torque in rw frames
-                    a =
-                    b =
-                    xdot = np.matmul(np.inv(a), b)  # time derivative of state vector
-                    x = self.ode45(xdot, x0)  # state vector
+                    rw = x0[7::]  # reaction wheels rpm
+                    t_ext = np.zeros([3, 1])  # external torque
+                    b = np.array([[0.5 * np.matmult(self.qdot(q), np.array([0], w)),
+                                  [-self.skew(w) * (self.I_body_as_B * w + sum(rw[i] * self.IsGs[:, i][:, np.newaxis]
+                                                                               for i in range(self.n)) + t_ext)],
+                                  [u_s_as_g]])
+                    xdot = np.matmul(np.inv(self.A), b)  # time derivative of state vector
+                    # x = self.ode45(xdot, x0)  # state vector
+                    x = x0 + xdot * dt_cam
+                    x[:4] = x[:4] / np.linalg.norm(x[:4])  # quaternion normalization constraint
                     self.rw_update(x[7::])  # send spin rates to reaction wheels
                     x0 = x
                     t0 = t
@@ -428,5 +491,33 @@ class COSMOS_AFS:
 
             # Non-Tracking (because target has not been spotted nor has been within 'nontracking_count' limit):
 
-            perform_nontracking(nontracking_mode)
+            x = nontracking_func(x0)
+            x[:4] = x[:4] / np.linalg.norm(x[:4])  # quaternion normalization constraint
+            self.rw_update(x[7::])  # send spin rates to reaction wheels
+            x0 = x
+
+    def nontracking_shutdown(self, x0):
+        """Turn reaction wheels off."""
+        return np.zeros_like(x0)
+
+    def nontracking_maintain(self, x0):
+        """Continue last known state vector."""
+        return x0
+
+    def nontracking_spindown(self, x0):
+        """Reset the reaction wheels."""
+        self.rw_read()
+        x = x0
+        return x
+
+    def rw_read(self):
+        """Receive current RPM from reaction wheels."""
+        rw = np.ones([self.n, 1])
+        return rw
+
+    def rw_update(self, rw):
+        """Send RPM to reaction wheels."""
+        print(rw)
+        return
+
 
