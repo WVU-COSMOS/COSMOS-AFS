@@ -23,14 +23,17 @@ Feb. 19, 2024     JPK              Need to get DCM from frame blocks, not axis-a
 Feb. 26, 2024     JPK              Successful tests of 'acquisition' method; May be inaccurate but has functionality;
                                    Outer loop checks for target @ stable FPS, returns RPM's if target, performs
                                    'nontracking_mode' operation if no target for specified number of frames; Need ode45;
+Mar. 04, 2024     JPK              Attempt to include ROS publishing for application to RW RPM's within while loop
+                                   (https://pypi.org/project/roslibpy/)
+                  (https://stackoverflow.com/questions/70070413/is-this-the-right-way-to-publish-msg-to-the-topic);
 """
-
 import time
 from PIL import Image
 import io
 import numpy as np
 import cv2
 import requests
+import roslibpy  # [ROS]
 
 
 # OUTDATED BECAUSE USES AXIS-ANGLES:
@@ -46,11 +49,20 @@ def aa_to_q(ehat, phimag):
 
 
 class COSMOS_AFS:
-    def __init__(self, url):
+    def __init__(self, url, ros_ip):
         """
         Inputs:
             - url (string) == f"http://{ip}/capture" where 'ip' is IP address of other ESP32 router connected to R-Pi
         """
+        try:  # [ROS]
+            self.ros = roslibpy.Ros(host=ros_ip, port=9090)
+            self.ros.run()
+            self.node_camera = roslibpy.Topic(self.ros, '/node_camera', 'std_msgs/String')
+            self.node_motors = roslibpy.Topic(self.ros, '/node_motors', 'std_msgs/String')
+            self.debug = False
+        except Exception as e:
+            self.debug = True
+
         # webcam and analysis options:
         self.url = url
         self.missions_params = {1: (np.array([100, 0, 0], dtype=np.uint8), np.array([255, 75, 75], dtype=np.uint8))}
@@ -107,7 +119,7 @@ class COSMOS_AFS:
         self.fs_cam = 10
         self.fs_ode = 100
         self.mission = 1
-        self.nontracking_count = 20
+        self.nontracking_count = 10
         self.nontracking_mode = 0
 
         return
@@ -353,7 +365,7 @@ class COSMOS_AFS:
         fs_cam = params['fs_cam']
         fs_ode = params['fs_ode']
         mission = params['mission']
-        nontracking_count = params['nontracking_count'] + 1  # +1 such that '<' is used instead of '<='
+        nontracking_count = params['nontracking_count']
         nontracking_mode = params['nontracking_mode']
         if isinstance(nontracking_mode, int):
             nontracking_mode = self.nontracking_modes[nontracking_mode]
@@ -363,7 +375,7 @@ class COSMOS_AFS:
 
         frame = 0
         x0 = np.concatenate([[[1]], np.zeros([6, 1]), self.rw_read()])  # = np.array([[q], [w], [rw]]), state vector
-        count = nontracking_count  # initialize to be in non-tracking mode until first target appears
+        count = nontracking_count + 1  # initialize to be in non-tracking mode until first target appears
         dt_cam = 1 / fs_cam
         dt_ode = 1 / fs_ode
 
@@ -404,6 +416,7 @@ class COSMOS_AFS:
                 target, t = acquire_target(mission)
                 frame += 1  # for printing to console when debugging
                 if target is not False:  # if target
+                    count = 0
                     dcm = self.pixel_to_dcm(target)
                     wx = -np.matmul(dcm.T, (dcm - dcm0) / (t - t0))  # [omega x]
                     w = np.array([[wx[2, 1]], [-wx[2, 0]], [wx[1, 0]]])  # omega
@@ -458,12 +471,18 @@ class COSMOS_AFS:
 
     def rw_read(self):
         """Receive current RPM from reaction wheels."""
-        rw = np.zeros([self.n, 1])
+        if self.debug is True:  # [ROS] is off
+            rw = np.zeros([self.n, 1])  # for debugging
+        elif self.ros.is_connected is True:
+            rw = self.node_motors.subscribe(lambda data: data)
         return rw
 
     def rw_update(self, rw, frame=None, count=None):
         """Send RPM to reaction wheels. Note 'frame' is only for printing to the console when debugging."""
-        self.rw_print(rw, frame, count)  # for debugging
+        if self.debug is True:  # [ROS] is off
+            self.rw_print(rw, frame, count)  # for debugging
+        elif self.ros.is_connected is True:
+            self.node_camera.publish(roslibpy.Message({'gs1': rw[0], 'gs2': rw[1], 'gs3': rw[2]}))
         return
 
     def rw_print(self, rw, frame=None, count=None):
