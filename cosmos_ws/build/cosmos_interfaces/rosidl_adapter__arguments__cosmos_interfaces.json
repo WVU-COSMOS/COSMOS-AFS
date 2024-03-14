@@ -3,6 +3,8 @@
   "non_idl_tuples": [
     "/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces:msg/ReactionWheels.msg",
     "/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces:msg/Position.msg",
-    "/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces:msg/Attitude.msg"
+    "/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces:msg/Attitude.msg",
+    "/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces:srv/AAToDCM.srv",
+    "/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces:srv/Skew.srv"
   ]
 }

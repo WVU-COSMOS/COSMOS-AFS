@@ -20,6 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            "GetImage = camera_pkg.GetImage:main",
+            "ImageToPixel = camera_pkg.ImageToPixel:main"
         ],
     },
 )

@@ -5,6 +5,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/msg/detail/dds_fastrtps/position__type_support.cpp.o.d"
   "CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/msg/detail/dds_fastrtps/reaction_wheels__type_support.cpp.o"
   "CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/msg/detail/dds_fastrtps/reaction_wheels__type_support.cpp.o.d"
+  "CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/srv/detail/dds_fastrtps/aa_to_dcm__type_support.cpp.o"
+  "CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/srv/detail/dds_fastrtps/aa_to_dcm__type_support.cpp.o.d"
+  "CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/srv/detail/dds_fastrtps/skew__type_support.cpp.o"
+  "CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/srv/detail/dds_fastrtps/skew__type_support.cpp.o.d"
   "libcosmos_interfaces__rosidl_typesupport_fastrtps_cpp.pdb"
   "libcosmos_interfaces__rosidl_typesupport_fastrtps_cpp.so"
   "rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/msg/detail/attitude__rosidl_typesupport_fastrtps_cpp.hpp"
@@ -13,6 +17,10 @@ file(REMOVE_RECURSE
   "rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/msg/detail/dds_fastrtps/reaction_wheels__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/msg/detail/position__rosidl_typesupport_fastrtps_cpp.hpp"
   "rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/msg/detail/reaction_wheels__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/srv/detail/dds_fastrtps/aa_to_dcm__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/srv/detail/dds_fastrtps/skew__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/srv/detail/skew__rosidl_typesupport_fastrtps_cpp.hpp"
 )
 
 # Per-language clean rules from dependency scanning.

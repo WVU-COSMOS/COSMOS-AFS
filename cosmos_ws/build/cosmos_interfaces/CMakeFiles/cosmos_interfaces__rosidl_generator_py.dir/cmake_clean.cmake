@@ -5,6 +5,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_position_s.c.o.d"
   "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_reaction_wheels_s.c.o"
   "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_reaction_wheels_s.c.o.d"
+  "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c.o"
+  "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c.o.d"
+  "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c.o"
+  "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c.o.d"
   "rosidl_generator_py/cosmos_interfaces/libcosmos_interfaces__rosidl_generator_py.pdb"
   "rosidl_generator_py/cosmos_interfaces/libcosmos_interfaces__rosidl_generator_py.so"
 )

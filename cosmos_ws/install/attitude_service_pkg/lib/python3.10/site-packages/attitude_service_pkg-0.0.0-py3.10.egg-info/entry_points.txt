@@ -1,0 +1,4 @@
+[console_scripts]
+AxisAngleToDCM = attitude_service_pkg.AxisAngleToDCM:main
+SkewServ = attitude_service_pkg.SkewServ:main
+

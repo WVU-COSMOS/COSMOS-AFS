@@ -12,6 +12,14 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/cosmos_interfaces/msg/detail/reaction_wheels__traits.hpp"
   "rosidl_generator_cpp/cosmos_interfaces/msg/position.hpp"
   "rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp"
+  "rosidl_generator_cpp/cosmos_interfaces/srv/aa_to_dcm.hpp"
+  "rosidl_generator_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__builder.hpp"
+  "rosidl_generator_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__struct.hpp"
+  "rosidl_generator_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__traits.hpp"
+  "rosidl_generator_cpp/cosmos_interfaces/srv/detail/skew__builder.hpp"
+  "rosidl_generator_cpp/cosmos_interfaces/srv/detail/skew__struct.hpp"
+  "rosidl_generator_cpp/cosmos_interfaces/srv/detail/skew__traits.hpp"
+  "rosidl_generator_cpp/cosmos_interfaces/srv/skew.hpp"
 )
 
 # Per-language clean rules from dependency scanning.

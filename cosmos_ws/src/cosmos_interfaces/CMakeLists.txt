@@ -12,6 +12,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ReactionWheels.msg"
   "msg/Position.msg"
   "msg/Attitude.msg"
+  "srv/AAToDCM.srv"
+  "srv/Skew.srv"
 )
 
 ament_export_dependencies(rosidl_default_runtime)
