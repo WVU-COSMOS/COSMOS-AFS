@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from cosmos_interfaces/srv/Skew.srv
+// generated code does not contain a copyright notice
+
+
+module cosmos_interfaces {
+  module srv {
+    typedef double double__3[3];
+    struct Skew_Request {
+      double__3 vector;
+    };
+    typedef double double__9[9];
+    struct Skew_Response {
+      double__9 skew;
+    };
+  };
+};

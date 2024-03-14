@@ -72,10 +72,15 @@ cosmos_interfaces__py/CMakeFiles/cosmos_interfaces__py: rosidl_generator_py/cosm
 cosmos_interfaces__py/CMakeFiles/cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/msg/_reaction_wheels.py
 cosmos_interfaces__py/CMakeFiles/cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/msg/_position.py
 cosmos_interfaces__py/CMakeFiles/cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/msg/_attitude.py
+cosmos_interfaces__py/CMakeFiles/cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm.py
+cosmos_interfaces__py/CMakeFiles/cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/srv/_skew.py
 cosmos_interfaces__py/CMakeFiles/cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/msg/__init__.py
+cosmos_interfaces__py/CMakeFiles/cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/srv/__init__.py
 cosmos_interfaces__py/CMakeFiles/cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/msg/_reaction_wheels_s.c
 cosmos_interfaces__py/CMakeFiles/cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/msg/_position_s.c
 cosmos_interfaces__py/CMakeFiles/cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/msg/_attitude_s.c
+cosmos_interfaces__py/CMakeFiles/cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c
+cosmos_interfaces__py/CMakeFiles/cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c
 
 rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -93,6 +98,8 @@ rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport
 rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/cosmos_interfaces/msg/ReactionWheels.idl
 rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/cosmos_interfaces/msg/Position.idl
 rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/cosmos_interfaces/msg/Attitude.idl
+rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/cosmos_interfaces/srv/AAToDCM.idl
+rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/cosmos_interfaces/srv/Skew.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
 	cd /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/cosmos_interfaces__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
@@ -111,8 +118,17 @@ rosidl_generator_py/cosmos_interfaces/msg/_position.py: rosidl_generator_py/cosm
 rosidl_generator_py/cosmos_interfaces/msg/_attitude.py: rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/cosmos_interfaces/msg/_attitude.py
 
+rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm.py: rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm.py
+
+rosidl_generator_py/cosmos_interfaces/srv/_skew.py: rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/cosmos_interfaces/srv/_skew.py
+
 rosidl_generator_py/cosmos_interfaces/msg/__init__.py: rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/cosmos_interfaces/msg/__init__.py
+
+rosidl_generator_py/cosmos_interfaces/srv/__init__.py: rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/cosmos_interfaces/srv/__init__.py
 
 rosidl_generator_py/cosmos_interfaces/msg/_reaction_wheels_s.c: rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/cosmos_interfaces/msg/_reaction_wheels_s.c
@@ -122,6 +138,12 @@ rosidl_generator_py/cosmos_interfaces/msg/_position_s.c: rosidl_generator_py/cos
 
 rosidl_generator_py/cosmos_interfaces/msg/_attitude_s.c: rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/cosmos_interfaces/msg/_attitude_s.c
+
+rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c: rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c
+
+rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c: rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c
 
 cosmos_interfaces__py: cosmos_interfaces__py/CMakeFiles/cosmos_interfaces__py
 cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_c.c
@@ -134,6 +156,11 @@ cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/msg/_position.py
 cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/msg/_position_s.c
 cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/msg/_reaction_wheels.py
 cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/msg/_reaction_wheels_s.c
+cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/srv/__init__.py
+cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm.py
+cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c
+cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/srv/_skew.py
+cosmos_interfaces__py: rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c
 cosmos_interfaces__py: cosmos_interfaces__py/CMakeFiles/cosmos_interfaces__py.dir/build.make
 .PHONY : cosmos_interfaces__py
 

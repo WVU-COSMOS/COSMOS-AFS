@@ -80,6 +80,8 @@ rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheel
 rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/cosmos_interfaces/msg/ReactionWheels.idl
 rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/cosmos_interfaces/msg/Position.idl
 rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/cosmos_interfaces/msg/Attitude.idl
+rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/cosmos_interfaces/srv/AAToDCM.idl
+rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__rosidl_typesupport_introspection_cpp.hpp: rosidl_adapter/cosmos_interfaces/srv/Skew.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ introspection for ROS interfaces"
 	/usr/bin/python3.10 /opt/ros/humble/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp --generator-arguments-file /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_typesupport_introspection_cpp__arguments.json
 
@@ -89,6 +91,12 @@ rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/position__rosi
 rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/attitude__rosidl_typesupport_introspection_cpp.hpp: rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/attitude__rosidl_typesupport_introspection_cpp.hpp
 
+rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__rosidl_typesupport_introspection_cpp.hpp: rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__rosidl_typesupport_introspection_cpp.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__rosidl_typesupport_introspection_cpp.hpp
+
+rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__rosidl_typesupport_introspection_cpp.hpp: rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__rosidl_typesupport_introspection_cpp.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__rosidl_typesupport_introspection_cpp.hpp
+
 rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__type_support.cpp: rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__type_support.cpp
 
@@ -97,6 +105,12 @@ rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/position__type
 
 rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/attitude__type_support.cpp: rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__rosidl_typesupport_introspection_cpp.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/attitude__type_support.cpp
+
+rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp: rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__rosidl_typesupport_introspection_cpp.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp
+
+rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp: rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__rosidl_typesupport_introspection_cpp.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp
 
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__type_support.cpp.o: CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/flags.make
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__type_support.cpp.o: rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__type_support.cpp
@@ -140,11 +154,41 @@ CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_ty
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/attitude__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/attitude__type_support.cpp -o CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/attitude__type_support.cpp.s
 
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp.o: CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/flags.make
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp.o: rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp.o: CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp.o -MF CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp.o.d -o CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp.o -c /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp
+
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp > CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp.i
+
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp -o CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp.s
+
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp.o: CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/flags.make
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp.o: rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp.o: CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp.o -MF CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp.o.d -o CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp.o -c /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp
+
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp > CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp.i
+
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp -o CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp.s
+
 # Object files for target cosmos_interfaces__rosidl_typesupport_introspection_cpp
 cosmos_interfaces__rosidl_typesupport_introspection_cpp_OBJECTS = \
 "CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__type_support.cpp.o" \
 "CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/position__type_support.cpp.o" \
-"CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/attitude__type_support.cpp.o"
+"CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/attitude__type_support.cpp.o" \
+"CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp.o" \
+"CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp.o"
 
 # External object files for target cosmos_interfaces__rosidl_typesupport_introspection_cpp
 cosmos_interfaces__rosidl_typesupport_introspection_cpp_EXTERNAL_OBJECTS =
@@ -152,13 +196,15 @@ cosmos_interfaces__rosidl_typesupport_introspection_cpp_EXTERNAL_OBJECTS =
 libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so: CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__type_support.cpp.o
 libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so: CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/position__type_support.cpp.o
 libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so: CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/attitude__type_support.cpp.o
+libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so: CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp.o
+libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so: CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp.o
 libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so: CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make
 libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
 libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so: /opt/ros/humble/lib/librcutils.so
 libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
 libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so: CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -175,6 +221,10 @@ CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: r
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/position__type_support.cpp
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__rosidl_typesupport_introspection_cpp.hpp
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__type_support.cpp
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__rosidl_typesupport_introspection_cpp.hpp
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__rosidl_typesupport_introspection_cpp.hpp
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/depend: rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp
 	cd /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/depend
 

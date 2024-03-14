@@ -69,6 +69,12 @@ include CMakeFiles/cosmos_interfaces.dir/progress.make
 CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/ReactionWheels.msg
 CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/Position.msg
 CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/Attitude.msg
+CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/srv/AAToDCM.srv
+CMakeFiles/cosmos_interfaces: rosidl_cmake/srv/AAToDCM_Request.msg
+CMakeFiles/cosmos_interfaces: rosidl_cmake/srv/AAToDCM_Response.msg
+CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/srv/Skew.srv
+CMakeFiles/cosmos_interfaces: rosidl_cmake/srv/Skew_Request.msg
+CMakeFiles/cosmos_interfaces: rosidl_cmake/srv/Skew_Response.msg
 
 cosmos_interfaces: CMakeFiles/cosmos_interfaces
 cosmos_interfaces: CMakeFiles/cosmos_interfaces.dir/build.make

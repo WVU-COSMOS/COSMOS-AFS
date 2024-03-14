@@ -1,0 +1,17 @@
+package.xml
+setup.cfg
+setup.py
+../../build/attitude_service_pkg/attitude_service_pkg.egg-info/PKG-INFO
+../../build/attitude_service_pkg/attitude_service_pkg.egg-info/SOURCES.txt
+../../build/attitude_service_pkg/attitude_service_pkg.egg-info/dependency_links.txt
+../../build/attitude_service_pkg/attitude_service_pkg.egg-info/entry_points.txt
+../../build/attitude_service_pkg/attitude_service_pkg.egg-info/requires.txt
+../../build/attitude_service_pkg/attitude_service_pkg.egg-info/top_level.txt
+../../build/attitude_service_pkg/attitude_service_pkg.egg-info/zip-safe
+attitude_service_pkg/AxisAngleToDCM.py
+attitude_service_pkg/SkewServ.py
+attitude_service_pkg/__init__.py
+resource/attitude_service_pkg
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

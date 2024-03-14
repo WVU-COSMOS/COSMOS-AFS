@@ -9,6 +9,11 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/cosmos_interfaces/msg/_position_s.c"
   "../rosidl_generator_py/cosmos_interfaces/msg/_reaction_wheels.py"
   "../rosidl_generator_py/cosmos_interfaces/msg/_reaction_wheels_s.c"
+  "../rosidl_generator_py/cosmos_interfaces/srv/__init__.py"
+  "../rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm.py"
+  "../rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c"
+  "../rosidl_generator_py/cosmos_interfaces/srv/_skew.py"
+  "../rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c"
   "CMakeFiles/cosmos_interfaces__py"
 )
 

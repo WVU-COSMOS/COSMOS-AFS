@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from cosmos_interfaces/srv/AAToDCM.srv
+// generated code does not contain a copyright notice
+
+
+module cosmos_interfaces {
+  module srv {
+    struct AAToDCM_Request {
+      sequence<double> ehat;
+
+      double phimag;
+    };
+    typedef double double__9[9];
+    struct AAToDCM_Response {
+      double__9 dcm;
+    };
+  };
+};

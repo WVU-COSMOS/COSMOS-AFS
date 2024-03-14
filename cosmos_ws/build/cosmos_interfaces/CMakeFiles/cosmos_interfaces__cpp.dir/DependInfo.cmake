@@ -23,6 +23,14 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/msg/detail/reaction_wheels__struct.hpp" "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp"
   "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/msg/detail/reaction_wheels__traits.hpp" "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp"
   "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/msg/position.hpp" "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp"
+  "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/srv/aa_to_dcm.hpp" "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp"
+  "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__builder.hpp" "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp"
+  "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__struct.hpp" "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp"
+  "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__traits.hpp" "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp"
+  "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/srv/detail/skew__builder.hpp" "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp"
+  "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/srv/detail/skew__struct.hpp" "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp"
+  "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/srv/detail/skew__traits.hpp" "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp"
+  "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/srv/skew.hpp" "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp"
   )
 
 

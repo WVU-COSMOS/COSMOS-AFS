@@ -4,3 +4,11 @@ msg/Position.idl
 msg/Position.msg
 msg/ReactionWheels.idl
 msg/ReactionWheels.msg
+srv/AAToDCM.idl
+srv/AAToDCM.srv
+srv/AAToDCM_Request.msg
+srv/AAToDCM_Response.msg
+srv/Skew.idl
+srv/Skew.srv
+srv/Skew_Request.msg
+srv/Skew_Response.msg

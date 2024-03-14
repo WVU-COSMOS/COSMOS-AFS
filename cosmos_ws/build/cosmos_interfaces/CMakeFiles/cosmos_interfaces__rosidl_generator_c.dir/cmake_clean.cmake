@@ -5,6 +5,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/position__functions.c.o.d"
   "CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__functions.c.o"
   "CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__functions.c.o.d"
+  "CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c.o"
+  "CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c.o.d"
+  "CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/skew__functions.c.o"
+  "CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/skew__functions.c.o.d"
   "libcosmos_interfaces__rosidl_generator_c.pdb"
   "libcosmos_interfaces__rosidl_generator_c.so"
   "rosidl_generator_c/cosmos_interfaces/msg/attitude.h"
@@ -22,6 +26,16 @@ file(REMOVE_RECURSE
   "rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__type_support.h"
   "rosidl_generator_c/cosmos_interfaces/msg/position.h"
   "rosidl_generator_c/cosmos_interfaces/msg/reaction_wheels.h"
+  "rosidl_generator_c/cosmos_interfaces/srv/aa_to_dcm.h"
+  "rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c"
+  "rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.h"
+  "rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__struct.h"
+  "rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.h"
+  "rosidl_generator_c/cosmos_interfaces/srv/detail/skew__functions.c"
+  "rosidl_generator_c/cosmos_interfaces/srv/detail/skew__functions.h"
+  "rosidl_generator_c/cosmos_interfaces/srv/detail/skew__struct.h"
+  "rosidl_generator_c/cosmos_interfaces/srv/detail/skew__type_support.h"
+  "rosidl_generator_c/cosmos_interfaces/srv/skew.h"
 )
 
 # Per-language clean rules from dependency scanning.
