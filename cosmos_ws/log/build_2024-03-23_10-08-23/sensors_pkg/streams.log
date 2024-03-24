@@ -1,0 +1,21 @@
+[1.698s] Invoking command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/sensors_pkg': PYTHONPATH=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/sensors_pkg/prefix_override:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/sensors_pkg build --build-base /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/sensors_pkg/build install --record /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/sensors_pkg/install.log --single-version-externally-managed
+[2.129s] running egg_info
+[2.129s] writing ../../build/sensors_pkg/sensors_pkg.egg-info/PKG-INFO
+[2.130s] writing dependency_links to ../../build/sensors_pkg/sensors_pkg.egg-info/dependency_links.txt
+[2.130s] writing entry points to ../../build/sensors_pkg/sensors_pkg.egg-info/entry_points.txt
+[2.130s] writing requirements to ../../build/sensors_pkg/sensors_pkg.egg-info/requires.txt
+[2.131s] writing top-level names to ../../build/sensors_pkg/sensors_pkg.egg-info/top_level.txt
+[2.132s] reading manifest file '../../build/sensors_pkg/sensors_pkg.egg-info/SOURCES.txt'
+[2.133s] writing manifest file '../../build/sensors_pkg/sensors_pkg.egg-info/SOURCES.txt'
+[2.134s] running build
+[2.134s] running build_py
+[2.134s] running install
+[2.134s] running install_lib
+[2.135s] running install_data
+[2.136s] running install_egg_info
+[2.137s] removing '/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages/sensors_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[2.138s] Copying ../../build/sensors_pkg/sensors_pkg.egg-info to /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages/sensors_pkg-0.0.0-py3.10.egg-info
+[2.139s] running install_scripts
+[2.164s] Installing Data_Acquisition script to /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/sensors_pkg
+[2.164s] writing list of installed files to '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/sensors_pkg/install.log'
+[2.229s] Invoked command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/sensors_pkg' returned '0': PYTHONPATH=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/sensors_pkg/prefix_override:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/sensors_pkg build --build-base /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/sensors_pkg/build install --record /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/sensors_pkg/install.log --single-version-externally-managed

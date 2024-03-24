@@ -1,0 +1,10 @@
+string from_node
+string to_node
+bool is_start
+bool is_done
+bool is_abort
+bool is_target
+int32 img_num
+bool next_img
+int32 u
+int32 v

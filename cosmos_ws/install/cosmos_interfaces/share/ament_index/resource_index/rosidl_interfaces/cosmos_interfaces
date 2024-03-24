@@ -1,9 +1,13 @@
 msg/Attitude.idl
 msg/Attitude.msg
+msg/Camera.idl
+msg/Camera.msg
 msg/Position.idl
 msg/Position.msg
 msg/ReactionWheels.idl
 msg/ReactionWheels.msg
+msg/StateMachine.idl
+msg/StateMachine.msg
 srv/AAToDCM.idl
 srv/AAToDCM.srv
 srv/AAToDCM_Request.msg

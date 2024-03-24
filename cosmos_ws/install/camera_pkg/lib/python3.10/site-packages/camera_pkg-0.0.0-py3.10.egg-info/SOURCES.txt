@@ -8,6 +8,7 @@ setup.py
 ../../build/camera_pkg/camera_pkg.egg-info/requires.txt
 ../../build/camera_pkg/camera_pkg.egg-info/top_level.txt
 ../../build/camera_pkg/camera_pkg.egg-info/zip-safe
+camera_pkg/CameraSM.py
 camera_pkg/GetImage.py
 camera_pkg/ImageToPixel.py
 camera_pkg/__init__.py

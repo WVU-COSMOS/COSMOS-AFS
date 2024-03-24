@@ -1,0 +1,22 @@
+[1.612s] Invoking command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_service_pkg': PYTHONPATH=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_service_pkg/prefix_override:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/attitude_service_pkg build --build-base /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_service_pkg/build install --record /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_service_pkg/install.log --single-version-externally-managed
+[1.991s] running egg_info
+[1.992s] writing ../../build/attitude_service_pkg/attitude_service_pkg.egg-info/PKG-INFO
+[1.992s] writing dependency_links to ../../build/attitude_service_pkg/attitude_service_pkg.egg-info/dependency_links.txt
+[1.992s] writing entry points to ../../build/attitude_service_pkg/attitude_service_pkg.egg-info/entry_points.txt
+[1.993s] writing requirements to ../../build/attitude_service_pkg/attitude_service_pkg.egg-info/requires.txt
+[1.993s] writing top-level names to ../../build/attitude_service_pkg/attitude_service_pkg.egg-info/top_level.txt
+[1.995s] reading manifest file '../../build/attitude_service_pkg/attitude_service_pkg.egg-info/SOURCES.txt'
+[1.996s] writing manifest file '../../build/attitude_service_pkg/attitude_service_pkg.egg-info/SOURCES.txt'
+[1.996s] running build
+[1.997s] running build_py
+[1.997s] running install
+[1.998s] running install_lib
+[2.000s] running install_data
+[2.001s] running install_egg_info
+[2.004s] removing '/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg/lib/python3.10/site-packages/attitude_service_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[2.004s] Copying ../../build/attitude_service_pkg/attitude_service_pkg.egg-info to /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg/lib/python3.10/site-packages/attitude_service_pkg-0.0.0-py3.10.egg-info
+[2.005s] running install_scripts
+[2.037s] Installing AxisAngleToDCM script to /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg/lib/attitude_service_pkg
+[2.038s] Installing SkewServ script to /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg/lib/attitude_service_pkg
+[2.039s] writing list of installed files to '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_service_pkg/install.log'
+[2.121s] Invoked command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_service_pkg' returned '0': PYTHONPATH=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_service_pkg/prefix_override:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/attitude_service_pkg build --build-base /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_service_pkg/build install --record /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_service_pkg/install.log --single-version-externally-managed

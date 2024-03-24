@@ -6,8 +6,10 @@ cosmos_interfaces.egg-info/dependency_links.txt
 cosmos_interfaces.egg-info/top_level.txt
 cosmos_interfaces/msg/__init__.py
 cosmos_interfaces/msg/_attitude.py
+cosmos_interfaces/msg/_camera.py
 cosmos_interfaces/msg/_position.py
 cosmos_interfaces/msg/_reaction_wheels.py
+cosmos_interfaces/msg/_state_machine.py
 cosmos_interfaces/msg/_task.py
 cosmos_interfaces/srv/__init__.py
 cosmos_interfaces/srv/_aa_to_dcm.py
