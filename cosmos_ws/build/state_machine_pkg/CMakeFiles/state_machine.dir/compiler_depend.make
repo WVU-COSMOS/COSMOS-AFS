@@ -677,8 +677,26 @@ CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o: /home/vini_dunker/COS
   /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/position.hpp \
   /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__struct.hpp \
   /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__builder.hpp \
-  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__traits.hpp
+  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__traits.hpp \
+  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/task.hpp \
+  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/task__struct.hpp \
+  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/task__builder.hpp \
+  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/task__traits.hpp \
+  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/state_machine.hpp \
+  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__struct.hpp \
+  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__builder.hpp \
+  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__traits.hpp
 
+
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__builder.hpp:
+
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/state_machine.hpp:
+
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/task__builder.hpp:
+
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/task__struct.hpp:
+
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/task.hpp:
 
 /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__traits.hpp:
 
@@ -957,6 +975,8 @@ CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o: /home/vini_dunker/COS
 /usr/include/c++/11/utility:
 
 /usr/include/c++/11/ios:
+
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__struct.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set.hpp:
 
@@ -1486,6 +1506,8 @@ CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o: /home/vini_dunker/COS
 
 /usr/include/c++/11/backward/binders.h:
 
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/task__traits.hpp:
+
 /usr/include/c++/11/bits/string_view.tcc:
 
 /usr/include/c++/11/bits/stringfwd.h:
@@ -1781,6 +1803,8 @@ CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o: /home/vini_dunker/COS
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__builder.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/macros.hpp:
+
+/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__traits.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/contexts/default_context.hpp:
 

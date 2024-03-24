@@ -78,6 +78,8 @@ rosidl_typesupport_c/cosmos_interfaces/msg/reaction_wheels__type_support.cpp: /o
 rosidl_typesupport_c/cosmos_interfaces/msg/reaction_wheels__type_support.cpp: rosidl_adapter/cosmos_interfaces/msg/ReactionWheels.idl
 rosidl_typesupport_c/cosmos_interfaces/msg/reaction_wheels__type_support.cpp: rosidl_adapter/cosmos_interfaces/msg/Position.idl
 rosidl_typesupport_c/cosmos_interfaces/msg/reaction_wheels__type_support.cpp: rosidl_adapter/cosmos_interfaces/msg/Attitude.idl
+rosidl_typesupport_c/cosmos_interfaces/msg/reaction_wheels__type_support.cpp: rosidl_adapter/cosmos_interfaces/msg/StateMachine.idl
+rosidl_typesupport_c/cosmos_interfaces/msg/reaction_wheels__type_support.cpp: rosidl_adapter/cosmos_interfaces/msg/Camera.idl
 rosidl_typesupport_c/cosmos_interfaces/msg/reaction_wheels__type_support.cpp: rosidl_adapter/cosmos_interfaces/srv/AAToDCM.idl
 rosidl_typesupport_c/cosmos_interfaces/msg/reaction_wheels__type_support.cpp: rosidl_adapter/cosmos_interfaces/srv/Skew.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C type support dispatch for ROS interfaces"
@@ -88,6 +90,12 @@ rosidl_typesupport_c/cosmos_interfaces/msg/position__type_support.cpp: rosidl_ty
 
 rosidl_typesupport_c/cosmos_interfaces/msg/attitude__type_support.cpp: rosidl_typesupport_c/cosmos_interfaces/msg/reaction_wheels__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/cosmos_interfaces/msg/attitude__type_support.cpp
+
+rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp: rosidl_typesupport_c/cosmos_interfaces/msg/reaction_wheels__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp
+
+rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp: rosidl_typesupport_c/cosmos_interfaces/msg/reaction_wheels__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp
 
 rosidl_typesupport_c/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp: rosidl_typesupport_c/cosmos_interfaces/msg/reaction_wheels__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp
@@ -137,10 +145,38 @@ CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosm
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/attitude__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_typesupport_c/cosmos_interfaces/msg/attitude__type_support.cpp -o CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/attitude__type_support.cpp.s
 
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp.o: CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/flags.make
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp.o: rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp.o: CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp.o -MF CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp.o.d -o CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp.o -c /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp
+
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp > CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp.i
+
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp -o CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp.s
+
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp.o: CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/flags.make
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp.o: rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp.o: CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp.o -MF CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp.o.d -o CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp.o -c /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp
+
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp > CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp.i
+
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp -o CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp.s
+
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp.o: CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp.o: rosidl_typesupport_c/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp.o: CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp.o -MF CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp.o.d -o CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp.o -c /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_typesupport_c/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp
 
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp.i: cmake_force
@@ -154,7 +190,7 @@ CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosm
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/skew__type_support.cpp.o: CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/skew__type_support.cpp.o: rosidl_typesupport_c/cosmos_interfaces/srv/skew__type_support.cpp
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/skew__type_support.cpp.o: CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/skew__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/skew__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/skew__type_support.cpp.o -MF CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/skew__type_support.cpp.o.d -o CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/skew__type_support.cpp.o -c /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_typesupport_c/cosmos_interfaces/srv/skew__type_support.cpp
 
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/skew__type_support.cpp.i: cmake_force
@@ -170,6 +206,8 @@ cosmos_interfaces__rosidl_typesupport_c_OBJECTS = \
 "CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/reaction_wheels__type_support.cpp.o" \
 "CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/position__type_support.cpp.o" \
 "CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/attitude__type_support.cpp.o" \
+"CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp.o" \
+"CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp.o" \
 "CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp.o" \
 "CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/skew__type_support.cpp.o"
 
@@ -179,6 +217,8 @@ cosmos_interfaces__rosidl_typesupport_c_EXTERNAL_OBJECTS =
 libcosmos_interfaces__rosidl_typesupport_c.so: CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/reaction_wheels__type_support.cpp.o
 libcosmos_interfaces__rosidl_typesupport_c.so: CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/position__type_support.cpp.o
 libcosmos_interfaces__rosidl_typesupport_c.so: CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/attitude__type_support.cpp.o
+libcosmos_interfaces__rosidl_typesupport_c.so: CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp.o
+libcosmos_interfaces__rosidl_typesupport_c.so: CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp.o
 libcosmos_interfaces__rosidl_typesupport_c.so: CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp.o
 libcosmos_interfaces__rosidl_typesupport_c.so: CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/skew__type_support.cpp.o
 libcosmos_interfaces__rosidl_typesupport_c.so: CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/build.make
@@ -187,7 +227,7 @@ libcosmos_interfaces__rosidl_typesupport_c.so: /opt/ros/humble/lib/librosidl_typ
 libcosmos_interfaces__rosidl_typesupport_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libcosmos_interfaces__rosidl_typesupport_c.so: /opt/ros/humble/lib/librcutils.so
 libcosmos_interfaces__rosidl_typesupport_c.so: CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library libcosmos_interfaces__rosidl_typesupport_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX shared library libcosmos_interfaces__rosidl_typesupport_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -199,8 +239,10 @@ CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/clean:
 .PHONY : CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/clean
 
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/cosmos_interfaces/msg/attitude__type_support.cpp
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/cosmos_interfaces/msg/position__type_support.cpp
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/cosmos_interfaces/msg/reaction_wheels__type_support.cpp
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/cosmos_interfaces/srv/skew__type_support.cpp
 	cd /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/DependInfo.cmake --color=$(COLOR)

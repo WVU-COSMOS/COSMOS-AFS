@@ -111,10 +111,38 @@ CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_attitude_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_py/cosmos_interfaces/msg/_attitude_s.c -o CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_attitude_s.c.s
 
+CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c.o: CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/flags.make
+CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c.o: rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c
+CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c.o: CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c.o -MF CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c.o.d -o CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c.o -c /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c
+
+CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c > CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c.i
+
+CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c -o CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c.s
+
+CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c.o: CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/flags.make
+CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c.o: rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c
+CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c.o: CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c.o -MF CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c.o.d -o CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c.o -c /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c
+
+CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c > CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c.i
+
+CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c -o CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c.s
+
 CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c.o: CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c.o: rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c
 CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c.o: CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c.o -MF CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c.o.d -o CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c.o -c /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c
 
 CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c.i: cmake_force
@@ -128,7 +156,7 @@ CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos
 CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c.o: CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/flags.make
 CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c.o: rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c
 CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c.o: CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c.o -MF CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c.o.d -o CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c.o -c /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c
 
 CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c.i: cmake_force
@@ -144,6 +172,8 @@ cosmos_interfaces__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_reaction_wheels_s.c.o" \
 "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_position_s.c.o" \
 "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_attitude_s.c.o" \
+"CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c.o" \
+"CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c.o" \
 "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c.o" \
 "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c.o"
 
@@ -153,6 +183,8 @@ cosmos_interfaces__rosidl_generator_py_EXTERNAL_OBJECTS =
 rosidl_generator_py/cosmos_interfaces/libcosmos_interfaces__rosidl_generator_py.so: CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_reaction_wheels_s.c.o
 rosidl_generator_py/cosmos_interfaces/libcosmos_interfaces__rosidl_generator_py.so: CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_position_s.c.o
 rosidl_generator_py/cosmos_interfaces/libcosmos_interfaces__rosidl_generator_py.so: CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_attitude_s.c.o
+rosidl_generator_py/cosmos_interfaces/libcosmos_interfaces__rosidl_generator_py.so: CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c.o
+rosidl_generator_py/cosmos_interfaces/libcosmos_interfaces__rosidl_generator_py.so: CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c.o
 rosidl_generator_py/cosmos_interfaces/libcosmos_interfaces__rosidl_generator_py.so: CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c.o
 rosidl_generator_py/cosmos_interfaces/libcosmos_interfaces__rosidl_generator_py.so: CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c.o
 rosidl_generator_py/cosmos_interfaces/libcosmos_interfaces__rosidl_generator_py.so: CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/build.make
@@ -162,7 +194,7 @@ rosidl_generator_py/cosmos_interfaces/libcosmos_interfaces__rosidl_generator_py.
 rosidl_generator_py/cosmos_interfaces/libcosmos_interfaces__rosidl_generator_py.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 rosidl_generator_py/cosmos_interfaces/libcosmos_interfaces__rosidl_generator_py.so: /opt/ros/humble/lib/librcutils.so
 rosidl_generator_py/cosmos_interfaces/libcosmos_interfaces__rosidl_generator_py.so: CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library rosidl_generator_py/cosmos_interfaces/libcosmos_interfaces__rosidl_generator_py.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C shared library rosidl_generator_py/cosmos_interfaces/libcosmos_interfaces__rosidl_generator_py.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

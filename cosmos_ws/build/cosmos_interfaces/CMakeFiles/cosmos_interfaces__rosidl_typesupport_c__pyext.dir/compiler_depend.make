@@ -252,9 +252,16 @@ CMakeFiles/cosmos_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_p
   rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__type_support.h \
   rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__struct.h \
   rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__functions.h \
+  rosidl_generator_c/cosmos_interfaces/msg/detail/state_machine__type_support.h \
+  rosidl_generator_c/cosmos_interfaces/msg/detail/state_machine__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  rosidl_generator_c/cosmos_interfaces/msg/detail/state_machine__functions.h \
+  rosidl_generator_c/cosmos_interfaces/msg/detail/camera__type_support.h \
+  rosidl_generator_c/cosmos_interfaces/msg/detail/camera__struct.h \
+  rosidl_generator_c/cosmos_interfaces/msg/detail/camera__functions.h \
   rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.h \
   rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__struct.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.h \
   rosidl_generator_c/cosmos_interfaces/srv/detail/skew__type_support.h \
   rosidl_generator_c/cosmos_interfaces/srv/detail/skew__struct.h \
@@ -262,6 +269,16 @@ CMakeFiles/cosmos_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_p
 
 
 rosidl_generator_c/cosmos_interfaces/srv/detail/skew__functions.h:
+
+rosidl_generator_c/cosmos_interfaces/srv/detail/skew__struct.h:
+
+rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.h:
+
+rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__struct.h:
+
+rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.h:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/camera__functions.h:
 
 /usr/include/asm-generic/errno-base.h:
 
@@ -299,8 +316,6 @@ rosidl_generator_c/cosmos_interfaces/msg/detail/position__functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
-rosidl_generator_c/cosmos_interfaces/srv/detail/skew__type_support.h:
-
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
@@ -319,8 +334,6 @@ rosidl_generator_c/cosmos_interfaces/srv/detail/skew__type_support.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
-/usr/include/python3.10/cpython/dictobject.h:
-
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
@@ -332,6 +345,10 @@ rosidl_generator_c/cosmos_interfaces/srv/detail/skew__type_support.h:
 /usr/include/linux/limits.h:
 
 /usr/include/python3.10/ceval.h:
+
+rosidl_generator_c/cosmos_interfaces/srv/detail/skew__type_support.h:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/state_machine__struct.h:
 
 /usr/include/assert.h:
 
@@ -483,9 +500,9 @@ rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__type_support.h:
 
 /usr/include/python3.10/patchlevel.h:
 
-/usr/include/asm-generic/int-ll64.h:
+rosidl_generator_c/cosmos_interfaces/msg/detail/state_machine__functions.h:
 
-rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__struct.h:
+/usr/include/asm-generic/int-ll64.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
@@ -683,8 +700,6 @@ rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport
 
 /usr/include/python3.10/traceback.h:
 
-rosidl_generator_c/cosmos_interfaces/srv/detail/skew__struct.h:
-
 /usr/include/string.h:
 
 /usr/include/python3.10/cpython/initconfig.h:
@@ -710,6 +725,8 @@ rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__struct.h:
 /usr/include/endian.h:
 
 /usr/include/python3.10/cpython/ceval.h:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/camera__type_support.h:
 
 /usr/include/python3.10/pyerrors.h:
 
@@ -743,6 +760,8 @@ rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__struct.h:
 
 /usr/include/python3.10/cpython/sysmodule.h:
 
+rosidl_generator_c/cosmos_interfaces/msg/detail/camera__struct.h:
+
 /usr/include/python3.10/tracemalloc.h:
 
 /usr/include/python3.10/osmodule.h:
@@ -756,8 +775,6 @@ rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__struct.h:
 /usr/include/python3.10/bytearrayobject.h:
 
 /usr/include/python3.10/eval.h:
-
-rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
@@ -775,4 +792,8 @@ rosidl_generator_c/cosmos_interfaces/msg/rosidl_generator_c__visibility_control.
 
 rosidl_generator_c/cosmos_interfaces/msg/detail/position__struct.h:
 
-rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.h:
+rosidl_generator_c/cosmos_interfaces/msg/detail/state_machine__type_support.h:
+
+/usr/include/python3.10/cpython/dictobject.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:

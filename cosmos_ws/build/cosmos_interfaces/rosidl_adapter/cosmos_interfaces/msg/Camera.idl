@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from cosmos_interfaces/msg/Camera.msg
+// generated code does not contain a copyright notice
+
+
+module cosmos_interfaces {
+  module msg {
+    struct Camera {
+      string from_node;
+
+      string to_node;
+
+      boolean is_start;
+
+      boolean is_done;
+
+      boolean is_abort;
+
+      boolean is_target;
+
+      int32 img_num;
+
+      boolean next_img;
+
+      int32 u;
+
+      int32 v;
+    };
+  };
+};
