@@ -19,6 +19,7 @@ extern "C"
 
 // Include directives for member types
 // Member 'to_node'
+// Member 'from_node'
 #include "rosidl_runtime_c/string.h"
 
 /// Struct defined in msg/StateMachine in the package cosmos_interfaces.
@@ -26,7 +27,9 @@ typedef struct cosmos_interfaces__msg__StateMachine
 {
   int32_t mission;
   rosidl_runtime_c__String to_node;
+  rosidl_runtime_c__String from_node;
   bool is_start;
+  bool is_done;
   bool is_abort;
 } cosmos_interfaces__msg__StateMachine;
 

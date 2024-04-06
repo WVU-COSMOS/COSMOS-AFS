@@ -13,6 +13,7 @@
 
 // Include directives for member types
 // Member `to_node`
+// Member `from_node`
 #include "rosidl_runtime_c/string_functions.h"
 
 bool
@@ -27,7 +28,13 @@ cosmos_interfaces__msg__StateMachine__init(cosmos_interfaces__msg__StateMachine 
     cosmos_interfaces__msg__StateMachine__fini(msg);
     return false;
   }
+  // from_node
+  if (!rosidl_runtime_c__String__init(&msg->from_node)) {
+    cosmos_interfaces__msg__StateMachine__fini(msg);
+    return false;
+  }
   // is_start
+  // is_done
   // is_abort
   return true;
 }
@@ -41,7 +48,10 @@ cosmos_interfaces__msg__StateMachine__fini(cosmos_interfaces__msg__StateMachine 
   // mission
   // to_node
   rosidl_runtime_c__String__fini(&msg->to_node);
+  // from_node
+  rosidl_runtime_c__String__fini(&msg->from_node);
   // is_start
+  // is_done
   // is_abort
 }
 
@@ -61,8 +71,18 @@ cosmos_interfaces__msg__StateMachine__are_equal(const cosmos_interfaces__msg__St
   {
     return false;
   }
+  // from_node
+  if (!rosidl_runtime_c__String__are_equal(
+      &(lhs->from_node), &(rhs->from_node)))
+  {
+    return false;
+  }
   // is_start
   if (lhs->is_start != rhs->is_start) {
+    return false;
+  }
+  // is_done
+  if (lhs->is_done != rhs->is_done) {
     return false;
   }
   // is_abort
@@ -88,8 +108,16 @@ cosmos_interfaces__msg__StateMachine__copy(
   {
     return false;
   }
+  // from_node
+  if (!rosidl_runtime_c__String__copy(
+      &(input->from_node), &(output->from_node)))
+  {
+    return false;
+  }
   // is_start
   output->is_start = input->is_start;
+  // is_done
+  output->is_done = input->is_done;
   // is_abort
   output->is_abort = input->is_abort;
   return true;

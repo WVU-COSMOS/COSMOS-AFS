@@ -36,8 +36,12 @@ cdr_serialize(
   cdr << ros_message.mission;
   // Member: to_node
   cdr << ros_message.to_node;
+  // Member: from_node
+  cdr << ros_message.from_node;
   // Member: is_start
   cdr << (ros_message.is_start ? true : false);
+  // Member: is_done
+  cdr << (ros_message.is_done ? true : false);
   // Member: is_abort
   cdr << (ros_message.is_abort ? true : false);
   return true;
@@ -55,11 +59,21 @@ cdr_deserialize(
   // Member: to_node
   cdr >> ros_message.to_node;
 
+  // Member: from_node
+  cdr >> ros_message.from_node;
+
   // Member: is_start
   {
     uint8_t tmp;
     cdr >> tmp;
     ros_message.is_start = tmp ? true : false;
+  }
+
+  // Member: is_done
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.is_done = tmp ? true : false;
   }
 
   // Member: is_abort
@@ -95,9 +109,19 @@ get_serialized_size(
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message.to_node.size() + 1);
+  // Member: from_node
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.from_node.size() + 1);
   // Member: is_start
   {
     size_t item_size = sizeof(ros_message.is_start);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: is_done
+  {
+    size_t item_size = sizeof(ros_message.is_done);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -150,7 +174,27 @@ max_serialized_size_StateMachine(
     }
   }
 
+  // Member: from_node
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
   // Member: is_start
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Member: is_done
   {
     size_t array_size = 1;
 

@@ -39,10 +39,24 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
+  // member: from_node
+  {
+    out << "from_node: ";
+    rosidl_generator_traits::value_to_yaml(msg.from_node, out);
+    out << ", ";
+  }
+
   // member: is_start
   {
     out << "is_start: ";
     rosidl_generator_traits::value_to_yaml(msg.is_start, out);
+    out << ", ";
+  }
+
+  // member: is_done
+  {
+    out << "is_done: ";
+    rosidl_generator_traits::value_to_yaml(msg.is_done, out);
     out << ", ";
   }
 
@@ -78,6 +92,16 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
+  // member: from_node
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "from_node: ";
+    rosidl_generator_traits::value_to_yaml(msg.from_node, out);
+    out << "\n";
+  }
+
   // member: is_start
   {
     if (indentation > 0) {
@@ -85,6 +109,16 @@ inline void to_block_style_yaml(
     }
     out << "is_start: ";
     rosidl_generator_traits::value_to_yaml(msg.is_start, out);
+    out << "\n";
+  }
+
+  // member: is_done
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "is_done: ";
+    rosidl_generator_traits::value_to_yaml(msg.is_done, out);
     out << "\n";
   }
 

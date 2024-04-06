@@ -1,0 +1,31 @@
+[1.207s] Invoking command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/camera_pkg': PYTHONPATH=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/camera_pkg/prefix_override:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/camera_pkg build --build-base /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/camera_pkg/build install --record /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/camera_pkg/install.log --single-version-externally-managed
+[1.515s] running egg_info
+[1.516s] writing ../../build/camera_pkg/camera_pkg.egg-info/PKG-INFO
+[1.516s] writing dependency_links to ../../build/camera_pkg/camera_pkg.egg-info/dependency_links.txt
+[1.517s] writing entry points to ../../build/camera_pkg/camera_pkg.egg-info/entry_points.txt
+[1.517s] writing requirements to ../../build/camera_pkg/camera_pkg.egg-info/requires.txt
+[1.517s] writing top-level names to ../../build/camera_pkg/camera_pkg.egg-info/top_level.txt
+[1.519s] reading manifest file '../../build/camera_pkg/camera_pkg.egg-info/SOURCES.txt'
+[1.520s] writing manifest file '../../build/camera_pkg/camera_pkg.egg-info/SOURCES.txt'
+[1.520s] running build
+[1.520s] running build_py
+[1.521s] copying camera_pkg/CameraSM.py -> /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/camera_pkg/build/lib/camera_pkg
+[1.521s] copying camera_pkg/GetImage.py -> /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/camera_pkg/build/lib/camera_pkg
+[1.521s] running install
+[1.522s] running install_lib
+[1.523s] copying /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/camera_pkg/build/lib/camera_pkg/CameraSM.py -> /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg
+[1.523s] copying /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/camera_pkg/build/lib/camera_pkg/GetImage.py -> /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg
+[1.525s] byte-compiling /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg/CameraSM.py to CameraSM.cpython-310.pyc
+[1.526s] byte-compiling /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg/image_to_pixel.py to image_to_pixel.cpython-310.pyc
+[1.527s] Sorry: IndentationError: expected an indented block after function definition on line 6 (image_to_pixel.py, line 14)
+[1.527s] byte-compiling /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg/GetImage.py to GetImage.cpython-310.pyc
+[1.527s] running install_data
+[1.528s] running install_egg_info
+[1.530s] removing '/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[1.531s] Copying ../../build/camera_pkg/camera_pkg.egg-info to /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg-0.0.0-py3.10.egg-info
+[1.533s] running install_scripts
+[1.560s] Installing CameraSM script to /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/camera_pkg
+[1.560s] Installing GetImage script to /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/camera_pkg
+[1.560s] Installing ImageToPixel script to /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/camera_pkg
+[1.561s] writing list of installed files to '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/camera_pkg/install.log'
+[1.701s] Invoked command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/camera_pkg' returned '0': PYTHONPATH=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/camera_pkg/prefix_override:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/camera_pkg build --build-base /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/camera_pkg/build install --record /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/camera_pkg/install.log --single-version-externally-managed

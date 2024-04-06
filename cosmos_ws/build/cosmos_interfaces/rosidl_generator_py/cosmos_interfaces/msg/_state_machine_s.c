@@ -77,6 +77,21 @@ bool cosmos_interfaces__msg__state_machine__convert_from_py(PyObject * _pymsg, v
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
+  {  // from_node
+    PyObject * field = PyObject_GetAttrString(_pymsg, "from_node");
+    if (!field) {
+      return false;
+    }
+    assert(PyUnicode_Check(field));
+    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
+    if (!encoded_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    rosidl_runtime_c__String__assign(&ros_message->from_node, PyBytes_AS_STRING(encoded_field));
+    Py_DECREF(encoded_field);
+    Py_DECREF(field);
+  }
   {  // is_start
     PyObject * field = PyObject_GetAttrString(_pymsg, "is_start");
     if (!field) {
@@ -84,6 +99,15 @@ bool cosmos_interfaces__msg__state_machine__convert_from_py(PyObject * _pymsg, v
     }
     assert(PyBool_Check(field));
     ros_message->is_start = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // is_done
+    PyObject * field = PyObject_GetAttrString(_pymsg, "is_done");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->is_done = (Py_True == field);
     Py_DECREF(field);
   }
   {  // is_abort
@@ -145,11 +169,39 @@ PyObject * cosmos_interfaces__msg__state_machine__convert_to_py(void * raw_ros_m
       }
     }
   }
+  {  // from_node
+    PyObject * field = NULL;
+    field = PyUnicode_DecodeUTF8(
+      ros_message->from_node.data,
+      strlen(ros_message->from_node.data),
+      "replace");
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "from_node", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
   {  // is_start
     PyObject * field = NULL;
     field = PyBool_FromLong(ros_message->is_start ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "is_start", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // is_done
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->is_done ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "is_done", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
