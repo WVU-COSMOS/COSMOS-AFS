@@ -14,6 +14,7 @@
 
 // Include directives for member types
 // Member `to_node`
+// Member `from_node`
 #include "rosidl_runtime_c/string_functions.h"
 
 #ifdef __cplusplus
@@ -35,7 +36,7 @@ void cosmos_interfaces__msg__StateMachine__rosidl_typesupport_introspection_c__S
   cosmos_interfaces__msg__StateMachine__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember cosmos_interfaces__msg__StateMachine__rosidl_typesupport_introspection_c__StateMachine_message_member_array[4] = {
+static rosidl_typesupport_introspection_c__MessageMember cosmos_interfaces__msg__StateMachine__rosidl_typesupport_introspection_c__StateMachine_message_member_array[6] = {
   {
     "mission",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
@@ -71,6 +72,23 @@ static rosidl_typesupport_introspection_c__MessageMember cosmos_interfaces__msg_
     NULL  // resize(index) function pointer
   },
   {
+    "from_node",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(cosmos_interfaces__msg__StateMachine, from_node),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
     "is_start",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
@@ -79,6 +97,23 @@ static rosidl_typesupport_introspection_c__MessageMember cosmos_interfaces__msg_
     0,  // array size
     false,  // is upper bound
     offsetof(cosmos_interfaces__msg__StateMachine, is_start),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "is_done",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(cosmos_interfaces__msg__StateMachine, is_done),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -109,7 +144,7 @@ static rosidl_typesupport_introspection_c__MessageMember cosmos_interfaces__msg_
 static const rosidl_typesupport_introspection_c__MessageMembers cosmos_interfaces__msg__StateMachine__rosidl_typesupport_introspection_c__StateMachine_message_members = {
   "cosmos_interfaces__msg",  // message namespace
   "StateMachine",  // message name
-  4,  // number of fields
+  6,  // number of fields
   sizeof(cosmos_interfaces__msg__StateMachine),
   cosmos_interfaces__msg__StateMachine__rosidl_typesupport_introspection_c__StateMachine_message_member_array,  // message members
   cosmos_interfaces__msg__StateMachine__rosidl_typesupport_introspection_c__StateMachine_init_function,  // function to initialize message memory (memory has to be allocated)

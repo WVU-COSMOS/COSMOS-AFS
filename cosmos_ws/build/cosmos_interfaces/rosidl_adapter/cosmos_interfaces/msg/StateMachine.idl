@@ -10,7 +10,11 @@ module cosmos_interfaces {
 
       string to_node;
 
+      string from_node;
+
       boolean is_start;
+
+      boolean is_done;
 
       boolean is_abort;
     };

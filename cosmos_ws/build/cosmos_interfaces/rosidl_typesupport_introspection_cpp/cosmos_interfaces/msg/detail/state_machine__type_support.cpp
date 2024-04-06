@@ -37,7 +37,7 @@ void StateMachine_fini_function(void * message_memory)
   typed_message->~StateMachine();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember StateMachine_message_member_array[4] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember StateMachine_message_member_array[6] = {
   {
     "mission",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
@@ -73,6 +73,23 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember StateMachine_
     nullptr  // resize(index) function pointer
   },
   {
+    "from_node",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(cosmos_interfaces::msg::StateMachine, from_node),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
     "is_start",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
@@ -81,6 +98,23 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember StateMachine_
     0,  // array size
     false,  // is upper bound
     offsetof(cosmos_interfaces::msg::StateMachine, is_start),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "is_done",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(cosmos_interfaces::msg::StateMachine, is_done),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -111,7 +145,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember StateMachine_
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers StateMachine_message_members = {
   "cosmos_interfaces::msg",  // message namespace
   "StateMachine",  // message name
-  4,  // number of fields
+  6,  // number of fields
   sizeof(cosmos_interfaces::msg::StateMachine),
   StateMachine_message_member_array,  // message members
   StateMachine_init_function,  // function to initialize message memory (memory has to be allocated)

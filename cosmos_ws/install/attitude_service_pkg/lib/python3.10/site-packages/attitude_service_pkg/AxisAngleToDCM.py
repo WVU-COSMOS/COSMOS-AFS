@@ -4,7 +4,7 @@ import numpy as np
 from rclpy.node import Node
 from cosmos_interfaces.srv import AAToDCM, Skew
 
-class AxisAngleToDCM(Node):
+class AxisAngleToDCM(Node): 
     def __init__(self):
         super().__init__("AxisAngleToDCM")
         self.aaToDcm_serv_ = self.create_service(AAToDCM, 'axis_angle_to_dcm', self.convertAAtoDCM)
@@ -34,7 +34,7 @@ class AxisAngleToDCM(Node):
         rclpy.spin_until_future_complete(self, future)
 
         if future.result() is not None:
-            skew_matrix = np.array(future.result().skew_matrix).reshape((3, 3))
+            skew_matrix = np.array(future.result().skew).reshape((3, 3))
         else:
             self.get_logger().error('Failed to call Skew service.')
 

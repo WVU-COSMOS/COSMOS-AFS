@@ -1,0 +1,419 @@
+[0.058s] Invoking command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vini_dunker/MRT-19/ros_drone_ws/install/drone_control:/home/vini_dunker/udemy_ws/install/my_py_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg:/home/vini_dunker/mrt_ws/install/traverse_stage:/home/vini_dunker/mrt_ws/install/state_machine:/home/vini_dunker/mrt_ws/install/data_acquisition:/opt/ros/humble /usr/bin/cmake --build /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces -- -j12 -l12
+[0.643s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.644s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.644s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.644s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.645s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.880s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.069s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.339s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.373s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.403s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.403s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.403s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.454s] -- Configuring done
+[1.518s] -- Generating done
+[1.521s] -- Build files have been written to: /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces
+[1.546s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.558s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.575s] [  2%] Built target ament_cmake_python_copy_cosmos_interfaces
+[1.864s] running egg_info
+[1.864s] writing cosmos_interfaces.egg-info/PKG-INFO
+[1.865s] writing dependency_links to cosmos_interfaces.egg-info/dependency_links.txt
+[1.865s] writing top-level names to cosmos_interfaces.egg-info/top_level.txt
+[1.867s] reading manifest file 'cosmos_interfaces.egg-info/SOURCES.txt'
+[1.868s] writing manifest file 'cosmos_interfaces.egg-info/SOURCES.txt'
+[1.911s] [  2%] Built target ament_cmake_python_build_cosmos_interfaces_egg
+[2.283s] [  2%] Built target cosmos_interfaces__cpp
+[2.295s] [  3%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.299s] [  5%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.301s] [  6%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.309s] [35m[1mConsolidate compiler generated dependencies of target cosmos_interfaces__rosidl_generator_c[0m
+[2.325s] [  7%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__functions.c.o[0m
+[2.325s] [  8%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__functions.c.o[0m
+[2.325s] [ 10%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/state_machine__functions.c.o[0m
+[2.325s] [ 11%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/position__functions.c.o[0m
+[2.326s] [ 12%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c.o[0m
+[2.334s] [ 15%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/skew__functions.c.o[0m
+[2.334s] [ 15%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/camera__functions.c.o[0m
+[2.518s] [ 16%] [32m[1mLinking C shared library libcosmos_interfaces__rosidl_generator_c.so[0m
+[2.689s] [ 16%] Built target cosmos_interfaces__rosidl_generator_c
+[2.699s] [ 17%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.701s] [ 20%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.701s] [ 20%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.912s] [35m[1mConsolidate compiler generated dependencies of target cosmos_interfaces__rosidl_typesupport_cpp[0m
+[2.930s] [ 24%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cosmos_interfaces/msg/position__type_support.cpp.o[0m
+[2.930s] [ 24%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cosmos_interfaces/msg/attitude__type_support.cpp.o[0m
+[2.930s] [ 24%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cosmos_interfaces/msg/reaction_wheels__type_support.cpp.o[0m
+[2.935s] [ 25%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cosmos_interfaces/msg/camera__type_support.cpp.o[0m
+[2.939s] [ 26%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp.o[0m
+[2.940s] [ 27%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cosmos_interfaces/msg/state_machine__type_support.cpp.o[0m
+[2.961s] [ 29%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cosmos_interfaces/srv/skew__type_support.cpp.o[0m
+[3.142s] [35m[1mConsolidate compiler generated dependencies of target cosmos_interfaces__rosidl_typesupport_introspection_cpp[0m
+[3.174s] [ 30%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/reaction_wheels__type_support.cpp.o[0m
+[3.204s] [35m[1mConsolidate compiler generated dependencies of target cosmos_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[3.245s] [ 31%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/msg/detail/dds_fastrtps/reaction_wheels__type_support.cpp.o[0m
+[3.294s] [35m[1mConsolidate compiler generated dependencies of target cosmos_interfaces__rosidl_typesupport_c[0m
+[3.321s] [ 32%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/reaction_wheels__type_support.cpp.o[0m
+[3.341s] [ 35%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/position__type_support.cpp.o[0m
+[3.341s] [ 35%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/msg/detail/dds_fastrtps/position__type_support.cpp.o[0m
+[3.342s] [ 36%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp.o[0m
+[3.357s] [ 37%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp.o[0m
+[3.357s] [ 39%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/attitude__type_support.cpp.o[0m
+[3.361s] [ 40%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp.o[0m
+[3.372s] [ 43%] [32m[1mLinking CXX shared library libcosmos_interfaces__rosidl_typesupport_cpp.so[0m
+[3.372s] [ 43%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/srv/skew__type_support.cpp.o[0m
+[3.372s] [ 44%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/position__type_support.cpp.o[0m
+[3.373s] [ 45%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/msg/detail/dds_fastrtps/attitude__type_support.cpp.o[0m
+[3.376s] [ 46%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/attitude__type_support.cpp.o[0m
+[3.379s] [ 48%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/state_machine__type_support.cpp.o[0m
+[3.416s] [ 49%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/msg/detail/camera__type_support.cpp.o[0m
+[3.418s] [ 50%] [32m[1mLinking CXX shared library libcosmos_interfaces__rosidl_typesupport_c.so[0m
+[3.576s] [35m[1mConsolidate compiler generated dependencies of target cosmos_interfaces__rosidl_typesupport_introspection_c[0m
+[3.599s] [ 51%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cosmos_interfaces/msg/detail/reaction_wheels__type_support.c.o[0m
+[3.609s] [ 51%] Built target cosmos_interfaces__rosidl_typesupport_cpp
+[3.616s] [ 51%] Built target cosmos_interfaces__rosidl_typesupport_c
+[3.639s] [ 53%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cosmos_interfaces/msg/detail/position__type_support.c.o[0m
+[3.640s] [ 54%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp.o[0m
+[3.657s] [35m[1mConsolidate compiler generated dependencies of target cosmos_interfaces__rosidl_typesupport_fastrtps_c[0m
+[3.676s] [ 55%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cosmos_interfaces/msg/detail/attitude__type_support.c.o[0m
+[3.690s] [ 56%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cosmos_interfaces/msg/detail/reaction_wheels__type_support_c.cpp.o[0m
+[3.713s] [ 58%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cosmos_interfaces/msg/detail/state_machine__type_support.c.o[0m
+[3.757s] [ 59%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cosmos_interfaces/msg/detail/camera__type_support.c.o[0m
+[3.779s] [ 60%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.c.o[0m
+[3.795s] [ 62%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cosmos_interfaces/srv/detail/skew__type_support.c.o[0m
+[3.839s] [ 63%] [32m[1mLinking C shared library libcosmos_interfaces__rosidl_typesupport_introspection_c.so[0m
+[3.855s] [ 64%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cosmos_interfaces/srv/detail/skew__type_support.cpp.o[0m
+[3.869s] [ 65%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cosmos_interfaces/msg/detail/position__type_support_c.cpp.o[0m
+[3.887s] [ 67%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cosmos_interfaces/msg/detail/attitude__type_support_c.cpp.o[0m
+[3.897s] [ 68%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/msg/detail/dds_fastrtps/state_machine__type_support.cpp.o[0m
+[3.907s] [ 69%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/msg/detail/dds_fastrtps/camera__type_support.cpp.o[0m
+[3.910s] [ 70%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cosmos_interfaces/msg/detail/state_machine__type_support_c.cpp.o[0m
+[3.916s] [ 72%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/srv/detail/dds_fastrtps/aa_to_dcm__type_support.cpp.o[0m
+[3.917s] [ 73%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cosmos_interfaces/srv/detail/dds_fastrtps/skew__type_support.cpp.o[0m
+[4.027s] [ 74%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cosmos_interfaces/msg/detail/camera__type_support_c.cpp.o[0m
+[4.035s] [ 74%] Built target cosmos_interfaces__rosidl_typesupport_introspection_c
+[4.059s] [ 75%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cosmos_interfaces/srv/detail/aa_to_dcm__type_support_c.cpp.o[0m
+[4.267s] [ 77%] [32mBuilding CXX object CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cosmos_interfaces/srv/detail/skew__type_support_c.cpp.o[0m
+[4.448s] [ 78%] [32m[1mLinking CXX shared library libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[4.603s] [ 79%] [32m[1mLinking CXX shared library libcosmos_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[4.638s] [ 79%] Built target cosmos_interfaces__rosidl_typesupport_introspection_cpp
+[4.647s] [ 81%] [32m[1mLinking CXX shared library libcosmos_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[4.806s] [ 81%] Built target cosmos_interfaces__rosidl_typesupport_fastrtps_cpp
+[4.844s] [ 81%] Built target cosmos_interfaces__rosidl_typesupport_fastrtps_c
+[4.860s] [ 81%] Built target cosmos_interfaces
+[4.873s] [ 82%] [34m[1mGenerating Python code for ROS interfaces[0m
+[5.795s] [ 82%] Built target cosmos_interfaces__py
+[5.806s] [35m[1mConsolidate compiler generated dependencies of target cosmos_interfaces__rosidl_generator_py[0m
+[5.822s] [ 83%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_attitude_s.c.o[0m
+[5.822s] [ 84%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_position_s.c.o[0m
+[5.822s] [ 86%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c.o[0m
+[5.822s] [ 87%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_reaction_wheels_s.c.o[0m
+[5.822s] [ 88%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_skew_s.c.o[0m
+[5.823s] [ 89%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/srv/_aa_to_dcm_s.c.o[0m
+[5.823s] [ 91%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c.o[0m
+[6.006s] [ 92%] [32m[1mLinking C shared library rosidl_generator_py/cosmos_interfaces/libcosmos_interfaces__rosidl_generator_py.so[0m
+[6.186s] [ 92%] Built target cosmos_interfaces__rosidl_generator_py
+[6.193s] [35m[1mConsolidate compiler generated dependencies of target cosmos_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[6.194s] [35m[1mConsolidate compiler generated dependencies of target cosmos_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[6.194s] [35m[1mConsolidate compiler generated dependencies of target cosmos_interfaces__rosidl_typesupport_c__pyext[0m
+[6.205s] [ 93%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[6.205s] [ 94%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[6.207s] [ 96%] [32mBuilding C object CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[6.311s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/cosmos_interfaces/cosmos_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[6.319s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/cosmos_interfaces/cosmos_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[6.321s] [100%] [32m[1mLinking C shared library rosidl_generator_py/cosmos_interfaces/cosmos_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[6.434s] [100%] Built target cosmos_interfaces__rosidl_typesupport_introspection_c__pyext
+[6.434s] [100%] Built target cosmos_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[6.436s] [100%] Built target cosmos_interfaces__rosidl_typesupport_c__pyext
+[6.448s] Invoked command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vini_dunker/MRT-19/ros_drone_ws/install/drone_control:/home/vini_dunker/udemy_ws/install/my_py_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg:/home/vini_dunker/mrt_ws/install/traverse_stage:/home/vini_dunker/mrt_ws/install/state_machine:/home/vini_dunker/mrt_ws/install/data_acquisition:/opt/ros/humble /usr/bin/cmake --build /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces -- -j12 -l12
+[6.587s] Invoking command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vini_dunker/MRT-19/ros_drone_ws/install/drone_control:/home/vini_dunker/udemy_ws/install/my_py_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg:/home/vini_dunker/mrt_ws/install/traverse_stage:/home/vini_dunker/mrt_ws/install/state_machine:/home/vini_dunker/mrt_ws/install/data_acquisition:/opt/ros/humble /usr/bin/cmake --install /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces
+[6.591s] -- Install configuration: ""
+[6.592s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/ament_index/resource_index/rosidl_interfaces/cosmos_interfaces
+[6.592s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces
+[6.592s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv
+[6.592s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/skew.h
+[6.592s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail
+[6.593s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c
+[6.593s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/skew__functions.c
+[6.593s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/skew__functions.h
+[6.593s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/skew__struct.h
+[6.594s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.h
+[6.594s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/aa_to_dcm__functions.h
+[6.594s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/aa_to_dcm__struct.h
+[6.594s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/skew__type_support.h
+[6.595s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/aa_to_dcm.h
+[6.595s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg
+[6.595s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/position.h
+[6.595s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/state_machine.h
+[6.596s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/reaction_wheels.h
+[6.596s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail
+[6.596s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__functions.h
+[6.596s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/camera__type_support.h
+[6.597s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/attitude__functions.h
+[6.597s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__struct.h
+[6.597s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/camera__struct.h
+[6.597s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__functions.c
+[6.598s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__functions.c
+[6.598s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/attitude__struct.h
+[6.598s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/task__struct.h
+[6.598s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/camera__functions.h
+[6.598s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/task__functions.h
+[6.598s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/task__functions.c
+[6.598s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__functions.h
+[6.598s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__type_support.h
+[6.598s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__type_support.h
+[6.598s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/task__type_support.h
+[6.598s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__functions.c
+[6.598s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/attitude__functions.c
+[6.598s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__struct.h
+[6.599s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__struct.h
+[6.599s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/attitude__type_support.h
+[6.599s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/camera__functions.c
+[6.599s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__functions.h
+[6.599s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__type_support.h
+[6.599s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/rosidl_generator_c__visibility_control.h
+[6.599s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/attitude.h
+[6.599s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/camera.h
+[6.599s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/task.h
+[6.600s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/environment/library_path.sh
+[6.600s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/environment/library_path.dsv
+[6.600s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_generator_c.so
+[6.601s] -- Set runtime path of "/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_generator_c.so" to ""
+[6.601s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces
+[6.601s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv
+[6.601s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail
+[6.601s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/aa_to_dcm__rosidl_typesupport_fastrtps_c.h
+[6.602s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/skew__rosidl_typesupport_fastrtps_c.h
+[6.602s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg
+[6.602s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[6.602s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail
+[6.603s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__rosidl_typesupport_fastrtps_c.h
+[6.603s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/task__rosidl_typesupport_fastrtps_c.h
+[6.603s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__rosidl_typesupport_fastrtps_c.h
+[6.603s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/camera__rosidl_typesupport_fastrtps_c.h
+[6.603s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/attitude__rosidl_typesupport_fastrtps_c.h
+[6.603s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__rosidl_typesupport_fastrtps_c.h
+[6.604s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_fastrtps_c.so
+[6.604s] -- Set runtime path of "/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[6.604s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces
+[6.605s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv
+[6.605s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail
+[6.605s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/skew__rosidl_typesupport_introspection_c.h
+[6.605s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/aa_to_dcm__rosidl_typesupport_introspection_c.h
+[6.605s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.c
+[6.606s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/skew__type_support.c
+[6.606s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg
+[6.606s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[6.606s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail
+[6.606s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/task__type_support.c
+[6.611s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__rosidl_typesupport_introspection_c.h
+[6.611s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/camera__type_support.c
+[6.612s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__rosidl_typesupport_introspection_c.h
+[6.612s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__type_support.c
+[6.612s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/attitude__rosidl_typesupport_introspection_c.h
+[6.612s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/camera__rosidl_typesupport_introspection_c.h
+[6.612s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__type_support.c
+[6.612s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/task__rosidl_typesupport_introspection_c.h
+[6.612s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/attitude__type_support.c
+[6.612s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__type_support.c
+[6.612s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__rosidl_typesupport_introspection_c.h
+[6.612s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_introspection_c.so
+[6.612s] -- Set runtime path of "/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[6.613s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_c.so
+[6.613s] -- Set runtime path of "/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_c.so" to ""
+[6.614s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces
+[6.614s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv
+[6.614s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/aa_to_dcm.hpp
+[6.614s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/skew.hpp
+[6.615s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail
+[6.615s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/skew__builder.hpp
+[6.615s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/skew__traits.hpp
+[6.615s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/aa_to_dcm__traits.hpp
+[6.616s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/aa_to_dcm__builder.hpp
+[6.616s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/aa_to_dcm__struct.hpp
+[6.616s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/skew__struct.hpp
+[6.617s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg
+[6.617s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/reaction_wheels.hpp
+[6.617s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/attitude.hpp
+[6.617s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/position.hpp
+[6.617s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/camera.hpp
+[6.618s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail
+[6.618s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__traits.hpp
+[6.618s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__traits.hpp
+[6.619s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__builder.hpp
+[6.619s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/attitude__builder.hpp
+[6.619s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__traits.hpp
+[6.619s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/camera__traits.hpp
+[6.620s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__struct.hpp
+[6.620s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__struct.hpp
+[6.620s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/task__builder.hpp
+[6.620s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/attitude__traits.hpp
+[6.621s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/task__traits.hpp
+[6.621s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__builder.hpp
+[6.621s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/attitude__struct.hpp
+[6.621s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/task__struct.hpp
+[6.621s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__builder.hpp
+[6.621s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/camera__builder.hpp
+[6.622s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/camera__struct.hpp
+[6.622s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__struct.hpp
+[6.622s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/task.hpp
+[6.622s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/state_machine.hpp
+[6.622s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces
+[6.622s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv
+[6.622s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail
+[6.622s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/aa_to_dcm__rosidl_typesupport_fastrtps_cpp.hpp
+[6.623s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/dds_fastrtps
+[6.623s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/skew__rosidl_typesupport_fastrtps_cpp.hpp
+[6.624s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg
+[6.624s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[6.624s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail
+[6.624s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/attitude__rosidl_typesupport_fastrtps_cpp.hpp
+[6.624s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__rosidl_typesupport_fastrtps_cpp.hpp
+[6.625s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/camera__rosidl_typesupport_fastrtps_cpp.hpp
+[6.625s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__rosidl_typesupport_fastrtps_cpp.hpp
+[6.626s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__rosidl_typesupport_fastrtps_cpp.hpp
+[6.626s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/dds_fastrtps
+[6.626s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/task__rosidl_typesupport_fastrtps_cpp.hpp
+[6.626s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[6.626s] -- Set runtime path of "/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[6.626s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces
+[6.626s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv
+[6.626s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail
+[6.626s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/skew__rosidl_typesupport_introspection_cpp.hpp
+[6.626s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/aa_to_dcm__rosidl_typesupport_introspection_cpp.hpp
+[6.626s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.cpp
+[6.626s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/srv/detail/skew__type_support.cpp
+[6.626s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg
+[6.627s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail
+[6.627s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/camera__type_support.cpp
+[6.627s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/task__rosidl_typesupport_introspection_cpp.hpp
+[6.627s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/camera__rosidl_typesupport_introspection_cpp.hpp
+[6.627s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/attitude__rosidl_typesupport_introspection_cpp.hpp
+[6.627s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__rosidl_typesupport_introspection_cpp.hpp
+[6.628s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/reaction_wheels__type_support.cpp
+[6.628s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/attitude__type_support.cpp
+[6.628s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/task__type_support.cpp
+[6.628s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__type_support.cpp
+[6.628s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__type_support.cpp
+[6.628s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/position__rosidl_typesupport_introspection_cpp.hpp
+[6.628s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__rosidl_typesupport_introspection_cpp.hpp
+[6.628s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so
+[6.628s] -- Set runtime path of "/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[6.628s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_cpp.so
+[6.629s] -- Set runtime path of "/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_cpp.so" to ""
+[6.629s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/environment/pythonpath.sh
+[6.630s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/environment/pythonpath.dsv
+[6.630s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces-0.0.0-py3.10.egg-info
+[6.630s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[6.630s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[6.630s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[6.631s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[6.631s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces
+[6.632s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/__init__.py
+[6.633s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[6.633s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/srv
+[6.633s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/srv/__init__.py
+[6.633s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/srv/_aa_to_dcm_s.c
+[6.633s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/srv/_skew_s.c
+[6.633s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/srv/_skew.py
+[6.634s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/srv/_aa_to_dcm.py
+[6.634s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/cosmos_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[6.634s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/cosmos_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[6.634s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_c.c
+[6.635s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[6.635s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/cosmos_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[6.635s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/libcosmos_interfaces__rosidl_generator_py.so
+[6.635s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg
+[6.636s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg/__init__.py
+[6.636s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg/_position.py
+[6.637s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg/_task_s.c
+[6.637s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg/_reaction_wheels.py
+[6.637s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg/_attitude.py
+[6.637s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg/_task.py
+[6.637s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg/_camera.py
+[6.638s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg/_state_machine_s.c
+[6.638s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg/_state_machine.py
+[6.638s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg/_camera_s.c
+[6.638s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg/_reaction_wheels_s.c
+[6.638s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg/_position_s.c
+[6.639s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg/_attitude_s.c
+[6.694s] Listing '/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces'...
+[6.694s] Compiling '/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/__init__.py'...
+[6.694s] Listing '/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg'...
+[6.694s] Compiling '/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg/__init__.py'...
+[6.694s] Compiling '/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg/_attitude.py'...
+[6.694s] Compiling '/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg/_camera.py'...
+[6.694s] Compiling '/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg/_position.py'...
+[6.694s] Compiling '/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg/_reaction_wheels.py'...
+[6.694s] Compiling '/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/msg/_state_machine.py'...
+[6.694s] Listing '/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/srv'...
+[6.694s] Compiling '/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/srv/__init__.py'...
+[6.694s] Compiling '/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/srv/_aa_to_dcm.py'...
+[6.695s] Compiling '/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/srv/_skew.py'...
+[6.698s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/cosmos_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[6.698s] -- Set runtime path of "/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/cosmos_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[6.698s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/cosmos_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[6.699s] -- Set runtime path of "/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/cosmos_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[6.699s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/cosmos_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[6.699s] -- Set runtime path of "/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages/cosmos_interfaces/cosmos_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[6.701s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_generator_py.so
+[6.701s] -- Set runtime path of "/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_generator_py.so" to ""
+[6.701s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/msg/ReactionWheels.idl
+[6.701s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/msg/Position.idl
+[6.702s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/msg/Attitude.idl
+[6.702s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/msg/StateMachine.idl
+[6.702s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/msg/Camera.idl
+[6.703s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/srv/AAToDCM.idl
+[6.703s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/srv/Skew.idl
+[6.703s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/msg/ReactionWheels.msg
+[6.704s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/msg/Position.msg
+[6.704s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/msg/Attitude.msg
+[6.704s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/msg/StateMachine.msg
+[6.704s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/msg/Camera.msg
+[6.705s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/srv/AAToDCM.srv
+[6.705s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/srv/AAToDCM_Request.msg
+[6.705s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/srv/AAToDCM_Response.msg
+[6.705s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/srv/Skew.srv
+[6.706s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/srv/Skew_Request.msg
+[6.706s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/srv/Skew_Response.msg
+[6.706s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/ament_index/resource_index/package_run_dependencies/cosmos_interfaces
+[6.706s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/ament_index/resource_index/parent_prefix_path/cosmos_interfaces
+[6.706s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/environment/ament_prefix_path.sh
+[6.707s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/environment/ament_prefix_path.dsv
+[6.707s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/environment/path.sh
+[6.707s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/environment/path.dsv
+[6.707s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/local_setup.bash
+[6.707s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/local_setup.sh
+[6.707s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/local_setup.zsh
+[6.708s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/local_setup.dsv
+[6.708s] -- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/package.dsv
+[6.708s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/ament_index/resource_index/packages/cosmos_interfaces
+[6.708s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/export_cosmos_interfaces__rosidl_generator_cExport.cmake
+[6.709s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/export_cosmos_interfaces__rosidl_generator_cExport-noconfig.cmake
+[6.709s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/export_cosmos_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[6.709s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/export_cosmos_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[6.709s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/cosmos_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[6.710s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/cosmos_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[6.710s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/cosmos_interfaces__rosidl_typesupport_cExport.cmake
+[6.710s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/cosmos_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[6.710s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/export_cosmos_interfaces__rosidl_generator_cppExport.cmake
+[6.710s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/export_cosmos_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[6.710s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/export_cosmos_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[6.710s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/cosmos_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[6.711s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/cosmos_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[6.711s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/cosmos_interfaces__rosidl_typesupport_cppExport.cmake
+[6.711s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/cosmos_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[6.711s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/export_cosmos_interfaces__rosidl_generator_pyExport.cmake
+[6.711s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/export_cosmos_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[6.712s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/rosidl_cmake-extras.cmake
+[6.712s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[6.712s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[6.712s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[6.712s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[6.712s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[6.713s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[6.713s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/cosmos_interfacesConfig.cmake
+[6.713s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake/cosmos_interfacesConfig-version.cmake
+[6.713s] -- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/package.xml
+[6.717s] Invoked command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vini_dunker/MRT-19/ros_drone_ws/install/drone_control:/home/vini_dunker/udemy_ws/install/my_py_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/traverse_state_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/state_machine_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/mrt19_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/drum_pkg:/home/vini_dunker/Automation/mrt19ROS_ws/install/data_acquition_pkg:/home/vini_dunker/mrt_ws/install/traverse_stage:/home/vini_dunker/mrt_ws/install/state_machine:/home/vini_dunker/mrt_ws/install/data_acquisition:/opt/ros/humble /usr/bin/cmake --install /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces

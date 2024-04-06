@@ -57,20 +57,26 @@ class StateMachine(metaclass=Metaclass_StateMachine):
     __slots__ = [
         '_mission',
         '_to_node',
+        '_from_node',
         '_is_start',
+        '_is_done',
         '_is_abort',
     ]
 
     _fields_and_field_types = {
         'mission': 'int32',
         'to_node': 'string',
+        'from_node': 'string',
         'is_start': 'boolean',
+        'is_done': 'boolean',
         'is_abort': 'boolean',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
@@ -81,7 +87,9 @@ class StateMachine(metaclass=Metaclass_StateMachine):
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.mission = kwargs.get('mission', int())
         self.to_node = kwargs.get('to_node', str())
+        self.from_node = kwargs.get('from_node', str())
         self.is_start = kwargs.get('is_start', bool())
+        self.is_done = kwargs.get('is_done', bool())
         self.is_abort = kwargs.get('is_abort', bool())
 
     def __repr__(self):
@@ -117,7 +125,11 @@ class StateMachine(metaclass=Metaclass_StateMachine):
             return False
         if self.to_node != other.to_node:
             return False
+        if self.from_node != other.from_node:
+            return False
         if self.is_start != other.is_start:
+            return False
+        if self.is_done != other.is_done:
             return False
         if self.is_abort != other.is_abort:
             return False
@@ -157,6 +169,19 @@ class StateMachine(metaclass=Metaclass_StateMachine):
         self._to_node = value
 
     @builtins.property
+    def from_node(self):
+        """Message field 'from_node'."""
+        return self._from_node
+
+    @from_node.setter
+    def from_node(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, str), \
+                "The 'from_node' field must be of type 'str'"
+        self._from_node = value
+
+    @builtins.property
     def is_start(self):
         """Message field 'is_start'."""
         return self._is_start
@@ -168,6 +193,19 @@ class StateMachine(metaclass=Metaclass_StateMachine):
                 isinstance(value, bool), \
                 "The 'is_start' field must be of type 'bool'"
         self._is_start = value
+
+    @builtins.property
+    def is_done(self):
+        """Message field 'is_done'."""
+        return self._is_done
+
+    @is_done.setter
+    def is_done(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'is_done' field must be of type 'bool'"
+        self._is_done = value
 
     @builtins.property
     def is_abort(self):

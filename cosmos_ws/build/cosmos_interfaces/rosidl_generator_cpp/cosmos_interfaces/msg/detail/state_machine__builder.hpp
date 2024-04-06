@@ -37,16 +37,48 @@ private:
   ::cosmos_interfaces::msg::StateMachine msg_;
 };
 
+class Init_StateMachine_is_done
+{
+public:
+  explicit Init_StateMachine_is_done(::cosmos_interfaces::msg::StateMachine & msg)
+  : msg_(msg)
+  {}
+  Init_StateMachine_is_abort is_done(::cosmos_interfaces::msg::StateMachine::_is_done_type arg)
+  {
+    msg_.is_done = std::move(arg);
+    return Init_StateMachine_is_abort(msg_);
+  }
+
+private:
+  ::cosmos_interfaces::msg::StateMachine msg_;
+};
+
 class Init_StateMachine_is_start
 {
 public:
   explicit Init_StateMachine_is_start(::cosmos_interfaces::msg::StateMachine & msg)
   : msg_(msg)
   {}
-  Init_StateMachine_is_abort is_start(::cosmos_interfaces::msg::StateMachine::_is_start_type arg)
+  Init_StateMachine_is_done is_start(::cosmos_interfaces::msg::StateMachine::_is_start_type arg)
   {
     msg_.is_start = std::move(arg);
-    return Init_StateMachine_is_abort(msg_);
+    return Init_StateMachine_is_done(msg_);
+  }
+
+private:
+  ::cosmos_interfaces::msg::StateMachine msg_;
+};
+
+class Init_StateMachine_from_node
+{
+public:
+  explicit Init_StateMachine_from_node(::cosmos_interfaces::msg::StateMachine & msg)
+  : msg_(msg)
+  {}
+  Init_StateMachine_is_start from_node(::cosmos_interfaces::msg::StateMachine::_from_node_type arg)
+  {
+    msg_.from_node = std::move(arg);
+    return Init_StateMachine_is_start(msg_);
   }
 
 private:
@@ -59,10 +91,10 @@ public:
   explicit Init_StateMachine_to_node(::cosmos_interfaces::msg::StateMachine & msg)
   : msg_(msg)
   {}
-  Init_StateMachine_is_start to_node(::cosmos_interfaces::msg::StateMachine::_to_node_type arg)
+  Init_StateMachine_from_node to_node(::cosmos_interfaces::msg::StateMachine::_to_node_type arg)
   {
     msg_.to_node = std::move(arg);
-    return Init_StateMachine_is_start(msg_);
+    return Init_StateMachine_from_node(msg_);
   }
 
 private:

@@ -1,0 +1,25 @@
+[35m[1mConsolidate compiler generated dependencies of target state_machine[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable state_machine[0m
+[100%] Built target state_machine
+-- Install configuration: ""
+-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/lib/state_machine_pkg/state_machine
+-- Set runtime path of "/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/lib/state_machine_pkg/state_machine" to ""
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/include/state_machine_pkg
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/include/state_machine_pkg/state_machine_pkg
+-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/include/state_machine_pkg/state_machine_pkg/state_machine_node.hpp
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/ament_index/resource_index/package_run_dependencies/state_machine_pkg
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/ament_index/resource_index/parent_prefix_path/state_machine_pkg
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/environment/ament_prefix_path.sh
+-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/environment/path.sh
+-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/environment/path.dsv
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/local_setup.bash
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/local_setup.sh
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/local_setup.zsh
+-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/local_setup.dsv
+-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/package.dsv
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/ament_index/resource_index/packages/state_machine_pkg
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/cmake/state_machine_pkgConfig.cmake
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/cmake/state_machine_pkgConfig-version.cmake
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/package.xml

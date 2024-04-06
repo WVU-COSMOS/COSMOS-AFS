@@ -40,20 +40,25 @@ struct StateMachine_
     {
       this->mission = 0l;
       this->to_node = "";
+      this->from_node = "";
       this->is_start = false;
+      this->is_done = false;
       this->is_abort = false;
     }
   }
 
   explicit StateMachine_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : to_node(_alloc)
+  : to_node(_alloc),
+    from_node(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->mission = 0l;
       this->to_node = "";
+      this->from_node = "";
       this->is_start = false;
+      this->is_done = false;
       this->is_abort = false;
     }
   }
@@ -65,9 +70,15 @@ struct StateMachine_
   using _to_node_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _to_node_type to_node;
+  using _from_node_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _from_node_type from_node;
   using _is_start_type =
     bool;
   _is_start_type is_start;
+  using _is_done_type =
+    bool;
+  _is_done_type is_done;
   using _is_abort_type =
     bool;
   _is_abort_type is_abort;
@@ -85,10 +96,22 @@ struct StateMachine_
     this->to_node = _arg;
     return *this;
   }
+  Type & set__from_node(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  {
+    this->from_node = _arg;
+    return *this;
+  }
   Type & set__is_start(
     const bool & _arg)
   {
     this->is_start = _arg;
+    return *this;
+  }
+  Type & set__is_done(
+    const bool & _arg)
+  {
+    this->is_done = _arg;
     return *this;
   }
   Type & set__is_abort(
@@ -146,7 +169,13 @@ struct StateMachine_
     if (this->to_node != other.to_node) {
       return false;
     }
+    if (this->from_node != other.from_node) {
+      return false;
+    }
     if (this->is_start != other.is_start) {
+      return false;
+    }
+    if (this->is_done != other.is_done) {
       return false;
     }
     if (this->is_abort != other.is_abort) {

@@ -13,7 +13,7 @@ class GetImage(Node):
         super().__init__("GetImage")
         self.get_logger().info("GetImage Node has been started!")
         # Defining Camera IP
-        self.ip = "10.0.0.19"
+        self.ip = "10.0.0.18"
         # Creating Publisher and Timer for publishing captured imaged
         # Note, image is being published in the topic called 'Image_Captured'
         self.publisher_ = self.create_publisher(Image, "Image_Captured", 10)
@@ -31,6 +31,9 @@ class GetImage(Node):
             self.img_num = msg.img_num
             self.get_logger().info(f"Getting Image number {msg.img_num}!")
             self.publish_image()
+        elif(msg.to_node == "GetImage" and msg.next_img == False):
+            self.get_logger().info(f"Done Getting Image!")
+
 
     # Function that gets a reponse from camera, converts it into array and publishes every 3 seconds
     def publish_image(self):
@@ -38,7 +41,6 @@ class GetImage(Node):
         response = requests.get(f"http://{self.ip}/capture")
         img = np.array(PILImage.open(io.BytesIO(response.content)))
 
-        
         msg = Image()
         msg.height = img.shape[0]
         msg.width = img.shape[1]
