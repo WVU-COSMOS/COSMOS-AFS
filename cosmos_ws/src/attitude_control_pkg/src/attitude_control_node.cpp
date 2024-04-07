@@ -16,25 +16,28 @@ AttitudeControl::AttitudeControl() : Node("attitude_control")
 
 void AttitudeControl::sMachineCallback(const cosmos_interfaces::msg::StateMachine::SharedPtr msg)
 {
-    RCLCPP_INFO(this->get_logger(), "Received:: Mission: %d", msg->mission);
-    MISSION mission = static_cast<MISSION>(msg->mission);
-    current_mission = msg->mission;
-    if(mission == MISSION::MOVE_BY_TARGET)
+    if(msg->to_node == node_name)
     {
-        auto rWheel_msg = cosmos_interfaces::msg::ReactionWheels();
-        rWheel_msg.is_done = false;
-        rWheel_msg.motor_x = true;
-        rWheel_msg.motor_y = false;
-        rWheel_msg.motor_z = false;
-        rWheel_msg.speed_x = 1700;
-        rWheel_msg.speed_y = 0;
-        rWheel_msg.speed_z = 0;
-        rWheel_msg.time_x = 3000;
-        rWheel_msg.time_y = 0;
-        rWheel_msg.time_z = 0;
+        RCLCPP_INFO(this->get_logger(), "Received:: Mission: %d", msg->mission);
+        MISSION mission = static_cast<MISSION>(msg->mission);
+        current_mission = msg->mission;
+        if(mission == MISSION::MOVE_BY_TARGET)
+        {
+            auto rWheel_msg = cosmos_interfaces::msg::ReactionWheels();
+            rWheel_msg.is_done = false;
+            rWheel_msg.motor_x = true;
+            rWheel_msg.motor_y = false;
+            rWheel_msg.motor_z = false;
+            rWheel_msg.speed_x = 1700;
+            rWheel_msg.speed_y = 0;
+            rWheel_msg.speed_z = 0;
+            rWheel_msg.time_x = 3000;
+            rWheel_msg.time_y = 0;
+            rWheel_msg.time_z = 0;
 
-        rWheelsPub_->publish(rWheel_msg);
-        RCLCPP_INFO(this->get_logger(), "Published to esp32_command!");
+            rWheelsPub_->publish(rWheel_msg);
+            RCLCPP_INFO(this->get_logger(), "Published to esp32_command!");
+        }
     }
 }
 
