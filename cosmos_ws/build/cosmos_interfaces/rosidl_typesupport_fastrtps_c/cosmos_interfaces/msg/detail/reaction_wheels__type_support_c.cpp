@@ -34,6 +34,8 @@ extern "C"
 {
 #endif
 
+#include "rosidl_runtime_c/string.h"  // from_node, to_node
+#include "rosidl_runtime_c/string_functions.h"  // from_node, to_node
 
 // forward declare type support functions
 
@@ -49,6 +51,34 @@ static bool _ReactionWheels__cdr_serialize(
     return false;
   }
   const _ReactionWheels__ros_msg_type * ros_message = static_cast<const _ReactionWheels__ros_msg_type *>(untyped_ros_message);
+  // Field name: from_node
+  {
+    const rosidl_runtime_c__String * str = &ros_message->from_node;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
+  // Field name: to_node
+  {
+    const rosidl_runtime_c__String * str = &ros_message->to_node;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
   // Field name: is_done
   {
     cdr << (ros_message->is_done ? true : false);
@@ -111,6 +141,38 @@ static bool _ReactionWheels__cdr_deserialize(
     return false;
   }
   _ReactionWheels__ros_msg_type * ros_message = static_cast<_ReactionWheels__ros_msg_type *>(untyped_ros_message);
+  // Field name: from_node
+  {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->from_node.data) {
+      rosidl_runtime_c__String__init(&ros_message->from_node);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->from_node,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'from_node'\n");
+      return false;
+    }
+  }
+
+  // Field name: to_node
+  {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->to_node.data) {
+      rosidl_runtime_c__String__init(&ros_message->to_node);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->to_node,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'to_node'\n");
+      return false;
+    }
+  }
+
   // Field name: is_done
   {
     uint8_t tmp;
@@ -186,6 +248,14 @@ size_t get_serialized_size_cosmos_interfaces__msg__ReactionWheels(
   (void)padding;
   (void)wchar_size;
 
+  // field.name from_node
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->from_node.size + 1);
+  // field.name to_node
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->to_node.size + 1);
   // field.name is_done
   {
     size_t item_size = sizeof(ros_message->is_done);
@@ -273,6 +343,30 @@ size_t max_serialized_size_cosmos_interfaces__msg__ReactionWheels(
   full_bounded = true;
   is_plain = true;
 
+  // member: from_node
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+  // member: to_node
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
   // member: is_done
   {
     size_t array_size = 1;

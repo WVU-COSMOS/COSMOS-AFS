@@ -183,6 +183,8 @@ CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesuppo
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc /usr/include/malloc.h \
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__struct.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__functions.h \
  /usr/include/c++/11/stdlib.h \
- /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/rosidl_generator_c__visibility_control.h
+ /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/rosidl_generator_c__visibility_control.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h

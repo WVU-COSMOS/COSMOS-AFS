@@ -168,13 +168,45 @@ private:
 class Init_ReactionWheels_is_done
 {
 public:
-  Init_ReactionWheels_is_done()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  explicit Init_ReactionWheels_is_done(::cosmos_interfaces::msg::ReactionWheels & msg)
+  : msg_(msg)
   {}
   Init_ReactionWheels_motor_x is_done(::cosmos_interfaces::msg::ReactionWheels::_is_done_type arg)
   {
     msg_.is_done = std::move(arg);
     return Init_ReactionWheels_motor_x(msg_);
+  }
+
+private:
+  ::cosmos_interfaces::msg::ReactionWheels msg_;
+};
+
+class Init_ReactionWheels_to_node
+{
+public:
+  explicit Init_ReactionWheels_to_node(::cosmos_interfaces::msg::ReactionWheels & msg)
+  : msg_(msg)
+  {}
+  Init_ReactionWheels_is_done to_node(::cosmos_interfaces::msg::ReactionWheels::_to_node_type arg)
+  {
+    msg_.to_node = std::move(arg);
+    return Init_ReactionWheels_is_done(msg_);
+  }
+
+private:
+  ::cosmos_interfaces::msg::ReactionWheels msg_;
+};
+
+class Init_ReactionWheels_from_node
+{
+public:
+  Init_ReactionWheels_from_node()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  Init_ReactionWheels_to_node from_node(::cosmos_interfaces::msg::ReactionWheels::_from_node_type arg)
+  {
+    msg_.from_node = std::move(arg);
+    return Init_ReactionWheels_to_node(msg_);
   }
 
 private:
@@ -192,7 +224,7 @@ template<>
 inline
 auto build<::cosmos_interfaces::msg::ReactionWheels>()
 {
-  return cosmos_interfaces::msg::builder::Init_ReactionWheels_is_done();
+  return cosmos_interfaces::msg::builder::Init_ReactionWheels_from_node();
 }
 
 }  // namespace cosmos_interfaces

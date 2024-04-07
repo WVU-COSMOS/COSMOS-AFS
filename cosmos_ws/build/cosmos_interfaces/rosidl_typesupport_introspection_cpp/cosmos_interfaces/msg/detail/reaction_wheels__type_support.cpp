@@ -37,7 +37,41 @@ void ReactionWheels_fini_function(void * message_memory)
   typed_message->~ReactionWheels();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember ReactionWheels_message_member_array[10] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember ReactionWheels_message_member_array[12] = {
+  {
+    "from_node",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(cosmos_interfaces::msg::ReactionWheels, from_node),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "to_node",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(cosmos_interfaces::msg::ReactionWheels, to_node),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
   {
     "is_done",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
@@ -213,7 +247,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ReactionWheel
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers ReactionWheels_message_members = {
   "cosmos_interfaces::msg",  // message namespace
   "ReactionWheels",  // message name
-  10,  // number of fields
+  12,  // number of fields
   sizeof(cosmos_interfaces::msg::ReactionWheels),
   ReactionWheels_message_member_array,  // message members
   ReactionWheels_init_function,  // function to initialize message memory (memory has to be allocated)

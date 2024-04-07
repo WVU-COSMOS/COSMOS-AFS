@@ -55,6 +55,8 @@ class ReactionWheels(metaclass=Metaclass_ReactionWheels):
     """Message class 'ReactionWheels'."""
 
     __slots__ = [
+        '_from_node',
+        '_to_node',
         '_is_done',
         '_motor_x',
         '_motor_y',
@@ -68,6 +70,8 @@ class ReactionWheels(metaclass=Metaclass_ReactionWheels):
     ]
 
     _fields_and_field_types = {
+        'from_node': 'string',
+        'to_node': 'string',
         'is_done': 'boolean',
         'motor_x': 'boolean',
         'motor_y': 'boolean',
@@ -81,6 +85,8 @@ class ReactionWheels(metaclass=Metaclass_ReactionWheels):
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
@@ -97,6 +103,8 @@ class ReactionWheels(metaclass=Metaclass_ReactionWheels):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        self.from_node = kwargs.get('from_node', str())
+        self.to_node = kwargs.get('to_node', str())
         self.is_done = kwargs.get('is_done', bool())
         self.motor_x = kwargs.get('motor_x', bool())
         self.motor_y = kwargs.get('motor_y', bool())
@@ -137,6 +145,10 @@ class ReactionWheels(metaclass=Metaclass_ReactionWheels):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.from_node != other.from_node:
+            return False
+        if self.to_node != other.to_node:
+            return False
         if self.is_done != other.is_done:
             return False
         if self.motor_x != other.motor_x:
@@ -163,6 +175,32 @@ class ReactionWheels(metaclass=Metaclass_ReactionWheels):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @builtins.property
+    def from_node(self):
+        """Message field 'from_node'."""
+        return self._from_node
+
+    @from_node.setter
+    def from_node(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, str), \
+                "The 'from_node' field must be of type 'str'"
+        self._from_node = value
+
+    @builtins.property
+    def to_node(self):
+        """Message field 'to_node'."""
+        return self._to_node
+
+    @to_node.setter
+    def to_node(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, str), \
+                "The 'to_node' field must be of type 'str'"
+        self._to_node = value
 
     @builtins.property
     def is_done(self):

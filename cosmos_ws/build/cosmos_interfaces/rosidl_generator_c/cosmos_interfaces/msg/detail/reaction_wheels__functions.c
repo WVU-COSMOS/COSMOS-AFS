@@ -11,10 +11,25 @@
 #include "rcutils/allocator.h"
 
 
+// Include directives for member types
+// Member `from_node`
+// Member `to_node`
+#include "rosidl_runtime_c/string_functions.h"
+
 bool
 cosmos_interfaces__msg__ReactionWheels__init(cosmos_interfaces__msg__ReactionWheels * msg)
 {
   if (!msg) {
+    return false;
+  }
+  // from_node
+  if (!rosidl_runtime_c__String__init(&msg->from_node)) {
+    cosmos_interfaces__msg__ReactionWheels__fini(msg);
+    return false;
+  }
+  // to_node
+  if (!rosidl_runtime_c__String__init(&msg->to_node)) {
+    cosmos_interfaces__msg__ReactionWheels__fini(msg);
     return false;
   }
   // is_done
@@ -36,6 +51,10 @@ cosmos_interfaces__msg__ReactionWheels__fini(cosmos_interfaces__msg__ReactionWhe
   if (!msg) {
     return;
   }
+  // from_node
+  rosidl_runtime_c__String__fini(&msg->from_node);
+  // to_node
+  rosidl_runtime_c__String__fini(&msg->to_node);
   // is_done
   // motor_x
   // motor_y
@@ -52,6 +71,18 @@ bool
 cosmos_interfaces__msg__ReactionWheels__are_equal(const cosmos_interfaces__msg__ReactionWheels * lhs, const cosmos_interfaces__msg__ReactionWheels * rhs)
 {
   if (!lhs || !rhs) {
+    return false;
+  }
+  // from_node
+  if (!rosidl_runtime_c__String__are_equal(
+      &(lhs->from_node), &(rhs->from_node)))
+  {
+    return false;
+  }
+  // to_node
+  if (!rosidl_runtime_c__String__are_equal(
+      &(lhs->to_node), &(rhs->to_node)))
+  {
     return false;
   }
   // is_done
@@ -103,6 +134,18 @@ cosmos_interfaces__msg__ReactionWheels__copy(
   cosmos_interfaces__msg__ReactionWheels * output)
 {
   if (!input || !output) {
+    return false;
+  }
+  // from_node
+  if (!rosidl_runtime_c__String__copy(
+      &(input->from_node), &(output->from_node)))
+  {
+    return false;
+  }
+  // to_node
+  if (!rosidl_runtime_c__String__copy(
+      &(input->to_node), &(output->to_node)))
+  {
     return false;
   }
   // is_done

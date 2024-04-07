@@ -25,6 +25,20 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
+  // member: from_node
+  {
+    out << "from_node: ";
+    rosidl_generator_traits::value_to_yaml(msg.from_node, out);
+    out << ", ";
+  }
+
+  // member: to_node
+  {
+    out << "to_node: ";
+    rosidl_generator_traits::value_to_yaml(msg.to_node, out);
+    out << ", ";
+  }
+
   // member: is_done
   {
     out << "is_done: ";
@@ -100,6 +114,26 @@ inline void to_block_style_yaml(
   const ReactionWheels & msg,
   std::ostream & out, size_t indentation = 0)
 {
+  // member: from_node
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "from_node: ";
+    rosidl_generator_traits::value_to_yaml(msg.from_node, out);
+    out << "\n";
+  }
+
+  // member: to_node
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "to_node: ";
+    rosidl_generator_traits::value_to_yaml(msg.to_node, out);
+    out << "\n";
+  }
+
   // member: is_done
   {
     if (indentation > 0) {
@@ -247,11 +281,11 @@ inline const char * name<cosmos_interfaces::msg::ReactionWheels>()
 
 template<>
 struct has_fixed_size<cosmos_interfaces::msg::ReactionWheels>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct has_bounded_size<cosmos_interfaces::msg::ReactionWheels>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct is_message<cosmos_interfaces::msg::ReactionWheels>

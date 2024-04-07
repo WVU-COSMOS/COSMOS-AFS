@@ -42,18 +42,22 @@ class SerialCommunication(Node):
             self.gStationPub_.publish(Int32(data=msg))
 
     def sm_command_callback(self, msg):
-        self.get_logger().info(f"Command Received!")
-        command_string = f"{int(msg.motor_x)},{int(msg.motor_y)},{int(msg.motor_z)}, \
-                               {msg.speed_x},{msg.speed_y},{msg.speed_z} \
-                               {msg.time_x},{msg.time_y},{msg.time_z}\n"
-        # Send the command via serial to ESP32
-        self.serial.write(command_string.encode())
-        self.get_logger().info(f"Sent command to ESP32: {command_string}")
+        if(msg.from_node != "SerialCommunication"):
+            self.get_logger().info(f"Command Received!")
 
-        msg = ReactionWheels()
-        msg.is_done = True
-        self.rWheelsPub_.publish(msg)
-        self.get_logger().info(f"Task Completed!")
+            motor_values = [int(msg.motor_x), int(msg.motor_y), int(msg.motor_z)]
+            command_string = ','.join(map(str, motor_values))
+            command_string += f",{msg.speed_x},{msg.speed_y},{msg.speed_z},"
+            command_string += f"{msg.time_x},{msg.time_y},{msg.time_z}\n"
+            # Send the command via serial to ESP32
+            self.serial.write(command_string.encode())
+            self.get_logger().info(f"Sent command to ESP32: {command_string}")
+
+            msg = ReactionWheels()
+            msg.is_done = True
+            msg.from_node = "SerialCommunication"
+            self.rWheelsPub_.publish(msg)
+            self.get_logger().info(f"Task Completed!")
 
 def main(args=None):
     rclpy.init(args=args)

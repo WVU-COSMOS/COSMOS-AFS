@@ -1,0 +1,5 @@
+  File "/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages/communication_pkg/SerialCommunication.py", line 45
+    if(msg.from_node != "SerialCommunication")
+                                              ^
+SyntaxError: expected ':'
+

@@ -17,9 +17,16 @@ extern "C"
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'from_node'
+// Member 'to_node'
+#include "rosidl_runtime_c/string.h"
+
 /// Struct defined in msg/ReactionWheels in the package cosmos_interfaces.
 typedef struct cosmos_interfaces__msg__ReactionWheels
 {
+  rosidl_runtime_c__String from_node;
+  rosidl_runtime_c__String to_node;
   bool is_done;
   bool motor_x;
   bool motor_y;

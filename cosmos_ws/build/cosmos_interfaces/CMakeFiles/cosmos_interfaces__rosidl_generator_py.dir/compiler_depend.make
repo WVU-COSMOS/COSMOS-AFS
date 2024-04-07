@@ -1005,8 +1005,11 @@ CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos
   /usr/include/python3.10/numpy/__multiarray_api.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__functions.h \
-  rosidl_generator_c/cosmos_interfaces/msg/rosidl_generator_c__visibility_control.h
+  rosidl_generator_c/cosmos_interfaces/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
 
 CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c.o: rosidl_generator_py/cosmos_interfaces/msg/_state_machine_s.c \
   /usr/include/stdc-predef.h \
