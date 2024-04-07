@@ -1,0 +1,24 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable attitude_control[0m
+[100%] Built target attitude_control
+-- Install configuration: ""
+-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/lib/attitude_control_pkg/attitude_control
+-- Set runtime path of "/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/lib/attitude_control_pkg/attitude_control" to ""
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/include/attitude_control_pkg
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/include/attitude_control_pkg/attitude_control_pkg
+-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/include/attitude_control_pkg/attitude_control_pkg/attitude_control_node.hpp
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/ament_index/resource_index/package_run_dependencies/attitude_control_pkg
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/ament_index/resource_index/parent_prefix_path/attitude_control_pkg
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/environment/ament_prefix_path.sh
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/environment/path.sh
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/environment/path.dsv
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/local_setup.bash
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/local_setup.sh
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/local_setup.zsh
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/local_setup.dsv
+-- Installing: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/package.dsv
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/ament_index/resource_index/packages/attitude_control_pkg
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/cmake/attitude_control_pkgConfig.cmake
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/cmake/attitude_control_pkgConfig-version.cmake
+-- Up-to-date: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/package.xml

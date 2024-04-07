@@ -1,12 +1,10 @@
+bool is_done
 bool motor_x
 bool motor_y
 bool motor_z
-bool motor_w
 int32 speed_x
 int32 speed_y
 int32 speed_z
-int32 speed_w
 int64 time_x
 int64 time_y
 int64 time_z
-int64 time_w

@@ -37,7 +37,24 @@ void ReactionWheels_fini_function(void * message_memory)
   typed_message->~ReactionWheels();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember ReactionWheels_message_member_array[12] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember ReactionWheels_message_member_array[10] = {
+  {
+    "is_done",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(cosmos_interfaces::msg::ReactionWheels, is_done),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
   {
     "motor_x",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
@@ -81,23 +98,6 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ReactionWheel
     0,  // array size
     false,  // is upper bound
     offsetof(cosmos_interfaces::msg::ReactionWheels, motor_z),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "motor_w",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(cosmos_interfaces::msg::ReactionWheels, motor_w),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -158,23 +158,6 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ReactionWheel
     nullptr  // resize(index) function pointer
   },
   {
-    "speed_w",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(cosmos_interfaces::msg::ReactionWheels, speed_w),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
     "time_x",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT64,  // type
     0,  // upper bound of string
@@ -224,30 +207,13 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ReactionWheel
     nullptr,  // fetch(index, &value) function pointer
     nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
-  },
-  {
-    "time_w",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT64,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(cosmos_interfaces::msg::ReactionWheels, time_w),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers ReactionWheels_message_members = {
   "cosmos_interfaces::msg",  // message namespace
   "ReactionWheels",  // message name
-  12,  // number of fields
+  10,  // number of fields
   sizeof(cosmos_interfaces::msg::ReactionWheels),
   ReactionWheels_message_member_array,  // message members
   ReactionWheels_init_function,  // function to initialize message memory (memory has to be allocated)

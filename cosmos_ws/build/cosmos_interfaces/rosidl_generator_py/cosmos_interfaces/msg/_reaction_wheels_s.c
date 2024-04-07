@@ -50,6 +50,15 @@ bool cosmos_interfaces__msg__reaction_wheels__convert_from_py(PyObject * _pymsg,
     assert(strncmp("cosmos_interfaces.msg._reaction_wheels.ReactionWheels", full_classname_dest, 53) == 0);
   }
   cosmos_interfaces__msg__ReactionWheels * ros_message = _ros_message;
+  {  // is_done
+    PyObject * field = PyObject_GetAttrString(_pymsg, "is_done");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->is_done = (Py_True == field);
+    Py_DECREF(field);
+  }
   {  // motor_x
     PyObject * field = PyObject_GetAttrString(_pymsg, "motor_x");
     if (!field) {
@@ -75,15 +84,6 @@ bool cosmos_interfaces__msg__reaction_wheels__convert_from_py(PyObject * _pymsg,
     }
     assert(PyBool_Check(field));
     ros_message->motor_z = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // motor_w
-    PyObject * field = PyObject_GetAttrString(_pymsg, "motor_w");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->motor_w = (Py_True == field);
     Py_DECREF(field);
   }
   {  // speed_x
@@ -113,15 +113,6 @@ bool cosmos_interfaces__msg__reaction_wheels__convert_from_py(PyObject * _pymsg,
     ros_message->speed_z = (int32_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
-  {  // speed_w
-    PyObject * field = PyObject_GetAttrString(_pymsg, "speed_w");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->speed_w = (int32_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
   {  // time_x
     PyObject * field = PyObject_GetAttrString(_pymsg, "time_x");
     if (!field) {
@@ -149,15 +140,6 @@ bool cosmos_interfaces__msg__reaction_wheels__convert_from_py(PyObject * _pymsg,
     ros_message->time_z = PyLong_AsLongLong(field);
     Py_DECREF(field);
   }
-  {  // time_w
-    PyObject * field = PyObject_GetAttrString(_pymsg, "time_w");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->time_w = PyLong_AsLongLong(field);
-    Py_DECREF(field);
-  }
 
   return true;
 }
@@ -180,6 +162,17 @@ PyObject * cosmos_interfaces__msg__reaction_wheels__convert_to_py(void * raw_ros
     }
   }
   cosmos_interfaces__msg__ReactionWheels * ros_message = (cosmos_interfaces__msg__ReactionWheels *)raw_ros_message;
+  {  // is_done
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->is_done ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "is_done", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
   {  // motor_x
     PyObject * field = NULL;
     field = PyBool_FromLong(ros_message->motor_x ? 1 : 0);
@@ -207,17 +200,6 @@ PyObject * cosmos_interfaces__msg__reaction_wheels__convert_to_py(void * raw_ros
     field = PyBool_FromLong(ros_message->motor_z ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "motor_z", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // motor_w
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->motor_w ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "motor_w", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -257,17 +239,6 @@ PyObject * cosmos_interfaces__msg__reaction_wheels__convert_to_py(void * raw_ros
       }
     }
   }
-  {  // speed_w
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->speed_w);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "speed_w", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // time_x
     PyObject * field = NULL;
     field = PyLong_FromLongLong(ros_message->time_x);
@@ -295,17 +266,6 @@ PyObject * cosmos_interfaces__msg__reaction_wheels__convert_to_py(void * raw_ros
     field = PyLong_FromLongLong(ros_message->time_z);
     {
       int rc = PyObject_SetAttrString(_pymessage, "time_z", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // time_w
-    PyObject * field = NULL;
-    field = PyLong_FromLongLong(ros_message->time_w);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "time_w", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

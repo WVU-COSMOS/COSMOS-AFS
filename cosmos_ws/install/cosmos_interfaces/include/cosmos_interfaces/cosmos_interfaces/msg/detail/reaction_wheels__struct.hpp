@@ -38,18 +38,16 @@ struct ReactionWheels_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->is_done = false;
       this->motor_x = false;
       this->motor_y = false;
       this->motor_z = false;
-      this->motor_w = false;
       this->speed_x = 0l;
       this->speed_y = 0l;
       this->speed_z = 0l;
-      this->speed_w = 0l;
       this->time_x = 0ll;
       this->time_y = 0ll;
       this->time_z = 0ll;
-      this->time_w = 0ll;
     }
   }
 
@@ -59,22 +57,23 @@ struct ReactionWheels_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->is_done = false;
       this->motor_x = false;
       this->motor_y = false;
       this->motor_z = false;
-      this->motor_w = false;
       this->speed_x = 0l;
       this->speed_y = 0l;
       this->speed_z = 0l;
-      this->speed_w = 0l;
       this->time_x = 0ll;
       this->time_y = 0ll;
       this->time_z = 0ll;
-      this->time_w = 0ll;
     }
   }
 
   // field types and members
+  using _is_done_type =
+    bool;
+  _is_done_type is_done;
   using _motor_x_type =
     bool;
   _motor_x_type motor_x;
@@ -84,9 +83,6 @@ struct ReactionWheels_
   using _motor_z_type =
     bool;
   _motor_z_type motor_z;
-  using _motor_w_type =
-    bool;
-  _motor_w_type motor_w;
   using _speed_x_type =
     int32_t;
   _speed_x_type speed_x;
@@ -96,9 +92,6 @@ struct ReactionWheels_
   using _speed_z_type =
     int32_t;
   _speed_z_type speed_z;
-  using _speed_w_type =
-    int32_t;
-  _speed_w_type speed_w;
   using _time_x_type =
     int64_t;
   _time_x_type time_x;
@@ -108,11 +101,14 @@ struct ReactionWheels_
   using _time_z_type =
     int64_t;
   _time_z_type time_z;
-  using _time_w_type =
-    int64_t;
-  _time_w_type time_w;
 
   // setters for named parameter idiom
+  Type & set__is_done(
+    const bool & _arg)
+  {
+    this->is_done = _arg;
+    return *this;
+  }
   Type & set__motor_x(
     const bool & _arg)
   {
@@ -129,12 +125,6 @@ struct ReactionWheels_
     const bool & _arg)
   {
     this->motor_z = _arg;
-    return *this;
-  }
-  Type & set__motor_w(
-    const bool & _arg)
-  {
-    this->motor_w = _arg;
     return *this;
   }
   Type & set__speed_x(
@@ -155,12 +145,6 @@ struct ReactionWheels_
     this->speed_z = _arg;
     return *this;
   }
-  Type & set__speed_w(
-    const int32_t & _arg)
-  {
-    this->speed_w = _arg;
-    return *this;
-  }
   Type & set__time_x(
     const int64_t & _arg)
   {
@@ -177,12 +161,6 @@ struct ReactionWheels_
     const int64_t & _arg)
   {
     this->time_z = _arg;
-    return *this;
-  }
-  Type & set__time_w(
-    const int64_t & _arg)
-  {
-    this->time_w = _arg;
     return *this;
   }
 
@@ -228,6 +206,9 @@ struct ReactionWheels_
   // comparison operators
   bool operator==(const ReactionWheels_ & other) const
   {
+    if (this->is_done != other.is_done) {
+      return false;
+    }
     if (this->motor_x != other.motor_x) {
       return false;
     }
@@ -235,9 +216,6 @@ struct ReactionWheels_
       return false;
     }
     if (this->motor_z != other.motor_z) {
-      return false;
-    }
-    if (this->motor_w != other.motor_w) {
       return false;
     }
     if (this->speed_x != other.speed_x) {
@@ -249,9 +227,6 @@ struct ReactionWheels_
     if (this->speed_z != other.speed_z) {
       return false;
     }
-    if (this->speed_w != other.speed_w) {
-      return false;
-    }
     if (this->time_x != other.time_x) {
       return false;
     }
@@ -259,9 +234,6 @@ struct ReactionWheels_
       return false;
     }
     if (this->time_z != other.time_z) {
-      return false;
-    }
-    if (this->time_w != other.time_w) {
       return false;
     }
     return true;
