@@ -219,6 +219,9 @@ CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosi
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/camera__type_support.h \
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/camera__struct.h \
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/camera__functions.h \
+ /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__type_support.h \
+ /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__struct.h \
+ /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.h \
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.h \
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__struct.h \
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.h \

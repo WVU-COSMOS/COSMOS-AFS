@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from cosmos_interfaces/msg/DCM.msg
+// generated code does not contain a copyright notice
+
+
+module cosmos_interfaces {
+  module msg {
+    typedef double double__9[9];
+    struct DCM {
+      string to_node;
+
+      string from_node;
+
+      boolean is_start;
+
+      boolean is_target;
+
+      boolean is_abort;
+
+      double__9 dcm;
+
+      double t;
+    };
+  };
+};

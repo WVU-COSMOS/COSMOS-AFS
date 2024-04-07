@@ -75,6 +75,44 @@ CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosm
   /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/message_type_support_dispatch.h \
   /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/type_support_map.h
 
+CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/dcm__type_support.cpp.o: rosidl_typesupport_c/cosmos_interfaces/msg/dcm__type_support.cpp \
+  /usr/include/stdc-predef.h \
+  /usr/include/c++/11/cstddef \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/features-time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
+  /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
+  rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__struct.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__type_support.h \
+  rosidl_generator_c/cosmos_interfaces/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/identifier.h \
+  /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/visibility_control.h \
+  /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/message_type_support_dispatch.h \
+  /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/type_support_map.h
+
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosmos_interfaces/msg/position__type_support.cpp.o: rosidl_typesupport_c/cosmos_interfaces/msg/position__type_support.cpp \
   /usr/include/stdc-predef.h \
   /usr/include/c++/11/cstddef \
@@ -265,116 +303,122 @@ CMakeFiles/cosmos_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/cosm
   /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/service_type_support_dispatch.h
 
 
-rosidl_generator_c/cosmos_interfaces/srv/detail/skew__struct.h:
-
-rosidl_typesupport_c/cosmos_interfaces/srv/skew__type_support.cpp:
-
-/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
-
-rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.h:
-
-rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__struct.h:
-
-rosidl_typesupport_c/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp:
-
-rosidl_generator_c/cosmos_interfaces/msg/detail/state_machine__type_support.h:
-
-rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__type_support.h:
-
-rosidl_typesupport_c/cosmos_interfaces/msg/reaction_wheels__type_support.cpp:
-
-rosidl_generator_c/cosmos_interfaces/msg/detail/position__struct.h:
-
-rosidl_generator_c/cosmos_interfaces/msg/detail/camera__type_support.h:
-
-/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
-
-/opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/type_support_map.h:
-
-rosidl_generator_c/cosmos_interfaces/srv/detail/skew__type_support.h:
-
-/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
-
-/opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/identifier.h:
-
-rosidl_generator_c/cosmos_interfaces/msg/rosidl_generator_c__visibility_control.h:
-
-/usr/include/features.h:
-
-rosidl_typesupport_c/cosmos_interfaces/msg/position__type_support.cpp:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-rosidl_generator_c/cosmos_interfaces/msg/detail/position__type_support.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
-
-rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp:
-
-/opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/visibility_control.h:
-
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
-
-rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp:
-
-/usr/include/x86_64-linux-gnu/bits/time64.h:
-
-/usr/include/features-time64.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-
-/usr/include/stdint.h:
-
-/opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/service_type_support_dispatch.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h:
-
-/usr/include/x86_64-linux-gnu/bits/types.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
-
-rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__struct.h:
-
-rosidl_typesupport_c/cosmos_interfaces/msg/attitude__type_support.cpp:
-
-/opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
-
-/usr/include/stdc-predef.h:
-
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
-/usr/include/c++/11/cstddef:
-
-/opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/message_type_support_dispatch.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
-
-rosidl_generator_c/cosmos_interfaces/msg/detail/state_machine__struct.h:
-
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
-
-rosidl_generator_c/cosmos_interfaces/msg/detail/camera__struct.h:
-
-rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__type_support.h:
-
-/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
-
-rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__struct.h:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__struct.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__type_support.h:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/camera__struct.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/state_machine__struct.h:
+
+/opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/message_type_support_dispatch.h:
+
+/usr/include/c++/11/cstddef:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__type_support.h:
+
+/opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
+
+rosidl_typesupport_c/cosmos_interfaces/msg/attitude__type_support.cpp:
+
+rosidl_generator_c/cosmos_interfaces/srv/detail/skew__type_support.h:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__struct.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h:
+
+/usr/include/stdc-predef.h:
+
+/opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/service_type_support_dispatch.h:
+
+/usr/include/stdint.h:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/usr/include/features-time64.h:
+
+/usr/include/x86_64-linux-gnu/bits/time64.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+rosidl_typesupport_c/cosmos_interfaces/msg/state_machine__type_support.cpp:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/visibility_control.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/position__type_support.h:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+rosidl_typesupport_c/cosmos_interfaces/msg/position__type_support.cpp:
+
+/usr/include/features.h:
+
+rosidl_generator_c/cosmos_interfaces/msg/rosidl_generator_c__visibility_control.h:
+
+/opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/identifier.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
+
+rosidl_typesupport_c/cosmos_interfaces/msg/camera__type_support.cpp:
+
+/opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/type_support_map.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/camera__type_support.h:
+
+rosidl_typesupport_c/cosmos_interfaces/msg/dcm__type_support.cpp:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+rosidl_typesupport_c/cosmos_interfaces/srv/skew__type_support.cpp:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__struct.h:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/position__struct.h:
+
+rosidl_typesupport_c/cosmos_interfaces/msg/reaction_wheels__type_support.cpp:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__type_support.h:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/state_machine__type_support.h:
+
+rosidl_typesupport_c/cosmos_interfaces/srv/aa_to_dcm__type_support.cpp:
+
+rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__struct.h:
+
+rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
+
+rosidl_generator_c/cosmos_interfaces/srv/detail/skew__struct.h:

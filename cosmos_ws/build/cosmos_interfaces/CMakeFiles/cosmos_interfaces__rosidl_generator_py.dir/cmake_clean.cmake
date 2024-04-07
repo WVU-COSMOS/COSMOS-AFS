@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_attitude_s.c.o.d"
   "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c.o"
   "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c.o.d"
+  "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_dcm_s.c.o"
+  "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_dcm_s.c.o.d"
   "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_position_s.c.o"
   "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_position_s.c.o.d"
   "CMakeFiles/cosmos_interfaces__rosidl_generator_py.dir/rosidl_generator_py/cosmos_interfaces/msg/_reaction_wheels_s.c.o"

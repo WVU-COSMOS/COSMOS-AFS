@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/cosmos_interfaces/msg/_attitude_s.c"
   "../rosidl_generator_py/cosmos_interfaces/msg/_camera.py"
   "../rosidl_generator_py/cosmos_interfaces/msg/_camera_s.c"
+  "../rosidl_generator_py/cosmos_interfaces/msg/_dcm.py"
+  "../rosidl_generator_py/cosmos_interfaces/msg/_dcm_s.c"
   "../rosidl_generator_py/cosmos_interfaces/msg/_position.py"
   "../rosidl_generator_py/cosmos_interfaces/msg/_position_s.c"
   "../rosidl_generator_py/cosmos_interfaces/msg/_reaction_wheels.py"

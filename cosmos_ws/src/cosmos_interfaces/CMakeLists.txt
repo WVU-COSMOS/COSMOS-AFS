@@ -14,6 +14,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Attitude.msg"
   "msg/StateMachine.msg"
   "msg/Camera.msg"
+  "msg/DCM.msg"
   "srv/AAToDCM.srv"
   "srv/Skew.srv"
 )

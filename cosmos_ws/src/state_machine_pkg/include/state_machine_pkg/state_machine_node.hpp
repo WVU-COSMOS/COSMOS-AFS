@@ -18,17 +18,19 @@ enum class MISSION : int32_t
     STOP = 6
 };
 
+enum class TRACKING_MISSION : int32_t
+{
+    FIND_TARGET = 1,
+    KINEMATICS = 2,
+    FOLLOW = 3,
+    MISSION_END = 4
+};
+
 enum class MOVE_TARGET_MISSION : int32_t
 {
     FIND_TARGET = 1,
     MOVE = 2,
     MISSION_END = 3
-};
-
-enum class COMMAND : int64_t
-{
-    MOVE_CLOCKWISE = 0,
-    MOVE_COUNTERCLOCKWISE = 1
 };
 
 class StateMachine : public rclcpp::Node
@@ -39,7 +41,8 @@ public:
 private:
     void gStationCallback(const std_msgs::msg::Int32::SharedPtr msg);
     void stateMachineCallback(const cosmos_interfaces::msg::StateMachine::SharedPtr msg);
-    void move_by_target(int mission);
+    void move_by_target(int mission, MOVE_TARGET_MISSION state);
+    void tracking_mode(int mission, TRACKING_MISSION state);
 
     rclcpp::Subscription<std_msgs::msg::Int32>::SharedPtr gSsubscriber_;
     rclcpp::Subscription<cosmos_interfaces::msg::StateMachine>::SharedPtr stateMachineSub_;
@@ -51,7 +54,7 @@ private:
     bool is_target = 0;
     cosmos_interfaces::msg::StateMachine mission_status = cosmos_interfaces::msg::StateMachine();
 
-    MOVE_TARGET_MISSION state = MOVE_TARGET_MISSION::FIND_TARGET;
+    
 };
 
 #endif // STATE_MACHINE_HPP_

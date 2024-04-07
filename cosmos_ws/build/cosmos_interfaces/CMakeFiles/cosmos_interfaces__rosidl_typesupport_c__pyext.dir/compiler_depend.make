@@ -260,6 +260,9 @@ CMakeFiles/cosmos_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_p
   rosidl_generator_c/cosmos_interfaces/msg/detail/camera__type_support.h \
   rosidl_generator_c/cosmos_interfaces/msg/detail/camera__struct.h \
   rosidl_generator_c/cosmos_interfaces/msg/detail/camera__functions.h \
+  rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__type_support.h \
+  rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__struct.h \
+  rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.h \
   rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__type_support.h \
   rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__struct.h \
   rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.h \
@@ -305,6 +308,8 @@ rosidl_generator_c/cosmos_interfaces/msg/detail/camera__functions.h:
 /usr/include/python3.10/cpython/bytesobject.h:
 
 /usr/include/python3.10/cpython/odictobject.h:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
@@ -672,6 +677,8 @@ rosidl_generator_py/cosmos_interfaces/_cosmos_interfaces_s.ep.rosidl_typesupport
 
 /usr/include/python3.10/dictobject.h:
 
+rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.h:
+
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h:
 
 /usr/include/python3.10/moduleobject.h:
@@ -757,6 +764,8 @@ rosidl_generator_c/cosmos_interfaces/msg/detail/camera__type_support.h:
 /usr/include/python3.10/compile.h:
 
 /usr/include/python3.10/sysmodule.h:
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__type_support.h:
 
 /usr/include/python3.10/cpython/sysmodule.h:
 
