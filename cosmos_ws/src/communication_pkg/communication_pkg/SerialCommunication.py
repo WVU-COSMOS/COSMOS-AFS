@@ -43,9 +43,11 @@ class SerialCommunication(Node):
 
     def sm_command_callback(self, msg):
         self.get_logger().info(f"Command Received!")
-        command_string = f"{int(msg.motor_x)},{int(msg.motor_y)},{int(msg.motor_z)}, \
-                               {msg.speed_x},{msg.speed_y},{msg.speed_z} \
-                               {msg.time_x},{msg.time_y},{msg.time_z}\n"
+
+        motor_values = [int(msg.motor_x), int(msg.motor_y), int(msg.motor_z)]
+        command_string = ','.join(map(str, motor_values))
+        command_string += f",{msg.speed_x},{msg.speed_y},{msg.speed_z},"
+        command_string += f"{msg.time_x},{msg.time_y},{msg.time_z}\n"
         # Send the command via serial to ESP32
         self.serial.write(command_string.encode())
         self.get_logger().info(f"Sent command to ESP32: {command_string}")
