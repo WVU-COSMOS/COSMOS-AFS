@@ -25,6 +25,13 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
+  // member: is_done
+  {
+    out << "is_done: ";
+    rosidl_generator_traits::value_to_yaml(msg.is_done, out);
+    out << ", ";
+  }
+
   // member: motor_x
   {
     out << "motor_x: ";
@@ -43,13 +50,6 @@ inline void to_flow_style_yaml(
   {
     out << "motor_z: ";
     rosidl_generator_traits::value_to_yaml(msg.motor_z, out);
-    out << ", ";
-  }
-
-  // member: motor_w
-  {
-    out << "motor_w: ";
-    rosidl_generator_traits::value_to_yaml(msg.motor_w, out);
     out << ", ";
   }
 
@@ -74,13 +74,6 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: speed_w
-  {
-    out << "speed_w: ";
-    rosidl_generator_traits::value_to_yaml(msg.speed_w, out);
-    out << ", ";
-  }
-
   // member: time_x
   {
     out << "time_x: ";
@@ -99,13 +92,6 @@ inline void to_flow_style_yaml(
   {
     out << "time_z: ";
     rosidl_generator_traits::value_to_yaml(msg.time_z, out);
-    out << ", ";
-  }
-
-  // member: time_w
-  {
-    out << "time_w: ";
-    rosidl_generator_traits::value_to_yaml(msg.time_w, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -114,6 +100,16 @@ inline void to_block_style_yaml(
   const ReactionWheels & msg,
   std::ostream & out, size_t indentation = 0)
 {
+  // member: is_done
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "is_done: ";
+    rosidl_generator_traits::value_to_yaml(msg.is_done, out);
+    out << "\n";
+  }
+
   // member: motor_x
   {
     if (indentation > 0) {
@@ -141,16 +137,6 @@ inline void to_block_style_yaml(
     }
     out << "motor_z: ";
     rosidl_generator_traits::value_to_yaml(msg.motor_z, out);
-    out << "\n";
-  }
-
-  // member: motor_w
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "motor_w: ";
-    rosidl_generator_traits::value_to_yaml(msg.motor_w, out);
     out << "\n";
   }
 
@@ -184,16 +170,6 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: speed_w
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "speed_w: ";
-    rosidl_generator_traits::value_to_yaml(msg.speed_w, out);
-    out << "\n";
-  }
-
   // member: time_x
   {
     if (indentation > 0) {
@@ -221,16 +197,6 @@ inline void to_block_style_yaml(
     }
     out << "time_z: ";
     rosidl_generator_traits::value_to_yaml(msg.time_z, out);
-    out << "\n";
-  }
-
-  // member: time_w
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "time_w: ";
-    rosidl_generator_traits::value_to_yaml(msg.time_w, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

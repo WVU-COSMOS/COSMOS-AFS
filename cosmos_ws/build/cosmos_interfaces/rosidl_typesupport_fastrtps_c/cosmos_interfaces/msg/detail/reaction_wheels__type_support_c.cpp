@@ -49,6 +49,11 @@ static bool _ReactionWheels__cdr_serialize(
     return false;
   }
   const _ReactionWheels__ros_msg_type * ros_message = static_cast<const _ReactionWheels__ros_msg_type *>(untyped_ros_message);
+  // Field name: is_done
+  {
+    cdr << (ros_message->is_done ? true : false);
+  }
+
   // Field name: motor_x
   {
     cdr << (ros_message->motor_x ? true : false);
@@ -62,11 +67,6 @@ static bool _ReactionWheels__cdr_serialize(
   // Field name: motor_z
   {
     cdr << (ros_message->motor_z ? true : false);
-  }
-
-  // Field name: motor_w
-  {
-    cdr << (ros_message->motor_w ? true : false);
   }
 
   // Field name: speed_x
@@ -84,11 +84,6 @@ static bool _ReactionWheels__cdr_serialize(
     cdr << ros_message->speed_z;
   }
 
-  // Field name: speed_w
-  {
-    cdr << ros_message->speed_w;
-  }
-
   // Field name: time_x
   {
     cdr << ros_message->time_x;
@@ -104,11 +99,6 @@ static bool _ReactionWheels__cdr_serialize(
     cdr << ros_message->time_z;
   }
 
-  // Field name: time_w
-  {
-    cdr << ros_message->time_w;
-  }
-
   return true;
 }
 
@@ -121,6 +111,13 @@ static bool _ReactionWheels__cdr_deserialize(
     return false;
   }
   _ReactionWheels__ros_msg_type * ros_message = static_cast<_ReactionWheels__ros_msg_type *>(untyped_ros_message);
+  // Field name: is_done
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->is_done = tmp ? true : false;
+  }
+
   // Field name: motor_x
   {
     uint8_t tmp;
@@ -142,13 +139,6 @@ static bool _ReactionWheels__cdr_deserialize(
     ros_message->motor_z = tmp ? true : false;
   }
 
-  // Field name: motor_w
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message->motor_w = tmp ? true : false;
-  }
-
   // Field name: speed_x
   {
     cdr >> ros_message->speed_x;
@@ -164,11 +154,6 @@ static bool _ReactionWheels__cdr_deserialize(
     cdr >> ros_message->speed_z;
   }
 
-  // Field name: speed_w
-  {
-    cdr >> ros_message->speed_w;
-  }
-
   // Field name: time_x
   {
     cdr >> ros_message->time_x;
@@ -182,11 +167,6 @@ static bool _ReactionWheels__cdr_deserialize(
   // Field name: time_z
   {
     cdr >> ros_message->time_z;
-  }
-
-  // Field name: time_w
-  {
-    cdr >> ros_message->time_w;
   }
 
   return true;
@@ -206,6 +186,12 @@ size_t get_serialized_size_cosmos_interfaces__msg__ReactionWheels(
   (void)padding;
   (void)wchar_size;
 
+  // field.name is_done
+  {
+    size_t item_size = sizeof(ros_message->is_done);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // field.name motor_x
   {
     size_t item_size = sizeof(ros_message->motor_x);
@@ -221,12 +207,6 @@ size_t get_serialized_size_cosmos_interfaces__msg__ReactionWheels(
   // field.name motor_z
   {
     size_t item_size = sizeof(ros_message->motor_z);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name motor_w
-  {
-    size_t item_size = sizeof(ros_message->motor_w);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -248,12 +228,6 @@ size_t get_serialized_size_cosmos_interfaces__msg__ReactionWheels(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name speed_w
-  {
-    size_t item_size = sizeof(ros_message->speed_w);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
   // field.name time_x
   {
     size_t item_size = sizeof(ros_message->time_x);
@@ -269,12 +243,6 @@ size_t get_serialized_size_cosmos_interfaces__msg__ReactionWheels(
   // field.name time_z
   {
     size_t item_size = sizeof(ros_message->time_z);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name time_w
-  {
-    size_t item_size = sizeof(ros_message->time_w);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -305,6 +273,12 @@ size_t max_serialized_size_cosmos_interfaces__msg__ReactionWheels(
   full_bounded = true;
   is_plain = true;
 
+  // member: is_done
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint8_t);
+  }
   // member: motor_x
   {
     size_t array_size = 1;
@@ -318,12 +292,6 @@ size_t max_serialized_size_cosmos_interfaces__msg__ReactionWheels(
     current_alignment += array_size * sizeof(uint8_t);
   }
   // member: motor_z
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // member: motor_w
   {
     size_t array_size = 1;
 
@@ -350,13 +318,6 @@ size_t max_serialized_size_cosmos_interfaces__msg__ReactionWheels(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
-  // member: speed_w
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
   // member: time_x
   {
     size_t array_size = 1;
@@ -372,13 +333,6 @@ size_t max_serialized_size_cosmos_interfaces__msg__ReactionWheels(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
   // member: time_z
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-  // member: time_w
   {
     size_t array_size = 1;
 

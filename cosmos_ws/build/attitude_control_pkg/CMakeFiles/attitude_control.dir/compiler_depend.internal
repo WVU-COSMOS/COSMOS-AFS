@@ -679,6 +679,10 @@ CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.o
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/attitude__struct.hpp
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/attitude__builder.hpp
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/attitude__traits.hpp
+ /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/state_machine.hpp
+ /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__struct.hpp
+ /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__builder.hpp
+ /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/include/cosmos_interfaces/cosmos_interfaces/msg/detail/state_machine__traits.hpp
  /usr/include/c++/11/fstream
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h

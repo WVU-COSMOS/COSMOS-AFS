@@ -6,13 +6,13 @@
 module cosmos_interfaces {
   module msg {
     struct ReactionWheels {
+      boolean is_done;
+
       boolean motor_x;
 
       boolean motor_y;
 
       boolean motor_z;
-
-      boolean motor_w;
 
       int32 speed_x;
 
@@ -20,15 +20,11 @@ module cosmos_interfaces {
 
       int32 speed_z;
 
-      int32 speed_w;
-
       int64 time_x;
 
       int64 time_y;
 
       int64 time_z;
-
-      int64 time_w;
     };
   };
 };

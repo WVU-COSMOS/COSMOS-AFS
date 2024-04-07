@@ -5,6 +5,7 @@
 #include "cosmos_interfaces/msg/reaction_wheels.hpp"
 #include "cosmos_interfaces/msg/position.hpp"
 #include "cosmos_interfaces/msg/attitude.hpp"
+#include "cosmos_interfaces/msg/state_machine.hpp"
 
 #include <fstream>
 #include <sstream>
@@ -17,6 +18,16 @@ enum class COMMAND : int64_t
     MOVE_COUNTERCLOCKWISE = 1
 };
 
+enum class MISSION : int32_t
+{
+    MOVE = 1,
+    ORBIT = 2,
+    FOLLOW = 3,
+    TRACK = 4,
+    MOVE_BY_TARGET = 5,
+    STOP = 6
+};
+
 class AttitudeControl : public rclcpp::Node
 {
 public:
@@ -24,7 +35,8 @@ public:
 
 private:
     // Callbacks
-    void sMachineCallback(const cosmos_interfaces::msg::Position::SharedPtr msg);
+    void sMachineCallback(const cosmos_interfaces::msg::StateMachine::SharedPtr msg);
+    void rWheelsCallback(const cosmos_interfaces::msg::ReactionWheels::SharedPtr msg);
 
     // Publishers
     void rWheelsCommandPublisher(cosmos_interfaces::msg::ReactionWheels::SharedPtr rWheelsCommand);
@@ -38,14 +50,18 @@ private:
     Eigen::Quaterniond rotationQuaternion(const cosmos_interfaces::msg::Attitude& attitude_current,
                                              const cosmos_interfaces::msg::Attitude& attitude_desired); // Calculate the rotation quaternion from current to desired
     
-    // Suscribers Pointers
-    rclcpp::Subscription<cosmos_interfaces::msg::Position>::SharedPtr sMachineSubscriber_;
+    // Suscribers
+    rclcpp::Subscription<cosmos_interfaces::msg::StateMachine>::SharedPtr sMachineSub_;
+    rclcpp::Subscription<cosmos_interfaces::msg::ReactionWheels>::SharedPtr rWheelsSub_;
 
-    // Publisher Pointers
+    // Publisher
     rclcpp::Publisher<cosmos_interfaces::msg::ReactionWheels>::SharedPtr rWheelsPub_;
+    rclcpp::Publisher<cosmos_interfaces::msg::StateMachine>::SharedPtr sMachinePub_;
 
     // Helper Variables
     std::string command_string_;
+    std::string node_name = "AttitudeControl";
+    int current_mission = 0;
 };
 
 #endif

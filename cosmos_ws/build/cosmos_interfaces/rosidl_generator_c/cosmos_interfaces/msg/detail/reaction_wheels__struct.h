@@ -20,18 +20,16 @@ extern "C"
 /// Struct defined in msg/ReactionWheels in the package cosmos_interfaces.
 typedef struct cosmos_interfaces__msg__ReactionWheels
 {
+  bool is_done;
   bool motor_x;
   bool motor_y;
   bool motor_z;
-  bool motor_w;
   int32_t speed_x;
   int32_t speed_y;
   int32_t speed_z;
-  int32_t speed_w;
   int64_t time_x;
   int64_t time_y;
   int64_t time_z;
-  int64_t time_w;
 } cosmos_interfaces__msg__ReactionWheels;
 
 // Struct for a sequence of cosmos_interfaces__msg__ReactionWheels.

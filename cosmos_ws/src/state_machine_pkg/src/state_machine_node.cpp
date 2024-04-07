@@ -8,8 +8,6 @@ StateMachine::StateMachine() : Node("state_machine")
     stateMachineSub_ = this->create_subscription<cosmos_interfaces::msg::StateMachine>(
             "sm_command", 10, std::bind(&StateMachine::stateMachineCallback, this, std::placeholders::_1));
 
-    positionPub_ = this->create_publisher<cosmos_interfaces::msg::Position>("attitude_command", 10);
-
     stateMachinePub_ = this->create_publisher<cosmos_interfaces::msg::StateMachine>("sm_command", 10);
 
     RCLCPP_INFO(this->get_logger(), "State Machine has been started!");
@@ -139,6 +137,11 @@ void StateMachine::move_by_target(int mission)
             break;
 
         case MOVE_TARGET_MISSION::MOVE:
+            mission_status.mission = mission;
+            mission_status.to_node = "AttitudeControl";
+            mission_status.is_start = true;
+            mission_status.is_abort = false;
+            stateMachinePub_->publish(mission_status);
             RCLCPP_INFO(this->get_logger(), "Moving!");
             StateMachine::state = MOVE_TARGET_MISSION::MISSION_END;
             move_by_target(mission);

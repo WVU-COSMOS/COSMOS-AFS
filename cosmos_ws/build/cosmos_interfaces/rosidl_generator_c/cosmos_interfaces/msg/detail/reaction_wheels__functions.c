@@ -17,18 +17,16 @@ cosmos_interfaces__msg__ReactionWheels__init(cosmos_interfaces__msg__ReactionWhe
   if (!msg) {
     return false;
   }
+  // is_done
   // motor_x
   // motor_y
   // motor_z
-  // motor_w
   // speed_x
   // speed_y
   // speed_z
-  // speed_w
   // time_x
   // time_y
   // time_z
-  // time_w
   return true;
 }
 
@@ -38,24 +36,26 @@ cosmos_interfaces__msg__ReactionWheels__fini(cosmos_interfaces__msg__ReactionWhe
   if (!msg) {
     return;
   }
+  // is_done
   // motor_x
   // motor_y
   // motor_z
-  // motor_w
   // speed_x
   // speed_y
   // speed_z
-  // speed_w
   // time_x
   // time_y
   // time_z
-  // time_w
 }
 
 bool
 cosmos_interfaces__msg__ReactionWheels__are_equal(const cosmos_interfaces__msg__ReactionWheels * lhs, const cosmos_interfaces__msg__ReactionWheels * rhs)
 {
   if (!lhs || !rhs) {
+    return false;
+  }
+  // is_done
+  if (lhs->is_done != rhs->is_done) {
     return false;
   }
   // motor_x
@@ -70,10 +70,6 @@ cosmos_interfaces__msg__ReactionWheels__are_equal(const cosmos_interfaces__msg__
   if (lhs->motor_z != rhs->motor_z) {
     return false;
   }
-  // motor_w
-  if (lhs->motor_w != rhs->motor_w) {
-    return false;
-  }
   // speed_x
   if (lhs->speed_x != rhs->speed_x) {
     return false;
@@ -84,10 +80,6 @@ cosmos_interfaces__msg__ReactionWheels__are_equal(const cosmos_interfaces__msg__
   }
   // speed_z
   if (lhs->speed_z != rhs->speed_z) {
-    return false;
-  }
-  // speed_w
-  if (lhs->speed_w != rhs->speed_w) {
     return false;
   }
   // time_x
@@ -102,10 +94,6 @@ cosmos_interfaces__msg__ReactionWheels__are_equal(const cosmos_interfaces__msg__
   if (lhs->time_z != rhs->time_z) {
     return false;
   }
-  // time_w
-  if (lhs->time_w != rhs->time_w) {
-    return false;
-  }
   return true;
 }
 
@@ -117,30 +105,26 @@ cosmos_interfaces__msg__ReactionWheels__copy(
   if (!input || !output) {
     return false;
   }
+  // is_done
+  output->is_done = input->is_done;
   // motor_x
   output->motor_x = input->motor_x;
   // motor_y
   output->motor_y = input->motor_y;
   // motor_z
   output->motor_z = input->motor_z;
-  // motor_w
-  output->motor_w = input->motor_w;
   // speed_x
   output->speed_x = input->speed_x;
   // speed_y
   output->speed_y = input->speed_y;
   // speed_z
   output->speed_z = input->speed_z;
-  // speed_w
-  output->speed_w = input->speed_w;
   // time_x
   output->time_x = input->time_x;
   // time_y
   output->time_y = input->time_y;
   // time_z
   output->time_z = input->time_z;
-  // time_w
-  output->time_w = input->time_w;
   return true;
 }
 

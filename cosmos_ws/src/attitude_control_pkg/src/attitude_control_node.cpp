@@ -2,37 +2,54 @@
 
 AttitudeControl::AttitudeControl() : Node("attitude_control")
 {
-    sMachineSubscriber_= this->create_subscription<cosmos_interfaces::msg::Position>(
-            "attitude_command", 10, std::bind(&AttitudeControl::sMachineCallback, this, std::placeholders::_1));
+    sMachineSub_= this->create_subscription<cosmos_interfaces::msg::StateMachine>(
+            "sm_command", 10, std::bind(&AttitudeControl::sMachineCallback, this, std::placeholders::_1));
+
+    rWheelsSub_= this->create_subscription<cosmos_interfaces::msg::ReactionWheels>(
+            "esp32_command", 10, std::bind(&AttitudeControl::rWheelsCallback, this, std::placeholders::_1));
 
     rWheelsPub_ = this->create_publisher<cosmos_interfaces::msg::ReactionWheels>("esp32_command", 10);
+    sMachinePub_ = this->create_publisher<cosmos_interfaces::msg::StateMachine>("sm_command", 10);
 
     RCLCPP_INFO(this->get_logger(), "Attitude Control has been started!");
 }
 
-void AttitudeControl::sMachineCallback(const cosmos_interfaces::msg::Position::SharedPtr msg)
+void AttitudeControl::sMachineCallback(const cosmos_interfaces::msg::StateMachine::SharedPtr msg)
 {
-    RCLCPP_INFO(this->get_logger(), "Received:: Mission: %ld, Current Position: %ld, Next Position: %ld, Running Task: %d",
-                         msg->mission, msg->current_position, msg->next_position, msg->is_running);
-
-    if(msg->next_position > msg->current_position)
+    RCLCPP_INFO(this->get_logger(), "Received:: Mission: %d", msg->mission);
+    MISSION mission = static_cast<MISSION>(msg->mission);
+    current_mission = msg->mission;
+    if(mission == MISSION::MOVE_BY_TARGET)
     {
         auto rWheel_msg = cosmos_interfaces::msg::ReactionWheels();
+        rWheel_msg.is_done = false;
         rWheel_msg.motor_x = true;
         rWheel_msg.motor_y = false;
         rWheel_msg.motor_z = false;
-        rWheel_msg.motor_w = false;
-        rWheel_msg.speed_x = 150;
+        rWheel_msg.speed_x = 1700;
         rWheel_msg.speed_y = 0;
         rWheel_msg.speed_z = 0;
-        rWheel_msg.speed_w = 0;
-        rWheel_msg.time_x = 1500;
+        rWheel_msg.time_x = 3000;
         rWheel_msg.time_y = 0;
         rWheel_msg.time_z = 0;
-        rWheel_msg.time_w = 0;
 
         rWheelsPub_->publish(rWheel_msg);
         RCLCPP_INFO(this->get_logger(), "Published to esp32_command!");
+    }
+}
+
+void AttitudeControl::rWheelsCallback(const cosmos_interfaces::msg::ReactionWheels::SharedPtr msg)
+{
+    if(msg->is_done)
+    {
+        auto sMachine_msg = cosmos_interfaces::msg::StateMachine();
+        sMachine_msg.from_node = node_name;
+        sMachine_msg.to_node = "StateMachine";
+        sMachine_msg.is_abort = false;
+        sMachine_msg.mission = current_mission;
+        sMachine_msg.is_done = true;
+        sMachinePub_->publish(sMachine_msg);
+        RCLCPP_INFO(this->get_logger(), "Published to State Machine!");
     }
 }
 
