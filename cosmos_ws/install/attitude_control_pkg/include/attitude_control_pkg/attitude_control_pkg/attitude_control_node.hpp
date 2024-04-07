@@ -1,5 +1,5 @@
-#ifndef REACTION_WHEELS_HPP_
-#define REACTION_WHEELS_HPP_
+#ifndef ATTITUDE_CONTROL_HPP_
+#define ATTITUDE_CONTROL_HPP_
 
 #include "rclcpp/rclcpp.hpp"
 #include "cosmos_interfaces/msg/reaction_wheels.hpp"

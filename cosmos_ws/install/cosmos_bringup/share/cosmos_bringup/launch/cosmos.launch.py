@@ -19,9 +19,9 @@ def generate_launch_description():
         executable="GetImage"
     )
 
-    image_to_pixel_node = Node(
+    image_to_dcm_node = Node(
         package="camera_pkg",
-        executable="ImageToPixel"
+        executable="ImageToDCM"
     )
 
 
@@ -38,7 +38,7 @@ def generate_launch_description():
     ld.add_action(state_machine_node)
     ld.add_action(cam_state_machine_node)
     ld.add_action(get_image_node)
-    ld.add_action(image_to_pixel_node)
+    ld.add_action(image_to_dcm_node)
     ld.add_action(gstation_node)
     ld.add_action(attitude_node)
 

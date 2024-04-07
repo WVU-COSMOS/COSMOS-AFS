@@ -21,7 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             "GetImage = camera_pkg.GetImage:main",
-            "ImageToPixel = camera_pkg.ImageToPixel:main",
+            "ImageToDCM = camera_pkg.ImageToDCM:main",
             "CameraSM = camera_pkg.CameraSM:main"
         ],
     },

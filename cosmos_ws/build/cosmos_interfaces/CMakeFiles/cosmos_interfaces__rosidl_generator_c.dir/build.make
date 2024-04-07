@@ -87,6 +87,7 @@ rosidl_generator_c/cosmos_interfaces/msg/reaction_wheels.h: rosidl_adapter/cosmo
 rosidl_generator_c/cosmos_interfaces/msg/reaction_wheels.h: rosidl_adapter/cosmos_interfaces/msg/Attitude.idl
 rosidl_generator_c/cosmos_interfaces/msg/reaction_wheels.h: rosidl_adapter/cosmos_interfaces/msg/StateMachine.idl
 rosidl_generator_c/cosmos_interfaces/msg/reaction_wheels.h: rosidl_adapter/cosmos_interfaces/msg/Camera.idl
+rosidl_generator_c/cosmos_interfaces/msg/reaction_wheels.h: rosidl_adapter/cosmos_interfaces/msg/DCM.idl
 rosidl_generator_c/cosmos_interfaces/msg/reaction_wheels.h: rosidl_adapter/cosmos_interfaces/srv/AAToDCM.idl
 rosidl_generator_c/cosmos_interfaces/msg/reaction_wheels.h: rosidl_adapter/cosmos_interfaces/srv/Skew.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
@@ -149,6 +150,18 @@ rosidl_generator_c/cosmos_interfaces/msg/detail/camera__struct.h: rosidl_generat
 rosidl_generator_c/cosmos_interfaces/msg/detail/camera__type_support.h: rosidl_generator_c/cosmos_interfaces/msg/reaction_wheels.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/cosmos_interfaces/msg/detail/camera__type_support.h
 
+rosidl_generator_c/cosmos_interfaces/msg/dcm.h: rosidl_generator_c/cosmos_interfaces/msg/reaction_wheels.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/cosmos_interfaces/msg/dcm.h
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.h: rosidl_generator_c/cosmos_interfaces/msg/reaction_wheels.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.h
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__struct.h: rosidl_generator_c/cosmos_interfaces/msg/reaction_wheels.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__struct.h
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__type_support.h: rosidl_generator_c/cosmos_interfaces/msg/reaction_wheels.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__type_support.h
+
 rosidl_generator_c/cosmos_interfaces/srv/aa_to_dcm.h: rosidl_generator_c/cosmos_interfaces/msg/reaction_wheels.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/cosmos_interfaces/srv/aa_to_dcm.h
 
@@ -187,6 +200,9 @@ rosidl_generator_c/cosmos_interfaces/msg/detail/state_machine__functions.c: rosi
 
 rosidl_generator_c/cosmos_interfaces/msg/detail/camera__functions.c: rosidl_generator_c/cosmos_interfaces/msg/reaction_wheels.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/cosmos_interfaces/msg/detail/camera__functions.c
+
+rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c: rosidl_generator_c/cosmos_interfaces/msg/reaction_wheels.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c
 
 rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c: rosidl_generator_c/cosmos_interfaces/msg/reaction_wheels.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c
@@ -264,10 +280,24 @@ CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_i
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/camera__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/camera__functions.c -o CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/camera__functions.c.s
 
+CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c.o: CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c.o: rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c
+CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c.o: CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c.o -MF CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c.o.d -o CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c.o -c /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c
+
+CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c > CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c.i
+
+CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c -o CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c.s
+
 CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c.o: CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c.o: rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c
 CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c.o: CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c.o -MF CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c.o.d -o CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c.o -c /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c
 
 CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c.i: cmake_force
@@ -281,7 +311,7 @@ CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_i
 CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/skew__functions.c.o: CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/skew__functions.c.o: rosidl_generator_c/cosmos_interfaces/srv/detail/skew__functions.c
 CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/skew__functions.c.o: CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/skew__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/skew__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/skew__functions.c.o -MF CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/skew__functions.c.o.d -o CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/skew__functions.c.o -c /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/srv/detail/skew__functions.c
 
 CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/skew__functions.c.i: cmake_force
@@ -299,6 +329,7 @@ cosmos_interfaces__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__functions.c.o" \
 "CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/state_machine__functions.c.o" \
 "CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/camera__functions.c.o" \
+"CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c.o" \
 "CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c.o" \
 "CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/skew__functions.c.o"
 
@@ -310,13 +341,14 @@ libcosmos_interfaces__rosidl_generator_c.so: CMakeFiles/cosmos_interfaces__rosid
 libcosmos_interfaces__rosidl_generator_c.so: CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__functions.c.o
 libcosmos_interfaces__rosidl_generator_c.so: CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/state_machine__functions.c.o
 libcosmos_interfaces__rosidl_generator_c.so: CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/camera__functions.c.o
+libcosmos_interfaces__rosidl_generator_c.so: CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c.o
 libcosmos_interfaces__rosidl_generator_c.so: CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/aa_to_dcm__functions.c.o
 libcosmos_interfaces__rosidl_generator_c.so: CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/rosidl_generator_c/cosmos_interfaces/srv/detail/skew__functions.c.o
 libcosmos_interfaces__rosidl_generator_c.so: CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/build.make
 libcosmos_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libcosmos_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 libcosmos_interfaces__rosidl_generator_c.so: CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C shared library libcosmos_interfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C shared library libcosmos_interfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -329,6 +361,7 @@ CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/clean:
 
 CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/cosmos_interfaces/msg/attitude.h
 CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/cosmos_interfaces/msg/camera.h
+CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/cosmos_interfaces/msg/dcm.h
 CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__functions.c
 CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__functions.h
 CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__struct.h
@@ -337,6 +370,10 @@ CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/
 CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/cosmos_interfaces/msg/detail/camera__functions.h
 CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/cosmos_interfaces/msg/detail/camera__struct.h
 CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/cosmos_interfaces/msg/detail/camera__type_support.h
+CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.c
+CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__functions.h
+CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__struct.h
+CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/cosmos_interfaces/msg/detail/dcm__type_support.h
 CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/cosmos_interfaces/msg/detail/position__functions.c
 CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/cosmos_interfaces/msg/detail/position__functions.h
 CMakeFiles/cosmos_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/cosmos_interfaces/msg/detail/position__struct.h

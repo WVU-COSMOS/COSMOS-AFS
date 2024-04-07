@@ -2,6 +2,8 @@ msg/Attitude.idl
 msg/Attitude.msg
 msg/Camera.idl
 msg/Camera.msg
+msg/DCM.idl
+msg/DCM.msg
 msg/Position.idl
 msg/Position.msg
 msg/ReactionWheels.idl

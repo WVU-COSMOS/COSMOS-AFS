@@ -5,27 +5,31 @@ import cv2
 from rclpy.node import Node
 from sensor_msgs.msg import Image
 from cosmos_interfaces.msg import Camera
+from cosmos_interfaces.msg import DCM
 
-class ImageToPixel(Node):
+class ImageToDCM(Node):
     def __init__(self):
-        super().__init__("ImageToPixel")
-        self.get_logger().info("ImageToPixel Node has been started!")
+        super().__init__("ImageToDCM")
+        self.get_logger().info("ImageToDCM Node has been started!")
 
         # Subscribers
         self.img_sub_ = self.create_subscription(Image, "Image_Captured", self.img_callback, 10)
 
         # Publishers
-        self.uv_pub_ = self.create_publisher(Camera, "uv_coordinates", 10)
+        self.dcm_pub_ = self.create_publisher(DCM, "DCM", 10)
 
         # Variables
         self.image = Image()
         self.images = []
-        self.missions_params = {1: (np.array([100, 0, 0], dtype=np.uint8), np.array([255, 75, 75], dtype=np.uint8))}
+        self.mission_params = {1: (np.array([100, 0, 0], dtype=np.uint8), np.array([255, 75, 75], dtype=np.uint8))}
         self.uu = 240
         self.vv = 240
         self.uu_2 = self.uu / 2
         self.vv_2 = self.vv / 2        
         self.format = 'med'
+        self.is_target = False
+
+        self.mission = 1  # default to red light tracking
             
         # field of view divided by two (i.e., half-angle), ordered as [v, u]:
         self.fov_2 = {'med': [np.arctan(41/108), np.arctan(41/108)],
@@ -42,39 +46,28 @@ class ImageToPixel(Node):
             self.uu = img_height
             self.vv = img_width
             img = np.frombuffer(msg.data, dtype=np.uint8).reshape((img_height, img_width, -1))
-            #self.get_logger().info("Image Received!")
 
             self.images.append(img)
 
-            [u, v] = self.image_to_pixel(img, 1)
+            dcm = self.image_to_dcm(img, 1)
+            dcm_msg = DCM()
 
-            if(u != -50 and v != -50):
-                uv_msg = Camera()
-                uv_msg.is_target = True
-                uv_msg.u = u
-                uv_msg.v = v
-                self.uv_pub_.publish(uv_msg)
+            if self.is_target:
+                dcm_msg.is_target = True
+                dcm_msg.dcm = dcm.flatten().tolist()
             else:
-               uv_msg = Camera()
-               uv_msg.is_target = False
-               self.uv_pub_.publish(uv_msg)
+                dcm_msg.is_target = False
+
+            self.dcm_pub_.publish(dcm_msg)  
 
         else:
             self.get_logger().warning("Received empty image message!")
 
         
-    def image_to_pixel(self, img, mission, **kwargs):
-        kwargs_default = {'circle': 0, 'ReturnImage': 0}
-        kwargs_expected = kwargs_default.keys()
-        for kwarg in kwargs.keys():
-            if kwarg not in kwargs_expected:
-                raise ValueError(f"Unexpected keyword argument: {kwarg}")
-            else:
-                kwargs_default[kwarg] = kwargs.get(kwarg, kwargs_default.get(kwarg))
-        circle = kwargs_default.get('circle')
+    def image_to_dcm(self, img, mission):
 
         try:
-            mission_params = self.missions_params.get(mission)
+            mission_params = self.mission_params.get(mission)
             rgb_lb = mission_params[0]
             rgb_ub = mission_params[1]
         except:
@@ -102,19 +95,46 @@ class ImageToPixel(Node):
             u = int(m['m10'] / m['m00'])
             v = int(m['m01'] / m['m00'])
 
-            if circle:  # then draw a circle at the center of the largest contour (i.e., the target)
-                con_rgb[bw] = img[bw]
-                #cv2.circle(con_rgb, (u, v), 6, (0, 255, 0), -1)
+            dcm = self.pixel_to_dcm(u, v)
+            self.is_target = True
 
-        except:
-            u = -50
-            v = -50
+        except Exception as exception:
+            dcm = []  # value is ignored outside of function so 3x3 not needed here
+            self.is_target = False
 
-        return [u, v]
+        return dcm
+    
+    def euler_to_dcm(self, theta):
+        """"
+        Convert Euler Angles to DCM assuming sequence is [u, v] for camera.
+        
+        theta == 3x1 ndarray (radians)
+
+        Assuming Body Frame's x-axis is along u and y along v.
+        """
+        self.get_logger().info("Converting Euler to DCM...")
+
+        c = np.cos(theta)
+        s = np.sin(theta)
+
+        dcm_u = np.array([[1, 0, 0], [0, c[0], s[0]], [0, -s[0], c[0]]])  # rotation about camera's u-axis (rightward horizontal), i.e., body's x-axis
+        dcm_v = np.array([[c[0], 0, -s[0]], [0, 1, 0], [s[0], 0, c[0]]])  # rotation about camera's v-axis (downward vertical), i.e., body's y-axis
+
+        return np.matmul(dcm_v, dcm_u)  # R = R2 * R1
+    
+    def pixel_to_dcm(self, u, v):
+        """Calculate DCM from pixels. Currently this uses Euler Angles so may blow up near center of image."""
+        self.get_logger().info("Converting pixels to Euler...")
+
+        theta_u = (u - self.uu_2) * self.rad_u  # radians to rotate about v-axis (about downward vertical)
+        theta_v = -(v - self.vv_2) * self.rad_v  # radians to rotate about u-axis (about rightward horizontal)
+
+        # theta = np.array([[theta_v], [theta_u], [0]])  # Euler angles about (u, v, z) axes where z-axis rotation may be any
+        return self.euler_to_dcm(np.array([theta_v, theta_u]))  # = dcm, where 'euler_to_dcm' assumes [u, v] axes
 
 def main(args=None):
     rclpy.init(args=args)
-    node = ImageToPixel()
+    node = ImageToDCM()
     rclpy.spin(node)
     rclpy.shutdown()
 

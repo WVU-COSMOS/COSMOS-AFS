@@ -86,6 +86,10 @@ CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/ca
 CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/camera__builder.hpp
 CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/camera__struct.hpp
 CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/camera__traits.hpp
+CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/dcm.hpp
+CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/dcm__builder.hpp
+CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/dcm__struct.hpp
+CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/dcm__traits.hpp
 CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/srv/aa_to_dcm.hpp
 CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__builder.hpp
 CMakeFiles/cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/srv/detail/aa_to_dcm__struct.hpp
@@ -115,6 +119,7 @@ rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp: rosidl_adapter/c
 rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp: rosidl_adapter/cosmos_interfaces/msg/Attitude.idl
 rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp: rosidl_adapter/cosmos_interfaces/msg/StateMachine.idl
 rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp: rosidl_adapter/cosmos_interfaces/msg/Camera.idl
+rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp: rosidl_adapter/cosmos_interfaces/msg/DCM.idl
 rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp: rosidl_adapter/cosmos_interfaces/srv/AAToDCM.idl
 rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp: rosidl_adapter/cosmos_interfaces/srv/Skew.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
@@ -177,6 +182,18 @@ rosidl_generator_cpp/cosmos_interfaces/msg/detail/camera__struct.hpp: rosidl_gen
 rosidl_generator_cpp/cosmos_interfaces/msg/detail/camera__traits.hpp: rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/cosmos_interfaces/msg/detail/camera__traits.hpp
 
+rosidl_generator_cpp/cosmos_interfaces/msg/dcm.hpp: rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/cosmos_interfaces/msg/dcm.hpp
+
+rosidl_generator_cpp/cosmos_interfaces/msg/detail/dcm__builder.hpp: rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/cosmos_interfaces/msg/detail/dcm__builder.hpp
+
+rosidl_generator_cpp/cosmos_interfaces/msg/detail/dcm__struct.hpp: rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/cosmos_interfaces/msg/detail/dcm__struct.hpp
+
+rosidl_generator_cpp/cosmos_interfaces/msg/detail/dcm__traits.hpp: rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/cosmos_interfaces/msg/detail/dcm__traits.hpp
+
 rosidl_generator_cpp/cosmos_interfaces/srv/aa_to_dcm.hpp: rosidl_generator_cpp/cosmos_interfaces/msg/reaction_wheels.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/cosmos_interfaces/srv/aa_to_dcm.hpp
 
@@ -204,12 +221,16 @@ rosidl_generator_cpp/cosmos_interfaces/srv/detail/skew__traits.hpp: rosidl_gener
 cosmos_interfaces__cpp: CMakeFiles/cosmos_interfaces__cpp
 cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/attitude.hpp
 cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/camera.hpp
+cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/dcm.hpp
 cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/attitude__builder.hpp
 cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/attitude__struct.hpp
 cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/attitude__traits.hpp
 cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/camera__builder.hpp
 cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/camera__struct.hpp
 cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/camera__traits.hpp
+cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/dcm__builder.hpp
+cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/dcm__struct.hpp
+cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/dcm__traits.hpp
 cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/position__builder.hpp
 cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/position__struct.hpp
 cosmos_interfaces__cpp: rosidl_generator_cpp/cosmos_interfaces/msg/detail/position__traits.hpp

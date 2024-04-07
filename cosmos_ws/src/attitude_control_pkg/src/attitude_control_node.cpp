@@ -99,20 +99,6 @@ cosmos_interfaces::msg::Attitude::SharedPtr AttitudeControl::getQuaternion(const
     return attitude_msg;
 }
 
-Eigen::Quaterniond AttitudeControl::toEigenQuaternion(const cosmos_interfaces::msg::Attitude& attitude_msg)
-{
-    return Eigen::Quaterniond(attitude_msg.q4, attitude_msg.q1, attitude_msg.q2, attitude_msg.q3);
-}
-
-Eigen::Quaterniond AttitudeControl::rotationQuaternion(const cosmos_interfaces::msg::Attitude& attitude_current,
-                                             const cosmos_interfaces::msg::Attitude& attitude_desired) {
-    Eigen::Quaterniond q_current = toEigenQuaternion(attitude_current);
-    Eigen::Quaterniond q_desired = toEigenQuaternion(attitude_desired);
-
-    Eigen::Quaterniond q_rotation = q_desired * q_current.inverse();
-    return q_rotation;
-}
-
 int main(int argc, char **argv)
 {
     rclcpp::init(argc, argv);

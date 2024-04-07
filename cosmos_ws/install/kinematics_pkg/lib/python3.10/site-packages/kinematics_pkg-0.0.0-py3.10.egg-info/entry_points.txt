@@ -1,0 +1,3 @@
+[console_scripts]
+Kinematics = kinematics_pkg.Kinematics:main
+

@@ -34,12 +34,9 @@ void StateMachine::gStationCallback(const std_msgs::msg::Int32::SharedPtr msg)
 
             if(!is_running)
             {
-                mission_status.mission = msg->data;
-                mission_status.to_node = "Camera";
-                mission_status.is_start = true;
-                mission_status.is_abort = false;
-                stateMachinePub_->publish(mission_status);
                 RCLCPP_INFO(this->get_logger(), "Mission %d Started!", msg->data);
+                TRACKING_MISSION state = TRACKING_MISSION::FIND_TARGET;
+                tracking_mode(msg->data, state);
                 is_running = 1;
             }
             else
@@ -54,7 +51,8 @@ void StateMachine::gStationCallback(const std_msgs::msg::Int32::SharedPtr msg)
             if(!is_running)
             {
                 RCLCPP_INFO(this->get_logger(), "Mission %d Started!", msg->data);
-                move_by_target(msg->data);
+                MOVE_TARGET_MISSION state = MOVE_TARGET_MISSION::FIND_TARGET;
+                move_by_target(msg->data, state);
                 is_running = 1;
             }
             else
@@ -89,6 +87,20 @@ void StateMachine::stateMachineCallback(const cosmos_interfaces::msg::StateMachi
             
             case MISSION::TRACK:
 
+                if(msg->from_node == "Camera" && msg->is_done)
+                {
+                    is_target = true;
+                    TRACKING_MISSION state = TRACKING_MISSION::FIND_TARGET;
+                    tracking_mode(msg->mission, state);
+                }
+
+                else if(msg->from_node == "Attitude_Control" && msg->is_done)
+                {
+                    is_target = false;
+                    TRACKING_MISSION state = TRACKING_MISSION::MISSION_END;
+                    tracking_mode(msg->mission, state);
+                }
+
                 break;
 
             case MISSION::MOVE_BY_TARGET:
@@ -96,13 +108,15 @@ void StateMachine::stateMachineCallback(const cosmos_interfaces::msg::StateMachi
                 if(msg->from_node == "Camera" && msg->is_done)
                 {
                     is_target = true;
-                    move_by_target(msg->mission);
+                    MOVE_TARGET_MISSION state = MOVE_TARGET_MISSION::FIND_TARGET;
+                    move_by_target(msg->mission, state);
                 }
 
-                if(msg->from_node == "Attitude_Control" && msg->is_done)
+                else if(msg->from_node == "Attitude_Control" && msg->is_done)
                 {
                     is_target = false;
-                    move_by_target(msg->mission);
+                    MOVE_TARGET_MISSION state = MOVE_TARGET_MISSION::MISSION_END;
+                    move_by_target(msg->mission, state);
                 }
 
                 break;
@@ -113,9 +127,42 @@ void StateMachine::stateMachineCallback(const cosmos_interfaces::msg::StateMachi
     }
 }
 
-void StateMachine::move_by_target(int mission) 
+void StateMachine::tracking_mode(int mission, TRACKING_MISSION state) 
 {
-    switch(StateMachine::state)
+    switch(state)
+    {
+        case TRACKING_MISSION::FIND_TARGET:
+            if(!is_target)
+            {
+                mission_status.mission = mission;
+                mission_status.to_node = "Camera";
+                mission_status.is_start = true;
+                mission_status.is_abort = false;
+                stateMachinePub_->publish(mission_status);
+                RCLCPP_INFO(this->get_logger(), "Looking for target!");
+            }
+            else
+            {
+                RCLCPP_INFO(this->get_logger(), "Target Found!");
+                state = TRACKING_MISSION::KINEMATICS;
+                tracking_mode(mission, state);
+            }
+            break;
+
+        case TRACKING_MISSION::KINEMATICS:
+            break;
+
+        case TRACKING_MISSION::FOLLOW:
+            break;
+
+        case TRACKING_MISSION::MISSION_END:
+            break;
+    }
+}
+
+void StateMachine::move_by_target(int mission, MOVE_TARGET_MISSION state) 
+{
+    switch(state)
     {
         case MOVE_TARGET_MISSION::FIND_TARGET:
             if(!is_target)
@@ -130,8 +177,8 @@ void StateMachine::move_by_target(int mission)
             else
             {
                 RCLCPP_INFO(this->get_logger(), "Target Found!");
-                StateMachine::state = MOVE_TARGET_MISSION::MOVE;
-                move_by_target(mission);
+                state = MOVE_TARGET_MISSION::MOVE;
+                move_by_target(mission, state);
             }
             
             break;
@@ -143,8 +190,6 @@ void StateMachine::move_by_target(int mission)
             mission_status.is_abort = false;
             stateMachinePub_->publish(mission_status);
             RCLCPP_INFO(this->get_logger(), "Moving!");
-            StateMachine::state = MOVE_TARGET_MISSION::MISSION_END;
-            move_by_target(mission);
             break;
         
         case MOVE_TARGET_MISSION::MISSION_END:

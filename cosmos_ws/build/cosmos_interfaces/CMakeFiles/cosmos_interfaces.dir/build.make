@@ -71,6 +71,7 @@ CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_
 CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/Attitude.msg
 CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/StateMachine.msg
 CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/Camera.msg
+CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/DCM.msg
 CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/srv/AAToDCM.srv
 CMakeFiles/cosmos_interfaces: rosidl_cmake/srv/AAToDCM_Request.msg
 CMakeFiles/cosmos_interfaces: rosidl_cmake/srv/AAToDCM_Response.msg
