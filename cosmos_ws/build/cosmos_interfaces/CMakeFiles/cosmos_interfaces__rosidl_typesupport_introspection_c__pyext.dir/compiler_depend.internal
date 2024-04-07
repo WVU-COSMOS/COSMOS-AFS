@@ -246,6 +246,8 @@ CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosi
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__type_support.h
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/rosidl_generator_c__visibility_control.h
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__struct.h
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__functions.h
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/position__type_support.h
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/position__struct.h
@@ -255,8 +257,6 @@ CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosi
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/attitude__functions.h
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/state_machine__type_support.h
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/state_machine__struct.h
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/state_machine__functions.h
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/camera__type_support.h
  /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/rosidl_generator_c/cosmos_interfaces/msg/detail/camera__struct.h

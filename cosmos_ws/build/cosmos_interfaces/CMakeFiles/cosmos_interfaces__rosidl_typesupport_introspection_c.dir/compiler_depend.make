@@ -258,7 +258,10 @@ CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_type
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   rosidl_generator_c/cosmos_interfaces/msg/rosidl_generator_c__visibility_control.h \
-  rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__struct.h
+  rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
 
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cosmos_interfaces/msg/detail/state_machine__type_support.c.o: rosidl_typesupport_introspection_c/cosmos_interfaces/msg/detail/state_machine__type_support.c \
   /usr/include/stdc-predef.h \

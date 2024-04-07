@@ -16,6 +16,9 @@
 #include "cosmos_interfaces/msg/detail/reaction_wheels__struct.h"
 #include "cosmos_interfaces/msg/detail/reaction_wheels__functions.h"
 
+#include "rosidl_runtime_c/string.h"
+#include "rosidl_runtime_c/string_functions.h"
+
 
 ROSIDL_GENERATOR_C_EXPORT
 bool cosmos_interfaces__msg__reaction_wheels__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -50,6 +53,36 @@ bool cosmos_interfaces__msg__reaction_wheels__convert_from_py(PyObject * _pymsg,
     assert(strncmp("cosmos_interfaces.msg._reaction_wheels.ReactionWheels", full_classname_dest, 53) == 0);
   }
   cosmos_interfaces__msg__ReactionWheels * ros_message = _ros_message;
+  {  // from_node
+    PyObject * field = PyObject_GetAttrString(_pymsg, "from_node");
+    if (!field) {
+      return false;
+    }
+    assert(PyUnicode_Check(field));
+    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
+    if (!encoded_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    rosidl_runtime_c__String__assign(&ros_message->from_node, PyBytes_AS_STRING(encoded_field));
+    Py_DECREF(encoded_field);
+    Py_DECREF(field);
+  }
+  {  // to_node
+    PyObject * field = PyObject_GetAttrString(_pymsg, "to_node");
+    if (!field) {
+      return false;
+    }
+    assert(PyUnicode_Check(field));
+    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
+    if (!encoded_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    rosidl_runtime_c__String__assign(&ros_message->to_node, PyBytes_AS_STRING(encoded_field));
+    Py_DECREF(encoded_field);
+    Py_DECREF(field);
+  }
   {  // is_done
     PyObject * field = PyObject_GetAttrString(_pymsg, "is_done");
     if (!field) {
@@ -162,6 +195,40 @@ PyObject * cosmos_interfaces__msg__reaction_wheels__convert_to_py(void * raw_ros
     }
   }
   cosmos_interfaces__msg__ReactionWheels * ros_message = (cosmos_interfaces__msg__ReactionWheels *)raw_ros_message;
+  {  // from_node
+    PyObject * field = NULL;
+    field = PyUnicode_DecodeUTF8(
+      ros_message->from_node.data,
+      strlen(ros_message->from_node.data),
+      "replace");
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "from_node", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // to_node
+    PyObject * field = NULL;
+    field = PyUnicode_DecodeUTF8(
+      ros_message->to_node.data,
+      strlen(ros_message->to_node.data),
+      "replace");
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "to_node", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
   {  // is_done
     PyObject * field = NULL;
     field = PyBool_FromLong(ros_message->is_done ? 1 : 0);

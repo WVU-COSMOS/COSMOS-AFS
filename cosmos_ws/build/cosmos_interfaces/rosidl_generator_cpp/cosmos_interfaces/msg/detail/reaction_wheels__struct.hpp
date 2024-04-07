@@ -38,6 +38,8 @@ struct ReactionWheels_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->from_node = "";
+      this->to_node = "";
       this->is_done = false;
       this->motor_x = false;
       this->motor_y = false;
@@ -52,11 +54,14 @@ struct ReactionWheels_
   }
 
   explicit ReactionWheels_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : from_node(_alloc),
+    to_node(_alloc)
   {
-    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->from_node = "";
+      this->to_node = "";
       this->is_done = false;
       this->motor_x = false;
       this->motor_y = false;
@@ -71,6 +76,12 @@ struct ReactionWheels_
   }
 
   // field types and members
+  using _from_node_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _from_node_type from_node;
+  using _to_node_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _to_node_type to_node;
   using _is_done_type =
     bool;
   _is_done_type is_done;
@@ -103,6 +114,18 @@ struct ReactionWheels_
   _time_z_type time_z;
 
   // setters for named parameter idiom
+  Type & set__from_node(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  {
+    this->from_node = _arg;
+    return *this;
+  }
+  Type & set__to_node(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  {
+    this->to_node = _arg;
+    return *this;
+  }
   Type & set__is_done(
     const bool & _arg)
   {
@@ -206,6 +229,12 @@ struct ReactionWheels_
   // comparison operators
   bool operator==(const ReactionWheels_ & other) const
   {
+    if (this->from_node != other.from_node) {
+      return false;
+    }
+    if (this->to_node != other.to_node) {
+      return false;
+    }
     if (this->is_done != other.is_done) {
       return false;
     }

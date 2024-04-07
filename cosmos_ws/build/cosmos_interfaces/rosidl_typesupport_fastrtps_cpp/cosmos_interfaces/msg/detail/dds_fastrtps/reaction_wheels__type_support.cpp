@@ -32,6 +32,10 @@ cdr_serialize(
   const cosmos_interfaces::msg::ReactionWheels & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
+  // Member: from_node
+  cdr << ros_message.from_node;
+  // Member: to_node
+  cdr << ros_message.to_node;
   // Member: is_done
   cdr << (ros_message.is_done ? true : false);
   // Member: motor_x
@@ -61,6 +65,12 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   cosmos_interfaces::msg::ReactionWheels & ros_message)
 {
+  // Member: from_node
+  cdr >> ros_message.from_node;
+
+  // Member: to_node
+  cdr >> ros_message.to_node;
+
   // Member: is_done
   {
     uint8_t tmp;
@@ -123,6 +133,14 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
+  // Member: from_node
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.from_node.size() + 1);
+  // Member: to_node
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.to_node.size() + 1);
   // Member: is_done
   {
     size_t item_size = sizeof(ros_message.is_done);
@@ -204,6 +222,32 @@ max_serialized_size_ReactionWheels(
   full_bounded = true;
   is_plain = true;
 
+
+  // Member: from_node
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Member: to_node
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
 
   // Member: is_done
   {

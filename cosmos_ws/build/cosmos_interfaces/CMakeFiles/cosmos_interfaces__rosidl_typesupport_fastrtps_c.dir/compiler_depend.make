@@ -903,9 +903,11 @@ CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesuppo
   /usr/include/c++/11/bits/istream.tcc \
   /usr/include/malloc.h \
   rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   rosidl_generator_c/cosmos_interfaces/msg/detail/reaction_wheels__functions.h \
   /usr/include/c++/11/stdlib.h \
-  rosidl_generator_c/cosmos_interfaces/msg/rosidl_generator_c__visibility_control.h
+  rosidl_generator_c/cosmos_interfaces/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h
 
 CMakeFiles/cosmos_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cosmos_interfaces/msg/detail/state_machine__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/cosmos_interfaces/msg/detail/state_machine__type_support_c.cpp \
   /usr/include/stdc-predef.h \

@@ -6,6 +6,10 @@
 module cosmos_interfaces {
   module msg {
     struct ReactionWheels {
+      string from_node;
+
+      string to_node;
+
       boolean is_done;
 
       boolean motor_x;

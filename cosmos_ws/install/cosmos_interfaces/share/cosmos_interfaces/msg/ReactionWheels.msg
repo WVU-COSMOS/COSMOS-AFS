@@ -1,3 +1,5 @@
+string from_node
+string to_node
 bool is_done
 bool motor_x
 bool motor_y
