@@ -115,7 +115,7 @@ void StateMachine::stateMachineCallback(const cosmos_interfaces::msg::StateMachi
                 else if(msg->from_node == "Attitude_Control" && msg->is_done)
                 {
                     is_target = false;
-                    MOVE_TARGET_MISSION state = MOVE_TARGET_MISSION::MISSION_END;
+                    MOVE_TARGET_MISSION state = MOVE_TARGET_MISSION::FIND_TARGET;
                     move_by_target(msg->mission, state);
                 }
 
