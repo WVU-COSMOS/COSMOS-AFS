@@ -13,7 +13,7 @@ class GetImage(Node):
         super().__init__("GetImage")
         self.get_logger().info("GetImage Node has been started!")
         # Defining Camera IP
-        self.ip = "10.0.0.18"
+        self.ip = "192.168.4.3"
         # Creating Publisher and Timer for publishing captured imaged
         # Note, image is being published in the topic called 'Image_Captured'
         self.publisher_ = self.create_publisher(Image, "Image_Captured", 10)
