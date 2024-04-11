@@ -1,5 +1,0 @@
-  File "/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages/communication_pkg/SerialCommunication.py", line 46
-    command_string = f"{int(msg.motor_x)},{int(msg.motor_y)},{int(msg.motor_z)},
-                     ^
-SyntaxError: unterminated string literal (detected at line 46)
-

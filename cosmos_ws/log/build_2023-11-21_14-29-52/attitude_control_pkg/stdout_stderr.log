@@ -1,9 +1,0 @@
-[ 50%] [32mBuilding CXX object CMakeFiles/reaction_wheels.dir/src/reaction_wheels_node.cpp.o[0m
-In file included from [01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/reaction_wheels_node.cpp:1[m[K:
-[01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/include/attitude_control_pkg/reaction_wheels_node.hpp:5:10:[m[K [01;31m[Kfatal error: [m[Kcosmos_interfaces/msg/reaction_wheels.hpp: No such file or directory
-    5 | #include [01;31m[K"cosmos_interfaces/msg/reaction_wheels.hpp"[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-gmake[2]: *** [CMakeFiles/reaction_wheels.dir/build.make:76: CMakeFiles/reaction_wheels.dir/src/reaction_wheels_node.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/reaction_wheels.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

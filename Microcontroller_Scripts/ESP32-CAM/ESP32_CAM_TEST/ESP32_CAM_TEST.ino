@@ -40,7 +40,7 @@
 // Enter your WiFi credentials
 // ===========================
 const char* ssid = "COSMOS";
-const char* password = "123456789";
+const char* password = "cosmos123";
 
 void startCameraServer();
 void setupLedFlash(int pin);

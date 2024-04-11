@@ -11,7 +11,6 @@ cosmos_interfaces/msg/_dcm.py
 cosmos_interfaces/msg/_position.py
 cosmos_interfaces/msg/_reaction_wheels.py
 cosmos_interfaces/msg/_state_machine.py
-cosmos_interfaces/msg/_task.py
 cosmos_interfaces/srv/__init__.py
 cosmos_interfaces/srv/_aa_to_dcm.py
 cosmos_interfaces/srv/_skew.py

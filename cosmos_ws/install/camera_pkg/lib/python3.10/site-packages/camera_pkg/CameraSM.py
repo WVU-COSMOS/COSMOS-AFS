@@ -26,6 +26,10 @@ class CameraSM(Node):
         self.img_num = 1
         self.is_target = False
 
+        # Initialize tunable parameters:
+        self.fs = 10  # stable sampling frequency of camera (i.e., FPS)
+        self.t_patience = 0.5  # seconds after target exits frame to continue trying to track, prior to nontracking mode
+
         # Initialize non-tunable parameters:
         self.t_fs = 1 / self.fs  # sampling period
         self.patience = int(self.fs * self.t_patience - 1)  # frames-1 (rounded) after target exits ..., prior to nontracking mode 
@@ -54,6 +58,14 @@ class CameraSM(Node):
                 self.find_target()
 
         elif msg.is_abort:
+            command = Camera()
+            command.is_start = False
+            command.to_node = "GetImage"
+            command.img_num = self.img_num
+            command.next_img = False
+            command.is_abort = False
+            command.is_target = True
+            self.sm_cam_pub_.publish(command)
             self.get_logger().info("Mission Aborted")
             self.publish_msg(3)
 
@@ -94,6 +106,7 @@ class CameraSM(Node):
         
         elif(self.current_mission == self.move_by_target):
             if(msg.is_target):
+                self.mission_start = False
                 self.get_logger().info("Camera Mission Done!")
                 command = StateMachine()
                 command.from_node = "Camera"

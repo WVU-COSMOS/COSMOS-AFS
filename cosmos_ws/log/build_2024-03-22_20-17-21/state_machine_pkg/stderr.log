@@ -1,4 +1,0 @@
-[01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg/src/state_machine_node.cpp:[m[K In member function ‘[01m[Kvoid StateMachine::gStationCallback(std_msgs::msg::Int32_<std::allocator<void> >::SharedPtr)[m[K’:
-[01m[K/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg/src/state_machine_node.cpp:35:20:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
-   35 |         [01;35m[Kis_running == 1[m[K;
-      |         [01;35m[K~~~~~~~~~~~^~~~[m[K

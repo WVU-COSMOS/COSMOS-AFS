@@ -58,6 +58,14 @@ class CameraSM(Node):
                 self.find_target()
 
         elif msg.is_abort:
+            command = Camera()
+            command.is_start = False
+            command.to_node = "GetImage"
+            command.img_num = self.img_num
+            command.next_img = False
+            command.is_abort = False
+            command.is_target = True
+            self.sm_cam_pub_.publish(command)
             self.get_logger().info("Mission Aborted")
             self.publish_msg(3)
 
@@ -98,6 +106,7 @@ class CameraSM(Node):
         
         elif(self.current_mission == self.move_by_target):
             if(msg.is_target):
+                self.mission_start = False
                 self.get_logger().info("Camera Mission Done!")
                 command = StateMachine()
                 command.from_node = "Camera"

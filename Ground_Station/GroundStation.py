@@ -26,7 +26,27 @@ def switch(mission):
         # Wait for response from serial communication
         response = ser.readline().decode().strip()
         print(f"Response from Serial: {response}")
-    if mission == "0":
+    elif mission == "4":
+        message = "4*"
+        ser.write(message.encode())
+        print(f"Mission Selected: {mission}")
+        # Wait for response from serial communication
+        response = ser.readline().decode().strip()
+        print(f"Response from Serial: {response}")
+    elif mission == "5":
+        message = "5*"
+        ser.write(message.encode())
+        print(f"Mission Selected: {mission}")
+        # Wait for response from serial communication
+        response = ser.readline().decode().strip()
+        print(f"Response from Serial: {response}")
+    elif mission == "6":
+        s = input("Enter the command: ")
+        command = "0,150,2000\n"
+        s = s + "\n"
+        ser.write(s.encode())
+        print(f"Sent command: {s}")
+    elif mission == "0":
         print("Exiting COSMOS.")
         sys.exit()
 
@@ -34,9 +54,11 @@ def mission_selection():
     print("|----------------------------------------------------------------|")
     print("|                           COSMOS                               |")
     print("|----------------------------------------------------------------|")
-    print("|  1 - Mission 1 (Move)                                          |")
-    print("|  2 - Mission 2 (Picture)                                       |")
-    print("|  3 - Mission 3 (Track)                                         |")
+    print("|  1 - Mission 1 (Test Reaction Wheels)                          |")
+    print("|  2 - Mission 2 (Orbit)                                         |")
+    print("|  3 - Mission 3 (Follow)                                        |")
+    print("|  4 - Mission 4 (Track)                                         |")
+    print("|  5 - Mission 5 (Move by Target)                                |")
     print("|  0 - Exit                                                      |")
     print("|----------------------------------------------------------------|")
 

@@ -4,7 +4,7 @@ from rclpy.node import Node
 import numpy as np
 import copy
 from scipy.integrate import solve_ivp
-from cosmos_interfaces import DCM
+from cosmos_interfaces.msg import DCM
 
 class Kinematics(Node):
     def __init__(self):
@@ -46,6 +46,20 @@ class Kinematics(Node):
         self.t_span = [0, 0.1]  # time invterval to integrate over ... likely 'dt_cam' from camera's FPS setting
     
         self.ode45_args = [self.z0, self.Kp, self.Kd, self.Ki, self.GsT_iGsGsT, self.I_body_as_B, self.IsGs, self.n, self.A]
+
+    def dcm_callback(self, msg):
+        """
+        Dynamics 'X" node is likely only node listening to this topic. Else, in future development, add a 'to_node' and 'from_node' parameter in DCM.msg.
+        
+        Store current DCM and t as previous, and store incoming DCM and t as current. Calculations occur elsewhere.
+        """
+        self.R0 = copy.copy(self.R)
+        self.t0 = copy.copy(self.t)
+        
+        self.R = np.reshape(msg.dcm, (3, 3))
+
+        self.get_logger().info("Incoming DCM saved.")
+
 
     def dcm_to_q(self, dcm):
         """Convert DCM to quaternion using Shepherd's method."""

@@ -5,7 +5,6 @@
 #include "std_msgs/msg/int32.hpp"
 #include "cosmos_interfaces/msg/reaction_wheels.hpp"
 #include "cosmos_interfaces/msg/position.hpp"
-#include "cosmos_interfaces/msg/task.hpp"
 #include "cosmos_interfaces/msg/state_machine.hpp"
 
 enum class MISSION : int32_t

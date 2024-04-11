@@ -1,120 +1,145 @@
+#include <Servo.h>
 #include <WiFi.h>
+#include <Stepper.h>
 #include <PubSubClient.h>
+#include "driver/gpio.h"
+
+// LED
+#define BLUE_LED 2
+
+// Reaction Wheels
+#define ESC1 13
+#define ESC2 12
+#define ESC3 14
+#define stopSpeed 1500
+
+// Relays
+#define RELAY1 27
+#define RELAY2 15
+
+// Steppers
+#define STEPS_REVOLUTION 2048
+#define STEPPER_SPEED 5
+
+// Define pins for stepper motors
+#define STP1_STEP 21
+#define STP1_DIR 19
+#define STP1_MS1 18
+#define STP1_MS2 5
+
+#define STP2_STEP 22
+#define STP2_DIR 23
+#define STP2_MS1 34
+#define STP2_MS2 35
+
+#define STP3_STEP 32
+#define STP3_DIR 33
+#define STP3_MS1 25
+#define STP3_MS2 26
+
+//Stepper stepper1 = Stepper(STEPS_REVOLUTION,STP1_STEP,STP1_DIR,STP1_MS1,STP1_MS2);
+//Stepper stepper2 = Stepper(STEPS_REVOLUTION,STP2_STEP,STP2_DIR,STP2_MS1,STP2_MS2);
+//Stepper stepper3 = Stepper(STEPS_REVOLUTION,STP3_STEP,STP3_DIR,STP3_MS1,STP3_MS2);
+
+// Motors
+Servo motor1;
+Servo motor2;
+Servo motor3;
 
 // Defining the Wi-Fi host
 const char* ssid     = "COSMOS";
-const char* password = "123456789";
+const char* password = "cosmos123";
 const int serverPort = 80;
-
-// Defining Constants
-const int ENAX_PIN = 19; // Connected to the ENAX pin L298N
-const int X1_PIN = 18; // Connected to the X1 pin L298N
-const int X2_PIN = 21; // Connected to the X2 pin L298N
-
-const int ENAY_PIN = 15; // Connected to the ENAY pin L298N
-const int Y1_PIN = 13; // Connected to the Y1 pin L298N
-const int Y2_PIN = 12; // Connected to the Y2 pin L298N
-
-const int ENAZ_PIN = 14; // Connected to the ENAZ pin L298N
-const int Z1_PIN = 27; // Connected to the Z1 pin L298N
-const int Z2_PIN = 26; // Connected to the Z2 pin L298N
-
-const int ENAW_PIN = 32; // Connected to the ENAW pin L298N
-const int W1_PIN = 33; // Connected to the W1 pin L298N
-const int W2_PIN = 25; // Connected to the W2 pin L298N
-
-// Iniciating Objects
 WiFiServer server(serverPort);
 WiFiClient wifiClient;
 
-// Setup Function
+void app_main() 
+{
+    gpio_config_t io_conf;
+    io_conf.mode = GPIO_MODE_OUTPUT;
+
+    // Disable pull-up and pull-down
+    io_conf.pull_down_en = GPIO_PULLDOWN_DISABLE;
+    io_conf.pull_up_en = GPIO_PULLUP_DISABLE;
+
+    io_conf.pin_bit_mask = (1ULL << 2);
+    gpio_config(&io_conf);
+
+    // Configure all GPIO pins as outputs
+    for (int i = 12; i < 36; i++) 
+    {
+        io_conf.pin_bit_mask = (1ULL << i);
+        gpio_config(&io_conf);
+    }
+}
+
 void setup() 
 {
   Serial.begin(115200);
+  delay(1000); // Wait for serial port to initialize
+  Serial.setDebugOutput(false); // Disable debug output
+  // Setting pins as output
+  pinMode(BLUE_LED, OUTPUT);
+  pinMode(RELAY1,OUTPUT);
+  pinMode(RELAY2,OUTPUT);
 
-  pinMode(ENAX_PIN, OUTPUT);
-  pinMode(X1_PIN, OUTPUT);
-  pinMode(X2_PIN, OUTPUT);
-
-  pinMode(ENAY_PIN, OUTPUT);
-  pinMode(Y1_PIN, OUTPUT);
-  pinMode(Y2_PIN, OUTPUT);
-
-  pinMode(ENAZ_PIN, OUTPUT);
-  pinMode(Z1_PIN, OUTPUT);
-  pinMode(Z2_PIN, OUTPUT);
-
-  pinMode(ENAW_PIN, OUTPUT);
-  pinMode(W1_PIN, OUTPUT);
-  pinMode(W2_PIN, OUTPUT);
+  pinMode(BLUE_LED, LOW);
   
-  Serial.print("Setting AP (Access Point)…");
+  // Setting up the Brushless motors
+  motor1.attach(ESC1);
+  motor1.writeMicroseconds(1500);
+  motor2.attach(ESC2);
+  motor2.writeMicroseconds(stopSpeed);
+  motor3.attach(ESC3);
+  motor3.writeMicroseconds(stopSpeed);
+  delay(3000);
+  
+  // Setting up the Stepper motors
+  //stepper1.setSpeed(STEPPER_SPEED);
+  //stepper2.setSpeed(STEPPER_SPEED);
+  //stepper3.setSpeed(STEPPER_SPEED);
+
+  // Set up the ESP32 as an access point
   WiFi.softAP(ssid, password);
 
-  IPAddress IP = WiFi.softAPIP();
-  Serial.print("AP IP address: ");
-  Serial.println(IP);
-  
+  Serial.println("Access Point started");
+  Serial.print("IP Address: ");
+  Serial.println(WiFi.softAPIP());
+
+  // Start the server
   server.begin();
+  Serial.println("Server started"); 
 }
 
-void loop()
+void loop() 
 { 
-//  Serial.println("Spin motor X");
-//  motorXClockwise(150);
-//  delay(2000);
-//  motorXoff();
-//  delay(2000);
-//
-//  Serial.println("Spin motor Y");
-  motorYClockwise(150);
-  delay(10000);
-  motorYoff();
-  delay(5000);
-//
-//  Serial.println("Spin motor Z");
-//  motorZClockwise(150);
-//  delay(2000);
-//  motorZoff();
-//  delay(2000);
-//
-//  Serial.println("Spin motor W");
-//  motorWClockwise(150);
-//  delay(2000);
-//  motorWoff();
-//  delay(2000);
+  WiFiClient client = server.available();
+
+  if (client)
+  {
+    String currentLine = "";
+    while (client.connected())
+    {
+      if (client.available())
+      {             
+        char c = client.read();             
+        if (c == '*')
+        {   
+          processMessage(currentLine);                
+          currentLine = "";
+        }
+        currentLine += c;
+      }
+    }
+    client.stop();
+  }
   
-//  if (!mqttClient.connected()) {
-//    connectToMQTT();
-//  }
-//
-//  mqttClient.loop();
-//  
-//  WiFiClient client = server.available();
-//
-//  if (client)
-//  {
-//    String currentLine = "";
-//    while (client.connected())
-//    {
-//      if (client.available())
-//      {             
-//        char c = client.read();             
-//        if (c == '*')
-//        {   
-//          processMessage(currentLine);                
-//          currentLine = "";
-//        }
-//        currentLine += c;
-//      }
-//    }
-//    client.stop();
-//  }
-//
-//  if (Serial.available() > 0) {
-//    String serialInput = Serial.readStringUntil('\n');
-//    motorCommand(serialInput);
-//  }
+  if (Serial.available() > 0) 
+  {
+    String serialInput = Serial.readStringUntil('\n');
+    //Serial.println(serialInput);
+    performTask(serialInput);
+  }
 }
 
 void processMessage(const String& message) 
@@ -122,202 +147,108 @@ void processMessage(const String& message)
   Serial.println(message);
 }
 
-void motorCommand(String command) 
+void performTask(String command)
 {
-  int orientation; // 0 Clockwise - 1 CounterClockwise
-  int motorX, motorY, motorZ, motorW;
-  int speedX, speedY, speedZ, speedW;
-  int duration;
+  int motorX, motorY, motorZ;
+  int speedX, speedY, speedZ;
+  int timeX, timeY, timeZ;
 
-  motorXClockwise(150);
-  delay(5);
-  motorXoff();
-  delay(1000);
+  if (sscanf(command.c_str(), "%d,%d,%d,%d,%d,%d,%d,%d,%d",
+                                  &motorX,&motorY,&motorZ,
+                                  &speedX,&speedY,&speedZ,
+                                  &timeX, &timeY, &timeZ) == 9) 
+  {
+    int caseNumber = motorX * 1 + motorY * 2 + motorZ * 4;
+    switch (caseNumber)
+    {
+      case 1:
+          motor1spin(speedX);
+          digitalWrite(BLUE_LED, HIGH);
+          delay(timeX);
+          digitalWrite(BLUE_LED, LOW);
+          motor1off();
+        break;
 
-//  if (sscanf(command.c_str(), "%d,%d,%d,%d,%d,%d,%d,%d,%d,%d", &orientation,
-//                                    &motorX,&motorY,&motorZ,&motorW,
-//                                    &speedX,&speedY,&speedZ,&speedW,
-//                                    &duration) == 10) 
-//  {
-//    int caseNumber = motorX * 1 + motorY * 2 + motorZ * 4 + motorW * 8;
-//    switch (caseNumber) 
-//    {
-//      case 1:
-//        if(orientation)
-//        {
-//          motorXClockwise(speedX);
-//          delay(duration);
-//          motorXoff();
-//        }
-//        else
-//        {
-//          motorXCounterClockwise(speedX);
-//          delay(duration);
-//          motorXoff();
-//        }
-//        break;
-//        
-//      case 2:
-//        if(orientation)
-//        {
-//          motorYClockwise(speedY);
-//          delay(duration);
-//          motorYoff();
-//        }
-//        else
-//        {
-//          motorYCounterClockwise(speedY);
-//          delay(duration);
-//          motorYoff();
-//        }
-//        break;
-//        
-//      case 3:
-//        if(orientation)
-//        {
-//          motorXClockwise(speedX);
-//          motorYClockwise(speedY);
-//          delay(duration);
-//          motorXoff();
-//          motorYoff();
-//        }
-//        else
-//        {
-//          motorXCounterClockwise(speedX);
-//          motorYCounterClockwise(speedY);
-//          delay(duration);
-//          motorXoff();
-//          motorYoff();
-//        }
-//        break;
-//
-//      case 4:
-//        if(orientation)
-//        {
-//          motorZClockwise(speedZ);
-//          delay(duration);
-//          motorZoff();
-//        }
-//        else
-//        {
-//          motorZCounterClockwise(speedZ);
-//          delay(duration);
-//          motorZoff();
-//        }
-//        break;
-//
-//      case 8:
-//        if(orientation)
-//        {
-//          motorWClockwise(speedW);
-//          delay(duration);
-//          motorWoff();
-//        }
-//        else
-//        {
-//          motorWCounterClockwise(speedW);
-//          delay(duration);
-//          motorWoff();
-//        }
-//        break;
-//        
-//      default:
-//        Serial.println("Unknown case number");
-//        break;
-//    }
-//  } else {
-//    Serial.println("Invalid command format");
-//  }
+      case 2:
+          motor2spin(speedY);
+          digitalWrite(BLUE_LED, HIGH);
+          delay(timeY);
+          digitalWrite(BLUE_LED, LOW);
+          motor2off();
+        break;
+
+      case 3:
+          motor1spin(speedX);
+          motor2spin(speedY);
+          digitalWrite(BLUE_LED, HIGH);
+          delay(timeX);
+          digitalWrite(BLUE_LED, LOW);
+          motor1off();
+          motor2off();
+        break;
+
+      case 4:
+          motor3spin(speedZ);
+          digitalWrite(BLUE_LED, HIGH);
+          delay(timeZ);
+          digitalWrite(BLUE_LED, LOW);
+          motor3off();
+        break;
+
+      default:
+        Serial.println("Unknown case number");
+        break;
+    }
+  }
 }
 
-void motorXClockwise(int mspeed) 
+void motor1spin(int mspeed) 
 {
-  // MotorX On
-  digitalWrite(X1_PIN, HIGH);
-  digitalWrite(X2_PIN, LOW);
-  analogWrite(ENAX_PIN, mspeed); 
+  // Motor1 On
+  motor1.writeMicroseconds(mspeed);
 }
 
-void motorXCounterClockwise(int mspeed) 
+void motor1off()
 {
-  // MotorX On
-  digitalWrite(X1_PIN, LOW);
-  digitalWrite(X2_PIN, HIGH);
-  analogWrite(ENAX_PIN, mspeed); 
+  // Motor1 Off
+  motor1.writeMicroseconds(stopSpeed);
 }
 
-void motorXoff()
+void motor2spin(int mspeed) 
 {
-  // MotorX Off
-  digitalWrite(X1_PIN, LOW);
-  digitalWrite(X2_PIN, LOW);
+  // Motor2 On
+  motor2.writeMicroseconds(mspeed);
 }
 
-void motorYClockwise(int mspeed) 
+void motor2off()
 {
-  // MotorY On
-  digitalWrite(Y1_PIN, HIGH);
-  digitalWrite(Y2_PIN, LOW);
-  analogWrite(ENAY_PIN, mspeed); 
+  // Motor2 Off
+  motor2.writeMicroseconds(stopSpeed);
 }
 
-void motorYCounterClockwise(int mspeed) 
-{
-  // MotorY On
-  digitalWrite(Y1_PIN, LOW);
-  digitalWrite(Y2_PIN, HIGH);
-  analogWrite(ENAY_PIN, mspeed); 
-}
-
-void motorYoff()
-{
-  // MotorY Off
-  digitalWrite(Y1_PIN, LOW);
-  digitalWrite(Y2_PIN, LOW);
-}
-
-void motorZClockwise(int mspeed) 
+void motor3spin(int mspeed) 
 {
   // MotorZ On
-  digitalWrite(Z1_PIN, HIGH);
-  digitalWrite(Z2_PIN, LOW);
-  analogWrite(ENAZ_PIN, mspeed); 
+  motor3.writeMicroseconds(mspeed); 
 }
 
-void motorZCounterClockwise(int mspeed) 
-{
-  // MotorZ On
-  digitalWrite(Z1_PIN, LOW);
-  digitalWrite(Z2_PIN, HIGH);
-  analogWrite(ENAZ_PIN, mspeed); 
-}
-
-void motorZoff()
+void motor3off()
 {
   // MotorZ Off
-  digitalWrite(Z1_PIN, LOW);
-  digitalWrite(Z2_PIN, LOW);
+  motor3.writeMicroseconds(stopSpeed);
 }
 
-void motorWClockwise(int mspeed) 
-{
-  // MotorW On
-  digitalWrite(W1_PIN, HIGH);
-  digitalWrite(W2_PIN, LOW);
-  analogWrite(ENAW_PIN, mspeed); 
-}
-
-void motorWCounterClockwise(int mspeed) 
-{
-  // MotorZ On
-  digitalWrite(W1_PIN, LOW);
-  digitalWrite(W2_PIN, HIGH);
-  analogWrite(ENAW_PIN, mspeed); 
-}
-
-void motorWoff()
-{
-  // MotorW Off
-  digitalWrite(W1_PIN, LOW);
-  digitalWrite(W2_PIN, LOW);
-}
+//void stepper1spin(int steps)
+//{
+//  stepper1.step(steps);
+//}
+//
+//void stepper2spin(int steps)
+//{
+//  stepper2.step(steps);
+//}
+//
+//void stepper3spin(int steps)
+//{
+//  stepper3.step(steps);
+//}
