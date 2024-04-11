@@ -1,0 +1,21 @@
+[1.459s] Invoking command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/kinematics_pkg': PYTHONPATH=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/kinematics_pkg/prefix_override:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/kinematics_pkg build --build-base /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/kinematics_pkg/build install --record /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/kinematics_pkg/install.log --single-version-externally-managed
+[1.828s] running egg_info
+[1.829s] writing ../../build/kinematics_pkg/kinematics_pkg.egg-info/PKG-INFO
+[1.830s] writing dependency_links to ../../build/kinematics_pkg/kinematics_pkg.egg-info/dependency_links.txt
+[1.831s] writing entry points to ../../build/kinematics_pkg/kinematics_pkg.egg-info/entry_points.txt
+[1.831s] writing requirements to ../../build/kinematics_pkg/kinematics_pkg.egg-info/requires.txt
+[1.831s] writing top-level names to ../../build/kinematics_pkg/kinematics_pkg.egg-info/top_level.txt
+[1.834s] reading manifest file '../../build/kinematics_pkg/kinematics_pkg.egg-info/SOURCES.txt'
+[1.834s] writing manifest file '../../build/kinematics_pkg/kinematics_pkg.egg-info/SOURCES.txt'
+[1.834s] running build
+[1.834s] running build_py
+[1.834s] running install
+[1.834s] running install_lib
+[1.836s] running install_data
+[1.836s] running install_egg_info
+[1.840s] removing '/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/lib/python3.10/site-packages/kinematics_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[1.840s] Copying ../../build/kinematics_pkg/kinematics_pkg.egg-info to /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/lib/python3.10/site-packages/kinematics_pkg-0.0.0-py3.10.egg-info
+[1.840s] running install_scripts
+[1.860s] Installing Kinematics script to /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/lib/kinematics_pkg
+[1.861s] writing list of installed files to '/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/kinematics_pkg/install.log'
+[2.035s] Invoked command in '/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/kinematics_pkg' returned '0': PYTHONPATH=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/kinematics_pkg/prefix_override:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/kinematics_pkg build --build-base /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/kinematics_pkg/build install --record /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/kinematics_pkg/install.log --single-version-externally-managed
