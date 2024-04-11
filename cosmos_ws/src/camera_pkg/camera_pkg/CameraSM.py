@@ -26,6 +26,10 @@ class CameraSM(Node):
         self.img_num = 1
         self.is_target = False
 
+        # Initialize tunable parameters:
+        self.fs = 10  # stable sampling frequency of camera (i.e., FPS)
+        self.t_patience = 0.5  # seconds after target exits frame to continue trying to track, prior to nontracking mode
+
         # Initialize non-tunable parameters:
         self.t_fs = 1 / self.fs  # sampling period
         self.patience = int(self.fs * self.t_patience - 1)  # frames-1 (rounded) after target exits ..., prior to nontracking mode 
