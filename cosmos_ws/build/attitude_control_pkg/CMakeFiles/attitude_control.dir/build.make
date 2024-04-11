@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg
+CMAKE_SOURCE_DIR = /home/cosmos/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg
+CMAKE_BINARY_DIR = /home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg
 
 # Include any dependencies generated for this target.
 include CMakeFiles/attitude_control.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/attitude_control.dir/progress.make
 include CMakeFiles/attitude_control.dir/flags.make
 
 CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.o: CMakeFiles/attitude_control.dir/flags.make
-CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.o: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/attitude_control_node.cpp
+CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.o: /home/cosmos/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/attitude_control_node.cpp
 CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.o: CMakeFiles/attitude_control.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.o -MF CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.o.d -o CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.o -c /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/attitude_control_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.o -MF CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.o.d -o CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.o -c /home/cosmos/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/attitude_control_node.cpp
 
 CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/attitude_control_node.cpp > CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cosmos/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/attitude_control_node.cpp > CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.i
 
 CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/attitude_control_node.cpp -o CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cosmos/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/src/attitude_control_node.cpp -o CMakeFiles/attitude_control.dir/src/attitude_control_node.cpp.s
 
 # Object files for target attitude_control
 attitude_control_OBJECTS = \
@@ -99,12 +99,12 @@ attitude_control: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspect
 attitude_control: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
 attitude_control: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
 attitude_control: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
-attitude_control: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_fastrtps_c.so
-attitude_control: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_introspection_c.so
-attitude_control: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_fastrtps_cpp.so
-attitude_control: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so
-attitude_control: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_cpp.so
-attitude_control: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_generator_py.so
+attitude_control: /home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_fastrtps_c.so
+attitude_control: /home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_introspection_c.so
+attitude_control: /home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_fastrtps_cpp.so
+attitude_control: /home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so
+attitude_control: /home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_cpp.so
+attitude_control: /home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_generator_py.so
 attitude_control: /opt/ros/humble/lib/liblibstatistics_collector.so
 attitude_control: /opt/ros/humble/lib/librcl.so
 attitude_control: /opt/ros/humble/lib/librmw_implementation.so
@@ -155,15 +155,15 @@ attitude_control: /opt/ros/humble/lib/librmw.so
 attitude_control: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
 attitude_control: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
 attitude_control: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
-attitude_control: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_c.so
-attitude_control: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_generator_c.so
+attitude_control: /home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_c.so
+attitude_control: /home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_generator_c.so
 attitude_control: /opt/ros/humble/lib/librosidl_typesupport_c.so
 attitude_control: /opt/ros/humble/lib/librcpputils.so
 attitude_control: /opt/ros/humble/lib/librosidl_runtime_c.so
 attitude_control: /opt/ros/humble/lib/librcutils.so
-attitude_control: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+attitude_control: /usr/lib/aarch64-linux-gnu/libpython3.10.so
 attitude_control: CMakeFiles/attitude_control.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable attitude_control"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable attitude_control"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/attitude_control.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -175,6 +175,6 @@ CMakeFiles/attitude_control.dir/clean:
 .PHONY : CMakeFiles/attitude_control.dir/clean
 
 CMakeFiles/attitude_control.dir/depend:
-	cd /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/CMakeFiles/attitude_control.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cosmos/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg /home/cosmos/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg /home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg /home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg /home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/CMakeFiles/attitude_control.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/attitude_control.dir/depend
 

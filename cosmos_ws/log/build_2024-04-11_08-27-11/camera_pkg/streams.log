@@ -1,0 +1,47 @@
+[21.388s] Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/camera_pkg': PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/prefix_override:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/camera_pkg build --build-base /home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/build install --record /home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/install.log --single-version-externally-managed
+[28.024s] running egg_info
+[28.031s] creating ../../build/camera_pkg/camera_pkg.egg-info
+[28.032s] writing ../../build/camera_pkg/camera_pkg.egg-info/PKG-INFO
+[28.034s] writing dependency_links to ../../build/camera_pkg/camera_pkg.egg-info/dependency_links.txt
+[28.035s] writing entry points to ../../build/camera_pkg/camera_pkg.egg-info/entry_points.txt
+[28.038s] writing requirements to ../../build/camera_pkg/camera_pkg.egg-info/requires.txt
+[28.039s] writing top-level names to ../../build/camera_pkg/camera_pkg.egg-info/top_level.txt
+[28.042s] writing manifest file '../../build/camera_pkg/camera_pkg.egg-info/SOURCES.txt'
+[28.081s] reading manifest file '../../build/camera_pkg/camera_pkg.egg-info/SOURCES.txt'
+[28.093s] writing manifest file '../../build/camera_pkg/camera_pkg.egg-info/SOURCES.txt'
+[28.095s] running build
+[28.097s] running build_py
+[28.098s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/build
+[28.102s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/build/lib
+[28.104s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/build/lib/camera_pkg
+[28.105s] copying camera_pkg/GetImage.py -> /home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/build/lib/camera_pkg
+[28.118s] copying camera_pkg/CameraSM.py -> /home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/build/lib/camera_pkg
+[28.136s] copying camera_pkg/__init__.py -> /home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/build/lib/camera_pkg
+[28.137s] copying camera_pkg/ImageToDCM.py -> /home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/build/lib/camera_pkg
+[28.138s] running install
+[28.141s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[28.142s]   warnings.warn(
+[28.148s] running install_lib
+[28.170s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg
+[28.171s] copying /home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/build/lib/camera_pkg/GetImage.py -> /home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg
+[28.173s] copying /home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/build/lib/camera_pkg/CameraSM.py -> /home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg
+[28.182s] copying /home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/build/lib/camera_pkg/__init__.py -> /home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg
+[28.186s] copying /home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/build/lib/camera_pkg/ImageToDCM.py -> /home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg
+[28.226s] byte-compiling /home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg/GetImage.py to GetImage.cpython-310.pyc
+[28.248s] byte-compiling /home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg/CameraSM.py to CameraSM.cpython-310.pyc
+[28.286s] byte-compiling /home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg/__init__.py to __init__.cpython-310.pyc
+[28.305s] byte-compiling /home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg/ImageToDCM.py to ImageToDCM.cpython-310.pyc
+[28.325s] running install_data
+[28.341s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/share/ament_index
+[28.343s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/share/ament_index/resource_index
+[28.346s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/share/ament_index/resource_index/packages
+[28.348s] copying resource/camera_pkg -> /home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/share/ament_index/resource_index/packages
+[28.356s] copying package.xml -> /home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/share/camera_pkg
+[28.384s] running install_egg_info
+[28.414s] Copying ../../build/camera_pkg/camera_pkg.egg-info to /home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages/camera_pkg-0.0.0-py3.10.egg-info
+[28.457s] running install_scripts
+[28.984s] Installing CameraSM script to /home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/camera_pkg
+[29.000s] Installing GetImage script to /home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/camera_pkg
+[29.002s] Installing ImageToDCM script to /home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/camera_pkg
+[29.012s] writing list of installed files to '/home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/install.log'
+[29.833s] Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/camera_pkg' returned '0': PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/prefix_override:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/camera_pkg build --build-base /home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/build install --record /home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/install.log --single-version-externally-managed

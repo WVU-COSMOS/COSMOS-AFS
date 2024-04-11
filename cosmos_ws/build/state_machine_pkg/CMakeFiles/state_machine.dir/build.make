@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg
+CMAKE_SOURCE_DIR = /home/cosmos/COSMOS-AFS/cosmos_ws/src/state_machine_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg
+CMAKE_BINARY_DIR = /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg
 
 # Include any dependencies generated for this target.
 include CMakeFiles/state_machine.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/state_machine.dir/progress.make
 include CMakeFiles/state_machine.dir/flags.make
 
 CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o: CMakeFiles/state_machine.dir/flags.make
-CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg/src/state_machine_node.cpp
+CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o: /home/cosmos/COSMOS-AFS/cosmos_ws/src/state_machine_pkg/src/state_machine_node.cpp
 CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o: CMakeFiles/state_machine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o -MF CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o.d -o CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o -c /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg/src/state_machine_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o -MF CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o.d -o CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o -c /home/cosmos/COSMOS-AFS/cosmos_ws/src/state_machine_pkg/src/state_machine_node.cpp
 
 CMakeFiles/state_machine.dir/src/state_machine_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/state_machine.dir/src/state_machine_node.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg/src/state_machine_node.cpp > CMakeFiles/state_machine.dir/src/state_machine_node.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cosmos/COSMOS-AFS/cosmos_ws/src/state_machine_pkg/src/state_machine_node.cpp > CMakeFiles/state_machine.dir/src/state_machine_node.cpp.i
 
 CMakeFiles/state_machine.dir/src/state_machine_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/state_machine.dir/src/state_machine_node.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg/src/state_machine_node.cpp -o CMakeFiles/state_machine.dir/src/state_machine_node.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cosmos/COSMOS-AFS/cosmos_ws/src/state_machine_pkg/src/state_machine_node.cpp -o CMakeFiles/state_machine.dir/src/state_machine_node.cpp.s
 
 # Object files for target state_machine
 state_machine_OBJECTS = \
@@ -99,12 +99,12 @@ state_machine: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection
 state_machine: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
 state_machine: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_cpp.so
 state_machine: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_py.so
-state_machine: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_fastrtps_c.so
-state_machine: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_introspection_c.so
-state_machine: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_fastrtps_cpp.so
-state_machine: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so
-state_machine: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_cpp.so
-state_machine: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_generator_py.so
+state_machine: /home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_fastrtps_c.so
+state_machine: /home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_introspection_c.so
+state_machine: /home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_fastrtps_cpp.so
+state_machine: /home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_introspection_cpp.so
+state_machine: /home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_cpp.so
+state_machine: /home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_generator_py.so
 state_machine: /opt/ros/humble/lib/liblibstatistics_collector.so
 state_machine: /opt/ros/humble/lib/librcl.so
 state_machine: /opt/ros/humble/lib/librmw_implementation.so
@@ -155,15 +155,15 @@ state_machine: /opt/ros/humble/lib/librmw.so
 state_machine: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
 state_machine: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
 state_machine: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
-state_machine: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_c.so
-state_machine: /home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_generator_c.so
+state_machine: /home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_typesupport_c.so
+state_machine: /home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/libcosmos_interfaces__rosidl_generator_c.so
 state_machine: /opt/ros/humble/lib/librosidl_typesupport_c.so
 state_machine: /opt/ros/humble/lib/librcpputils.so
 state_machine: /opt/ros/humble/lib/librosidl_runtime_c.so
 state_machine: /opt/ros/humble/lib/librcutils.so
-state_machine: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+state_machine: /usr/lib/aarch64-linux-gnu/libpython3.10.so
 state_machine: CMakeFiles/state_machine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable state_machine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable state_machine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/state_machine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -175,6 +175,6 @@ CMakeFiles/state_machine.dir/clean:
 .PHONY : CMakeFiles/state_machine.dir/clean
 
 CMakeFiles/state_machine.dir/depend:
-	cd /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg/CMakeFiles/state_machine.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cosmos/COSMOS-AFS/cosmos_ws/src/state_machine_pkg /home/cosmos/COSMOS-AFS/cosmos_ws/src/state_machine_pkg /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg/CMakeFiles/state_machine.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/state_machine.dir/depend
 

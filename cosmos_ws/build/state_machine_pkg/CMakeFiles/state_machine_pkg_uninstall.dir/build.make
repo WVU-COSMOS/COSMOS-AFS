@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg
+CMAKE_SOURCE_DIR = /home/cosmos/COSMOS-AFS/cosmos_ws/src/state_machine_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg
+CMAKE_BINARY_DIR = /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg
 
 # Utility rule file for state_machine_pkg_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/state_machine_pkg_uninstall.dir/compiler_depend.make
 include CMakeFiles/state_machine_pkg_uninstall.dir/progress.make
 
 CMakeFiles/state_machine_pkg_uninstall:
-	/usr/bin/cmake -P /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 state_machine_pkg_uninstall: CMakeFiles/state_machine_pkg_uninstall
 state_machine_pkg_uninstall: CMakeFiles/state_machine_pkg_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/state_machine_pkg_uninstall.dir/clean:
 .PHONY : CMakeFiles/state_machine_pkg_uninstall.dir/clean
 
 CMakeFiles/state_machine_pkg_uninstall.dir/depend:
-	cd /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/state_machine_pkg /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/state_machine_pkg/CMakeFiles/state_machine_pkg_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cosmos/COSMOS-AFS/cosmos_ws/src/state_machine_pkg /home/cosmos/COSMOS-AFS/cosmos_ws/src/state_machine_pkg /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg/CMakeFiles/state_machine_pkg_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/state_machine_pkg_uninstall.dir/depend
 

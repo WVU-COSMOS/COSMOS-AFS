@@ -1,0 +1,560 @@
+[12.544s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[12.545s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffa9e5b3d0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffaa108970>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffaa108970>>)
+[13.069s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[13.070s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[13.070s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[13.071s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[13.071s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[13.072s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[13.073s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/cosmos/COSMOS-AFS/cosmos_ws'
+[13.074s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[13.075s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[13.076s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[13.077s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[13.078s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[13.078s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[13.079s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[13.079s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[13.079s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[13.177s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[13.177s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[13.178s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[13.178s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[13.179s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[13.183s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[13.186s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[13.187s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[13.188s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[13.188s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[13.189s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[13.190s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[13.191s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[13.191s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[13.192s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[13.192s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[13.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[13.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[13.198s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[13.198s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[13.199s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[13.199s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[13.200s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[13.201s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[13.201s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[13.202s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[13.202s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[13.202s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[13.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/attitude_control_pkg) by extensions ['ignore', 'ignore_ament_install']
+[13.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/attitude_control_pkg) by extension 'ignore'
+[13.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/attitude_control_pkg) by extension 'ignore_ament_install'
+[13.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/attitude_control_pkg) by extensions ['colcon_pkg']
+[13.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/attitude_control_pkg) by extension 'colcon_pkg'
+[13.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/attitude_control_pkg) by extensions ['colcon_meta']
+[13.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/attitude_control_pkg) by extension 'colcon_meta'
+[13.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/attitude_control_pkg) by extensions ['ros']
+[13.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/attitude_control_pkg) by extension 'ros'
+[13.233s] DEBUG:colcon.colcon_core.package_identification:Package 'src/attitude_control_pkg' with type 'ros.ament_cmake' and name 'attitude_control_pkg'
+[13.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_pkg) by extensions ['ignore', 'ignore_ament_install']
+[13.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_pkg) by extension 'ignore'
+[13.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_pkg) by extension 'ignore_ament_install'
+[13.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_pkg) by extensions ['colcon_pkg']
+[13.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_pkg) by extension 'colcon_pkg'
+[13.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_pkg) by extensions ['colcon_meta']
+[13.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_pkg) by extension 'colcon_meta'
+[13.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_pkg) by extensions ['ros']
+[13.243s] Level 1:colcon.colcon_core.package_identification:_identify(src/camera_pkg) by extension 'ros'
+[13.248s] DEBUG:colcon.colcon_core.package_identification:Package 'src/camera_pkg' with type 'ros.ament_python' and name 'camera_pkg'
+[13.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/communication_pkg) by extensions ['ignore', 'ignore_ament_install']
+[13.249s] Level 1:colcon.colcon_core.package_identification:_identify(src/communication_pkg) by extension 'ignore'
+[13.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/communication_pkg) by extension 'ignore_ament_install'
+[13.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/communication_pkg) by extensions ['colcon_pkg']
+[13.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/communication_pkg) by extension 'colcon_pkg'
+[13.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/communication_pkg) by extensions ['colcon_meta']
+[13.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/communication_pkg) by extension 'colcon_meta'
+[13.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/communication_pkg) by extensions ['ros']
+[13.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/communication_pkg) by extension 'ros'
+[13.261s] DEBUG:colcon.colcon_core.package_identification:Package 'src/communication_pkg' with type 'ros.ament_python' and name 'communication_pkg'
+[13.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/cosmos_bringup) by extensions ['ignore', 'ignore_ament_install']
+[13.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/cosmos_bringup) by extension 'ignore'
+[13.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/cosmos_bringup) by extension 'ignore_ament_install'
+[13.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/cosmos_bringup) by extensions ['colcon_pkg']
+[13.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/cosmos_bringup) by extension 'colcon_pkg'
+[13.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/cosmos_bringup) by extensions ['colcon_meta']
+[13.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/cosmos_bringup) by extension 'colcon_meta'
+[13.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/cosmos_bringup) by extensions ['ros']
+[13.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/cosmos_bringup) by extension 'ros'
+[13.270s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cosmos_bringup' with type 'ros.ament_cmake' and name 'cosmos_bringup'
+[13.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/cosmos_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[13.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/cosmos_interfaces) by extension 'ignore'
+[13.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/cosmos_interfaces) by extension 'ignore_ament_install'
+[13.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/cosmos_interfaces) by extensions ['colcon_pkg']
+[13.273s] Level 1:colcon.colcon_core.package_identification:_identify(src/cosmos_interfaces) by extension 'colcon_pkg'
+[13.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/cosmos_interfaces) by extensions ['colcon_meta']
+[13.274s] Level 1:colcon.colcon_core.package_identification:_identify(src/cosmos_interfaces) by extension 'colcon_meta'
+[13.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/cosmos_interfaces) by extensions ['ros']
+[13.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/cosmos_interfaces) by extension 'ros'
+[13.279s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cosmos_interfaces' with type 'ros.ament_cmake' and name 'cosmos_interfaces'
+[13.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematics_pkg) by extensions ['ignore', 'ignore_ament_install']
+[13.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematics_pkg) by extension 'ignore'
+[13.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematics_pkg) by extension 'ignore_ament_install'
+[13.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematics_pkg) by extensions ['colcon_pkg']
+[13.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematics_pkg) by extension 'colcon_pkg'
+[13.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematics_pkg) by extensions ['colcon_meta']
+[13.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematics_pkg) by extension 'colcon_meta'
+[13.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematics_pkg) by extensions ['ros']
+[13.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematics_pkg) by extension 'ros'
+[13.293s] DEBUG:colcon.colcon_core.package_identification:Package 'src/kinematics_pkg' with type 'ros.ament_python' and name 'kinematics_pkg'
+[13.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensors_pkg) by extensions ['ignore', 'ignore_ament_install']
+[13.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensors_pkg) by extension 'ignore'
+[13.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensors_pkg) by extension 'ignore_ament_install'
+[13.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensors_pkg) by extensions ['colcon_pkg']
+[13.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensors_pkg) by extension 'colcon_pkg'
+[13.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensors_pkg) by extensions ['colcon_meta']
+[13.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensors_pkg) by extension 'colcon_meta'
+[13.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensors_pkg) by extensions ['ros']
+[13.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/sensors_pkg) by extension 'ros'
+[13.306s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sensors_pkg' with type 'ros.ament_python' and name 'sensors_pkg'
+[13.307s] Level 1:colcon.colcon_core.package_identification:_identify(src/state_machine_pkg) by extensions ['ignore', 'ignore_ament_install']
+[13.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/state_machine_pkg) by extension 'ignore'
+[13.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/state_machine_pkg) by extension 'ignore_ament_install'
+[13.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/state_machine_pkg) by extensions ['colcon_pkg']
+[13.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/state_machine_pkg) by extension 'colcon_pkg'
+[13.310s] Level 1:colcon.colcon_core.package_identification:_identify(src/state_machine_pkg) by extensions ['colcon_meta']
+[13.310s] Level 1:colcon.colcon_core.package_identification:_identify(src/state_machine_pkg) by extension 'colcon_meta'
+[13.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/state_machine_pkg) by extensions ['ros']
+[13.311s] Level 1:colcon.colcon_core.package_identification:_identify(src/state_machine_pkg) by extension 'ros'
+[13.316s] DEBUG:colcon.colcon_core.package_identification:Package 'src/state_machine_pkg' with type 'ros.ament_cmake' and name 'state_machine_pkg'
+[13.316s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[13.317s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[13.317s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[13.318s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[13.318s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[14.555s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[14.556s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[14.920s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[14.921s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[14.922s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[14.923s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[14.924s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[14.925s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[14.926s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[14.927s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[14.928s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[14.930s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[14.931s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[14.932s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[14.933s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[15.314s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/cosmos/COSMOS-AFS/cosmos_ws/install
+[15.673s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 270 installed packages in /opt/ros/humble
+[15.681s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[17.234s] Level 5:colcon.colcon_core.verb:set package 'camera_pkg' build argument 'cmake_args' from command line to 'None'
+[17.235s] Level 5:colcon.colcon_core.verb:set package 'camera_pkg' build argument 'cmake_target' from command line to 'None'
+[17.235s] Level 5:colcon.colcon_core.verb:set package 'camera_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[17.236s] Level 5:colcon.colcon_core.verb:set package 'camera_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[17.236s] Level 5:colcon.colcon_core.verb:set package 'camera_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[17.237s] Level 5:colcon.colcon_core.verb:set package 'camera_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[17.237s] Level 5:colcon.colcon_core.verb:set package 'camera_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[17.238s] Level 5:colcon.colcon_core.verb:set package 'camera_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[17.238s] Level 5:colcon.colcon_core.verb:set package 'camera_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[17.239s] DEBUG:colcon.colcon_core.verb:Building package 'camera_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg', 'merge_install': False, 'path': '/home/cosmos/COSMOS-AFS/cosmos_ws/src/camera_pkg', 'symlink_install': False, 'test_result_base': None}
+[17.580s] Level 5:colcon.colcon_core.verb:set package 'cosmos_interfaces' build argument 'cmake_args' from command line to 'None'
+[17.581s] Level 5:colcon.colcon_core.verb:set package 'cosmos_interfaces' build argument 'cmake_target' from command line to 'None'
+[17.581s] Level 5:colcon.colcon_core.verb:set package 'cosmos_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[17.586s] Level 5:colcon.colcon_core.verb:set package 'cosmos_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[17.587s] Level 5:colcon.colcon_core.verb:set package 'cosmos_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[17.588s] Level 5:colcon.colcon_core.verb:set package 'cosmos_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[17.588s] Level 5:colcon.colcon_core.verb:set package 'cosmos_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[17.588s] Level 5:colcon.colcon_core.verb:set package 'cosmos_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[17.588s] Level 5:colcon.colcon_core.verb:set package 'cosmos_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[17.589s] DEBUG:colcon.colcon_core.verb:Building package 'cosmos_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces', 'merge_install': False, 'path': '/home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces', 'symlink_install': False, 'test_result_base': None}
+[17.924s] Level 5:colcon.colcon_core.verb:set package 'kinematics_pkg' build argument 'cmake_args' from command line to 'None'
+[17.925s] Level 5:colcon.colcon_core.verb:set package 'kinematics_pkg' build argument 'cmake_target' from command line to 'None'
+[17.925s] Level 5:colcon.colcon_core.verb:set package 'kinematics_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[17.926s] Level 5:colcon.colcon_core.verb:set package 'kinematics_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[17.927s] Level 5:colcon.colcon_core.verb:set package 'kinematics_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[17.927s] Level 5:colcon.colcon_core.verb:set package 'kinematics_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[17.928s] Level 5:colcon.colcon_core.verb:set package 'kinematics_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[17.928s] Level 5:colcon.colcon_core.verb:set package 'kinematics_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[17.929s] Level 5:colcon.colcon_core.verb:set package 'kinematics_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[17.929s] DEBUG:colcon.colcon_core.verb:Building package 'kinematics_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cosmos/COSMOS-AFS/cosmos_ws/build/kinematics_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg', 'merge_install': False, 'path': '/home/cosmos/COSMOS-AFS/cosmos_ws/src/kinematics_pkg', 'symlink_install': False, 'test_result_base': None}
+[18.215s] Level 5:colcon.colcon_core.verb:set package 'sensors_pkg' build argument 'cmake_args' from command line to 'None'
+[18.216s] Level 5:colcon.colcon_core.verb:set package 'sensors_pkg' build argument 'cmake_target' from command line to 'None'
+[18.216s] Level 5:colcon.colcon_core.verb:set package 'sensors_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[18.216s] Level 5:colcon.colcon_core.verb:set package 'sensors_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[18.217s] Level 5:colcon.colcon_core.verb:set package 'sensors_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[18.217s] Level 5:colcon.colcon_core.verb:set package 'sensors_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[18.218s] Level 5:colcon.colcon_core.verb:set package 'sensors_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[18.219s] Level 5:colcon.colcon_core.verb:set package 'sensors_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[18.219s] Level 5:colcon.colcon_core.verb:set package 'sensors_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[18.220s] DEBUG:colcon.colcon_core.verb:Building package 'sensors_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg', 'merge_install': False, 'path': '/home/cosmos/COSMOS-AFS/cosmos_ws/src/sensors_pkg', 'symlink_install': False, 'test_result_base': None}
+[18.555s] Level 5:colcon.colcon_core.verb:set package 'attitude_control_pkg' build argument 'cmake_args' from command line to 'None'
+[18.556s] Level 5:colcon.colcon_core.verb:set package 'attitude_control_pkg' build argument 'cmake_target' from command line to 'None'
+[18.556s] Level 5:colcon.colcon_core.verb:set package 'attitude_control_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[18.556s] Level 5:colcon.colcon_core.verb:set package 'attitude_control_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[18.557s] Level 5:colcon.colcon_core.verb:set package 'attitude_control_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[18.557s] Level 5:colcon.colcon_core.verb:set package 'attitude_control_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[18.557s] Level 5:colcon.colcon_core.verb:set package 'attitude_control_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[18.558s] Level 5:colcon.colcon_core.verb:set package 'attitude_control_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[18.559s] Level 5:colcon.colcon_core.verb:set package 'attitude_control_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[18.559s] DEBUG:colcon.colcon_core.verb:Building package 'attitude_control_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg', 'merge_install': False, 'path': '/home/cosmos/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg', 'symlink_install': False, 'test_result_base': None}
+[18.857s] Level 5:colcon.colcon_core.verb:set package 'communication_pkg' build argument 'cmake_args' from command line to 'None'
+[18.858s] Level 5:colcon.colcon_core.verb:set package 'communication_pkg' build argument 'cmake_target' from command line to 'None'
+[18.859s] Level 5:colcon.colcon_core.verb:set package 'communication_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[18.860s] Level 5:colcon.colcon_core.verb:set package 'communication_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[18.860s] Level 5:colcon.colcon_core.verb:set package 'communication_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[18.861s] Level 5:colcon.colcon_core.verb:set package 'communication_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[18.861s] Level 5:colcon.colcon_core.verb:set package 'communication_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[18.862s] Level 5:colcon.colcon_core.verb:set package 'communication_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[18.862s] Level 5:colcon.colcon_core.verb:set package 'communication_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[18.863s] DEBUG:colcon.colcon_core.verb:Building package 'communication_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg', 'merge_install': False, 'path': '/home/cosmos/COSMOS-AFS/cosmos_ws/src/communication_pkg', 'symlink_install': False, 'test_result_base': None}
+[19.126s] Level 5:colcon.colcon_core.verb:set package 'state_machine_pkg' build argument 'cmake_args' from command line to 'None'
+[19.126s] Level 5:colcon.colcon_core.verb:set package 'state_machine_pkg' build argument 'cmake_target' from command line to 'None'
+[19.127s] Level 5:colcon.colcon_core.verb:set package 'state_machine_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[19.127s] Level 5:colcon.colcon_core.verb:set package 'state_machine_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[19.128s] Level 5:colcon.colcon_core.verb:set package 'state_machine_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[19.128s] Level 5:colcon.colcon_core.verb:set package 'state_machine_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[19.129s] Level 5:colcon.colcon_core.verb:set package 'state_machine_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[19.129s] Level 5:colcon.colcon_core.verb:set package 'state_machine_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[19.130s] Level 5:colcon.colcon_core.verb:set package 'state_machine_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[19.130s] DEBUG:colcon.colcon_core.verb:Building package 'state_machine_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg', 'merge_install': False, 'path': '/home/cosmos/COSMOS-AFS/cosmos_ws/src/state_machine_pkg', 'symlink_install': False, 'test_result_base': None}
+[19.419s] Level 5:colcon.colcon_core.verb:set package 'cosmos_bringup' build argument 'cmake_args' from command line to 'None'
+[19.420s] Level 5:colcon.colcon_core.verb:set package 'cosmos_bringup' build argument 'cmake_target' from command line to 'None'
+[19.421s] Level 5:colcon.colcon_core.verb:set package 'cosmos_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[19.421s] Level 5:colcon.colcon_core.verb:set package 'cosmos_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[19.422s] Level 5:colcon.colcon_core.verb:set package 'cosmos_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[19.422s] Level 5:colcon.colcon_core.verb:set package 'cosmos_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[19.422s] Level 5:colcon.colcon_core.verb:set package 'cosmos_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[19.423s] Level 5:colcon.colcon_core.verb:set package 'cosmos_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[19.423s] Level 5:colcon.colcon_core.verb:set package 'cosmos_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[19.424s] DEBUG:colcon.colcon_core.verb:Building package 'cosmos_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup', 'merge_install': False, 'path': '/home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_bringup', 'symlink_install': False, 'test_result_base': None}
+[19.677s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[19.921s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[19.923s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces' with build type 'ament_cmake'
+[19.925s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces'
+[20.349s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[20.353s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[20.355s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[21.464s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/camera_pkg' with build type 'ament_python'
+[21.466s] Level 1:colcon.colcon_core.shell:create_environment_hook('camera_pkg', 'ament_prefix_path')
+[21.790s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/share/camera_pkg/hook/ament_prefix_path.ps1'
+[21.805s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/share/camera_pkg/hook/ament_prefix_path.dsv'
+[21.813s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/share/camera_pkg/hook/ament_prefix_path.sh'
+[22.149s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[22.150s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[23.219s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/kinematics_pkg' with build type 'ament_python'
+[23.221s] Level 1:colcon.colcon_core.shell:create_environment_hook('kinematics_pkg', 'ament_prefix_path')
+[23.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/share/kinematics_pkg/hook/ament_prefix_path.ps1'
+[23.580s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/share/kinematics_pkg/hook/ament_prefix_path.dsv'
+[23.587s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/share/kinematics_pkg/hook/ament_prefix_path.sh'
+[23.975s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[23.976s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[24.987s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/sensors_pkg' with build type 'ament_python'
+[24.988s] Level 1:colcon.colcon_core.shell:create_environment_hook('sensors_pkg', 'ament_prefix_path')
+[25.382s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/share/sensors_pkg/hook/ament_prefix_path.ps1'
+[25.388s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/share/sensors_pkg/hook/ament_prefix_path.dsv'
+[25.395s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/share/sensors_pkg/hook/ament_prefix_path.sh'
+[25.788s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[25.789s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[26.619s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake /home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces -DCMAKE_INSTALL_PREFIX=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces
+[29.333s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/camera_pkg'
+[29.485s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[29.486s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[32.109s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/kinematics_pkg'
+[32.215s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[32.215s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[34.508s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/sensors_pkg'
+[34.720s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[34.720s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[42.538s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/sensors_pkg': PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/prefix_override:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/sensors_pkg build --build-base /home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/build install --record /home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/install.log --single-version-externally-managed
+[42.859s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/camera_pkg': PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/prefix_override:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/camera_pkg build --build-base /home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/build install --record /home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/install.log --single-version-externally-managed
+[43.118s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/kinematics_pkg': PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/build/kinematics_pkg/prefix_override:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/kinematics_pkg build --build-base /home/cosmos/COSMOS-AFS/cosmos_ws/build/kinematics_pkg/build install --record /home/cosmos/COSMOS-AFS/cosmos_ws/build/kinematics_pkg/install.log --single-version-externally-managed
+[49.445s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake /home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces -DCMAKE_INSTALL_PREFIX=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces
+[49.459s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake --build /home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces -- -j4 -l4
+[51.304s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/camera_pkg' returned '0': PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/prefix_override:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/camera_pkg build --build-base /home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/build install --record /home/cosmos/COSMOS-AFS/cosmos_ws/build/camera_pkg/install.log --single-version-externally-managed
+[52.152s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg' for CMake module files
+[52.158s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg' for CMake config files
+[52.165s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib'
+[52.168s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/bin'
+[52.169s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/pkgconfig/camera_pkg.pc'
+[52.172s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages'
+[52.172s] Level 1:colcon.colcon_core.shell:create_environment_hook('camera_pkg', 'pythonpath')
+[52.506s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/share/camera_pkg/hook/pythonpath.ps1'
+[52.511s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/share/camera_pkg/hook/pythonpath.dsv'
+[52.515s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/share/camera_pkg/hook/pythonpath.sh'
+[52.522s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/bin'
+[52.523s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(camera_pkg)
+[52.906s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/share/camera_pkg/package.ps1'
+[52.921s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/share/camera_pkg/package.dsv'
+[52.935s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/share/camera_pkg/package.sh'
+[52.963s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/share/camera_pkg/package.bash'
+[52.969s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/share/camera_pkg/package.zsh'
+[52.978s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/share/colcon-core/packages/camera_pkg)
+[53.010s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/sensors_pkg' returned '0': PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/prefix_override:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/sensors_pkg build --build-base /home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/build install --record /home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/install.log --single-version-externally-managed
+[53.459s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg' for CMake module files
+[53.469s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg' for CMake config files
+[53.482s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib'
+[53.484s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/bin'
+[53.485s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/pkgconfig/sensors_pkg.pc'
+[53.492s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages'
+[53.493s] Level 1:colcon.colcon_core.shell:create_environment_hook('sensors_pkg', 'pythonpath')
+[53.877s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/share/sensors_pkg/hook/pythonpath.ps1'
+[53.881s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/share/sensors_pkg/hook/pythonpath.dsv'
+[53.886s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/share/sensors_pkg/hook/pythonpath.sh'
+[53.894s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/bin'
+[53.895s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sensors_pkg)
+[54.243s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/share/sensors_pkg/package.ps1'
+[54.248s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/share/sensors_pkg/package.dsv'
+[54.251s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/share/sensors_pkg/package.sh'
+[54.259s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/share/sensors_pkg/package.bash'
+[54.262s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/share/sensors_pkg/package.zsh'
+[54.265s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/share/colcon-core/packages/sensors_pkg)
+[54.300s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/kinematics_pkg' returned '0': PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/build/kinematics_pkg/prefix_override:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/kinematics_pkg build --build-base /home/cosmos/COSMOS-AFS/cosmos_ws/build/kinematics_pkg/build install --record /home/cosmos/COSMOS-AFS/cosmos_ws/build/kinematics_pkg/install.log --single-version-externally-managed
+[54.696s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg' for CMake module files
+[54.708s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg' for CMake config files
+[54.724s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/lib'
+[54.735s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/bin'
+[54.736s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/lib/pkgconfig/kinematics_pkg.pc'
+[54.743s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/lib/python3.10/site-packages'
+[54.745s] Level 1:colcon.colcon_core.shell:create_environment_hook('kinematics_pkg', 'pythonpath')
+[55.041s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/share/kinematics_pkg/hook/pythonpath.ps1'
+[55.043s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/share/kinematics_pkg/hook/pythonpath.dsv'
+[55.046s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/share/kinematics_pkg/hook/pythonpath.sh'
+[55.049s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/bin'
+[55.050s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(kinematics_pkg)
+[55.227s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/share/kinematics_pkg/package.ps1'
+[55.232s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/share/kinematics_pkg/package.dsv'
+[55.235s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/share/kinematics_pkg/package.sh'
+[55.242s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/share/kinematics_pkg/package.bash'
+[55.245s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/share/kinematics_pkg/package.zsh'
+[55.247s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/share/colcon-core/packages/kinematics_pkg)
+[165.869s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake --build /home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces -- -j4 -l4
+[167.308s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake --install /home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces
+[168.118s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cosmos_interfaces)
+[168.132s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake --install /home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces
+[168.346s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces' for CMake module files
+[168.352s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces' for CMake config files
+[168.360s] Level 1:colcon.colcon_core.shell:create_environment_hook('cosmos_interfaces', 'cmake_prefix_path')
+[168.576s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/hook/cmake_prefix_path.ps1'
+[168.583s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/hook/cmake_prefix_path.dsv'
+[168.588s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/hook/cmake_prefix_path.sh'
+[168.594s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib'
+[168.596s] Level 1:colcon.colcon_core.shell:create_environment_hook('cosmos_interfaces', 'ld_library_path_lib')
+[168.792s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/hook/ld_library_path_lib.ps1'
+[168.796s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/hook/ld_library_path_lib.dsv'
+[168.798s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/hook/ld_library_path_lib.sh'
+[168.800s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/bin'
+[168.801s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/pkgconfig/cosmos_interfaces.pc'
+[168.803s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/python3.10/site-packages'
+[168.805s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/bin'
+[168.976s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/package.ps1'
+[168.979s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/package.dsv'
+[168.983s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/package.sh'
+[168.986s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/package.bash'
+[168.989s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/package.zsh'
+[168.992s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/colcon-core/packages/cosmos_interfaces)
+[171.565s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cosmos_interfaces)
+[171.891s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces' for CMake module files
+[171.901s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces' for CMake config files
+[171.915s] Level 1:colcon.colcon_core.shell:create_environment_hook('cosmos_interfaces', 'cmake_prefix_path')
+[172.271s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/hook/cmake_prefix_path.ps1'
+[172.278s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/hook/cmake_prefix_path.dsv'
+[172.284s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/hook/cmake_prefix_path.sh'
+[172.295s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib'
+[172.297s] Level 1:colcon.colcon_core.shell:create_environment_hook('cosmos_interfaces', 'ld_library_path_lib')
+[172.781s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/hook/ld_library_path_lib.ps1'
+[172.788s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/hook/ld_library_path_lib.dsv'
+[172.794s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/hook/ld_library_path_lib.sh'
+[172.801s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/bin'
+[172.802s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/pkgconfig/cosmos_interfaces.pc'
+[172.805s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib/python3.10/site-packages'
+[172.808s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/bin'
+[173.162s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/package.ps1'
+[173.174s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/package.dsv'
+[173.181s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/package.sh'
+[173.192s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/package.bash'
+[173.199s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/package.zsh'
+[173.208s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/colcon-core/packages/cosmos_interfaces)
+[173.221s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg' with build type 'ament_cmake'
+[173.223s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg'
+[173.600s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[173.601s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[174.856s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/communication_pkg' with build type 'ament_python'
+[174.858s] Level 1:colcon.colcon_core.shell:create_environment_hook('communication_pkg', 'ament_prefix_path')
+[175.260s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/share/communication_pkg/hook/ament_prefix_path.ps1'
+[175.268s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/share/communication_pkg/hook/ament_prefix_path.dsv'
+[175.273s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/share/communication_pkg/hook/ament_prefix_path.sh'
+[175.712s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[175.713s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[177.016s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/state_machine_pkg' with build type 'ament_cmake'
+[177.018s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/state_machine_pkg'
+[177.431s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[177.432s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[178.765s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake /home/cosmos/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg -DCMAKE_INSTALL_PREFIX=/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg
+[183.622s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/communication_pkg'
+[184.054s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[184.060s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[185.486s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake /home/cosmos/COSMOS-AFS/cosmos_ws/src/state_machine_pkg -DCMAKE_INSTALL_PREFIX=/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg
+[191.092s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/communication_pkg': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/prefix_override:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/communication_pkg build --build-base /home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/build install --record /home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/install.log --single-version-externally-managed
+[197.925s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/communication_pkg' returned '0': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/prefix_override:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/communication_pkg build --build-base /home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/build install --record /home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/install.log --single-version-externally-managed
+[198.465s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg' for CMake module files
+[198.470s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg' for CMake config files
+[198.486s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib'
+[198.488s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/bin'
+[198.489s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/pkgconfig/communication_pkg.pc'
+[198.510s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages'
+[198.522s] Level 1:colcon.colcon_core.shell:create_environment_hook('communication_pkg', 'pythonpath')
+[199.094s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/share/communication_pkg/hook/pythonpath.ps1'
+[199.098s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/share/communication_pkg/hook/pythonpath.dsv'
+[199.103s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/share/communication_pkg/hook/pythonpath.sh'
+[199.112s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/bin'
+[199.113s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(communication_pkg)
+[199.631s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/share/communication_pkg/package.ps1'
+[199.635s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/share/communication_pkg/package.dsv'
+[199.639s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/share/communication_pkg/package.sh'
+[199.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/share/communication_pkg/package.bash'
+[199.663s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/share/communication_pkg/package.zsh'
+[199.667s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/share/colcon-core/packages/communication_pkg)
+[201.102s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg' returned '0': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake /home/cosmos/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg -DCMAKE_INSTALL_PREFIX=/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg
+[201.111s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake --build /home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg -- -j4 -l4
+[204.463s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg' returned '0': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake /home/cosmos/COSMOS-AFS/cosmos_ws/src/state_machine_pkg -DCMAKE_INSTALL_PREFIX=/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg
+[204.467s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake --build /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg -- -j4 -l4
+[275.725s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg' returned '0': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake --build /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg -- -j4 -l4
+[275.908s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake --install /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg
+[276.162s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(state_machine_pkg)
+[276.177s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg' returned '0': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake --install /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg
+[276.421s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg' for CMake module files
+[276.427s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg' for CMake config files
+[276.430s] Level 1:colcon.colcon_core.shell:create_environment_hook('state_machine_pkg', 'cmake_prefix_path')
+[276.640s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/hook/cmake_prefix_path.ps1'
+[276.644s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/hook/cmake_prefix_path.dsv'
+[276.648s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/hook/cmake_prefix_path.sh'
+[276.654s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/lib'
+[276.656s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/bin'
+[276.657s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/lib/pkgconfig/state_machine_pkg.pc'
+[276.659s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/lib/python3.10/site-packages'
+[276.661s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/bin'
+[276.918s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/package.ps1'
+[276.923s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/package.dsv'
+[276.928s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/package.sh'
+[276.931s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/package.bash'
+[276.937s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/package.zsh'
+[276.945s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/colcon-core/packages/state_machine_pkg)
+[277.451s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(state_machine_pkg)
+[277.623s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg' for CMake module files
+[277.627s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg' for CMake config files
+[277.630s] Level 1:colcon.colcon_core.shell:create_environment_hook('state_machine_pkg', 'cmake_prefix_path')
+[277.811s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/hook/cmake_prefix_path.ps1'
+[277.815s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/hook/cmake_prefix_path.dsv'
+[277.818s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/hook/cmake_prefix_path.sh'
+[277.823s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/lib'
+[277.824s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/bin'
+[277.824s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/lib/pkgconfig/state_machine_pkg.pc'
+[277.826s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/lib/python3.10/site-packages'
+[277.827s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/bin'
+[278.083s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/package.ps1'
+[278.090s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/package.dsv'
+[278.097s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/package.sh'
+[278.102s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/package.bash'
+[278.107s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/package.zsh'
+[278.113s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/colcon-core/packages/state_machine_pkg)
+[280.595s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg' returned '0': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake --build /home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg -- -j4 -l4
+[280.753s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake --install /home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg
+[280.862s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(attitude_control_pkg)
+[280.864s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg' returned '0': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake --install /home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg
+[280.975s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg' for CMake module files
+[280.979s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg' for CMake config files
+[280.981s] Level 1:colcon.colcon_core.shell:create_environment_hook('attitude_control_pkg', 'cmake_prefix_path')
+[281.088s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/hook/cmake_prefix_path.ps1'
+[281.091s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/hook/cmake_prefix_path.dsv'
+[281.093s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/hook/cmake_prefix_path.sh'
+[281.096s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/lib'
+[281.097s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/bin'
+[281.098s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/lib/pkgconfig/attitude_control_pkg.pc'
+[281.099s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/lib/python3.10/site-packages'
+[281.101s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/bin'
+[281.217s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/package.ps1'
+[281.220s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/package.dsv'
+[281.222s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/package.sh'
+[281.225s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/package.bash'
+[281.229s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/package.zsh'
+[281.231s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/colcon-core/packages/attitude_control_pkg)
+[281.486s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(attitude_control_pkg)
+[281.667s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg' for CMake module files
+[281.671s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg' for CMake config files
+[281.677s] Level 1:colcon.colcon_core.shell:create_environment_hook('attitude_control_pkg', 'cmake_prefix_path')
+[281.857s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/hook/cmake_prefix_path.ps1'
+[281.861s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/hook/cmake_prefix_path.dsv'
+[281.865s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/hook/cmake_prefix_path.sh'
+[281.870s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/lib'
+[281.871s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/bin'
+[281.871s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/lib/pkgconfig/attitude_control_pkg.pc'
+[281.873s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/lib/python3.10/site-packages'
+[281.874s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/bin'
+[282.038s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/package.ps1'
+[282.042s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/package.dsv'
+[282.046s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/package.sh'
+[282.050s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/package.bash'
+[282.054s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/attitude_control_pkg/package.zsh'
+[282.058s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/share/colcon-core/packages/attitude_control_pkg)
+[282.060s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_bringup' with build type 'ament_cmake'
+[282.061s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_bringup'
+[282.270s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[282.271s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[282.677s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_bringup': AMENT_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake /home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_bringup -DCMAKE_INSTALL_PREFIX=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup
+[286.706s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_bringup' returned '0': AMENT_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake /home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_bringup -DCMAKE_INSTALL_PREFIX=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup
+[286.709s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_bringup': AMENT_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_bringup -- -j4 -l4
+[286.883s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_bringup' returned '0': AMENT_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_bringup -- -j4 -l4
+[287.019s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_bringup': AMENT_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_bringup
+[287.087s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cosmos_bringup)
+[287.090s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_bringup' returned '0': AMENT_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/local/lib/python3.10/dist-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg/lib/python3.10/site-packages:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_bringup
+[287.231s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup' for CMake module files
+[287.234s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup' for CMake config files
+[287.236s] Level 1:colcon.colcon_core.shell:create_environment_hook('cosmos_bringup', 'cmake_prefix_path')
+[287.336s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/share/cosmos_bringup/hook/cmake_prefix_path.ps1'
+[287.338s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/share/cosmos_bringup/hook/cmake_prefix_path.dsv'
+[287.340s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/share/cosmos_bringup/hook/cmake_prefix_path.sh'
+[287.344s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/bin'
+[287.344s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/lib/pkgconfig/cosmos_bringup.pc'
+[287.346s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/lib/python3.10/site-packages'
+[287.347s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/bin'
+[287.456s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/share/cosmos_bringup/package.ps1'
+[287.458s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/share/cosmos_bringup/package.dsv'
+[287.461s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/share/cosmos_bringup/package.sh'
+[287.464s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/share/cosmos_bringup/package.bash'
+[287.466s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/share/cosmos_bringup/package.zsh'
+[287.468s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/share/colcon-core/packages/cosmos_bringup)
+[287.703s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cosmos_bringup)
+[287.881s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup' for CMake module files
+[287.886s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup' for CMake config files
+[287.891s] Level 1:colcon.colcon_core.shell:create_environment_hook('cosmos_bringup', 'cmake_prefix_path')
+[288.059s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/share/cosmos_bringup/hook/cmake_prefix_path.ps1'
+[288.062s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/share/cosmos_bringup/hook/cmake_prefix_path.dsv'
+[288.065s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/share/cosmos_bringup/hook/cmake_prefix_path.sh'
+[288.070s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/bin'
+[288.071s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/lib/pkgconfig/cosmos_bringup.pc'
+[288.072s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/lib/python3.10/site-packages'
+[288.075s] Level 1:colcon.colcon_core.environment:checking '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/bin'
+[288.224s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/share/cosmos_bringup/package.ps1'
+[288.227s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/share/cosmos_bringup/package.dsv'
+[288.231s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/share/cosmos_bringup/package.sh'
+[288.233s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/share/cosmos_bringup/package.bash'
+[288.236s] INFO:colcon.colcon_core.shell:Creating package script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/share/cosmos_bringup/package.zsh'
+[288.239s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup/share/colcon-core/packages/cosmos_bringup)
+[288.240s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[288.242s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[288.242s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[288.243s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[288.418s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[288.418s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[288.418s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[288.553s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[288.780s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/local_setup.ps1'
+[288.787s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cosmos/COSMOS-AFS/cosmos_ws/install/_local_setup_util_ps1.py'
+[288.796s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/setup.ps1'
+[288.966s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/local_setup.sh'
+[288.970s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cosmos/COSMOS-AFS/cosmos_ws/install/_local_setup_util_sh.py'
+[288.973s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/setup.sh'
+[289.083s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/local_setup.bash'
+[289.087s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/setup.bash'
+[289.203s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/local_setup.zsh'
+[289.207s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cosmos/COSMOS-AFS/cosmos_ws/install/setup.zsh'

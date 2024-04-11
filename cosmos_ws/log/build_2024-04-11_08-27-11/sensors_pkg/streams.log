@@ -1,0 +1,39 @@
+[17.544s] Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/sensors_pkg': PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/prefix_override:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/sensors_pkg build --build-base /home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/build install --record /home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/install.log --single-version-externally-managed
+[24.681s] running egg_info
+[24.717s] creating ../../build/sensors_pkg/sensors_pkg.egg-info
+[24.718s] writing ../../build/sensors_pkg/sensors_pkg.egg-info/PKG-INFO
+[24.739s] writing dependency_links to ../../build/sensors_pkg/sensors_pkg.egg-info/dependency_links.txt
+[24.746s] writing entry points to ../../build/sensors_pkg/sensors_pkg.egg-info/entry_points.txt
+[24.747s] writing requirements to ../../build/sensors_pkg/sensors_pkg.egg-info/requires.txt
+[24.748s] writing top-level names to ../../build/sensors_pkg/sensors_pkg.egg-info/top_level.txt
+[24.762s] writing manifest file '../../build/sensors_pkg/sensors_pkg.egg-info/SOURCES.txt'
+[24.795s] reading manifest file '../../build/sensors_pkg/sensors_pkg.egg-info/SOURCES.txt'
+[24.831s] writing manifest file '../../build/sensors_pkg/sensors_pkg.egg-info/SOURCES.txt'
+[24.863s] running build
+[24.864s] running build_py
+[24.866s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/build
+[24.867s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/build/lib
+[24.890s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/build/lib/sensors_pkg
+[24.890s] copying sensors_pkg/daq_node.py -> /home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/build/lib/sensors_pkg
+[24.891s] copying sensors_pkg/__init__.py -> /home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/build/lib/sensors_pkg
+[24.906s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[24.908s]   warnings.warn(
+[24.910s] running install
+[24.911s] running install_lib
+[24.927s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages/sensors_pkg
+[24.933s] copying /home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/build/lib/sensors_pkg/daq_node.py -> /home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages/sensors_pkg
+[24.974s] copying /home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/build/lib/sensors_pkg/__init__.py -> /home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages/sensors_pkg
+[24.975s] byte-compiling /home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages/sensors_pkg/daq_node.py to daq_node.cpython-310.pyc
+[24.976s] byte-compiling /home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages/sensors_pkg/__init__.py to __init__.cpython-310.pyc
+[24.994s] running install_data
+[25.012s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/share/ament_index
+[25.018s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/share/ament_index/resource_index
+[25.021s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/share/ament_index/resource_index/packages
+[25.023s] copying resource/sensors_pkg -> /home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/share/ament_index/resource_index/packages
+[25.036s] copying package.xml -> /home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/share/sensors_pkg
+[25.039s] running install_egg_info
+[25.072s] Copying ../../build/sensors_pkg/sensors_pkg.egg-info to /home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages/sensors_pkg-0.0.0-py3.10.egg-info
+[25.122s] running install_scripts
+[25.800s] Installing Data_Acquisition script to /home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/sensors_pkg
+[25.817s] writing list of installed files to '/home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/install.log'
+[28.016s] Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/sensors_pkg' returned '0': PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/prefix_override:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/sensors_pkg build --build-base /home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/build install --record /home/cosmos/COSMOS-AFS/cosmos_ws/build/sensors_pkg/install.log --single-version-externally-managed

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg
+CMAKE_SOURCE_DIR = /home/cosmos/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg
+CMAKE_BINARY_DIR = /home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg
 
 # Utility rule file for attitude_control_pkg_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/attitude_control_pkg_uninstall.dir/compiler_depend.make
 include CMakeFiles/attitude_control_pkg_uninstall.dir/progress.make
 
 CMakeFiles/attitude_control_pkg_uninstall:
-	/usr/bin/cmake -P /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 attitude_control_pkg_uninstall: CMakeFiles/attitude_control_pkg_uninstall
 attitude_control_pkg_uninstall: CMakeFiles/attitude_control_pkg_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/attitude_control_pkg_uninstall.dir/clean:
 .PHONY : CMakeFiles/attitude_control_pkg_uninstall.dir/clean
 
 CMakeFiles/attitude_control_pkg_uninstall.dir/depend:
-	cd /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/CMakeFiles/attitude_control_pkg_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cosmos/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg /home/cosmos/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg /home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg /home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg /home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/CMakeFiles/attitude_control_pkg_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/attitude_control_pkg_uninstall.dir/depend
 

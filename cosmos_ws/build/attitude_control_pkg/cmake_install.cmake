@@ -1,8 +1,8 @@
-# Install script for directory: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg
+# Install script for directory: /home/cosmos/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg")
+  set(CMAKE_INSTALL_PREFIX "/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,12 +49,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg/attitude_control"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg" TYPE EXECUTABLE FILES "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/attitude_control")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg" TYPE EXECUTABLE FILES "/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/attitude_control")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg/attitude_control" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg/attitude_control")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg/attitude_control"
-         OLD_RPATH "/opt/ros/humble/lib:/home/vini_dunker/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/attitude_control_pkg/attitude_control")
@@ -63,15 +63,15 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/attitude_control_pkg" TYPE DIRECTORY FILES "/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/include/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/attitude_control_pkg" TYPE DIRECTORY FILES "/home/cosmos/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/include/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/attitude_control_pkg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/attitude_control_pkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/attitude_control_pkg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/attitude_control_pkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -79,7 +79,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/attitude_control_pkg/environment" TYPE FILE FILES "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/attitude_control_pkg/environment" TYPE FILE FILES "/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -87,42 +87,42 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/attitude_control_pkg/environment" TYPE FILE FILES "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/attitude_control_pkg/environment" TYPE FILE FILES "/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/attitude_control_pkg" TYPE FILE FILES "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/attitude_control_pkg" TYPE FILE FILES "/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/attitude_control_pkg" TYPE FILE FILES "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/attitude_control_pkg" TYPE FILE FILES "/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/attitude_control_pkg" TYPE FILE FILES "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/attitude_control_pkg" TYPE FILE FILES "/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/attitude_control_pkg" TYPE FILE FILES "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/attitude_control_pkg" TYPE FILE FILES "/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/attitude_control_pkg" TYPE FILE FILES "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/attitude_control_pkg" TYPE FILE FILES "/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_index/share/ament_index/resource_index/packages/attitude_control_pkg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_index/share/ament_index/resource_index/packages/attitude_control_pkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/attitude_control_pkg/cmake" TYPE FILE FILES
-    "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_core/attitude_control_pkgConfig.cmake"
-    "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_core/attitude_control_pkgConfig-version.cmake"
+    "/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_core/attitude_control_pkgConfig.cmake"
+    "/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/ament_cmake_core/attitude_control_pkgConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/attitude_control_pkg" TYPE FILE FILES "/home/vini_dunker/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/attitude_control_pkg" TYPE FILE FILES "/home/cosmos/COSMOS-AFS/cosmos_ws/src/attitude_control_pkg/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -133,5 +133,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/vini_dunker/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/cosmos/COSMOS-AFS/cosmos_ws/build/attitude_control_pkg/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

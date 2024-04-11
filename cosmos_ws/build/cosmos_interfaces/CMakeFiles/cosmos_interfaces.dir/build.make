@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces
+CMAKE_SOURCE_DIR = /home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces
+CMAKE_BINARY_DIR = /home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces
 
 # Utility rule file for cosmos_interfaces.
 
@@ -66,16 +66,16 @@ include CMakeFiles/cosmos_interfaces.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/cosmos_interfaces.dir/progress.make
 
-CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/ReactionWheels.msg
-CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/Position.msg
-CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/Attitude.msg
-CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/StateMachine.msg
-CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/Camera.msg
-CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/DCM.msg
-CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/srv/AAToDCM.srv
+CMakeFiles/cosmos_interfaces: /home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/ReactionWheels.msg
+CMakeFiles/cosmos_interfaces: /home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/Position.msg
+CMakeFiles/cosmos_interfaces: /home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/Attitude.msg
+CMakeFiles/cosmos_interfaces: /home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/StateMachine.msg
+CMakeFiles/cosmos_interfaces: /home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/Camera.msg
+CMakeFiles/cosmos_interfaces: /home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/msg/DCM.msg
+CMakeFiles/cosmos_interfaces: /home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/srv/AAToDCM.srv
 CMakeFiles/cosmos_interfaces: rosidl_cmake/srv/AAToDCM_Request.msg
 CMakeFiles/cosmos_interfaces: rosidl_cmake/srv/AAToDCM_Response.msg
-CMakeFiles/cosmos_interfaces: /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/srv/Skew.srv
+CMakeFiles/cosmos_interfaces: /home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces/srv/Skew.srv
 CMakeFiles/cosmos_interfaces: rosidl_cmake/srv/Skew_Request.msg
 CMakeFiles/cosmos_interfaces: rosidl_cmake/srv/Skew_Response.msg
 
@@ -92,6 +92,6 @@ CMakeFiles/cosmos_interfaces.dir/clean:
 .PHONY : CMakeFiles/cosmos_interfaces.dir/clean
 
 CMakeFiles/cosmos_interfaces.dir/depend:
-	cd /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces /home/vini_dunker/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces /home/vini_dunker/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles/cosmos_interfaces.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces /home/cosmos/COSMOS-AFS/cosmos_ws/src/cosmos_interfaces /home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces /home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces /home/cosmos/COSMOS-AFS/cosmos_ws/build/cosmos_interfaces/CMakeFiles/cosmos_interfaces.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cosmos_interfaces.dir/depend
 

@@ -1,0 +1,64 @@
+[8.459s] Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake /home/cosmos/COSMOS-AFS/cosmos_ws/src/state_machine_pkg -DCMAKE_INSTALL_PREFIX=/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg
+[9.357s] -- The C compiler identification is GNU 11.4.0
+[9.837s] -- The CXX compiler identification is GNU 11.4.0
+[9.886s] -- Detecting C compiler ABI info
+[10.450s] -- Detecting C compiler ABI info - done
+[10.509s] -- Check for working C compiler: /usr/bin/cc - skipped
+[10.511s] -- Detecting C compile features
+[10.514s] -- Detecting C compile features - done
+[10.535s] -- Detecting CXX compiler ABI info
+[11.445s] -- Detecting CXX compiler ABI info - done
+[11.542s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[11.544s] -- Detecting CXX compile features
+[11.548s] -- Detecting CXX compile features - done
+[11.655s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[14.930s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[16.836s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[17.830s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[17.986s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[18.136s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[18.375s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[18.732s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[20.087s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[20.182s] -- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[21.995s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[22.554s] -- Found FastRTPS: /opt/ros/humble/include  
+[23.270s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[23.471s] -- Looking for pthread.h
+[24.343s] -- Looking for pthread.h - found
+[24.345s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[25.234s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[25.250s] -- Found Threads: TRUE  
+[26.590s] -- Found cosmos_interfaces: 0.0.0 (/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces/share/cosmos_interfaces/cmake)
+[27.278s] -- Configuring done
+[27.364s] -- Generating done
+[27.385s] -- Build files have been written to: /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg
+[27.437s] Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg' returned '0': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake /home/cosmos/COSMOS-AFS/cosmos_ws/src/state_machine_pkg -DCMAKE_INSTALL_PREFIX=/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg
+[27.441s] Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake --build /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg -- -j4 -l4
+[27.764s] [ 50%] [32mBuilding CXX object CMakeFiles/state_machine.dir/src/state_machine_node.cpp.o[0m
+[93.450s] [100%] [32m[1mLinking CXX executable state_machine[0m
+[98.207s] [100%] Built target state_machine
+[98.699s] Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg' returned '0': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake --build /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg -- -j4 -l4
+[98.881s] Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake --install /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg
+[98.921s] -- Install configuration: ""
+[98.925s] -- Installing: /home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/lib/state_machine_pkg/state_machine
+[99.014s] -- Set runtime path of "/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/lib/state_machine_pkg/state_machine" to ""
+[99.017s] -- Installing: /home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/include/state_machine_pkg
+[99.019s] -- Installing: /home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/include/state_machine_pkg/state_machine_pkg
+[99.021s] -- Installing: /home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/include/state_machine_pkg/state_machine_pkg/state_machine_node.hpp
+[99.030s] -- Installing: /home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/ament_index/resource_index/package_run_dependencies/state_machine_pkg
+[99.036s] -- Installing: /home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/ament_index/resource_index/parent_prefix_path/state_machine_pkg
+[99.051s] -- Installing: /home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/environment/ament_prefix_path.sh
+[99.067s] -- Installing: /home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/environment/ament_prefix_path.dsv
+[99.079s] -- Installing: /home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/environment/path.sh
+[99.100s] -- Installing: /home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/environment/path.dsv
+[99.104s] -- Installing: /home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/local_setup.bash
+[99.106s] -- Installing: /home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/local_setup.sh
+[99.107s] -- Installing: /home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/local_setup.zsh
+[99.113s] -- Installing: /home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/local_setup.dsv
+[99.114s] -- Installing: /home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/package.dsv
+[99.116s] -- Installing: /home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/ament_index/resource_index/packages/state_machine_pkg
+[99.116s] -- Installing: /home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/cmake/state_machine_pkgConfig.cmake
+[99.128s] -- Installing: /home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/cmake/state_machine_pkgConfig-version.cmake
+[99.130s] -- Installing: /home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg/share/state_machine_pkg/package.xml
+[99.150s] Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg' returned '0': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/sensors_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/kinematics_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/camera_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_service_pkg:/opt/ros/humble /usr/bin/cmake --install /home/cosmos/COSMOS-AFS/cosmos_ws/build/state_machine_pkg

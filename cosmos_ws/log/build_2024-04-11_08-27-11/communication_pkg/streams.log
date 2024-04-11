@@ -1,0 +1,39 @@
+[16.227s] Invoking command in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/communication_pkg': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/prefix_override:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/communication_pkg build --build-base /home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/build install --record /home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/install.log --single-version-externally-managed
+[21.871s] running egg_info
+[21.903s] creating ../../build/communication_pkg/communication_pkg.egg-info
+[21.905s] writing ../../build/communication_pkg/communication_pkg.egg-info/PKG-INFO
+[21.916s] writing dependency_links to ../../build/communication_pkg/communication_pkg.egg-info/dependency_links.txt
+[21.926s] writing entry points to ../../build/communication_pkg/communication_pkg.egg-info/entry_points.txt
+[21.932s] writing requirements to ../../build/communication_pkg/communication_pkg.egg-info/requires.txt
+[21.966s] writing top-level names to ../../build/communication_pkg/communication_pkg.egg-info/top_level.txt
+[21.967s] writing manifest file '../../build/communication_pkg/communication_pkg.egg-info/SOURCES.txt'
+[21.991s] reading manifest file '../../build/communication_pkg/communication_pkg.egg-info/SOURCES.txt'
+[22.001s] writing manifest file '../../build/communication_pkg/communication_pkg.egg-info/SOURCES.txt'
+[22.003s] running build
+[22.003s] running build_py
+[22.004s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/build
+[22.004s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/build/lib
+[22.005s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/build/lib/communication_pkg
+[22.006s] copying communication_pkg/SerialCommunication.py -> /home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/build/lib/communication_pkg
+[22.007s] copying communication_pkg/__init__.py -> /home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/build/lib/communication_pkg
+[22.010s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[22.011s]   warnings.warn(
+[22.011s] running install
+[22.012s] running install_lib
+[22.023s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages/communication_pkg
+[22.027s] copying /home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/build/lib/communication_pkg/SerialCommunication.py -> /home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages/communication_pkg
+[22.028s] copying /home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/build/lib/communication_pkg/__init__.py -> /home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages/communication_pkg
+[22.030s] byte-compiling /home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages/communication_pkg/SerialCommunication.py to SerialCommunication.cpython-310.pyc
+[22.039s] byte-compiling /home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages/communication_pkg/__init__.py to __init__.cpython-310.pyc
+[22.041s] running install_data
+[22.044s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/share/ament_index
+[22.045s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/share/ament_index/resource_index
+[22.055s] creating /home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/share/ament_index/resource_index/packages
+[22.056s] copying resource/communication_pkg -> /home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/share/ament_index/resource_index/packages
+[22.057s] copying package.xml -> /home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/share/communication_pkg
+[22.057s] running install_egg_info
+[22.066s] Copying ../../build/communication_pkg/communication_pkg.egg-info to /home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages/communication_pkg-0.0.0-py3.10.egg-info
+[22.095s] running install_scripts
+[22.518s] Installing SerialCommunication script to /home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/communication_pkg
+[22.528s] writing list of installed files to '/home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/install.log'
+[23.060s] Invoked command in '/home/cosmos/COSMOS-AFS/cosmos_ws/src/communication_pkg' returned '0': CMAKE_PREFIX_PATH=/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_interfaces:/home/cosmos/COSMOS-AFS/cosmos_ws/install/cosmos_bringup:/home/cosmos/COSMOS-AFS/cosmos_ws/install/state_machine_pkg:/home/cosmos/COSMOS-AFS/cosmos_ws/install/attitude_control_pkg PYTHONPATH=/home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/prefix_override:/home/cosmos/COSMOS-AFS/cosmos_ws/install/communication_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/communication_pkg build --build-base /home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/build install --record /home/cosmos/COSMOS-AFS/cosmos_ws/build/communication_pkg/install.log --single-version-externally-managed
