@@ -15,27 +15,31 @@ class Kinematics(Node):
         self.dcm_sub_ = self.create_subscription(DCM, "DCM", self.dcm_callback, 10)
 
         # Initialize:
-        self.R = np.zeros([3, 3])
-        self.t = 0
-        self.x = np.zeros([10, 1])
-        self.z0 = np.zeros([3, 1])
-        self.rw = np.zeros([3, 1])  # to be updated any time motors change
+        self.R = np.zeros([3, 3])  # DCM of target
+        self.t = 0  # timestamp of target
+        self.x = np.zeros([10, 1])  # state vector, [q, w, rw] = [attitude, angular velocity, RPMs]
+        self.z0 = np.zeros([3, 1])  # error quaternion qv per tracking series
+        self.rw = np.zeros([3, 1])  # RPMs of RWs, to be updated any time motors change
 
-        # Further initialize of constants for reaction wheels torque control:
-        #   - Measurements or calculations to optimize:
-        self.I_body_as_B = np.array([[0.4, 0, 0], [0, 0.3, 0], [0, 0, 0.6]])
-        self.Is = [5, 5, 5]  # inertia of reaction wheels
-        self.Kp = 1  # scalar
-        self.Kd = np.ones([3, 3])  # 3x3 matrix, needs to be solved as function of other control gains
-        self.Ki = np.ones([3, 3])  # 3x3 matrix, needs to be solved as function of other control gains
+        # User-defined measurements (for reaction wheels torque control):
+        self.I_body_as_B = np.array([[0.4, 0, 0], [0, 0.3, 0], [0, 0, 0.6]])  # inertia matrix, kg * m^2
+        rw_m = 0.325  # mass of reaction wheel in kilograms
+        rw_r = 1.5 * 0.0254  # radius of reaction wheel in meters
         self.gs1 = np.array([-1, 0, 0])[:, np.newaxis]
         self.gs2 = np.array([0, 1, 0])[:, np.newaxis]
         self.gs3 = np.array([0, 0, -1])[:, np.newaxis]
-        #   - Constants:
+        Ts = 2  # settling time of control loop in seconds
+        zeta = 1  # damping coefficient for max inertia, i.e., max(I_body_as_B)
+
+        # Constants derived from user-defined measurements (for reaction wheels torque control):
+        self.Kd = 2 / Ts * self.I_body_as_B  # control gain (derivative)
+        self.Kp = 4 / (zeta * Ts) ** 2 * np.max(self.I_body_as_B)  # control gain (proportional)
+        self.Ki = np.zeros([3, 3])  # control gain (integral), approximating as zero
         self.Gs = np.squeeze([self.gs1, self.gs2, self.gs3]).T  # projection to spin axis
         self.GsT = self.Gs.T
         self.GsT_iGsGsT = np.matmul(self.GsT, np.linalg.inv(np.matmul(self.Gs, self.GsT)))
         self.n = len(self.Gs)  # = 3, number of reaction wheels
+        self.Is = [rw_m * rw_r ** 2 / 2] * self.n  # inertias of reaction wheels approximating all as solid cylinder, 1/2*M*R^2
         self.IsGs = np.zeros_like(self.Gs)
         for i in range(self.n):
             self.IsGs[:, i] = self.Is[i] * self.Gs[:, i]
@@ -138,7 +142,7 @@ class Kinematics(Node):
         
         self.x = self.ode45_stuff(x0)  # state vector, integration of (x0 + xdot*dt)
 
-        self.z0 += q[1::]  # update after ode45 called; not sure if qv but assuming because Ki is 3x3
+        self.z0 += q[1::]  # update after ode45 called
         self.ode45_args[0] = self.z0
 
         return self.x, self.z0
