@@ -5,3 +5,4 @@ bool is_target
 bool is_abort
 float64[9] dcm
 float64 t
+bool is_first
