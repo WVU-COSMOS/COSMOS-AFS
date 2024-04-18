@@ -64,6 +64,9 @@ class Kinematics(Node):
 
         self.get_logger().info("Incoming DCM saved.")
 
+        # NEED TO RESET ERROR QUATERNION qv IF NEW TRACKING SERIES (currently, Ki=0 allows z to be ignored but for optimization / future dev., z should be reset here and Ki nonzero):
+        # if msg.NEW_SERIES == 1:
+        #     self.z0 = np.zeros([3, 1])  # reset error
 
     def dcm_to_q(self, dcm):
         """Convert DCM to quaternion using Shepherd's method."""
