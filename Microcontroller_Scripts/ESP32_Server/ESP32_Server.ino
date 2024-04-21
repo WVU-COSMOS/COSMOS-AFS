@@ -37,9 +37,9 @@
 #define STP3_MS1 25
 #define STP3_MS2 26
 
-//Stepper stepper1 = Stepper(STEPS_REVOLUTION,STP1_STEP,STP1_DIR,STP1_MS1,STP1_MS2);
-//Stepper stepper2 = Stepper(STEPS_REVOLUTION,STP2_STEP,STP2_DIR,STP2_MS1,STP2_MS2);
-//Stepper stepper3 = Stepper(STEPS_REVOLUTION,STP3_STEP,STP3_DIR,STP3_MS1,STP3_MS2);
+Stepper stepper1 = Stepper(STEPS_REVOLUTION,STP1_STEP,STP1_DIR,STP1_MS1,STP1_MS2);
+Stepper stepper2 = Stepper(STEPS_REVOLUTION,STP2_STEP,STP2_DIR,STP2_MS1,STP2_MS2);
+Stepper stepper3 = Stepper(STEPS_REVOLUTION,STP3_STEP,STP3_DIR,STP3_MS1,STP3_MS2);
 
 // Motors
 Servo motor1;
@@ -95,9 +95,9 @@ void setup()
   delay(3000);
   
   // Setting up the Stepper motors
-  //stepper1.setSpeed(STEPPER_SPEED);
-  //stepper2.setSpeed(STEPPER_SPEED);
-  //stepper3.setSpeed(STEPPER_SPEED);
+  stepper1.setSpeed(STEPPER_SPEED);
+  stepper2.setSpeed(STEPPER_SPEED);
+  stepper3.setSpeed(STEPPER_SPEED);
 
   // Set up the ESP32 as an access point
   WiFi.softAP(ssid, password);
@@ -195,6 +195,38 @@ void performTask(String command)
           motor3off();
         break;
 
+      case 5:
+          motor1spin(speedX);
+          motor3spin(speedZ);
+          digitalWrite(BLUE_LED, HIGH);
+          delay(timeX);
+          digitalWrite(BLUE_LED, LOW);
+          motor1off();
+          motor3off();
+        break;
+
+      case 6:
+          motor2spin(speedY);
+          motor3spin(speedZ);
+          digitalWrite(BLUE_LED, HIGH);
+          delay(timeX);
+          digitalWrite(BLUE_LED, LOW);
+          motor2off();
+          motor3off();
+        break;
+
+      case 7:
+          motor1spin(speedX);
+          motor2spin(speedY);
+          motor3spin(speedZ);
+          digitalWrite(BLUE_LED, HIGH);
+          delay(timeX);
+          digitalWrite(BLUE_LED, LOW);
+          motor1off();
+          motor2off();
+          motor3off();
+        break;
+
       default:
         Serial.println("Unknown case number");
         break;
@@ -238,17 +270,17 @@ void motor3off()
   motor3.writeMicroseconds(stopSpeed);
 }
 
-//void stepper1spin(int steps)
-//{
-//  stepper1.step(steps);
-//}
-//
-//void stepper2spin(int steps)
-//{
-//  stepper2.step(steps);
-//}
-//
-//void stepper3spin(int steps)
-//{
-//  stepper3.step(steps);
-//}
+void stepper1spin(int steps)
+{
+  stepper1.step(steps);
+}
+
+void stepper2spin(int steps)
+{
+  stepper2.step(steps);
+}
+
+void stepper3spin(int steps)
+{
+  stepper3.step(steps);
+}
