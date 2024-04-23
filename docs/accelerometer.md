@@ -1,15 +1,20 @@
+# Accelerometer
+
+Resources for mathematics:
 - https://physics.stackexchange.com/questions/578359/possible-to-convert-accelerometer-x-y-z-measurements-into-quaternion
 - https://ahrs.readthedocs.io/en/latest/filters/aqua.html
 - https://wiki.dfrobot.com/How_to_Use_a_Three-Axis_Accelerometer_for_Tilt_Sensing
+
+Stock example running GY-521 MPU6050 accelerometer:
 - https://randomnerdtutorials.com/esp32-mpu-6050-accelerometer-gyroscope-arduino/
 
-Decompose 3 accelerations into Euler angles.
+---
 
-
-
-![COSMOS-Body-Frame](/docs/_static/body_frame.png)
+Goal is to decompose 3 accelerations into Euler angles.
 
 Defining accelerometer axes to align with body frame such that gravity is in $-\hat{b}_3$ direction when satellite is at rest,
+
+![COSMOS-Body-Frame](/docs/_static/body_frame.png)
 
 $\mathbf{R}^A_B {}^A\mathbf{a} = {}^B\mathbf{a} = \begin{bmatrix} 0 \\ 0 \\ -g \end{bmatrix}$
 
