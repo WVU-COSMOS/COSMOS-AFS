@@ -20,18 +20,34 @@ The IMU sensor for COSMOS is GY-521 MPU6050. This connects to the ESP32 DAQ via 
 
 The IMU measures linear acceleration and angular velocity. The goal is to decompose the three measured accelerations into Euler angles pitch $\theta$ and roll $\phi$. Angular velocity may be used as is.
 
-First, defining accelerometer axes rotated from accelerometer frame $A$ by fixed $\mathbf{R}^A_B$ to align with body frame $B$ such that gravity is in $-\hat{b}_3$ direction when satellite attitude is flat (i.e., $[\phi, \theta] = \mathbf{0}$),
+First, defining accelerometer axes rotated from accelerometer frame $A$ by fixed $\mathbf{R}^A_B$ to align with body frame $B$ such that gravity is in $-\hat{b}_3$ direction when satellite attitude is flat (i.e., $(\phi, \theta) = 0$),
 
 ![COSMOS-Body-Frame](/docs/_static/body_frame.png)
 
 To be thorough, for a 321 Euler sequence,
+
 ```math
-\mathbf{R}^A_B ^A\mathbf{a} = \begin{cases} [-g,\ 0,\ 0]^T \\ [0,\ -g,\ 0]^T \\ [0,\ 0,\ -g]^T \end{cases}\ \text{where}\ (\phi, \theta, \psi) \in \begin{cases} (\mathbb{R}, -90^{\circ}, \mathbb{R}) \\ (90^{\circ}, 0^{\circ}, \mathbb{R}) \\ (0^{\circ}, 0^{\circ}, \mathbb{R}) \end{cases}\ \text{and}\ ^A\mathbf{a}\ \text{are measured accelerations.}
+{}^B\mathbf{a} = \mathbf{R}^A_B {}^A\mathbf{a} = \begin{cases} [-g,\ 0,\ 0]^T \\ [0,\ -g,\ 0]^T \\ [0,\ 0,\ -g]^T \end{cases}\ \text{where}\ (\phi, \theta, \psi) \in \begin{cases} (\mathbb{R}, -90^{\circ}, \mathbb{R}) \\ (90^{\circ}, 0^{\circ}, \mathbb{R}) \\ (0^{\circ}, 0^{\circ}, \mathbb{R}) \end{cases}\ \text{and}\ {}^A\mathbf{a}\ \text{are measured accelerations.}
 ```
 
-Then, 321 Euler sequence without yaw yields
+Then, the $(\phi, \theta, \psi)$ angles for a 321 Euler sequence that the accelerometer has undergone from ${}^B\mathbf{a} = [0,\ 0\, -g]^T$ are
+
 ```math
-\mathbf{R}_1(-\phi) \mathbf{R}_2(-\theta) {}^B\mathbf{a} = \begin{bmatrix} 1 & 0 & 0 \\ 0 & \cos(-\phi) & -\sin(-\phi) \\ 0 & \sin(-\phi) & \cos(-\phi) \end{bmatrix} \begin{bmatrix} \cos(-\theta) & 0 & \sin(-\theta) \\ 0 & 1 & 0 \\ -\sin(-\theta) & 0 & \cos(-\theta) \end{bmatrix} \begin{bmatrix} 0 \\ 0 \\ -g \end{bmatrix} = \begin{bmatrix} g \sin(\theta) \\ -g \sin(\phi) \cos(\theta) \\ -g \cos(\phi) \cos(\theta) \end{bmatrix}
+\mathbf{R}_1(-\phi) \mathbf{R}_2(-\theta) \mathbf{R}_3(-\psi) {}^B\mathbf{a} =
+\mathbf{R}_1(-\phi) \mathbf{R}_2(-\theta) {}^B\mathbf{a} =
+\begin{bmatrix} 1 & 0 & 0 \\ 0 & \cos(-\phi) & -\sin(-\phi) \\ 0 & \sin(-\phi) & \cos(-\phi) \end{bmatrix}
+\begin{bmatrix} \cos(-\theta) & 0 & \sin(-\theta) \\ 0 & 1 & 0 \\ -\sin(-\theta) & 0 & \cos(-\theta) \end{bmatrix}
+\begin{bmatrix} 0 \\ 0 \\ -g \end{bmatrix} =
+\begin{bmatrix} g \sin(\theta) \\ -g \sin(\phi) \cos(\theta) \\ -g \cos(\phi) \cos(\theta) \end{bmatrix}
+```
+
+Note yaw $\psi$ cannot be determined because 
+
+```math
+\mathbf{R}_3(-\psi) {}^B\mathbf{a} =
+\begin{bmatrix} \cos(-\psi) & -\sin(-\psi) & 0 \\ \sin(-\psi) & \cos(-\psi) & 0 \\ 0 & 0 & 1 \end{bmatrix}
+\begin{bmatrix} 0 \\ 0 \\ -g \end{bmatrix} =
+\begin{bmatrix} 0 \\ 0 \\ -g \end{bmatrix} = {}^B\mathbf{a}
 ```
 
 Roll $\phi$ and pitch $\theta$ are then
@@ -43,6 +59,8 @@ Roll $\phi$ and pitch $\theta$ are then
 \theta = \tan^{-1}(\frac{\sin(\theta)}{\cos(\theta)}) = \tan^{-1}(\frac{g \sin(\theta)}{\sqrt{(-g \sin(\phi) \cos(\theta))^2 + (-g \cos(\phi) \cos(\theta))^2}}) = \tan^{-1}(\frac{a_x}{\sqrt{a_y^2 + a_z^2}}) \implies \text{np.arctan2}(a_x,\ \sqrt{a_y^2 + a_z^2}) 
 \end{cases}
 ```
+
+## Attitude Thresholding
 
 Examining the lowest point of the cubic satellite with side length $L$,
 
@@ -60,15 +78,4 @@ T \ge C_0 - C_{\phi,\theta} = -\frac{L}{2} + \frac{L}{2}(\cos(|\phi|) (\sin(|\th
 2 \frac{T}{L} + 1 \ge \sin(|\phi|) + \cos(|\phi|)(\sin(|\theta|)+\cos(|\theta|))
 ```
 
-
-
-
----
-
-With yaw, 321 yields
-```math
-\mathbf{R}_1(-\phi) \mathbf{R}_2(-\theta) {}^B\mathbf{a} = \begin{bmatrix} 1 & 0 & 0 \\ 0 & \cos(-\phi) & -\sin(-\phi) \\ 0 & \sin(-\phi) & \cos(-\phi) \end{bmatrix} \begin{bmatrix} \cos(-\theta) & 0 & \sin(-\theta) \\ 0 & 1 & 0 \\ -\sin(-\theta) & 0 & \cos(-\theta) \end{bmatrix} \begin{bmatrix} 0 \\ 0 \\ -g \end{bmatrix} = \begin{bmatrix} g \sin(\theta) \\ -g \sin(\phi) \cos(\theta) \\ -g \cos(\phi) \cos(\theta) \end{bmatrix}
-```
-
-
-
+It may be most practical to implement something simple like $(|\phi|, |\theta|) \lesssim 40^{\circ}$, but the above $2 \frac{T}{L} + 1$ is the true threshold.
