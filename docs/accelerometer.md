@@ -2,7 +2,7 @@
 
 ## Overview
 
-The IMU sensor for COSMOS is GY-521 MPU6050. This connects to the ESP32 DAQ via [*ESP32_DAQ.ino*](Microcontroller_Scripts/ESP32_DAQ/ESP32_DAQ.ino) which was based upon the Adafruit MPU6050 [*basis_readings.ino*](https://github.com/adafruit/Adafruit_MPU6050/blob/master/examples/basic_readings/basic_readings.ino) stock example. As of April 24th, 2024, the IMU does not interface with ROS and instead the Kinematics node is written to calculate angular velocity from $\dot{\mathbf{R}} = \mathbf{R} [^B\vec{\mathbf{\omega}}_{B/N} \times]$ using a backwards difference approximation of $\dot{\mathbf{R}}$. Attitude is then thresholded above the SAB table by decomposing $\overline{\mathbf{q}}^N_B$ from the new proposed state vector into Euler angles, thresholding pitch and roll, then reconstructing a new DCM to re-propagate the state vector if pitch or roll were thresholded. The below wiring diagram was taken from https://randomnerdtutorials.com/esp32-mpu-6050-accelerometer-gyroscope-arduino/.
+The IMU sensor for COSMOS is GY-521 MPU6050. This connects to the ESP32 DAQ via [*ESP32_DAQ.ino*](Microcontroller_Scripts/ESP32_DAQ/ESP32_DAQ.ino) which was based upon the Adafruit MPU6050 [*basis_readings.ino*](https://github.com/adafruit/Adafruit_MPU6050/blob/master/examples/basic_readings/basic_readings.ino) stock example. As of April 24th, 2024, the IMU does not interface with ROS and instead the Kinematics node is written to calculate angular velocity from $\dot{\mathbf{R}} = \mathbf{R} [^B\vec{\mathbf{\omega}}_{B/N} \times]$ using a backwards difference approximation of $\dot{\mathbf{R}}$. Attitude is then thresholded above the SAB table by decomposing $\overline{\mathbf{q}}^N_B$ from the new proposed state vector into Euler angles, thresholding pitch and roll, then reconstructing a new DCM to re-propagate the state vector if pitch or roll were thresholded. In future development, this document can be implemented to measure angular velocity, pitch, and roll directly, instead of approximating with calculations. The below wiring diagram was taken from https://randomnerdtutorials.com/esp32-mpu-6050-accelerometer-gyroscope-arduino/.
 
 ![GY-521_MPU6050_wiring_diagram_for_ESP32](/docs/_static/GY-521_MPU6050_wiring_diagram_for_ESP32.png)
 
@@ -26,9 +26,8 @@ First, defining accelerometer axes rotated from accelerometer frame $A$ by fixed
 
 To be thorough, for a 321 Euler sequence,
 ```math
-\mathbf{R}^A_B = \begin{cases} [-g,\ 0,\ 0]^T \\ [0,\ -g,\ 0]^T \\ [0,\ 0,\ -g]^T \end{cases},\ (\phi, \theta, \psi) \in \begin{cases} (\mathbb{R}, -90^{\circ}, \mathbb{R}) \\ (90^{\circ}, 0^{\circ}, \mathbb{R}) \\ (0^{\circ}, 0^{\circ}, \mathbb{R}) \end{cases}
+\mathbf{R}^A_B ^A\mathbf{a} = \begin{cases} [-g,\ 0,\ 0]^T \\ [0,\ -g,\ 0]^T \\ [0,\ 0,\ -g]^T \end{cases}\ \text{where}\ (\phi, \theta, \psi) \in \begin{cases} (\mathbb{R}, -90^{\circ}, \mathbb{R}) \\ (90^{\circ}, 0^{\circ}, \mathbb{R}) \\ (0^{\circ}, 0^{\circ}, \mathbb{R}) \end{cases}\ \text{and}\ ^A\mathbf{a}\ \text{are measured accelerations.}
 ```
-where ${}^A\mathbf{a}$ are measured accelerations.
 
 Then, 321 Euler sequence without yaw yields
 ```math
