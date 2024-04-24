@@ -1,4 +1,4 @@
-# Accelerometer
+# Attitude Thresholding With IMU
 
 ## Overview
 
@@ -79,3 +79,5 @@ T \ge C_0 - C_{\phi,\theta} = -\frac{L}{2} + \frac{L}{2}(\cos(|\phi|) (\sin(|\th
 ```
 
 It may be most practical to implement something simple like $(|\phi|, |\theta|) \lesssim 40^{\circ}$, but the above $2 \frac{T}{L} + 1$ is the true threshold.
+
+After thresholding roll $\phi$ and pitch $\theta$ as needed, reconstruct $\mathbf{R}^N_B$ to re-propagate the state vector such that the rotation is within the bounds of the SAB table. Note yaw $\psi$ will likely need to be inferred from the attitude quaternion $\overline{\mathbf{q}}^N_B$ contained in the state vector by converting to a DCM and deconstructing into $(\phi, \theta, \psi)$ 321 Euler sequence. From [*attitude_thresholding_without_IMU.md*](\docs/attitude_thresholding_without_IMU.md), that is $\psi = $.
