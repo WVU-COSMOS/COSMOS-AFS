@@ -12,7 +12,9 @@
 - [Flow of Kinematics](#flow-of-kinematics)
 - [ROS Nodes, Topics, and Messages (in progress)](#ros-nodes-topics-and-messages-in-progress)
 - [Documentation](#documentation)
+- [License](#license
 - [Contact](#contact)
+- [Citations](#citations)
 
 <!-- tocstop -->
 
@@ -127,14 +129,15 @@ Some documentation is stored in the *docs* folder. Included, as of April 24th, 2
 - [attitude_thresholding_without_IMU](/docs/attitude_thresholding_without_IMU.md)
 - [attitude_thresholding_with_IMU](/docs/attitude_thresholding_with_IMU.md)
 
+## License
+
+Please see [LICENSE](LICENSE).
+
 ## Contact
 
-West Virginia University, Morgantown, WV
-
-jakepkrell@gmail.com
-
-etc.
+[Jacob P. Krell](mailto:[jakepkrell@gmail.com])
+[Vinicius D. Ferreira](mailto:[viniciusdunker@gmail.com])
 
 ## Citations
 
-If referencing this project, please consult Dr. Andrew Rhodes on how to cite. The preferred citation(s) may change over time.
+Please consult [Dr. Andrew Rhodes](mailto:[andrew.rhodes@mail.wvu.edu]) on how to cite. The preferred citation(s) may change over time.
