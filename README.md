@@ -135,9 +135,10 @@ Please see [LICENSE](LICENSE).
 
 ## Contact
 
-2023-2024 Developers:
-- [Jacob P. Krell](mailto:[jakepkrell@gmail.com])
-- [Vinicius D. Ferreira](mailto:[viniciusdunker@gmail.com])
+Developers:
+- August 2023 - May 2024
+    - [Jacob P. Krell](mailto:[jakepkrell@gmail.com])
+    - [Vinicius D. Ferreira](mailto:[viniciusdunker@gmail.com])
 
 ## Citations
 
