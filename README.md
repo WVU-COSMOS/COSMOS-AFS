@@ -12,7 +12,7 @@
 - [Flow of Kinematics](#flow-of-kinematics)
 - [ROS Nodes, Topics, and Messages (in progress)](#ros-nodes-topics-and-messages-in-progress)
 - [Documentation](#documentation)
-- [License](#license
+- [License](#license)
 - [Contact](#contact)
 - [Citations](#citations)
 
@@ -135,8 +135,9 @@ Please see [LICENSE](LICENSE).
 
 ## Contact
 
-[Jacob P. Krell](mailto:[jakepkrell@gmail.com])
-[Vinicius D. Ferreira](mailto:[viniciusdunker@gmail.com])
+2023-2024 Developers:
+- [Jacob P. Krell](mailto:[jakepkrell@gmail.com])
+- [Vinicius D. Ferreira](mailto:[viniciusdunker@gmail.com])
 
 ## Citations
 
