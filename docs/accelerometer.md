@@ -1,22 +1,26 @@
 # Accelerometer
 
-The IMU sensor for COSMOS is GY-521 MPU6050. This connects to the ESP32 DAQ via 'Microcontroller_Scripts/ESP32_DAQ', which was modified from the Adafruit MPU6050 'basis_readings.ino' stock example. As of 2024/04/24, the IMU does not interface with the ROS2 code and instead the Kinematics node is written to calculate the angular velocity from $[\omega \cross] = \dot{\mathbf{R}}$.
-- Example: https://github.com/adafruit/Adafruit_MPU6050/blob/master/examples/basic_readings/basic_readings.ino
-- Walkthrough of example, with wiring diagram: https://randomnerdtutorials.com/esp32-mpu-6050-accelerometer-gyroscope-arduino/
+## Overview
 
-Resources for mathematics:
+The IMU sensor for COSMOS is GY-521 MPU6050. This connects to the ESP32 DAQ via [*ESP32_DAQ.ino*](Microcontroller_Scripts/ESP32_DAQ/ESP32_DAQ.ino) which was based upon the Adafruit MPU6050 [*basis_readings.ino*](https://github.com/adafruit/Adafruit_MPU6050/blob/master/examples/basic_readings/basic_readings.ino) stock example. As of April 24th, 2024, the IMU does not interface with ROS and instead the Kinematics node is written to calculate angular velocity from $\dot{\mathbf{R}} = \mathbf{R} [^B\vec{\mathbf{\omega}}_{B/N} \times]$ using a backwards difference approximation of $\dot{\mathbf{R}}$. Attitude is then thresholded above the SAB table by decomposing $\overline{\mathbf{q}}^N_B$ from the new proposed state vector into Euler angles, thresholding pitch and roll, then reconstructing a new DCM to re-propagate the state vector if pitch or roll were thresholded. The below wiring diagram was taken from https://randomnerdtutorials.com/esp32-mpu-6050-accelerometer-gyroscope-arduino/.
+
+![GY-521_MPU6050_wiring_diagram_for_ESP32](/docs/_static/GY-521_MPU6050_wiring_diagram_for_ESP32.png)
+
+---
+
+## Resources for Mathematics
+
 - https://physics.stackexchange.com/questions/578359/possible-to-convert-accelerometer-x-y-z-measurements-into-quaternion
 - https://ahrs.readthedocs.io/en/latest/filters/aqua.html
 - https://wiki.dfrobot.com/How_to_Use_a_Three-Axis_Accelerometer_for_Tilt_Sensing
 
-Stock example running GY-521 MPU6050 accelerometer:
-- https://randomnerdtutorials.com/esp32-mpu-6050-accelerometer-gyroscope-arduino/
-
 ---
 
-Goal is to decompose 3 accelerations into Euler angles.
+## Dynamics Derivation
 
-Defining accelerometer axes to align with body frame such that gravity is in $-\hat{b}_3$ direction when satellite is at rest,
+The IMU measures linear acceleration and angular velocity. The goal is to decompose the three measured accelerations into Euler angles pitch $\theta$ and roll $\phi$. Angular velocity may be used as is.
+
+First, defining accelerometer axes to align with body frame such that gravity is in $-\hat{b}_3$ direction when satellite is at rest,
 
 ![COSMOS-Body-Frame](/docs/_static/body_frame.png)
 
@@ -55,6 +59,7 @@ T \ge C_0 - C_{\phi,\theta} = -\frac{L}{2} + \frac{L}{2}(\cos(|\phi|) (\sin(|\th
 \implies
 2 \frac{T}{L} + 1 \ge \sin(|\phi|) + \cos(|\phi|)(\sin(|\theta|)+\cos(|\theta|))
 ```
+
 
 
 
