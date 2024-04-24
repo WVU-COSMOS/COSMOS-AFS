@@ -61,7 +61,7 @@ Or, if not debugging and launching all nodes at once:
 ros2 launch cosmos_bringup cosmos.launch.py
 ```
 
-The following package and node names are outdated, but the format is the same. Start the nodes as follows:
+The following package and node names are outdated, but the format is the same. For a current list of node names, see [rosgraph](/_static/rosgraph.png). Start the nodes as follows:
 
 GCS (Ground Control Station):
 ```cmd
