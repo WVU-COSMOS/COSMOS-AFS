@@ -82,7 +82,7 @@ It may be most practical to implement something simple like $(|\phi|, |\theta|) 
 
 After thresholding roll $\phi$ and pitch $\theta$ as needed, reconstruct $\mathbf{R}^N_B$ to re-propagate the state vector such that the rotation is within the bounds of the SAB table. Note yaw $\psi$ will likely need to be inferred from the attitude quaternion $\overline{\mathbf{q}}^N_B$ contained in the state vector by converting to a DCM and deconstructing into $(\phi, \theta, \psi)$ 321 Euler sequence. 
 
-From [*attitude_thresholding_without_IMU.md*](/docs/attitude_thresholding_without_IMU.md), that is $\psi = \text{np.arctan2}(\frac{R_{12}}{\cos(\theta)},\ \frac{R_{11}}{\cos(\theta)})$ where $R_{12}$ and $R_{11}$ come from $\overline{\mathbf{q}}^N_B$ but $\theta$ comes from the IMU; then,
+From [*attitude_thresholding_without_IMU.md*](docs/attitude_thresholding_without_IMU.md), that is $\psi = \text{np.arctan2}(\frac{R_{12}}{\cos(\theta)},\ \frac{R_{11}}{\cos(\theta)})$ where $R_{12}$ and $R_{11}$ come from $\overline{\mathbf{q}}^N_B$ but $\theta$ comes from the IMU; then,
 
 ```math
 \mathbf{R}^N_B = 
