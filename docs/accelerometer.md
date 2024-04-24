@@ -20,16 +20,17 @@ The IMU sensor for COSMOS is GY-521 MPU6050. This connects to the ESP32 DAQ via 
 
 The IMU measures linear acceleration and angular velocity. The goal is to decompose the three measured accelerations into Euler angles pitch $\theta$ and roll $\phi$. Angular velocity may be used as is.
 
-First, defining accelerometer axes to align with body frame such that gravity is in $-\hat{b}_3$ direction when satellite is at rest,
+First, defining accelerometer axes rotated from accelerometer frame $A$ by fixed $\mathbf{R}^A_B$ to align with body frame $B$ such that gravity is in $-\hat{b}_3$ direction when satellite attitude is flat (i.e., $[\phi, \theta] = \mathbf{0}$),
 
 ![COSMOS-Body-Frame](/docs/_static/body_frame.png)
 
+To be thorough, for a 321 Euler sequence,
 ```math
-\mathbf{R}^A_B {}^A\mathbf{a} = {}^B\mathbf{a} = \begin{bmatrix} 0 \\ 0 \\ -g \end{bmatrix}
+\mathbf{R}^A_B = \begin{cases} [-g,\ 0,\ 0]^T \\ [0,\ -g,\ 0]^T \\ [0,\ 0,\ -g]^T \end{cases},\ (\phi, \theta, \psi) \in \begin{cases} (\mathbb{R}, -90^{\circ}, \mathbb{R}) \\ (90^{\circ}, 0^{\circ}, \mathbb{R}) \\ (0^{\circ}, 0^{\circ}, \mathbb{R}) \end{cases}
 ```
+where ${}^A\mathbf{a}$ are measured accelerations.
 
 Then, 321 Euler sequence without yaw yields
-
 ```math
 \mathbf{R}_1(-\phi) \mathbf{R}_2(-\theta) {}^B\mathbf{a} = \begin{bmatrix} 1 & 0 & 0 \\ 0 & \cos(-\phi) & -\sin(-\phi) \\ 0 & \sin(-\phi) & \cos(-\phi) \end{bmatrix} \begin{bmatrix} \cos(-\theta) & 0 & \sin(-\theta) \\ 0 & 1 & 0 \\ -\sin(-\theta) & 0 & \cos(-\theta) \end{bmatrix} \begin{bmatrix} 0 \\ 0 \\ -g \end{bmatrix} = \begin{bmatrix} g \sin(\theta) \\ -g \sin(\phi) \cos(\theta) \\ -g \cos(\phi) \cos(\theta) \end{bmatrix}
 ```
@@ -62,6 +63,13 @@ T \ge C_0 - C_{\phi,\theta} = -\frac{L}{2} + \frac{L}{2}(\cos(|\phi|) (\sin(|\th
 
 
 
+
+---
+
+With yaw, 321 yields
+```math
+\mathbf{R}_1(-\phi) \mathbf{R}_2(-\theta) {}^B\mathbf{a} = \begin{bmatrix} 1 & 0 & 0 \\ 0 & \cos(-\phi) & -\sin(-\phi) \\ 0 & \sin(-\phi) & \cos(-\phi) \end{bmatrix} \begin{bmatrix} \cos(-\theta) & 0 & \sin(-\theta) \\ 0 & 1 & 0 \\ -\sin(-\theta) & 0 & \cos(-\theta) \end{bmatrix} \begin{bmatrix} 0 \\ 0 \\ -g \end{bmatrix} = \begin{bmatrix} g \sin(\theta) \\ -g \sin(\phi) \cos(\theta) \\ -g \cos(\phi) \cos(\theta) \end{bmatrix}
+```
 
 
 
