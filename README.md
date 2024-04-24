@@ -26,6 +26,8 @@ Manual for users and developers of the Avionics and Flight Software package for 
 
 From a GUI, the user will select a mission corresponding to an integer which is published internally. The list of missions here is a template and brainstorm of how integers may be used to index missions. See [*GroundStation.py*](Ground_Station/GroundStation.py) for an actual list of missions, and ensure the missions listed there are supported in [*state_machine_node.cpp*](cosmos_ws/src/state_machine_pkg/src/state_machine_node.cpp). 
 
+To communicate from a GCS laptop to the satellite, an ESP32 running [*ESP32_GroundStation.ino*](Microcontroller_Scripts/ESP32_GroundStation/ESP32_GroundStation.ino) should be connected to the laptop. The laptop should then run [GroundStation.py](Ground_Station/GroundStation.py), with the proper COM port in the Python script defined. In the laptop's command terminal, a preliminary GUI should appear asking for the user to input a mission index. In future development, it is intended for the user to simply select a mission name from a list in an actual GUI instead of interfacing with the command terminal. See [*GroundStationGUI_preliminary.png*](/docs/_static/GroundStationGUI_preliminary.png) for an example of the preliminary GUI.
+
 As an example for simulating a GCS command in ROS, tracking red light with the nontracking mission being to orbit is called like
 ```cmd
 ros2 topic pub --once /gcs cosmos_interfaces/msg/GCS "{mission: 1120}"
