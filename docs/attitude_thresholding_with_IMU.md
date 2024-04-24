@@ -80,4 +80,13 @@ T \ge C_0 - C_{\phi,\theta} = -\frac{L}{2} + \frac{L}{2}(\cos(|\phi|) (\sin(|\th
 
 It may be most practical to implement something simple like $(|\phi|, |\theta|) \lesssim 40^{\circ}$, but the above $2 \frac{T}{L} + 1$ is the true threshold.
 
-After thresholding roll $\phi$ and pitch $\theta$ as needed, reconstruct $\mathbf{R}^N_B$ to re-propagate the state vector such that the rotation is within the bounds of the SAB table. Note yaw $\psi$ will likely need to be inferred from the attitude quaternion $\overline{\mathbf{q}}^N_B$ contained in the state vector by converting to a DCM and deconstructing into $(\phi, \theta, \psi)$ 321 Euler sequence. From [*attitude_thresholding_without_IMU.md*](\docs/attitude_thresholding_without_IMU.md), that is $\psi = $.
+After thresholding roll $\phi$ and pitch $\theta$ as needed, reconstruct $\mathbf{R}^N_B$ to re-propagate the state vector such that the rotation is within the bounds of the SAB table. Note yaw $\psi$ will likely need to be inferred from the attitude quaternion $\overline{\mathbf{q}}^N_B$ contained in the state vector by converting to a DCM and deconstructing into $(\phi, \theta, \psi)$ 321 Euler sequence. From [*attitude_thresholding_without_IMU.md*](\docs/attitude_thresholding_without_IMU.md), that is $\psi = \text{np.arctan2}(\frac{R_{12}}{\cos(\theta)},\ \frac{R_{11}}{\cos(\theta)})$ where $R_{12}$ and $R_{11}$ come from $\overline{\mathbf{q}}^N_B$ but $\theta$ comes from the IMU.
+
+Then,
+
+```math
+\mathbf{R}^N_B = 
+```
+
+and this DCM replaces the current $\mathbf{R}$ so that a new $\dot{\mathbf{R}}$ may drive the re-propagation of the state vector in the Kinematics node. Be careful if the previous DCM was received from the ImageToDCM node, as that will be $\mathbf{R}^{Camera}_{Target}$ instead of $\mathbf{R}^N_B$.
+
