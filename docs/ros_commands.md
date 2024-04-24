@@ -2,6 +2,13 @@
 
 ## Environment
 
+Linux is required. If working on Windows,
+1. Download and install WSL and Ubuntu;
+2. Install ROS (https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html);
+3. Run WSL in VS Code (https://code.visualstudio.com/docs/remote/wsl-tutorial);
+
+Then, all the following may be run in the command terminal from within VS Code.
+
 Clone main GitHub branch, create new branch, and set new branch as current:
 ```cmd
 git clone https://github.com/WVU-COSMOS/COSMOS-AFS.git
@@ -15,7 +22,7 @@ source /opt/ros/humble/setup.bash
 source ~/COSMOS-AFS/cosmos_ws/install/local_setup.sh
 ```
 
-Then, each time after opening VS Code:
+Then, in order to enable 'ros2' commands and 'colcon build' for creating packages and nodes:
 ```cmd
 source .bashrc
 ```
@@ -54,12 +61,12 @@ Or, if not debugging and launching all nodes at once:
 ros2 launch cosmos_bringup cosmos.launch.py
 ```
 
-Start the nodes as follows:
+The following package and node names are outdated, but the format is the same. For a more current list of node names, see [*rosgraph.png*](/docs/_static/rosgraph.png). Start the nodes as follows:
 
-<!-- GCS (Ground Control Station):
+GCS (Ground Control Station):
 ```cmd
 ros2 run ground_control_pkg GCS
-``` -->
+```
 
 SM (State Machine):
 ```cmd
@@ -86,12 +93,10 @@ X (Dynamics / integration of state vector)
 ros2 run dynamics_pkg X
 ```
 
-more
+Other
 ```cmd
-
+ros2 run other_pkg other_node
 ```
-
-
 
 ## Sending messages
 
@@ -100,7 +105,7 @@ Simulate user-selected GCS mission:
 ros2 topic pub --once /gcs cosmos_interfaces/msg/GCS "{mission: 1111}"
 ```
 
-## Other considerations for building on R-Pi
+## Other considerations for building on RasPi
 
 The ODE solver, ```scipy.integrate.solve_ivp```, requires older numpy versions so ensure the R-Pi environment prior to building has:
 ```cmd

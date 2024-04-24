@@ -11,6 +11,10 @@
 - [Flow of CameraSM (i.e., Track Missions)](#flow-of-camerasm-ie-track-missions)
 - [Flow of Kinematics](#flow-of-kinematics)
 - [ROS Nodes, Topics, and Messages (in progress)](#ros-nodes-topics-and-messages-in-progress)
+- [Documentation](#documentation)
+- [License](#license)
+- [Contact](#contact)
+- [Citations](#citations)
 
 <!-- tocstop -->
 
@@ -20,12 +24,16 @@ Manual for users and developers of the Avionics and Flight Software package for 
 
 ## Ground Control Station (GCS) Commands
 
-From a GUI, the user will select a mission corresponding to an integer which is published internally. To track red light with the nontracking mission being to orbit, 
+From a GUI, the user will select a mission corresponding to an integer which is published internally. The list of missions here is a template and brainstorm of how integers may be used to index missions. See [*GroundStation.py*](Ground_Station/GroundStation.py) for an actual list of missions, and ensure the missions listed there are supported in [*state_machine_node.cpp*](cosmos_ws/src/state_machine_pkg/src/state_machine_node.cpp). 
+
+To communicate from a GCS laptop to the satellite, an ESP32 running [*ESP32_GroundStation.ino*](Microcontroller_Scripts/ESP32_GroundStation/ESP32_GroundStation.ino) should be connected to the laptop. The laptop should then run [*GroundStation.py*](Ground_Station/GroundStation.py), with the proper COM port in the Python script defined. In the laptop's command terminal, a preliminary GUI should appear asking for the user to input a mission index. In future development, it is intended for the user to simply select a mission name from a list in an actual GUI instead of interfacing with the command terminal. See [*GroundStationGUI.png*](/docs/_static/GroundStationGUI.png) for an example of the preliminary GUI.
+
+As an example for simulating a GCS command in ROS, tracking red light with the nontracking mission being to orbit is called like
 ```cmd
 ros2 topic pub --once /gcs cosmos_interfaces/msg/GCS "{mission: 1120}"
 ```
 
-The missions are defined as ```enum class MISSION : uint16_t``` in *state_machine_node.hpp* and are as follows.
+The missions here are intended to be defined as ```enum class MISSION : uint16_t``` in *state_machine_node.hpp* and are again just a template and brainstorm.
 
 | Index | Type | Mission | Description |
 |---|---|---|---|
@@ -58,6 +66,8 @@ The last two digits of the Track missions are the nontracking mission to perform
 
 ## Flow of CameraSM (i.e., Track Missions)
 
+This method is outdated as of April 24th, 2024, but one method to continuously search for a target while performing a nontracking mission (e.g., optimally charging solar panels) until a target is spotted is as follows. Ideally, the StateMachine node should not be driven by CameraSM or anything other than the single message sent from GCS, which is why this method is outdated.
+
 1. User selects "Track/TRACK_ARUCO_*XX*" or "Track/TRACK_RED_*XX*" on GUI, then corresponding mission index is published.
     -   ```cmd
         ros2 topic pub --once /gcs cosmos_interfaces/msg/GCS "{mission: 1120}"
@@ -81,13 +91,16 @@ The last two digits of the Track missions are the nontracking mission to perform
 
 ## Flow of Kinematics
 
+The following is outdated because Kinematics, as of April 24th, 2024, is intended to propagate the state vector without requiring a green light from StateMachine. To achieve this, it is thought that ImageToDCM will send *DCM.msg* but with an additional parameter *is_first*. That way, Kinematics receives (*is_first*, *R*, *t*). If *is_first* is false, then Kinematics should propagate the state vector.
+
 1. Kinematics, when receiving a message from the "dcm" topic, updates its class attributes $(R_0, t_0)$ with the currently saved $(R, t)$ attributes. Then, the incoming $(R, t)$ are saved.
 1. When receiving green light from StateMachine, the currently saved $(R, t, R_0, t_0)$ are used along with the saved $(x_0, z_0)$ attributes to propagate the state vector by calling the ODE solver. The updated state vector $x$ and error $z$ are published to Communications and the status of Kinematics (i.e., success or failure) is returned to StateMachine.
 1. StateMachine, if success, gives green light to Communications to process the state vector it has just saved as a class attribute in order to write the new RPM's to the motors.
 1. Communications, receiving the green light, grabs the last three values of the state vector (i.e., RPM's) and checks if they exceed the limits of the motors. If they exceed, Communications thresholds the RPM's to the motors' max speed. Communications then writes to the motors. The status (i.e., success, failure, or limited) is then returned to StateMachine.
 
-
 ## ROS Nodes, Topics, and Messages (in progress)
+
+The following is outdated but provides a template for keeping track of nodes and topics.
 
 | Node | Topics | Description |
 |---|---|---|
@@ -99,6 +112,8 @@ The last two digits of the Track missions are the nontracking mission to perform
 | ImageToDCM | cam, dcm, img | |
 | Kinematics | dcm, sm, x | |
 
+The following is outdated but provides a template for keeping track of messages.
+
 | Message | Parameters | Description |
 |---|---|---|
 | Cam | uint16 command <br> string to_node <br> string from_node <br> bool is_start <br> bool is_abort <br> float64[9] dcm <br> float64 t | |
@@ -109,16 +124,23 @@ The last two digits of the Track missions are the nontracking mission to perform
 | SM | uint16 command <br> string to_node <br> string from_node <br> bool is_start <br> bool is_abort | |
 | X | float64[10] x <br> float64[3] z | |
 
-# Contact
+## Documentation
 
-West Virginia University, Morgantown, WV
+Some documentation is stored in the *docs* folder. Included, as of April 24th, 2024, are
+- [ros_commands](/docs/ros_commands.md)
+- [attitude_thresholding_without_IMU](/docs/attitude_thresholding_without_IMU.md)
+- [attitude_thresholding_with_IMU](/docs/attitude_thresholding_with_IMU.md)
 
-jakepkrell@gmail.com
+## License
 
-etc.
+Please see [LICENSE](LICENSE).
 
-# Citations
+## Contact
 
-Please cite:
-stuff
+Developers, August 2023 - May 2024:
+- [Jacob P. Krell](mailto:[jakepkrell@gmail.com])
+- [Vinicius D. Ferreira](mailto:[viniciusdunker@gmail.com])
 
+## Citations
+
+Please consult [Dr. Andrew Rhodes](mailto:[andrew.rhodes@mail.wvu.edu]) on how to cite. The preferred citation(s) may change over time.
